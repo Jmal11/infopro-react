@@ -511,7 +511,14 @@ const handleMouseLeave = () => {
   <button onClick={() => setExpandedMenu(!expandedMenu)} className={clsx("hidden lg:flex p-2 hover:bg-white rounded-full", !isScrolled && "hover:bg-white/10")}>
     <Menu className={clsx("w-6 h-6 transition-colors duration-300", isScrolled ? "text-gray-700" : "text-white")} />
   </button>
-  <a href="/contact" className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">CONNECT WITH US</a>
+  <a 
+  href="/contact" 
+  className="hidden lg:block text-white px-6 py-2 rounded"
+  style={{ backgroundColor: '#6B19FF' }}
+>
+  CONNECT WITH US
+</a>
+
   <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={clsx("lg:hidden p-2 hover:bg-white rounded-full", !isScrolled && "hover:bg-white/10")}>
     {isMenuOpen ? (
       <X className={clsx("w-6 h-6 transition-colors duration-300", isScrolled ? "text-gray-700" : "text-white")} />

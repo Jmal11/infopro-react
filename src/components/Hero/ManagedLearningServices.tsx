@@ -89,41 +89,69 @@ const rightItems = [
 
 export function ManagedLearningServices() {
   return (
-    <section className="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 bg-purple-50 rounded-md">
-      {/* Left Side */}
-      <div className="md:w-1/2 bg-purple-100 p-6 rounded-md space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">
-          Managed Learning Services
-          <sup className="text-sm font-normal">AI+</sup>
-        </h2>
-        <p className="text-gray-700">
-          Leveraging AI to Optimize and Elevate Managed Learning Services Benefits
-        </p>
-        <div className="grid grid-cols-3 gap-4">
-          {leftItems.map(({ label, icon }) => (
-            <div
-              key={label}
-              className="bg-white rounded-md p-4 flex flex-col items-center justify-center space-y-2 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
-            >
-              {icon}
-              <span className="text-sm font-medium text-gray-900">{label}<sup className="text-xs font-normal">AI+</sup></span>
-            </div>
-          ))}
+    <section className="bg-white w-full py-14 px-2">
+      <div className="max-w-6xl mx-auto">
+        {/* Main Heading & Subheading */}
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+            Deliver a Performance-Ready Workforce<br />
+            with Our Managed Learning Service
+          </h2>
+          <p className="text-gray-700 text-lg">
+            Make Infopro Learning your L&D strategic business partner
+          </p>
         </div>
-      </div>
-
-      {/* Right Side */}
-      <div className="md:w-1/2 space-y-6">
-        {rightItems.map(({ title, description, icon }) => (
-          <div key={title} className="flex items-start gap-4">
-            <div className="flex-shrink-0">{icon}</div>
-            <div>
-              <h3 className="font-semibold text-gray-900">{title}</h3>
-              <p className="text-gray-700">{description}</p>
+        {/* Two Column Layout */}
+        <div className="flex flex-col md:flex-row gap-10 items-stretch">
+          {/* Left: Managed Learning Card */}
+          <div className="md:w-1/2 bg-purple-50 rounded-lg p-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-1">
+              Managed Learning Services
+              <sup className="text-base font-normal ml-1">AI+</sup>
+            </h3>
+            <p className="text-gray-700 mb-6 text-sm">
+              Leveraging AI to Optimize and Elevate Managed Learning Services Benefits
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {leftItems.map(({ label, icon }) => (
+                <div
+                  key={label}
+                  className="bg-white rounded-md p-5 flex flex-col items-center justify-center space-y-2 shadow transition hover:shadow-lg cursor-pointer"
+                >
+                  {icon}
+                  <span className="text-sm font-medium text-gray-900">
+                    {label}<sup className="text-xs font-normal">AI+</sup>
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
+          {/* Right: Features List */}
+          <div className="md:w-1/2 flex flex-col justify-between">
+            <div className="space-y-7">
+              {rightItems.map(({ title, description, icon }) => (
+                <div key={title} className="flex items-start gap-4">
+                  <div className="flex-shrink-0">{icon}</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">{title}</h4>
+                    <p className="text-gray-700">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 flex justify-end">
+              <button className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-purple-700">
+                LEARN MORE
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
+export default ManagedLearningServices;

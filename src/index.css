@@ -1,0 +1,364 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Original styles kept intact */
+  .mega-menu {
+    @apply invisible opacity-0 fixed left-0 right-0 w-full bg-white shadow-lg transition-all duration-200 transform -translate-y-2;
+    top: 5rem;
+  }
+  
+  .mega-menu.active {
+    @apply visible opacity-100 translate-y-0;
+  }
+  
+  .mega-menu-container {
+    @apply max-w-7xl mx-auto px-4 py-8;
+  }
+  
+  .service-icon {
+    @apply flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-gray-50 w-full text-left;
+  }
+  
+  .service-icon span {
+    @apply text-gray-700 font-medium;
+  }
+  
+  .category-title {
+    @apply text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide;
+  }
+  
+  .category-link {
+    @apply block text-sm text-gray-600 hover:text-primary transition-colors py-1.5;
+  }
+  
+  .promo-panel {
+    @apply bg-gray-50 p-6 rounded-lg;
+  }
+  
+  .nav-button {
+    @apply relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors;
+  }
+  
+  .nav-button::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 transition-transform origin-left;
+  }
+  
+  .nav-button:hover::after {
+    @apply scale-x-100;
+  }
+  
+  .nav-container {
+    @apply max-w-7xl mx-auto px-4 h-20 flex items-center justify-between;
+  }
+}
+
+/* ============= ENHANCED DROPDOWN STYLING ============= */
+
+/* Dropdown container with glass effect */
+.absolute.top-full.left-0.w-screen {
+  position: fixed !important;
+  top: 64px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 50 !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px) !important;
+  padding-top: 20px !important;
+  margin-top: -20px !important;
+  box-shadow: 0 10px 40px -5px rgba(114, 50, 232, 0.2), 0 8px 20px -8px rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(114, 50, 232, 0.1) !important;
+  
+  /* Premium animation */
+  opacity: 0 !important;
+  transform: translateY(-15px) scale(0.98) !important;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s ease !important;
+  
+  /* Initially hidden */
+  pointer-events: none !important;
+}
+
+/* Animated entrance for dropdown */
+.relative:hover .absolute.top-full.left-0.w-screen,
+.absolute.top-full.left-0.w-screen:hover {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+  box-shadow: 0 20px 60px -10px rgba(114, 50, 232, 0.25), 0 15px 40px -20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Hover bridge for smooth interaction */
+.relative::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+  z-index: 51;
+  pointer-events: none;
+}
+
+/* Container styling */
+.container.mx-auto.px-4 {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  animation: containerFadeIn 0.5s ease forwards !important;
+}
+
+@keyframes containerFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Grid layout with staggered entrance */
+.grid.grid-cols-12.gap-6 {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+}
+
+/* Left panel enhancements with premium styling */
+.col-span-3.bg-purple-50 {
+  background: linear-gradient(135deg, rgba(114, 50, 232, 0.05) 0%, rgba(114, 50, 232, 0.1) 100%) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(114, 50, 232, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 12px -2px rgba(114, 50, 232, 0.1) !important;
+  animation: panelSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  animation-delay: 0.1s !important;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+@keyframes panelSlideIn {
+  from { 
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.col-span-3.bg-purple-50:hover {
+  transform: translateY(-3px) scale(1.01) !important;
+  box-shadow: 0 8px 24px -4px rgba(114, 50, 232, 0.2) !important;
+}
+
+/* Service icon premium styling */
+.flex.flex-col.items-center {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
+.flex.flex-col.items-center::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, rgba(114, 50, 232, 0.08) 0%, rgba(114, 50, 232, 0) 100%) !important;
+  z-index: -1 !important;
+  opacity: 0 !important;
+  transition: opacity 0.25s ease !important;
+}
+
+/* Remove or neutralize the global hover effect for .flex.flex-col.items-center:hover */
+.flex.flex-col.items-center:hover {
+  background-color: inherit !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.flex.flex-col.items-center:hover::before {
+  opacity: 0 !important;
+}
+
+.flex.flex-col.items-center:hover svg {
+  transform: none !important;
+}
+
+/* Middle section animations */
+.col-span-6 {
+  animation: fadeUpStaggered 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  animation-delay: 0.2s !important;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes fadeUpStaggered {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Category title animation */
+h3 {
+  position: relative !important;
+  display: inline-block !important;
+  margin-bottom: 1rem !important;
+}
+
+h3::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -3px !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #7232E8 0%, rgba(114, 50, 232, 0.3) 100%) !important;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+div:hover > h3::after {
+  width: 100% !important;
+}
+
+/* Custom animations for link lists with staggered appearance */
+li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInStaggered 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInStaggered {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animations with more pronounced delay */
+li:nth-child(1) { animation-delay: 0.25s; }
+li:nth-child(2) { animation-delay: 0.3s; }
+li:nth-child(3) { animation-delay: 0.35s; }
+li:nth-child(4) { animation-delay: 0.4s; }
+li:nth-child(5) { animation-delay: 0.45s; }
+li:nth-child(6) { animation-delay: 0.5s; }
+li:nth-child(7) { animation-delay: 0.55s; }
+
+/* Link hover effects with sliding indicator */
+a.text-gray-700, a.text-gray-600 {
+  position: relative !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-block !important;
+  padding-left: 0 !important;
+}
+
+a.text-gray-700::before, a.text-gray-600::before {
+  content: '↪' !important;
+  position: absolute !important;
+  left: -20px !important;
+  opacity: 0 !important;
+  transform: translateX(10px) !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease !important;
+  color: #7232E8 !important;
+}
+
+a.text-gray-700:hover, a.text-gray-600:hover {
+  transform: translateX(12px) !important;
+  padding-left: 0 !important;
+}
+
+a.text-gray-700:hover::before, a.text-gray-600:hover::before {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Right promotional panel with enhanced styling */
+.col-span-3:not(.bg-purple-50) {
+  animation: slideInRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  animation-delay: 0.3s !important;
+  opacity: 0;
+  transform: translateX(10px);
+  background: linear-gradient(135deg, rgba(114, 50, 232, 0.03) 0%, rgba(114, 50, 232, 0.08) 100%) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px -2px rgba(114, 50, 232, 0.1) !important;
+  padding: 1.5rem !important;
+  border: 1px solid rgba(114, 50, 232, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.col-span-3:not(.bg-purple-50):hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 24px -6px rgba(114, 50, 232, 0.15) !important;
+}
+
+/* Button hover effect with premium animation */
+.bg-primary {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 1 !important;
+}
+
+.bg-primary::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, rgba(114, 50, 232, 0) 0%, rgba(149, 91, 255, 0.8) 100%) !important;
+  z-index: -1 !important;
+  transform: translateX(-100%) !important;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.bg-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(114, 50, 232, 0.4) !important;
+}
+
+.bg-primary:hover::before {
+  transform: translateX(0) !important;
+}
+
+/* Define colors */
+.text-primary {
+  color: #7232E8 !important;
+}
+
+.bg-primary {
+  background-color: #7232E8 !important;
+}
+
+.hover\:bg-primary-dark:hover {
+  background-color: #5a20cc !important;
+}
+
+.hover\:text-primary:hover {
+  color: #7232E8 !important;
+}

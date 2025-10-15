@@ -11,6 +11,10 @@ import { SalesTrainingEnablementStats } from '../../components/Hero/SalesTrainin
 import { SalesTrainingEnablementTestimonial } from '../../components/Hero/SalesTrainingEnablementTestimonial';
 import { SalesTrainingEnablementRealApproach } from '../../components/Hero/SalesTrainingEnablementRealApproach';
 import { SalesTrainingEnablementPortfolio } from '../../components/Hero/SalesTrainingEnablementPortfolio';
+import { SalesTrainingEnablementJourney } from '../../components/Hero/SalesTrainingEnablementJourney';
+import { SalesTrainingEnablementLearningExperience } from '../../components/Hero/SalesTrainingEnablementLearningExperience';
+import { SalesTrainingEnablementProgramAudience } from '../../components/Hero/SalesTrainingEnablementProgramAudience';
+import { SalesTrainingEnablementCertificate } from '../../components/Hero/SalesTrainingEnablementCertificate';
 
 export function SalesTrainingEnablementPage() {
   return (
@@ -22,10 +26,10 @@ export function SalesTrainingEnablementPage() {
       <SalesTrainingEnablementTestimonial />
       <SalesTrainingEnablementRealApproach />
       <SalesTrainingEnablementPortfolio />
-      {/* TODO: Add SalesTrainingEnablementJourney */}
-      {/* TODO: Add SalesTrainingEnablementLearningExperience */}
-      {/* TODO: Add SalesTrainingEnablementProgramAudience */}
-      {/* TODO: Add SalesTrainingEnablementCertificate */}
+      <SalesTrainingEnablementJourney />
+      <SalesTrainingEnablementLearningExperience />
+      <SalesTrainingEnablementProgramAudience />
+      <SalesTrainingEnablementCertificate />
       <SuccessStoriesSection />
       <LatestInsights />
       <LearningExperienceArchitectsSection />

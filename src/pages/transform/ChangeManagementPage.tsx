@@ -1,38 +1,24 @@
-import { PageHeader } from '../../components/PageHeader';
-import { Workflow, Users, Target, BarChart3, ArrowRight } from 'lucide-react';
+import { HeroSection } from '../../components/ChangeManagement/HeroSection';
+import { CompanyLogos } from '../../components/ChangeManagement/CompanyLogos';
+import { ThrivingInDisruption } from '../../components/ChangeManagement/ThrivingInDisruption';
+import { StatisticsSection } from '../../components/ChangeManagement/StatisticsSection';
+import { FrameworkSection } from '../../components/ChangeManagement/FrameworkSection';
+import { ProcessSection } from '../../components/ChangeManagement/ProcessSection';
+import { SolutionsSection } from '../../components/ChangeManagement/SolutionsSection';
+import { Workflow, Users, Target } from 'lucide-react';
 
 export function ChangeManagementPage() {
   return (
     <main className="pt-16">
-      <PageHeader 
-        title="Organizational Change Management"
-        description="Navigate transformation successfully with our proven change management approach"
-      />
+      <HeroSection />
+      <CompanyLogos />
+      <ThrivingInDisruption />
+      <StatisticsSection />
+      <FrameworkSection />
+      <ProcessSection />
+      <SolutionsSection />
       
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="relative overflow-hidden rounded-3xl mb-12">
-          <img 
-            src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-            alt="Change Management"
-            className="w-full h-[400px] object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
-            <div className="text-white max-w-2xl p-12">
-              <h2 className="text-4xl font-bold mb-4">
-                Transform with Confidence
-              </h2>
-              <p className="text-xl mb-6">
-                Our comprehensive change management solutions help organizations navigate
-                complex transformations while maintaining productivity and engagement.
-              </p>
-              <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                Start Your Transformation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
 
         {/* Methodology Section */}
         <div className="mb-12">

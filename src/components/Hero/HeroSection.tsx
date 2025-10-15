@@ -20,7 +20,7 @@ const slides = [
             <span className="block text-xs text-gray-700">COST PER LEARNER</span>
           </>
         ),
-        style: "left-[-65px] top-[45px] shadow-md"
+        style: "left-4 top-8 sm:left-[-45px] sm:top-[45px] shadow-md"
       },
       {
         text: (
@@ -29,7 +29,7 @@ const slides = [
             <span className="block text-xs text-gray-700">GLOBAL REACH & IMPACT</span>
           </>
         ),
-        style: "right-[-30px] bottom-[30px] shadow-md"
+        style: "right-4 bottom-6 sm:right-[-30px] sm:bottom-[30px] shadow-md"
       }
     ]
   },
@@ -51,7 +51,7 @@ const slides = [
             <span className="block text-xs text-gray-700">WORLDWIDE</span>
           </>
         ),
-        style: "left-[-65px] top-[50px] shadow-md"
+        style: "left-4 top-10 sm:left-[-45px] sm:top-[50px] shadow-md"
       },
       {
         text: (
@@ -60,7 +60,7 @@ const slides = [
             <span className="block text-xs text-gray-700">LEARNING APPROACH</span>
           </>
         ),
-        style: "right-[-30px] bottom-[30px] shadow-md"
+        style: "right-4 bottom-6 sm:right-[-30px] sm:bottom-[30px] shadow-md"
       }
     ]
   },
@@ -82,7 +82,7 @@ const slides = [
             <span className="block text-xs text-gray-700">ACCESSIBLE</span>
           </>
         ),
-        style: "left-[-65px] top-[50px] shadow-md"
+        style: "left-4 top-10 sm:left-[-45px] sm:top-[50px] shadow-md"
       }
     ]
   },
@@ -104,7 +104,7 @@ const slides = [
             <span className="block text-xs text-gray-700">PERFORMANCE MONITORING</span>
           </>
         ),
-        style: "left-[-65px] top-[50px] shadow-md"
+        style: "left-4 top-10 sm:left-[-45px] sm:top-[50px] shadow-md"
       }
     ]
   }
@@ -124,33 +124,33 @@ export function HeroSection() {
   const slide = slides[currentIndex];
 
   return (
-    <div className="relative min-h-screen flex items-center bg-[#2a2a2a]">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-        {/* Left - Text */}
-        <div className="w-full md:w-7/12 text-white mb-16 md:mb-0">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+    <div className="relative min-h-[70vh] md:min-h-screen flex items-center bg-[#2a2a2a] pt-20 md:pt-0">
+      <div className="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-4 md:px-8 lg:px-12">
+       {/* Left - Text */}
+        <div className="w-full md:w-7/12 text-white text-center md:text-left mt-8 md:mt-0">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
             {slide.title}
           </h1>
-          <p className="mb-6 text-lg md:text-xl">{slide.subtitle}</p>
-          <button className="border border-white px-8 py-4 rounded-md text-sm font-semibold hover:bg-white hover:text-black transition-all bg-transparent">
+          <p className="mb-6 text-base sm:text-lg md:text-xl">{slide.subtitle}</p>
+          <button className="border border-white px-6 py-3 sm:px-8 sm:py-4 rounded-md text-base sm:text-sm font-semibold hover:bg-white hover:text-black transition-all bg-transparent mb-16 sm:mb-0">
             READ MORE
           </button>
         </div>
         {/* Right - Image with tags */}
-        <div className="relative w-full md:w-5/12 flex justify-center md:justify-end">
-          <div className="relative rounded-[22px] overflow-hidden shadow-lg bg-white/10 min-w-[320px] max-w-[370px]">
+        <div className="relative w-full md:w-5/12 flex justify-center items-center md:items-end md:justify-end mb-6 md:mb-0">
+          <div className="relative rounded-[22px] overflow-hidden shadow-lg bg-white/10 w-full max-w-[320px] sm:max-w-[370px] mx-auto">
             <img
               src={slide.image}
               alt="Hero"
-              className="object-cover w-full h-auto"
+              className="object-cover w-full h-56 sm:h-72 md:h-96"
               style={{ borderRadius: '22px' }}
             />
             {/* Slide tags/badges */}
             {slide.tags.map((tag, idx) => (
               <div
                 key={idx}
-                className={`absolute bg-white py-2 px-6 rounded-md text-[15px] text-left ${tag.style}`}
-                style={{ minWidth: 120 }}
+                className={`absolute bg-white py-2 px-4 sm:px-6 rounded-md text-sm text-left ${tag.style}`}
+                style={{ minWidth: 100 }}
               >
                 {tag.text}
               </div>
@@ -159,12 +159,12 @@ export function HeroSection() {
         </div>
       </div>
       {/* Dots */}
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center items-center">
+      <div className="absolute bottom-7 left-0 right-0 flex justify-center items-center">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`w-5 h-5 mx-1 rounded-full border transition-all duration-150 ${
+            className={`w-3 h-3 mx-1 rounded-full border transition-all duration-150 ${
               idx === currentIndex ? 'bg-white border-white' : 'bg-transparent border-gray-400'
             }`}
             aria-label={`Go to slide ${idx + 1}`}

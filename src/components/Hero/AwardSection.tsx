@@ -1,30 +1,22 @@
 import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const awards = [
   {
-    title: 'Watch List 2023',
-    description: 'Recognized for outstanding innovation and user experience in learning technology.',
-    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/awards/ti-1.png ',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/awards/ti-1.png',
   },
   {
-    title: 'Brandon Hall Group HCM Excellence Award',
-    description: 'Awarded for excellence in human capital management solutions.',
-    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/awards/bh.png ',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/awards/bh.png',
   },
   {
-    title: 'Fosway Group Strategic Leader',
-    description: 'Recognized for strategic leadership in digital learning solutions.',
-    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/fosway-2025.webp ',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/fosway-2025.webp',
   },
   {
-    title: 'Watch List 2024',
-    description: 'Recognized for innovative contributions to the training industry.',
-    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/2025-Leadership-Training.webp ',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/2025-Leadership-Training.webp',
   },
   {
-    title: 'Learning in Practice Awards Winner',
-    description: 'Awarded for excellence in practical learning solutions.',
-    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/LIP_BRONZE_Winner_Badge_2024.png ',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/LIP_BRONZE_Winner_Badge_2024.png',
   },
 ];
 
@@ -32,21 +24,62 @@ export function AwardSection() {
   return (
     <section className="bg-[#f6f6f6]">
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Awards</h2>
-        <div className="flex flex-row justify-center gap-6 overflow-x-auto pb-4">
-          {awards.map(({ title, image }) => (
+
+        {/* Mobile: Logo Carousel with Dots */}
+        <div className="md:hidden">
+          <Carousel
+            showArrows={false}
+            showStatus={false}
+            showThumbs={false}
+            infiniteLoop
+            autoPlay
+            interval={4000}
+            swipeable
+            emulateTouch
+            showIndicators
+            renderIndicator={(onClickHandler, isSelected, index, label) => (
+              <li
+                className={`inline-block w-2.5 h-2.5 mx-1 rounded-full cursor-pointer ${isSelected ? "bg-purple-600" : "bg-gray-300"}`}
+                onClick={onClickHandler}
+                key={index}
+                role="button"
+                tabIndex={0}
+                aria-label={`${label} ${index + 1}`}
+                style={{ marginTop: 24 }}
+              />
+            )}
+          >
+            {awards.map((award, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center min-h-[120px] py-2"
+              >
+                <img
+                  src={award.image}
+                  alt={`Award Logo ${idx + 1}`}
+                  className="w-40 h-24 object-contain mb-10"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </Carousel>
+        </div>
+
+        {/* Desktop/Tablet: Flex Wrap Logos */}
+        <div className="hidden md:flex flex-wrap justify-center gap-10">
+          {awards.map((award, idx) => (
             <div
-              key={title}
-              className="bg-transparent rounded-md p-2 shadow-sm hover:shadow-md transition-shadow cursor-pointer flex-shrink-0"
+              key={idx}
+              className="flex items-center justify-center p-2"
             >
-              <img src={image} alt={title} className="w-40 h-24 object-contain" />
+              <img
+                src={award.image}
+                alt={`Award Logo ${idx + 1}`}
+                className="w-40 h-24 object-contain"
+                loading="lazy"
+              />
             </div>
           ))}
-        </div>
-        <div className="flex justify-center mt-8">
-          <button className="px-6 py-2 bg-transparent border-2 border-purple-500 text-purple-500 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-colors">
-            VIEW ALL AWARDS
-          </button>
         </div>
       </div>
     </section>

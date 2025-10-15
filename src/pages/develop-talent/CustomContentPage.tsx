@@ -7,6 +7,7 @@ import { CustomContentAIAreasOfImpact } from '../../components/Hero/CustomConten
 import { SuccessStoriesSection } from '../../components/Hero/SuccessStoriesSection';
 import { LatestInsights } from '../../components/Hero/LatestInsights';
 import { LearningExperienceArchitectsSection } from '../../components/Hero/LearningExperienceArchitectsSection';
+import ContactForm from '../../components/Hero/ContactForm';
 
 export function CustomContentPage() {
   console.log('CustomContentPage rendered');
@@ -21,6 +22,7 @@ export function CustomContentPage() {
       <SuccessStoriesSection />
       <LearningExperienceArchitectsSection />
       <LatestInsights />
+      <ContactForm />
     </main>
   );
 }

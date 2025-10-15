@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const testimonials = [
   {
@@ -64,47 +64,54 @@ const testimonials = [
 ];
 
 export function TestimonialSection() {
+  // Responsive cards-per-page
+  const getCardsPerPage = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth < 640) return 1;
+      if (window.innerWidth < 1024) return 2;
+    }
+    return 3;
+  };
+
+  const [cardsPerPage, setCardsPerPage] = useState(getCardsPerPage());
   const [currentPage, setCurrentPage] = useState(0);
 
-  const cardsPerPage = 3;
+  useEffect(() => {
+    const handleResize = () => setCardsPerPage(getCardsPerPage());
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const totalPages = Math.ceil(testimonials.length / cardsPerPage);
 
   const goToNext = () => {
-    if (currentPage < totalPages - 1) {
-      setCurrentPage((prev) => prev + 1);
-    }
+    if (currentPage < totalPages - 1) setCurrentPage((p) => p + 1);
   };
-
   const goToPrev = () => {
-    if (currentPage > 0) {
-      setCurrentPage((prev) => prev - 1);
-    }
+    if (currentPage > 0) setCurrentPage((p) => p - 1);
   };
 
   const startIndex = currentPage * cardsPerPage;
   const currentTestimonials = testimonials.slice(startIndex, startIndex + cardsPerPage);
 
   return (
-    <section className="bg-[#f6f6f6] py-12"> 
+    <section className="bg-[#f6f6f6] py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Success Stories</h2>
 
-        {/* Cards Container with Transition */}
-        <div
-          key={currentPage}
-          className="flex justify-between gap-4 transition-opacity duration-500"
-        >
+        {/* Cards container */}
+        <div className="flex flex-wrap justify-center gap-6 transition-opacity duration-500">
           {currentTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-md shadow-md w-1/3 flex flex-col"
+              className="bg-white rounded-md shadow-md w-full sm:w-[48%] lg:w-[32%] flex flex-col"
             >
               <img
                 src={testimonial.image}
                 alt={testimonial.title}
                 className="w-full h-40 object-cover rounded-t-md"
               />
-              <div className="p-4 flex-grow">
+              <div className="p-4 flex-grow flex flex-col">
                 <p className="text-sm text-purple-700 mb-1">
                   <span className="font-semibold">Industry:</span> {testimonial.industry}
                 </p>
@@ -150,7 +157,6 @@ export function TestimonialSection() {
           >
             &#8592;
           </button>
-
           <div className="flex space-x-2">
             {Array.from({ length: totalPages }).map((_, i) => (
               <button
@@ -163,7 +169,6 @@ export function TestimonialSection() {
               />
             ))}
           </div>
-
           <button
             onClick={goToNext}
             disabled={currentPage === totalPages - 1}

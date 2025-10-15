@@ -10,6 +10,9 @@ import { DiversityEquityInclusionContent } from '../../components/Hero/Diversity
 import { DiversityEquityInclusionJourney } from '../../components/Hero/DiversityEquityInclusionJourney';
 import { EarlyCareerDevelopmentLearningExperience } from '../../components/Hero/EarlyCareerDevelopmentLearningExperience';
 import { DiversityEquityInclusionProgramAudience } from '../../components/Hero/DiversityEquityInclusionProgramAudience';
+import { DiversityEquityInclusionStats } from '../../components/Hero/DiversityEquityInclusionStats';
+import { DiversityEquityInclusionTestimonial } from '../../components/Hero/DiversityEquityInclusionTestimonial';
+import { DiversityEquityInclusionCertificate } from '../../components/Hero/DiversityEquityInclusionCertificate';
 
 export function DiversityEquityInclusionPage() {
   return (
@@ -20,7 +23,9 @@ export function DiversityEquityInclusionPage() {
       <DiversityEquityInclusionJourney />
       <EarlyCareerDevelopmentLearningExperience />
       <DiversityEquityInclusionProgramAudience />
-      {/* Add more DEI sections here as needed */}
+      <DiversityEquityInclusionStats />
+      <DiversityEquityInclusionTestimonial />
+      <DiversityEquityInclusionCertificate />
       <SuccessStoriesSection />
       <LatestInsights />
       <LearningExperienceArchitectsSection />

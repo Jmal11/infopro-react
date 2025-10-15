@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainNav from './components/Navigation/MainNav';
 import { Footer } from './components/Footer';
@@ -47,6 +46,10 @@ import AgileProjectManagementPage from './pages/empower-teams/AgileProjectManage
 import { AgileTransformationPage } from './pages/transform/AgileTransformationPage';
 import { ChangeManagementPage } from './pages/transform/ChangeManagementPage';
 import PerformanceConsultingPage from './pages/transform/PerformanceConsultingPage';
+
+// Technology Consulting Pages
+import { TechnologyConsultingPage } from './pages/technology-consulting/TechnologyConsultingPage';
+import OperatingModelPage from './pages/operating-model/OperatingModelPage';
 
 const App = () => {
   return (
@@ -97,6 +100,10 @@ const App = () => {
         <Route path="/transform/agile-transformation" element={<AgileTransformationPage />} />
         <Route path="/transform/change-management" element={<ChangeManagementPage />} />
         <Route path="/transform/performance-consulting" element={<PerformanceConsultingPage />} />
+
+        {/* Technology Consulting Pages */}
+        <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
+        <Route path="/operating-model" element={<OperatingModelPage />} />
       </Routes>
       <Footer />
     </Router>

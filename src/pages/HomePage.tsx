@@ -13,18 +13,36 @@ import { LatestInsights } from '../components/Hero/LatestInsights';
 
 export function HomePage() {
   return (
-    <main>
+    <main className="section-responsive">
       <HeroSection />
-      <WorkforcePage />
-      <PartnerLogos />
-      <AccordionContentSection />
-      <StatsBar />
-      <ManagedLearningServices />
-      <AwardSection />
-      <FutureSkillsSection />
-      <TestimonialSection />
-      <CarouselSection />
-      <LatestInsights />
+      <section className="container mx-auto px-4 stack-lg-row">
+        <WorkforcePage />
+      </section>
+      <section className="container mx-auto px-4">
+        <PartnerLogos />
+      </section>
+      <section className="container mx-auto px-4">
+        <AccordionContentSection />
+      </section>
+      <section className="container mx-auto px-4">
+        <StatsBar />
+      </section>
+      <section className="container mx-auto px-4">
+        <ManagedLearningServices />
+      </section>
+      <section className="container mx-auto px-4 grid gap-8">
+        <AwardSection />
+        <FutureSkillsSection />
+      </section>
+      <section className="container mx-auto px-4">
+        <TestimonialSection />
+      </section>
+      <section className="container mx-auto px-4">
+        <CarouselSection />
+      </section>
+      <section className="container mx-auto px-4">
+        <LatestInsights />
+      </section>
     </main>
   );
 }

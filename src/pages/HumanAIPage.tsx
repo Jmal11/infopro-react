@@ -14,20 +14,34 @@ import ContactForm from '../components/Hero/ContactForm';
 
 export function HumanAIPage() {
   return (
-    <main className="pt-16">
+    <main className="pt-16 section-responsive">
       <HumanAIHero />
       <HumanAIPartnerLogos />
-      <HumanAISkillsSection />
+      <section className="container mx-auto px-4">
+        <HumanAISkillsSection />
+      </section>
       <HumanAIStatsSection />
       <HumanAIApproachSection />
       <HumanAIStrategySection />
-      <AIDigitalSkillsAcademySection />
-      <VanguardSkillsCarousel />
-      <AdoptionChangeManagementSection />
-      <SuccessStoriesSection />
-      <LearningExperienceArchitectsSection />
-      <LatestInsights />
-      <ContactForm />
+      <section className="container mx-auto px-4">
+        <AIDigitalSkillsAcademySection />
+      </section>
+      <section className="container mx-auto px-4">
+        <VanguardSkillsCarousel />
+      </section>
+      <section className="container mx-auto px-4">
+        <AdoptionChangeManagementSection />
+      </section>
+      <section className="container mx-auto px-4">
+        <SuccessStoriesSection />
+      </section>
+      <section className="container mx-auto px-4 grid gap-8">
+        <LearningExperienceArchitectsSection />
+        <LatestInsights />
+      </section>
+      <section className="container mx-auto px-4">
+        <ContactForm />
+      </section>
       
       
     </main>

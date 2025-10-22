@@ -112,16 +112,22 @@ export function HumanAIStrategySection() {
   const defaultColor = "#a39b92"; // beige/brownish-grey
 
   return (
-    <section className="bg-gray-50 py-16 border-t border-gray-200">
+    <section className="bg-gray-50 section-responsive border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4">Human + AI Strategy</h2>
-        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Human + AI Strategy</h2>
+        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-8 sm:mb-10 fluid-body">
           Unlock the potential of Human+AI collaboration with a tailored strategy that drives innovation and efficiency. We identify competencies, address skills gaps, and outline process changes for seamless AI integration.
         </p>
 
-        <div className="flex flex-col lg:flex-row rounded-lg overflow-hidden border border-gray-200 shadow-sm" style={{ background: 'linear-gradient(to right, #f8f6f3 0%, #f8f6f3 25%, white 25%, white 100%)', height: '500px', width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
+        <div
+          className="flex flex-col lg:flex-row rounded-lg overflow-hidden border border-gray-200 shadow-sm w-full"
+          style={{
+            // Keep visual treatment but allow content-driven height
+            background: 'linear-gradient(to right, #f8f6f3 0%, #f8f6f3 25%, white 25%, white 100%)'
+          }}
+        >
           {/* Left Panel: Menu */}
-          <div className="bg-white min-w-[300px] lg:w-1/4 p-0 flex flex-col justify-between relative h-full">
+          <div className="bg-white w-full lg:w-1/4 p-0 flex flex-col justify-between relative">
             {steps.map((step, idx) => (
               <div
                 key={step.key}
@@ -143,7 +149,7 @@ export function HumanAIStrategySection() {
                   <div className="flex-shrink-0">
                     {step.icon}
                   </div>
-                  <span className={`font-semibold text-base tracking-wide ${
+                  <span className={`font-semibold text-sm sm:text-base tracking-wide ${
                     activeStep === idx ? "text-[#9147ff]" : "text-gray-700"
                   }`}>
                     {step.title}
@@ -154,31 +160,31 @@ export function HumanAIStrategySection() {
           </div>
 
           {/* Middle: Description + Activities */}
-          <div className="bg-white lg:w-2/4 px-8 py-8 border-r border-gray-200 flex flex-col h-full overflow-y-auto">
-            <p className="text-gray-700 text-base leading-relaxed mb-8">{steps[activeStep].description}</p>
-            <h4 className="font-bold text-gray-900 mb-4 text-lg">Key Activities</h4>
+          <div className="bg-white w-full lg:w-2/4 px-6 sm:px-8 py-6 sm:py-8 border-t lg:border-t-0 lg:border-r border-gray-200 flex flex-col lg:max-h-[520px] lg:overflow-y-auto">
+            <p className="text-gray-700 text-base leading-relaxed mb-6 sm:mb-8">{steps[activeStep].description}</p>
+            <h4 className="font-bold text-gray-900 mb-3 sm:mb-4 text-base sm:text-lg">Key Activities</h4>
             <ul className="space-y-3">
               {steps[activeStep].keyActivities.map((activity, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <svg className="h-6 w-6 text-[#9147ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-800 text-base">{activity}</span>
+                  <span className="text-gray-800 text-sm sm:text-base">{activity}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Right: Outcomes */}
-          <div className="bg-white lg:w-1/4 px-8 py-8 flex flex-col h-full overflow-y-auto">
-            <h4 className="font-bold text-gray-900 mb-4 text-lg">Key Outcomes</h4>
+          <div className="bg-white w-full lg:w-1/4 px-6 sm:px-8 py-6 sm:py-8 flex flex-col lg:max-h-[520px] lg:overflow-y-auto">
+            <h4 className="font-bold text-gray-900 mb-3 sm:mb-4 text-base sm:text-lg">Key Outcomes</h4>
             <ul className="space-y-3">
               {steps[activeStep].keyOutcomes.map((outcome, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <svg className="h-6 w-6 text-[#9147ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-800 text-base">{outcome}</span>
+                  <span className="text-gray-800 text-sm sm:text-base">{outcome}</span>
                 </li>
               ))}
             </ul>

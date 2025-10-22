@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const steps = [
   {
@@ -109,7 +109,6 @@ export function HumanAIStrategySection() {
 
   // Colors for vertical line
   const highlightColor = "#9147ff";
-  const defaultColor = "#a39b92"; // beige/brownish-grey
 
   return (
     <section className="bg-gray-50 section-responsive border-t border-gray-200">

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const cards = [
   {
@@ -56,8 +55,6 @@ export function AdoptionChangeManagementSection() {
               key={idx}
               className="rounded-lg overflow-hidden bg-white shadow border-t-4 flex flex-col"
               style={{
-                minHeight: '400px',
-                maxHeight: '400px',
                 borderTopColor: '#6b19ff',
               }}
             >
@@ -65,7 +62,6 @@ export function AdoptionChangeManagementSection() {
                 src={card.image}
                 alt={card.title}
                 className="object-cover w-full h-48"
-                style={{ minHeight: '12rem' }}
               />
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="font-semibold text-gray-900 mb-2">{card.title}</h3>
@@ -78,3 +74,5 @@ export function AdoptionChangeManagementSection() {
     </section>
   );
 }
+
+export default AdoptionChangeManagementSection;

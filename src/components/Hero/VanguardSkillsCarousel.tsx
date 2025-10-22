@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const slides = [
   [
@@ -58,7 +58,7 @@ const slides = [
 export function VanguardSkillsCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
@@ -77,26 +77,20 @@ export function VanguardSkillsCarousel() {
 
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto max-w-7xl px-4">
-          <div className="flex gap-0 justify-center items-stretch transition-all duration-700">
-            {slides[currentSlide].map((item, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 transition-all duration-700 border border-gray-200 rounded-md overflow-hidden">
+            {slides[currentSlide].map((item) => (
               <div
                 key={item.number}
-                className={`flex flex-col justify-between bg-white px-8 py-8 w-1/4 border-r border-gray-200 last:border-none items-start`}
-                style={{
-                  height: '400px',
-                  minHeight: '400px',
-                  maxHeight: '400px',
-                }}
+                className={"flex flex-col justify-between bg-white px-6 sm:px-8 py-6 sm:py-8 border-b lg:border-b-0 lg:border-r border-gray-200 last:border-none items-start"}
               >
                 <div>
                   <div
                     className="w-10 aspect-square rounded-full border-2 border-purple-600 text-purple-700 flex items-center justify-center font-bold text-lg mb-5"
-                    style={{ borderRadius: '50%' }}
                   >
                     {item.number}
                   </div>
-                  <h3 className="font-bold text-gray-900 text-xl mb-4">{item.title}</h3>
-                  <p className="text-gray-700 leading-relaxed text-base break-words">{item.description}</p>
+                  <h3 className="font-bold text-gray-900 text-lg sm:text-xl mb-3 sm:mb-4">{item.title}</h3>
+                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base break-words">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -118,3 +112,5 @@ export function VanguardSkillsCarousel() {
     </section>
   );
 }
+
+export default VanguardSkillsCarousel;

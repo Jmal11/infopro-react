@@ -5,7 +5,7 @@ export function StatisticsSection() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Stat 1 */}
           <div className="text-center relative">
-            <div className="text-5xl lg:text-6xl font-bold text-purple-600 mb-3">29%</div>
+            <div className="text-5xl lg:text-6xl font-bold text-primary mb-3">29%</div>
             <p className="text-gray-700 text-sm leading-relaxed">
               increase in employee engagement.
             </p>
@@ -15,7 +15,7 @@ export function StatisticsSection() {
 
           {/* Stat 2 */}
           <div className="text-center relative">
-            <div className="text-5xl lg:text-6xl font-bold text-purple-600 mb-3">50%</div>
+            <div className="text-5xl lg:text-6xl font-bold text-primary mb-3">50%</div>
             <p className="text-gray-700 text-sm leading-relaxed">
               higher employee retention rates.
             </p>
@@ -25,7 +25,7 @@ export function StatisticsSection() {
 
           {/* Stat 3 */}
           <div className="text-center relative">
-            <div className="text-5xl lg:text-6xl font-bold text-purple-600 mb-3">84%</div>
+            <div className="text-5xl lg:text-6xl font-bold text-primary mb-3">84%</div>
             <p className="text-gray-700 text-sm leading-relaxed">
               of employees in organizations that prioritize L&D during change report a significant improvement in their skills and competencies.
             </p>
@@ -35,7 +35,7 @@ export function StatisticsSection() {
 
           {/* Stat 4 */}
           <div className="text-center relative">
-            <div className="text-5xl lg:text-6xl font-bold text-purple-600 mb-3">37%</div>
+            <div className="text-5xl lg:text-6xl font-bold text-primary mb-3">37%</div>
             <p className="text-gray-700 text-sm leading-relaxed">
               increase in innovation.
             </p>
@@ -45,7 +45,7 @@ export function StatisticsSection() {
 
           {/* Stat 5 */}
           <div className="text-center">
-            <div className="text-5xl lg:text-6xl font-bold text-purple-600 mb-3">22%</div>
+            <div className="text-5xl lg:text-6xl font-bold text-primary mb-3">22%</div>
             <p className="text-gray-700 text-sm leading-relaxed">
               of organizations have a formalized succession planning process for critical roles.
             </p>

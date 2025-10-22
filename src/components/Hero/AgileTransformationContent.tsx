@@ -54,7 +54,7 @@ export function AgileTransformationContent() {
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-start space-x-4">
               <div className="flex-shrink-0 mt-1">
-                <CheckCircle className="w-6 h-6 text-purple-600" />
+                <CheckCircle className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

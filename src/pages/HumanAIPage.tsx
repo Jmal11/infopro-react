@@ -10,6 +10,7 @@ import { AdoptionChangeManagementSection } from '../components/Hero/AdoptionChan
 import { SuccessStoriesSection } from '../components/Hero/SuccessStoriesSection';
 import { LatestInsights } from '../components/Hero/LatestInsights';
 import { LearningExperienceArchitectsSection } from '../components/Hero/LearningExperienceArchitectsSection';
+import ContactForm from '../components/Hero/ContactForm';
 
 export function HumanAIPage() {
   return (
@@ -26,6 +27,7 @@ export function HumanAIPage() {
       <SuccessStoriesSection />
       <LearningExperienceArchitectsSection />
       <LatestInsights />
+      <ContactForm />
       
       
     </main>

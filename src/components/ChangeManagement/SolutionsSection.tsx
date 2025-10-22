@@ -15,7 +15,7 @@ export function SolutionsSection() {
         {/* Solutions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Transformational Change */}
-          <div className="bg-white border-t-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="bg-white border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="p-6">
               <img 
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop"
@@ -30,7 +30,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Cultural Change */}
-          <div className="bg-white border-t-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="bg-white border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="p-6">
               <img 
                 src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=250&fit=crop"
@@ -45,7 +45,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Large-Scale IT Implementations */}
-          <div className="bg-white border-t-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="bg-white border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="p-6">
               <img 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop"
@@ -60,7 +60,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Organization Design and Restructuring */}
-          <div className="bg-white border-t-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="bg-white border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="p-6">
               <img 
                 src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=250&fit=crop"
@@ -75,7 +75,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Managing Disruptive Change */}
-          <div className="bg-white border-t-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="bg-white border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="p-6">
               <img 
                 src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=250&fit=crop"
@@ -90,7 +90,7 @@ export function SolutionsSection() {
           </div>
 
           {/* Establishing Change Agility */}
-          <div className="bg-white border-t-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="bg-white border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="p-6">
               <img 
                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=250&fit=crop"

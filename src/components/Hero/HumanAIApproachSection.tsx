@@ -22,20 +22,21 @@ export function HumanAIApproachSection() {
   return (
     <section className="bg-gray-50 py-12 border-t border-gray-200">
       <div className="container mx-auto px-4 max-w-6xl text-center">
-        <h2 className="text-2xl font-bold mb-2">Our Approach</h2>
-        <p className="text-gray-700 max-w-3xl mx-auto mb-10">
-          Our approach empowers organizations to seamlessly integrate AI and human capabilities. By focusing on strategic transformation, skill development, and hands-on adoption, we help you achieve your Human+AI vision.
-        </p>
         <div className="flex flex-col lg:flex-row gap-8 text-left">
           {approachItems.map((item, index) => (
             <div
               key={index}
-              className={`flex-1 ${index !== approachItems.length - 1 ? 'border-r border-gray-300' : ''} pr-4`}
+              className={`flex-1 bg-transparent ${index !== approachItems.length - 1 ? 'border-r border-gray-300' : ''} pr-8`}
             >
-              <h3 className="font-semibold mb-1">
-                <span className="inline-block border-b-4 border-purple-600 pb-1">{item.title}</span>
-              </h3>
-              <p className="text-gray-700 text-sm">{item.description}</p>
+              {/* Using div for title to eliminate inherited h3::after */}
+              <div>
+                <span className="font-semibold text-gray-900 text-xl">{item.title}</span>
+                <div
+                  className="border-b-2 border-[#9147ff] w-16 mb-4"
+                  style={{ borderBottomWidth: '3px' }}
+                ></div>
+              </div>
+              <p className="text-gray-700 text-base">{item.description}</p>
             </div>
           ))}
         </div>

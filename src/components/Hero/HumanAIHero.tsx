@@ -11,9 +11,9 @@ export function HumanAIHero() {
   return (
     <section
       className="relative bg-cover bg-center human-ai-hero-section"
-      style={{ minHeight: '500px', height: '100svh' }}
+      style={{ minHeight: '500px', height: '100svh', marginTop: '-80px' }} // Adjust value (-80px) to match your navbar height
     >
-      {/* Responsive overlay and background */}
+      {/* Background overlay and image that starts from top-edge */}
       <div
         className="absolute inset-0 z-0 bg-center"
         style={{
@@ -22,6 +22,7 @@ export function HumanAIHero() {
             "url('https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/humn+AI-Video-img.webp')",
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'top center', // ensures image begins from the top
         }}
         id="human-ai-bg"
       ></div>
@@ -39,11 +40,12 @@ export function HumanAIHero() {
               height: auto !important;
               min-height: 400px !important;
               background: #292929 !important;
+              margin-top: 0 !important; /* disable overlap on mobile */
             }
           }
           @media (min-width: 1024px) {
             .human-ai-hero-section {
-              height: 47vw !important;
+              height: 51vw !important;
               min-height: unset !important;
             }
           }
@@ -69,8 +71,6 @@ export function HumanAIHero() {
           <div className="md:w-1/2 hidden md:block"></div>
         </div>
       </div>
-
-     
     </section>
   );
 }

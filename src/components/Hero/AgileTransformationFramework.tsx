@@ -243,7 +243,7 @@ export function AgileTransformationFramework() {
               {currentData.sections.map((section, index) => (
                 <div key={index} className="space-y-3">
                   <div className="flex items-start space-x-4">
-                    <span className="text-2xl font-bold text-purple-600 mt-1">
+                    <span className="text-2xl font-bold text-primary mt-1">
                       {section.number}
                     </span>
                     <div className="flex-1">

@@ -10,7 +10,7 @@ export function OperatingCTASection() {
         </p>
         <a
           href="/contact"
-          className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded shadow transition-colors"
+          className="inline-block bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded shadow transition-colors"
         >
           CONNECT WITH US
         </a>

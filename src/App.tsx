@@ -50,6 +50,7 @@ import PerformanceConsultingPage from './pages/transform/PerformanceConsultingPa
 // Technology Consulting Pages
 import { TechnologyConsultingPage } from './pages/technology-consulting/TechnologyConsultingPage';
 import OperatingModelPage from './pages/operating-model/OperatingModelPage';
+import SkillsBasedDesignPage from './pages/skills-based-design/SkillsBasedDesignPage';
 
 const App = () => {
   return (
@@ -104,6 +105,7 @@ const App = () => {
         {/* Technology Consulting Pages */}
         <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
         <Route path="/operating-model" element={<OperatingModelPage />} />
+        <Route path="/skills-based-design" element={<SkillsBasedDesignPage />} />
       </Routes>
       <Footer />
     </Router>

@@ -29,7 +29,7 @@ export function SalesTrainingEnablementJourney() {
               {topics.map((topic, idx) => (
                 <li key={topic}>
                   <button
-                    className={`text-left w-full px-3 py-2 rounded font-medium transition border-l-4 ${selected === idx ? 'bg-purple-50 border-purple-500 text-purple-700' : 'bg-transparent border-transparent text-gray-800 hover:bg-gray-100'}`}
+                    className={`text-left w-full px-3 py-2 rounded font-medium transition border-l-4 ${selected === idx ? 'bg-purple-50 border-primary text-primary' : 'bg-transparent border-transparent text-gray-800 hover:bg-gray-100'}`}
                     onClick={() => setSelected(idx)}
                   >
                     {topic}
@@ -51,7 +51,7 @@ export function SalesTrainingEnablementJourney() {
                   onChange={e => setEmail(e.target.value)}
                   placeholder="Enter your email"
                 />
-                <button type="submit" className="bg-purple-600 text-white px-6 py-2 rounded font-semibold hover:bg-purple-700 transition">SUBMIT</button>
+                <button type="submit" className="bg-primary text-white px-6 py-2 rounded font-semibold hover:bg-primary-dark transition">SUBMIT</button>
               </form>
             </div>
           </div>

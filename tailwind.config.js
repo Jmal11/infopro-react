@@ -4,8 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#7232E8',
-        'primary-dark': '#5f28c4',
+        primary: '#6B19FF',
+        'primary-dark': '#5a0fd9',
+        purple: {
+          50: '#f3f0ff',
+          100: '#e9e5ff',
+          200: '#d6ccff',
+          300: '#b8a3ff',
+          400: '#9570ff',
+          500: '#6B19FF',
+          600: '#5a0fd9',
+          700: '#4c0bb8',
+          800: '#3e0a96',
+          900: '#330874',
+        },
       },
       container: {
         center: true,

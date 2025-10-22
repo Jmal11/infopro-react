@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 export function BusinessImpactSection() {
   const Item = ({ title, children }: { title: string; children: React.ReactNode }) => (
     <div className="flex items-start gap-3">
-      <span className="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-600 text-white">
+      <span className="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white">
         <Check className="w-3 h-3" />
       </span>
       <div>

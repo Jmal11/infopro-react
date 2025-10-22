@@ -93,13 +93,13 @@ export function OperatingModelBlocksSection() {
                   key={b.key}
                   onClick={() => setActiveKey(b.key)}
                   className={`w-full flex items-center gap-3 text-left px-5 py-5 border-b border-gray-200 transition-colors ${
-                    activeKey === b.key ? 'bg-purple-600 text-white' : 'bg-white hover:bg-gray-50'
+                    activeKey === b.key ? 'bg-primary text-white' : 'bg-white hover:bg-gray-50'
                   }`}
                 >
                   {/* simple placeholder icon */}
                   <span
                     className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${
-                      activeKey === b.key ? 'bg-white/20' : 'bg-purple-100 text-purple-700'
+                      activeKey === b.key ? 'bg-white/20' : 'bg-purple-100 text-primary'
                     }`}
                   >
                     •
@@ -121,7 +121,7 @@ export function OperatingModelBlocksSection() {
                 <ul className="space-y-2 mb-6">
                   {active.principles.map((p, i) => (
                     <li key={i} className="flex gap-2 text-gray-700">
-                      <span className="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-600 text-white">
+                      <span className="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white">
                         <Check className="w-3 h-3" />
                       </span>
                       <span>{p}</span>
@@ -133,7 +133,7 @@ export function OperatingModelBlocksSection() {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {active.impacts.map((p, i) => (
                     <li key={i} className="flex gap-2 text-gray-700">
-                      <span className="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-600 text-white">
+                      <span className="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white">
                         <Check className="w-3 h-3" />
                       </span>
                       <span>{p}</span>
@@ -143,12 +143,12 @@ export function OperatingModelBlocksSection() {
               </div>
 
               <div className="xl:col-span-5">
-                <div className="border-l-4 border-purple-600 pl-4">
+                <div className="border-l-4 border-primary pl-4">
                   <h4 className="font-semibold text-gray-900 mb-3">Success Metrics</h4>
                   <ul className="space-y-3">
                     {active.metrics.map((m, i) => (
                       <li key={i} className="flex gap-2 text-gray-800">
-                        <span className="mt-1 inline-flex items-center justify-center w-4 h-4 rounded-full bg-purple-600 text-white">
+                        <span className="mt-1 inline-flex items-center justify-center w-4 h-4 rounded-full bg-primary text-white">
                           <Check className="w-3 h-3" />
                         </span>
                         <span>{m}</span>

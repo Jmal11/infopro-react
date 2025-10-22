@@ -48,7 +48,7 @@ export function AgileTransformationStats() {
               
               {/* Stat Content */}
               <div className="px-4">
-                <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-4">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-4">
                   {stat.value}
                 </div>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">

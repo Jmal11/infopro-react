@@ -18,7 +18,7 @@ export function TechnologySolutionsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Card 1 */}
           <div>
-            <div className="rounded shadow-sm overflow-hidden border-t-4 border-purple-600 mb-4">
+            <div className="rounded shadow-sm overflow-hidden border-t-4 border-primary mb-4">
               <img
                 src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&h=600&fit=crop"
                 alt="Integrated Learning Platforms"
@@ -34,7 +34,7 @@ export function TechnologySolutionsSection() {
 
           {/* Card 2 */}
           <div>
-            <div className="rounded shadow-sm overflow-hidden border-t-4 border-purple-600 mb-4">
+            <div className="rounded shadow-sm overflow-hidden border-t-4 border-primary mb-4">
               <img
                 src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&h=600&fit=crop"
                 alt="Optimized LMS Solutions"
@@ -50,7 +50,7 @@ export function TechnologySolutionsSection() {
 
           {/* Card 3 */}
           <div>
-            <div className="rounded shadow-sm overflow-hidden border-t-4 border-purple-600 mb-4">
+            <div className="rounded shadow-sm overflow-hidden border-t-4 border-primary mb-4">
               <img
                 src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=900&h=600&fit=crop"
                 alt="Advanced Mobile Learning"

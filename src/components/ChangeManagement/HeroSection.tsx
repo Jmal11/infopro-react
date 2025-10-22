@@ -38,7 +38,7 @@ export function HeroSection() {
               {/* Play Button */}
               <div className="absolute top-1/2 right-1/4 transform -translate-y-1/2">
                 <button className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
-                  <Play className="w-6 h-6 text-purple-600 ml-1" fill="currentColor" />
+                  <Play className="w-6 h-6 text-primary ml-1" fill="currentColor" />
                 </button>
               </div>
 

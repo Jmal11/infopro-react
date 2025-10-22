@@ -303,9 +303,12 @@ export function MainNav() {
 
   // Scroll handler
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50); // Increased threshold for better UX
+    };
     handleScroll(); // Set initial scroll state on mount
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -357,8 +360,10 @@ const handleMouseLeave = () => {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-300",
-        "bg-transparent py-4"
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out",
+        isScrolled 
+          ? "bg-white/95 backdrop-blur-md shadow-lg py-2" 
+          : "bg-transparent py-4"
       )}
       ref={navRef}
     >
@@ -387,20 +392,24 @@ const handleMouseLeave = () => {
         <button
           ref={(el) => (buttonRefs.current[index] = el)}
           className={clsx(
-            "flex items-center font-medium py-5 transition-colors duration-300",
-            isScrolled ? "text-gray-800 hover:text-black" : "text-white hover:text-black",
-            activeDropdown === index ? "text-black" : ""
+            "flex items-center font-medium py-5 transition-all duration-500 ease-in-out",
+            isScrolled 
+              ? "text-gray-800 hover:text-blue-600" 
+              : "text-white hover:text-gray-200",
+            activeDropdown === index && isScrolled ? "text-blue-600" : ""
           )}
           aria-expanded={activeDropdown === index}
         >
-          {item.title} <ChevronDown className="ml-1 w-4 h-4 transition-colors duration-300" />
+          {item.title} <ChevronDown className={clsx("ml-1 w-4 h-4 transition-all duration-500", isScrolled ? "text-gray-600" : "text-white")} />
         </button>
           ) : (
             <Link
-              to={item.link}
+              to={item.link || "/"}
               className={clsx(
-                "block py-5 transition-colors duration-300",
-                isScrolled ? "text-gray-800 hover:text-black" : "text-white hover:text-black"
+                "block py-5 transition-all duration-500 ease-in-out",
+                isScrolled 
+                  ? "text-gray-800 hover:text-blue-600" 
+                  : "text-white hover:text-gray-200"
               )}
             >
               {item.title}
@@ -415,7 +424,7 @@ const handleMouseLeave = () => {
         exit={{ opacity: 0, y: 10 }}
         className="fixed inset-x-0 z-40 bg-white shadow-lg rounded-b border-t border-gray-200"
         style={{
-          top: buttonRefs.current[index]?.getBoundingClientRect().bottom ?? 0,
+          top: (buttonRefs.current[index]?.getBoundingClientRect().bottom ?? 0) + (isScrolled ? 8 : 16),
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
           zIndex: 50
         }}
@@ -505,11 +514,11 @@ const handleMouseLeave = () => {
 ))}
 {/* Right Buttons */}
 <div className="flex items-center space-x-4">
-  <button onClick={() => setIsSearchOpen(true)} className={clsx("p-2 hover:bg-white rounded-full", !isScrolled && "hover:bg-white/10")}>
-    <Search className={clsx("w-5 h-5 transition-colors duration-300", isScrolled ? "text-gray-700" : "text-white")} />
+  <button onClick={() => setIsSearchOpen(true)} className={clsx("p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+    <Search className={clsx("w-5 h-5 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
   </button>
-  <button onClick={() => setExpandedMenu(!expandedMenu)} className={clsx("hidden lg:flex p-2 hover:bg-white rounded-full", !isScrolled && "hover:bg-white/10")}>
-    <Menu className={clsx("w-6 h-6 transition-colors duration-300", isScrolled ? "text-gray-700" : "text-white")} />
+  <button onClick={() => setExpandedMenu(!expandedMenu)} className={clsx("hidden lg:flex p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+    <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
   </button>
   <a 
   href="/contact" 
@@ -519,11 +528,11 @@ const handleMouseLeave = () => {
   CONNECT WITH US
 </a>
 
-  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={clsx("lg:hidden p-2 hover:bg-white rounded-full", !isScrolled && "hover:bg-white/10")}>
+  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={clsx("lg:hidden p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
     {isMenuOpen ? (
-      <X className={clsx("w-6 h-6 transition-colors duration-300", isScrolled ? "text-gray-700" : "text-white")} />
+      <X className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
     ) : (
-      <Menu className={clsx("w-6 h-6 transition-colors duration-300", isScrolled ? "text-gray-700" : "text-white")} />
+      <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
     )}
   </button>
 </div>
@@ -601,7 +610,8 @@ const handleMouseLeave = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-16 left-0 right-0 bg-white z-[50] shadow-lg border-b"
+            className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
+            style={{ top: isScrolled ? '72px' : '88px' }}
           >
             <div className="container mx-auto py-8 px-4">
               <div className="flex items-center justify-between mb-8">
@@ -628,7 +638,8 @@ const handleMouseLeave = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-16 left-0 right-0 bg-white z-[50] shadow-lg border-b"
+            className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
+            style={{ top: isScrolled ? '72px' : '88px' }}
           >
             <div className="container mx-auto py-6 px-4 max-w-6xl">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

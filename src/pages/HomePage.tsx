@@ -10,6 +10,7 @@ import { TestimonialSection } from '../components/Hero/TestimonialSection';
 import { CarouselSection } from '../components/Hero/CarouselSection';
 import { LatestInsights } from '../components/Hero/LatestInsights';
 
+
 export function HomePage() {
   return (
     <main>

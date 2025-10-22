@@ -11,7 +11,7 @@ export function ProcessSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Step 1: Assessment */}
           <div className="flex flex-col items-center text-center p-6 relative">
-            <div className="w-12 h-12 rounded-full border-2 border-purple-600 flex items-center justify-center text-lg font-semibold text-purple-600 mb-4">
+            <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center text-lg font-semibold text-primary mb-4">
               01
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-3">Assessment</h3>
@@ -24,7 +24,7 @@ export function ProcessSection() {
 
           {/* Step 2: Strategy */}
           <div className="flex flex-col items-center text-center p-6 relative">
-            <div className="w-12 h-12 rounded-full border-2 border-purple-600 flex items-center justify-center text-lg font-semibold text-purple-600 mb-4">
+            <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center text-lg font-semibold text-primary mb-4">
               02
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-3">Strategy</h3>
@@ -37,7 +37,7 @@ export function ProcessSection() {
 
           {/* Step 3: Design */}
           <div className="flex flex-col items-center text-center p-6 relative">
-            <div className="w-12 h-12 rounded-full border-2 border-purple-600 flex items-center justify-center text-lg font-semibold text-purple-600 mb-4">
+            <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center text-lg font-semibold text-primary mb-4">
               03
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-3">Design</h3>
@@ -50,7 +50,7 @@ export function ProcessSection() {
 
           {/* Step 4: Implementation */}
           <div className="flex flex-col items-center text-center p-6 relative">
-            <div className="w-12 h-12 rounded-full border-2 border-purple-600 flex items-center justify-center text-lg font-semibold text-purple-600 mb-4">
+            <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center text-lg font-semibold text-primary mb-4">
               04
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-3">Implementation</h3>
@@ -62,7 +62,7 @@ export function ProcessSection() {
 
         {/* Pagination Dots */}
         <div className="flex justify-center mt-12 space-x-2">
-          <div className="w-2 h-2 rounded-full bg-purple-600"></div>
+          <div className="w-2 h-2 rounded-full bg-primary"></div>
           <div className="w-2 h-2 rounded-full bg-gray-300"></div>
         </div>
       </div>

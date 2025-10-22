@@ -30,23 +30,23 @@ export function UnlockTechnologySection() {
         {/* Stats row */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mt-14">
           <div className="border-t pt-6">
-            <div className="text-4xl lg:text-5xl font-bold text-purple-600 mb-2">1Billion</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">1Billion</div>
             <p className="text-gray-700 text-sm">Jobs Transformed by AI</p>
           </div>
           <div className="border-t pt-6">
-            <div className="text-4xl lg:text-5xl font-bold text-purple-600 mb-2">90%</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">90%</div>
             <p className="text-gray-700 text-sm">Companies face skills gap</p>
           </div>
           <div className="border-t pt-6">
-            <div className="text-4xl lg:text-5xl font-bold text-purple-600 mb-2">$6.5</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">$6.5</div>
             <p className="text-gray-700 text-sm">Trillion cost of skills gap</p>
           </div>
           <div className="border-t pt-6">
-            <div className="text-4xl lg:text-5xl font-bold text-purple-600 mb-2">4 in 5</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">4 in 5</div>
             <p className="text-gray-700 text-sm">Seek AI skills</p>
           </div>
           <div className="border-t pt-6">
-            <div className="text-4xl lg:text-5xl font-bold text-purple-600 mb-2">85%</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">85%</div>
             <p className="text-gray-700 text-sm">HR executives planning workflow changes</p>
           </div>
         </div>

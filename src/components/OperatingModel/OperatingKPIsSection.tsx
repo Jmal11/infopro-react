@@ -1,7 +1,7 @@
 export function OperatingKPIsSection() {
   const Stat = ({ value, label }: { value: string; label: string }) => (
     <div className="text-center relative px-8">
-      <div className="text-5xl font-bold text-purple-600 mb-3">{value}</div>
+      <div className="text-5xl font-bold text-primary mb-3">{value}</div>
       <p className="text-gray-800 text-sm leading-relaxed whitespace-pre-line">{label}</p>
     </div>
   );

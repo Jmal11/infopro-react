@@ -52,10 +52,25 @@ export function AdoptionChangeManagementSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, idx) => (
-            <div key={idx} className="space-y-2">
-              <img src={card.image} alt={card.title} className="rounded-lg object-cover w-full h-48" />
-              <h3 className="font-semibold text-gray-900">{card.title}</h3>
-              <p className="text-gray-700 text-sm">{card.description}</p>
+            <div
+              key={idx}
+              className="rounded-lg overflow-hidden bg-white shadow border-t-4 flex flex-col"
+              style={{
+                minHeight: '400px',
+                maxHeight: '400px',
+                borderTopColor: '#6b19ff',
+              }}
+            >
+              <img
+                src={card.image}
+                alt={card.title}
+                className="object-cover w-full h-48"
+                style={{ minHeight: '12rem' }}
+              />
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-semibold text-gray-900 mb-2">{card.title}</h3>
+                <p className="text-gray-700 text-sm">{card.description}</p>
+              </div>
             </div>
           ))}
         </div>

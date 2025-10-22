@@ -5,28 +5,13 @@ const steps = [
     key: 'assess',
     title: 'ASSESS',
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 8c-1.657 0-3 1.343-3 3v1h6v-1c0-1.657-1.343-3-3-3z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 14v2m0 0h.01M12 16a2 2 0 100-4 2 2 0 000 4z"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+        <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" fill="none"/>
       </svg>
     ),
     description:
-      'The Assess stage involves conducting a comprehensive evaluation of the organization\'s current state and AI readiness by analyzing both business/functional capabilities and identifying skill requirements. This stage combines systematic assessment of existing processes, competencies, and resources with data-driven gap analysis to establish a clear baseline and identify transformation requirements.',
+      "The Assess stage involves conducting a comprehensive evaluation of your organization's current state, identifying opportunities for AI integration, and understanding the resources required to support successful implementation.",
     keyActivities: [
       'Stakeholder interviews',
       'Value system mapping',
@@ -44,185 +29,156 @@ const steps = [
     key: 'align',
     title: 'ALIGN',
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <rect x="6" y="6" width="12" height="2" fill="currentColor"/>
+        <rect x="6" y="11" width="12" height="2" fill="currentColor"/>
+        <rect x="6" y="16" width="12" height="2" fill="currentColor"/>
       </svg>
     ),
     description:
-      'The Align stage focuses on aligning AI strategy with business goals, ensuring stakeholder buy-in, and establishing governance frameworks to support AI initiatives.',
+      "The Align stage focuses on aligning AI strategy with business objectives, establishing governance frameworks, and ensuring stakeholder buy-in across the organization for successful AI adoption.",
     keyActivities: [
       'Stakeholder alignment meetings',
       'Governance framework development',
       'Communication planning',
+      'Change management strategy',
     ],
     keyOutcomes: [
       'Aligned AI and business objectives',
       'Clear governance structures',
       'Effective communication channels',
+      'Stakeholder commitment',
     ],
   },
   {
     key: 'plan',
     title: 'PLAN',
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 17v-6h6v6m-6 0v4h6v-4m-6 0H5v-4h14v4h-4"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+        <circle cx="10" cy="12" r="1" fill="currentColor"/>
+        <circle cx="14" cy="12" r="1" fill="currentColor"/>
+        <circle cx="10" cy="16" r="1" fill="currentColor"/>
+        <circle cx="14" cy="16" r="1" fill="currentColor"/>
       </svg>
     ),
     description:
-      'The Plan stage involves detailed planning of AI projects, resource allocation, and timeline development to ensure successful implementation.',
+      "The Plan stage involves detailed planning of AI implementation roadmap, resource allocation, and establishing clear milestones and success metrics to guide the transformation journey.",
     keyActivities: [
       'Project roadmap creation',
       'Resource allocation',
       'Timeline and milestone setting',
+      'Success metrics definition',
     ],
     keyOutcomes: [
       'Comprehensive project plans',
       'Optimized resource use',
       'Clear milestones and deadlines',
+      'Measurable success criteria',
     ],
   },
   {
     key: 'activate',
     title: 'ACTIVATE',
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 4v16m8-8H4"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        <rect x="11" y="6" width="2" height="5" fill="currentColor"/>
+        <rect x="8" y="11" width="8" height="2" fill="currentColor"/>
       </svg>
     ),
     description:
-      'The Activate stage is about executing AI initiatives, monitoring progress, and iterating based on feedback and results.',
+      "The Activate stage implements the human-AI integration through carefully sequenced phases, prioritizing initiatives based on complexity, dependencies, and organizational readiness. This staged deployment approach allows for controlled rollout, learning from early implementations, and gradual scaling of complexity. Each phase builds upon previous successes while managing risk and ensuring sustainable adoption.",
     keyActivities: [
-      'Implementation of AI solutions',
-      'Performance monitoring',
-      'Continuous improvement',
+      'Pilot deployment',
+      'Core training execution',
+      'Integration implementation',
+      'System optimization',
     ],
     keyOutcomes: [
-      'Deployed AI capabilities',
-      'Measured impact and ROI',
-      'Ongoing optimization',
+      'Phase-gate milestones',
+      'Workforce capability',
+      'Performance targets',
+      'Sustainable operation',
     ],
   },
 ];
 
 export function HumanAIStrategySection() {
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(3); // Set to ACTIVATE (index 3) to match the image
+
+  // Colors for vertical line
+  const highlightColor = "#9147ff";
+  const defaultColor = "#a39b92"; // beige/brownish-grey
 
   return (
     <section className="bg-gray-50 py-16 border-t border-gray-200">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-3xl font-bold text-center mb-4">Human + AI Strategy</h2>
-        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-4">Human + AI Strategy</h2>
+        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
           Unlock the potential of Human+AI collaboration with a tailored strategy that drives innovation and efficiency. We identify competencies, address skills gaps, and outline process changes for seamless AI integration.
         </p>
 
-        <div className="flex flex-col lg:flex-row gap-10">
-          {/* Timeline */}
-          <div className="lg:w-1/4 relative">
-            <div className="sticky top-24 space-y-6">
-              {steps.map((step, index) => (
-                <div
-                  key={step.key}
-                  onClick={() => setActiveStep(index)}
-                  className={`flex items-center cursor-pointer group transition-all duration-300 ${
-                    activeStep === index ? 'text-purple-700' : 'text-gray-600 hover:text-purple-500'
-                  }`}
-                >
-                  <div
-                    className={`flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-full border-2 transition-all duration-300 ${
-                      activeStep === index
-                        ? 'border-purple-600 bg-purple-100 shadow-md'
-                        : 'border-gray-300 bg-white'
-                    }`}
-                  >
-                    {React.cloneElement(step.icon, {
-                      className: `h-5 w-5 ${activeStep === index ? 'text-purple-600' : 'text-gray-500'}`,
-                    })}
+        <div className="flex flex-col lg:flex-row rounded-lg overflow-hidden border border-gray-200 shadow-sm" style={{ background: 'linear-gradient(to right, #f8f6f3 0%, #f8f6f3 25%, white 25%, white 100%)', height: '500px', width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
+          {/* Left Panel: Menu */}
+          <div className="bg-white min-w-[300px] lg:w-1/4 p-0 flex flex-col justify-between relative h-full">
+            {steps.map((step, idx) => (
+              <div
+                key={step.key}
+                className={`relative flex items-center px-8 py-8 cursor-pointer transition group`}
+                onClick={() => setActiveStep(idx)}
+              >
+                {/* Custom vertical line (colored beside active) - moved to right */}
+                <div 
+                  className="absolute right-0 top-0 h-full w-1 transition-all duration-300"
+                  style={{
+                    backgroundColor: activeStep === idx ? highlightColor : 'transparent',
+                  }} 
+                />
+                
+                <div className={`flex items-center gap-4 transition-colors duration-300 ${
+                  activeStep === idx ? "text-[#9147ff]" : "text-gray-600"
+                }`}>
+                  {/* Logo/Icon */}
+                  <div className="flex-shrink-0">
+                    {step.icon}
                   </div>
-                  <span className="ml-3 font-medium group-hover:translate-x-1 transition-transform">
+                  <span className={`font-semibold text-base tracking-wide ${
+                    activeStep === idx ? "text-[#9147ff]" : "text-gray-700"
+                  }`}>
                     {step.title}
                   </span>
                 </div>
-              ))}
-              {/* Vertical Line */}
-              <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gray-200"></div>
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Content */}
-          <div className="lg:w-2/4 p-6 bg-white rounded-lg shadow-sm border border-gray-200 transition-all duration-300">
-            <p className="text-gray-700 leading-relaxed">{steps[activeStep].description}</p>
-
-            <div className="mt-6">
-              <h4 className="font-semibold text-gray-800 mb-3">Key Activities</h4>
-              <ul className="space-y-2">
-                {steps[activeStep].keyActivities.map((activity, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <svg
-                      className="h-5 w-5 text-purple-600 mt-0.5 mr-2"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-gray-700">{activity}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Outcomes */}
-          <div className="lg:w-1/4 p-6 bg-white rounded-lg shadow-sm border border-gray-200 transition-all duration-300">
-            <h4 className="font-semibold text-gray-800 mb-4">Key Outcomes</h4>
-            <ul className="space-y-2">
-              {steps[activeStep].keyOutcomes.map((outcome, idx) => (
-                <li key={idx} className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-purple-600 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
+          {/* Middle: Description + Activities */}
+          <div className="bg-white lg:w-2/4 px-8 py-8 border-r border-gray-200 flex flex-col h-full overflow-y-auto">
+            <p className="text-gray-700 text-base leading-relaxed mb-8">{steps[activeStep].description}</p>
+            <h4 className="font-bold text-gray-900 mb-4 text-lg">Key Activities</h4>
+            <ul className="space-y-3">
+              {steps[activeStep].keyActivities.map((activity, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <svg className="h-6 w-6 text-[#9147ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-sm text-gray-700">{outcome}</span>
+                  <span className="text-gray-800 text-base">{activity}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right: Outcomes */}
+          <div className="bg-white lg:w-1/4 px-8 py-8 flex flex-col h-full overflow-y-auto">
+            <h4 className="font-bold text-gray-900 mb-4 text-lg">Key Outcomes</h4>
+            <ul className="space-y-3">
+              {steps[activeStep].keyOutcomes.map((outcome, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <svg className="h-6 w-6 text-[#9147ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-800 text-base">{outcome}</span>
                 </li>
               ))}
             </ul>

@@ -17,8 +17,8 @@ export function FrameworkSection() {
           <div className="grid grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Top Left - Individual (Internal) */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-purple-100 relative">
-              <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-purple-600 rounded-full"></div>
-              <h3 className="text-lg font-bold text-purple-600 mb-3 border-b-2 border-purple-600 pb-1 w-fit">
+              <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-primary rounded-full"></div>
+              <h3 className="text-lg font-bold text-primary mb-3 border-b-2 border-primary pb-1 w-fit">
                 Individual (Internal)
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
@@ -28,8 +28,8 @@ export function FrameworkSection() {
 
             {/* Top Right - Individual (External) */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-purple-100 relative">
-              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-purple-600 rounded-full"></div>
-              <h3 className="text-lg font-bold text-purple-600 mb-3 border-b-2 border-purple-600 pb-1 w-fit">
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-primary rounded-full"></div>
+              <h3 className="text-lg font-bold text-primary mb-3 border-b-2 border-primary pb-1 w-fit">
                 Individual (External)
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
@@ -39,8 +39,8 @@ export function FrameworkSection() {
 
             {/* Bottom Left - Collective (Internal) */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-purple-100 relative">
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-600 rounded-full"></div>
-              <h3 className="text-lg font-bold text-purple-600 mb-3 border-b-2 border-purple-600 pb-1 w-fit">
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full"></div>
+              <h3 className="text-lg font-bold text-primary mb-3 border-b-2 border-primary pb-1 w-fit">
                 Collective (Internal)
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
@@ -50,8 +50,8 @@ export function FrameworkSection() {
 
             {/* Bottom Right - Collective (External) */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-purple-100 relative">
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-purple-600 rounded-full"></div>
-              <h3 className="text-lg font-bold text-purple-600 mb-3 border-b-2 border-purple-600 pb-1 w-fit">
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary rounded-full"></div>
+              <h3 className="text-lg font-bold text-primary mb-3 border-b-2 border-primary pb-1 w-fit">
                 Collective (External)
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
@@ -62,9 +62,9 @@ export function FrameworkSection() {
 
           {/* Central Circle */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-48 h-48 bg-purple-100 border-2 border-purple-600 rounded-full flex items-center justify-center">
+            <div className="w-48 h-48 bg-purple-100 border-2 border-primary rounded-full flex items-center justify-center">
               <div className="text-center">
-                <div className="w-6 h-6 bg-purple-600 rounded-full mx-auto mb-2"></div>
+                <div className="w-6 h-6 bg-primary rounded-full mx-auto mb-2"></div>
                 <h3 className="text-gray-800 font-bold text-lg leading-tight">
                   Integral<br />Future Model
                 </h3>

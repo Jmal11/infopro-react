@@ -12,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 export function CustomContentPage() {
   console.log('CustomContentPage rendered');
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <CustomContentHero />
       <CustomContentPartnerLogos />
       <CustomContentTailoredSolutions />

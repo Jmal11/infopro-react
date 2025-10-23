@@ -1,4 +1,3 @@
-import React from 'react';
 import { SeniorLeaderDevelopmentHero } from '../../components/Hero/SeniorLeaderDevelopmentHero';
 import { SeniorLeaderDevelopmentPartnerLogos } from '../../components/Hero/SeniorLeaderDevelopmentPartnerLogos';
 import { SeniorLeaderDevelopmentContent } from '../../components/Hero/SeniorLeaderDevelopmentContent';
@@ -13,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function SeniorLeaderDevelopmentPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <SeniorLeaderDevelopmentHero />
       <SeniorLeaderDevelopmentPartnerLogos />
       <SeniorLeaderDevelopmentContent />

@@ -1,4 +1,3 @@
-import React from 'react';
 // Placeholder imports for now; replace with actual components as needed
 import { SuccessStoriesSection } from '../../components/Hero/SuccessStoriesSection';
 import { LatestInsights } from '../../components/Hero/LatestInsights';
@@ -18,7 +17,7 @@ import { SalesTrainingEnablementCertificate } from '../../components/Hero/SalesT
 
 export function SalesTrainingEnablementPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <SalesTrainingEnablementHero />
       <SalesTrainingEnablementPartnerLogos />
       <SalesTrainingEnablementContent />

@@ -11,7 +11,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function EarlyCareerDevelopmentPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <EarlyCareerDevelopmentHero />
       <EarlyCareerDevelopmentContent />
       <EarlyCareerDevelopmentJourney />

@@ -13,7 +13,7 @@ import { LearningExperienceArchitectsSection } from '../../components/Hero/Learn
 
 export function LearningStrategyPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <LearningStrategyHero />
       <CustomContentPartnerLogos />
       <IntelligentLearningAdvantage />

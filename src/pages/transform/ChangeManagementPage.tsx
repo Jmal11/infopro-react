@@ -9,7 +9,7 @@ import { Workflow, Users, Target } from 'lucide-react';
 
 export function ChangeManagementPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <HeroSection />
       <CompanyLogos />
       <ThrivingInDisruption />
@@ -23,7 +23,7 @@ export function ChangeManagementPage() {
         {/* Methodology Section */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-8">Our Change Management Approach</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
               <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <span className="text-primary font-bold text-xl">1</span>
@@ -71,7 +71,7 @@ export function ChangeManagementPage() {
         </div>
 
         {/* Key Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg">
             <Workflow className="w-12 h-12 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-3">Process Excellence</h3>
@@ -103,7 +103,7 @@ export function ChangeManagementPage() {
         {/* Success Stories */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-8">Success Stories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <div className="bg-gray-50 p-8 rounded-xl">
               <div className="flex items-center mb-4">
                 <img 
@@ -144,14 +144,14 @@ export function ChangeManagementPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-primary rounded-2xl p-12 text-white">
+        <div className="bg-primary rounded-2xl p-8 lg:p-12 text-white">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Organization?</h2>
-            <p className="text-lg mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Transform Your Organization?</h2>
+            <p className="text-base lg:text-lg mb-6 lg:mb-8">
               Let's discuss how our change management solutions can help you achieve
               your transformation goals while maintaining business continuity.
             </p>
-            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-primary px-6 lg:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Schedule a Consultation
             </button>
           </div>

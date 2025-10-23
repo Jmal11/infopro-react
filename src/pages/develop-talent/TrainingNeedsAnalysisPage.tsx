@@ -11,7 +11,7 @@ import { TrainingExperts } from '../../components/Hero/TrainingExperts';
 
 export function TrainingNeedsAnalysisPage() {
   return (
-    <div>
+    <main className="section-responsive">
       <TrainingNeedsAnalysisHero />
       <CustomContentPartnerLogos />
       <TrainingNeedsAnalysisContent />
@@ -23,6 +23,6 @@ export function TrainingNeedsAnalysisPage() {
       <TrainingExperts />
       
       {/* Additional content for the Training Needs Analysis page can be added here */}
-    </div>
+    </main>
   );
 }

@@ -3,7 +3,7 @@ import { TrainingNeedsAnalysisStatsBar } from '../../components/Hero/TrainingNee
 
 export function TrainingNeedsAnalysisStatsPage() {
   return (
-    <main>
+    <main className="section-responsive">
       <TrainingNeedsAnalysisStatsBar />
     </main>
   );

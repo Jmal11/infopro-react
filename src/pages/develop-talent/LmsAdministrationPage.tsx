@@ -12,7 +12,7 @@ import { CustomContentAIAreasOfImpact } from '../../components/Hero/CustomConten
 
 export function LmsAdministrationPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <LmsAdministrationHero />
       <CustomContentPartnerLogos />
       <LmsAdministrationDetails />

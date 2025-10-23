@@ -5,7 +5,7 @@ import { TechnologySolutionsSection } from '../../components/TechnologyConsultin
 
 export function TechnologyConsultingPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <TechnologyHeroSection />
       <TechnologyCompanyLogos />
       <UnlockTechnologySection />
@@ -14,10 +14,10 @@ export function TechnologyConsultingPage() {
       {/* Additional sections can be added here */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
             Technology Consulting Services
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-base lg:text-lg">
             More content sections will be added here...
           </p>
         </div>

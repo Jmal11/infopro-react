@@ -12,7 +12,7 @@ import { LearningExperienceArchitectsSection } from '../../components/Hero/Learn
 
 export function PerformanceManagementPage() {
   return (
-    <main>
+    <main className="section-responsive">
       <PerformanceManagementHero />
       <PerformanceManagementPartners />
       <PerformanceManagementDetails />

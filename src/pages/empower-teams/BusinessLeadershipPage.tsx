@@ -13,7 +13,7 @@ import ContactForm from "../../components/Hero/ContactForm";
 
 const BusinessLeadershipPage = () => {
   return (
-    <main className="pt-16 overflow-x-hidden">
+    <main className="section-responsive">
       <BusinessLeadershipHero />
       <BusinessLeadershipContent />
       <BusinessLeadershipJourney />

@@ -6,7 +6,7 @@ import { PromptEngineeringProgramAudience } from '../../components/Hero/PromptEn
 
 const PromptEngineeringPage: React.FC = () => {
   return (
-    <main className="flex flex-col gap-y-16 pt-20">
+    <main className="section-responsive">
       <PromptEngineeringHero />
       <PromptEngineeringNextSection />
       <PromptEngineeringDevelopmentJourney />

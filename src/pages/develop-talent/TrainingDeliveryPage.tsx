@@ -13,7 +13,7 @@ import { LatestInsights } from '../../components/Hero/LatestInsights';
 
 export function TrainingDeliveryPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <TrainingDeliveryHero />
       <CustomContentPartnerLogos />
       <TrainingDeliveryExpertSolutions />

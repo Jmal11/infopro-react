@@ -12,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 const CybersecurityPage: React.FC = () => {
   return (
-    <main className="flex flex-col gap-y-16 pt-20">
+    <main className="section-responsive">
       <CybersecurityHero />
       <CybersecurityContent />
       <CybersecurityDevelopmentJourney />

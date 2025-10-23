@@ -12,7 +12,7 @@ import { LearningExperienceArchitectsSection } from '../../components/Hero/Learn
 
 export function LeadershipDevelopmentPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <VanguardLeadershipHero />
       <OnboardingInnovativeSolutions />
       <OnboardingBenefits />

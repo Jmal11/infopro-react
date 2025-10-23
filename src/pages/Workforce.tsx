@@ -2,7 +2,7 @@ import React from 'react';
 
 export function WorkforcePage() {
   return (
-    <div className="bg-white min-h-screen py-12">
+    <div className="bg-white min-h-screen section-responsive">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 px-2 sm:px-0">

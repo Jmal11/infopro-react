@@ -4,7 +4,7 @@ import SkillsJourneySection from '../../components/SkillsBasedDesign/SkillsJourn
 
 export default function SkillsBasedDesignPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <SkillsBasedDesignHeroSection />
       <WhySkillBasedSection />
       <SkillsJourneySection />

@@ -12,7 +12,7 @@ import ContactForm from "../../components/Hero/ContactForm";
 
 const DataAnalyticsPage = () => {
   return (
-    <div className="flex flex-col gap-y-16">
+    <main className="section-responsive">
       <DataAnalyticsHero />
       <DataAnalyticsContent />
       <DataAnalyticsJourney />
@@ -23,7 +23,7 @@ const DataAnalyticsPage = () => {
       <LatestInsights />
       <LearningExperienceArchitectsSection />
       <ContactForm />
-    </div>
+    </main>
   );
 };
 

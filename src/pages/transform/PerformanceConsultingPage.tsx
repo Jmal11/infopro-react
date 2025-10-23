@@ -11,7 +11,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 const PerformanceConsultingPage: React.FC = () => {
   return (
-    <main className="flex flex-col gap-y-16">
+    <main className="section-responsive">
       <PerformanceConsultingHero />
       <PerformanceConsultingNextSection />
       <PerformanceConsultingWorkforceBlueprint />

@@ -1,4 +1,3 @@
-import React from 'react';
 import { DiversityEquityInclusionHero } from '../../components/Hero/DiversityEquityInclusionHero';
 import { DiversityEquityInclusionPartnerLogos } from '../../components/Hero/DiversityEquityInclusionPartnerLogos';
 // TODO: Add other DEI-specific sections as needed
@@ -16,7 +15,7 @@ import { DiversityEquityInclusionCertificate } from '../../components/Hero/Diver
 
 export function DiversityEquityInclusionPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <DiversityEquityInclusionHero />
       <DiversityEquityInclusionPartnerLogos />
       <DiversityEquityInclusionContent />

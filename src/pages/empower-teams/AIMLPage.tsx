@@ -12,7 +12,7 @@ import { LearningExperienceArchitectsSection } from '../../components/Hero/Learn
 
 export function AIMLPage() {
   return (
-    <main>
+    <main className="section-responsive">
       <AIMLHero />
       <AIMLContentSection />
       <AIMLDevelopmentJourney />

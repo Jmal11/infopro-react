@@ -1,4 +1,3 @@
-import React from 'react';
 import { ProductTrainingHero } from '../../components/Hero/ProductTrainingHero';
 import { ProductTrainingPartnerLogos } from '../../components/Hero/ProductTrainingPartnerLogos';
 import { ProductTrainingOutcomes } from '../../components/Hero/ProductTrainingOutcomes';
@@ -16,7 +15,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function ProductTrainingPage() {
   return (
-    <main className="pt-16 overflow-x-hidden">
+    <main className="section-responsive">
       <ProductTrainingHero />
       <ProductTrainingPartnerLogos />
       <ProductTrainingOutcomes />

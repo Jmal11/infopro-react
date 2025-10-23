@@ -360,7 +360,7 @@ const handleMouseLeave = () => {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out",
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out overflow-x-clip",
         isScrolled 
           ? "bg-white/95 backdrop-blur-md shadow-lg py-2" 
           : "bg-transparent py-4"
@@ -369,7 +369,7 @@ const handleMouseLeave = () => {
     >
       {/* Main Navigation Bar */}
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 gap-2">
           {/* Logo */}
           <a href="/" className="flex items-center z-10">
             {isScrolled ? (
@@ -380,11 +380,11 @@ const handleMouseLeave = () => {
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center flex-wrap gap-x-2 max-w-full overflow-x-auto scrollbar-hide">
 {mainMenuItems.map((item, index) => (
   <div
     key={index}
-    className="relative px-6"
+    className="relative px-4 xl:px-6"
     onMouseEnter={() => item.hasDropdown && handleMouseEnter(index)}
     onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
   >
@@ -513,7 +513,7 @@ const handleMouseLeave = () => {
   </div>
 ))}
 {/* Right Buttons */}
-<div className="flex items-center space-x-4">
+<div className="flex items-center gap-3 flex-shrink-0">
   <button onClick={() => setIsSearchOpen(true)} className={clsx("p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
     <Search className={clsx("w-5 h-5 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
   </button>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { SelfLeadershipDevelopmentHero } from '../../components/Hero/SelfLeadershipDevelopmentHero';
 import { SelfLeadershipDevelopmentPartnerLogos } from '../../components/Hero/SelfLeadershipDevelopmentPartnerLogos';
 import { SelfLeadershipDevelopmentContent } from '../../components/Hero/SelfLeadershipDevelopmentContent';
@@ -13,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function SelfLeadershipDevelopmentPage() {
   return (
-    <main className="pt-16">
+    <main className="section-responsive">
       <SelfLeadershipDevelopmentHero />
       <SelfLeadershipDevelopmentPartnerLogos />
       <SelfLeadershipDevelopmentContent />

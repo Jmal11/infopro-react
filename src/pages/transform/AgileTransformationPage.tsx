@@ -10,7 +10,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function AgileTransformationPage() {
   return (
-    <main>
+    <main className="section-responsive">
       <AgileTransformationHero />
       <AgileTransformationContent />
       <AgileTransformationStats />

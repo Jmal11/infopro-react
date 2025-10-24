@@ -25,22 +25,29 @@ const efficiencyItems = [
 
 export function LmsAdministrationEfficiency() {
   return (
-    <section className="container mx-auto px-4 py-16">
-      <h2 className="text-2xl font-bold mb-2 text-center">Maximize Efficiency with Infopro Learning</h2>
-      <p className="text-center mb-8 text-sm text-gray-700">
-        Partner with us for comprehensive LMS management that drives operational excellence and empowers your team to focus on what matters most.
+    <section className="w-full py-16">
+      <h2 className="text-4xl font-extrabold text-center mb-3">Maximize Efficiency with Infopro Learning</h2>
+      <p className="text-center mb-12 text-md text-gray-800">
+        Partner with us for comprehensive LMS management that drives operational excellence<br />
+        and empowers your team to focus on what matters most.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {efficiencyItems.map(({ title, description }, index) => (
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3">
+        {efficiencyItems.map(({ title, description }, i) => (
           <div
-            key={index}
-            className={`border border-gray-300 rounded-md p-4 shadow-sm hover:shadow-md transition-shadow duration-300 ${
-              index === 4 ? 'md:col-span-2' : ''
-            }`}
+            key={i}
+            className="flex flex-row items-start pl-0 pr-8 pt-8 pb-10"
           >
-            <h3 className="font-semibold mb-2">{title}</h3>
-            <div className="w-12 h-1 bg-purple-700 mb-4"></div>
-            <p className="text-sm text-gray-700">{description}</p>
+            {/* Tall vertical bar */}
+            <div
+              className="w-1.5 bg-gray-300 mr-6 rounded"
+              style={{ height: '12.25rem' }}
+            />
+            {/* Content */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">{title}</h3>
+              <div className="w-14 h-1 bg-[#892fff] mb-4"></div>
+              <p className="text-base text-gray-800">{description}</p>
+            </div>
           </div>
         ))}
       </div>

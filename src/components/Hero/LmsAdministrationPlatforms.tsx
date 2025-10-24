@@ -2,82 +2,95 @@ import React from 'react';
 
 const platforms = [
   {
-    title: 'sumtotal',
     description: 'We enhance SumTotal with tailored learning paths, seamless integrations, and ongoing support to boost employee engagement and organizational growth.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/SumTotal_logo.svg/2560px-SumTotal_logo.svg.png',
+    logo: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Sumtotal.webp',
   },
   {
-    title: 'SAP SuccessFactors',
     description: 'We align SuccessFactors with your HR strategies, optimizing talent management, performance tracking, and succession planning.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/SAP_SuccessFactors_Logo.svg/2560px-SAP_SuccessFactors_Logo.svg.png',
+    logo: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/SAP.webp',
   },
   {
-    title: 'cornerstone',
     description: 'We customize Cornerstone to meet your specific learning needs, ensuring a scalable and effective training strategy.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cornerstone_OnDemand_logo.svg/2560px-Cornerstone_OnDemand_logo.svg.png',
+    logo: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/cornerstone.webp',
   },
   {
-    title: 'SharePoint',
     description: 'We leverage SharePoint to enhance collaboration, document management, and workflow automation, driving productivity across your organization.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg/2560px-Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg.png',
+    logo: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/sharepoint.webp',
   },
   {
-    title: 'servicenow',
     description: 'We customize ServiceNow to streamline IT service management, workflows, and user experiences, making operations more efficient.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/ServiceNow_logo.svg/2560px-ServiceNow_logo.svg.png',
+    logo: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/servicenow.webp',
   },
   {
-    title: 'Jira',
     description: 'We configure JIRA to enhance project management, agile development, and issue tracking, helping your teams deliver projects on time and within budget.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Atlassian_Jira_Logo.svg/2560px-Atlassian_Jira_Logo.svg.png',
-  },
-  {
-    title: 'Other LMS We Support',
-    description: '',
-    logos: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Absorb_LMS_logo.svg/2560px-Absorb_LMS_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Litmos_logo.svg/2560px-Litmos_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Docebo_logo.svg/2560px-Docebo_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Learning_Management_System_logo.svg/2560px-Learning_Management_System_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Moodle_logo.svg/2560px-Moodle_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/iSpring_logo.svg/2560px-iSpring_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Skillsoft_Percipio_logo.svg/2560px-Skillsoft_Percipio_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Learning_Management_System_logo.svg/2560px-Learning_Management_System_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Learning_Management_System_logo.svg/2560px-Learning_Management_System_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Learning_Management_System_logo.svg/2560px-Learning_Management_System_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Learning_Management_System_logo.svg/2560px-Learning_Management_System_logo.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Learning_Management_System_logo.svg/2560px-Learning_Management_System_logo.svg.png',
-    ],
+    logo: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Jira.webp',
   },
 ];
+
+const otherLmsTitleImage = 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/other-lms-support.svg'; // Composite Heading Image
+const otherLmsGroupImage = 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/lms-all-client-logo.webp'; // Group Logo Image
 
 export function LmsAdministrationPlatforms() {
   return (
     <section className="container mx-auto px-4 py-16">
-      <h2 className="text-2xl font-bold mb-2 text-center">Platforms We Support</h2>
-      <p className="text-center mb-8 text-sm text-gray-700">
-        Empower your ecosystem with our expertise. We seamlessly integrate with your existing platforms, ensuring optimal performance while you focus on driving impactful results.
+      <h2 className="text-4xl font-bold mb-3 text-center">Platforms We Support</h2>
+      <p className="text-center mb-10 text-base text-gray-700 max-w-3xl mx-auto">
+        Empower your ecosystem with our expertise. We seamlessly integrate with your existing platforms,
+        ensuring optimal performance while you focus on driving impactful results.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        {platforms.slice(0, 6).map(({ title, description, logo }) => (
-          <div key={title} className="border border-gray-300 rounded-md p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <img src={logo} alt={title} className="h-10 mb-4 object-contain" loading="lazy" />
-            <h3 className="font-semibold mb-2">{title}</h3>
-            <div className="w-12 h-1 bg-purple-700 mb-4"></div>
-            <p className="text-sm text-gray-700">{description}</p>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-12 gap-x-2">
+        {platforms.map(({ description, logo }, i) => (
+          <div
+            key={i}
+            className="flex flex-row items-start"
+            style={{ minHeight: '12.25rem' }}
+          >
+            <div
+              className="w-1.5 bg-gray-300 mr-6 rounded"
+              style={{ height: '12.25rem', marginTop: '0.5rem', flexShrink: 0 }}
+            />
+            <div className="flex flex-col items-start">
+              <img
+                src={logo}
+                alt=""
+                width={265}
+                height={73}
+                className="mb-4 object-contain"
+                style={{ width: '265px', height: '73px' }}
+                loading="lazy"
+              />
+              <div className="w-12 h-1 bg-[#892fff] mb-4"></div>
+              <p className="text-base text-gray-700">{description}</p>
+            </div>
           </div>
         ))}
-        <div className="border border-gray-300 rounded-md p-4 shadow-sm hover:shadow-md transition-shadow duration-300 col-span-2">
-          <h3 className="font-semibold mb-2">Other LMS We Support</h3>
-          <div className="w-12 h-1 bg-purple-700 mb-4"></div>
-          <div className="grid grid-cols-6 gap-4">
-            {platforms[6].logos.map((logo, index) => (
-              <img key={index} src={logo} alt={`Other LMS ${index + 1}`} className="h-10 object-contain" loading="lazy" />
-            ))}
+        <div
+          className="flex flex-row items-start"
+          style={{ minHeight: '12.25rem' }}
+        >
+          <div
+            className="w-1.5 bg-gray-300 mr-6 rounded"
+            style={{ height: '12.25rem', marginTop: '0.5rem', flexShrink: 0 }}
+          />
+          <div className="flex flex-col items-start">
+            <img
+              src={otherLmsTitleImage}
+              alt="Other LMS We Support Title"
+              className="mb-4 object-contain"
+              loading="lazy"
+              style={{ width: '265px', height: '73px' }}
+            />
+            <div className="w-12 h-1 bg-[#892fff] mb-4"></div>
+            <img
+              src={otherLmsGroupImage}
+              alt="Other LMS logos group"
+              className="object-contain"
+              loading="lazy"
+              style={{ maxWidth: '497px', height: '141px' }}
+            />
           </div>
         </div>
       </div>
     </section>
   );
 }
-

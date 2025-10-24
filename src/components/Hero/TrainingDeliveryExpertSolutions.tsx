@@ -32,35 +32,49 @@ const featuresRight = [
 
 export function TrainingDeliveryExpertSolutions() {
   return (
-    <section className="container mx-auto px-4 py-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Expert Global Learning Delivery Solutions</h2>
-          <p className="mb-8 text-gray-700">
-            Maintaining large teams of in-house facilitators can lead to high fixed costs and low utilization rates. As a trusted partner to the world’s most esteemed companies, we deliver both in-person and virtual training globally. With a vast pool of over 15,000 rigorously vetted trainers, subject matter experts, and more than 300 learning suppliers worldwide, we optimize your training delivery model to maximize facilitator utilization while ensuring impactful learning experiences.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8">
-          {featuresLeft.map((feature) => (
-            <div key={feature.title} className="flex items-start space-x-4">
-              <CheckCircle className="w-6 h-6 text-primary mt-1" />
-              <div>
-                <h3 className="font-semibold">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+    <section className="w-full py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12">
+          {/* LEFT COLUMN: HEADING */}
+          <div className="mb-8 lg:mb-0 flex items-start">
+            <h2 className="text-4xl font-extrabold text-gray-900 leading-tight max-w-xs">
+              Expert Global<br />
+              Learning Delivery<br />
+              Solutions
+            </h2>
+          </div>
+          {/* RIGHT SIDE: PARAGRAPH & FEATURES */}
+          <div className="lg:col-span-2">
+            <div className="mb-8">
+              <p className="text-lg text-gray-800">
+                Maintaining large teams of in-house facilitators can lead to high fixed costs and low utilization rates. As a trusted partner to the world’s most esteemed companies, we deliver both in-person and virtual training globally. With a vast pool of over 15,000 rigorously vetted trainers, subject matter experts, and more than 300 learning suppliers worldwide, we optimize your training delivery model to maximize facilitator utilization while ensuring impactful learning experiences.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+              <div className="space-y-7">
+                {featuresLeft.map((feature) => (
+                  <div key={feature.title} className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-900">{feature.title}</p>
+                      <p className="text-gray-700 text-base">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-7">
+                {featuresRight.map((feature) => (
+                  <div key={feature.title} className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-900">{feature.title}</p>
+                      <p className="text-gray-700 text-base">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 gap-8">
-          {featuresRight.map((feature) => (
-            <div key={feature.title} className="flex items-start space-x-4">
-              <CheckCircle className="w-6 h-6 text-primary mt-1" />
-              <div>
-                <h3 className="font-semibold">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

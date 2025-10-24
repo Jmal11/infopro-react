@@ -29,18 +29,18 @@ const stats = [
 
 export function CustomContentStatsBar() {
   return (
-    <section className="bg-white text-purple-700 py-8 border-t border-b border-gray-300">
-      <div className="container mx-auto px-4 flex flex-wrap justify-between">
+    <section className="bg-white py-8">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-stretch border-gray-200">
         {stats.map(({ number, title }, index) => (
           <div
             key={index}
-            className={`flex flex-col px-4 ${
-              index !== stats.length - 1 ? 'border-r border-gray-300' : ''
-            } mb-4 md:mb-0 w-full md:w-auto`}
-            style={{ minWidth: '150px' }}
+            className={`
+              flex flex-col flex-1 items-start px-6 py-2
+              ${index !== stats.length - 1 ? 'border-r border-gray-200' : ''}
+              `}
           >
-            <span className="text-3xl font-bold">{number}</span>
-            <span className="text-sm mt-1">{title}</span>
+            <span className="text-4xl text-purple-700 font-semibold mb-2">{number}</span>
+            <span className="text-base text-gray-700">{title}</span>
           </div>
         ))}
       </div>

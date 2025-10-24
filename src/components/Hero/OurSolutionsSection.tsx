@@ -2,51 +2,47 @@ import React from 'react';
 
 const solutions = [
   {
-    title: 'Managed Learning Services',
-    image: 'https://www.infoprolearning.com/wp-content/uploads/2023/01/Managed-Learning-Services-1.jpg',
-    description: 'Maximize your L&D performance with our comprehensive MLS services that cover every aspect of your L&D function, from strategy and curriculum design to global training delivery, administration to vendor management and learning technology optimization.',
+    title: 'Ensure Optimal Human Capital Development',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Ensure-Optimal-Human-Capital-Development.webp',
+    description: 'We focus on unlocking the potential of your workforce by implementing strategic measures that expand their capabilities.',
   },
   {
-    title: 'Custom Content Development',
-    image: 'https://www.infoprolearning.com/wp-content/uploads/2023/01/Custom-Content-Development-1.jpg',
-    description: 'Transform your team’s growth with our custom content development. We craft personalized blended learning journeys, seamlessly integrating diverse modalities—from interactive eLearning modules, video, simulations to instructor and workshop. Maximize engagement and all application across your organization with tailored, multi-format experiences.',
+    title: 'Harmonize Organizational and Employee Needs',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Harmonize-Organizational-and-Employee-Needs.webp',
+    description: 'Our strategic framework aligns employee development with your business vision, ensuring that workforce goals are directly linked to business demands.',
   },
   {
-    title: 'Training Delivery',
-    image: 'https://www.infoprolearning.com/wp-content/uploads/2023/01/Training-Delivery-1.jpg',
-    description: 'Bring your learning vision to life with our global pool of master facilitators. We adapt to your team’s needs, delivering engaging sessions virtually in person, or through blended approaches. Experience dynamic, culturally nuanced learning that drives real results across your organization.',
+    title: 'Devise Strategic Organizational Initiatives',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Devise-Strategic-Organizational-Initiatives.webp',
+    description: 'We assess and improve business performance through structured collaboration and engagement, tailoring strategies to meet your specific needs.',
   },
   {
-    title: 'LMS Administration',
-    image: 'https://www.infoprolearning.com/wp-content/uploads/2023/01/LMS-Administration-1.jpg',
-    description: 'Maximize the impact of your learning initiatives with our comprehensive learning administration services. We streamline training coordination, LMS management, and learner support to ensure efficient global delivery, positive ROI, and seamless access to learning for your workforce.',
-  },
-  {
-    title: 'Learning Strategy',
-    image: 'https://www.infoprolearning.com/wp-content/uploads/2023/01/Learning-Strategy-1.jpg',
-    description: 'Our learning strategy services creates tailored roadmaps that align learning initiatives with your organization’s goals and industry trends. We help organizations become more agile by identifying shifts and evolving strategies through experience, evidence, and insights, with a focus on effective blended learning approaches.',
-  },
-  {
-    title: 'Training Needs Analysis',
-    image: 'https://www.infoprolearning.com/wp-content/uploads/2023/01/Training-Needs-Analysis-1.jpg',
-    description: 'Instead of choosing training based on what you think you might need, our training needs analysis service helps you pinpoint exact gaps, find appropriate training solutions, and ensure your training objectives are achieved.',
+    title: 'Optimize Existing Programs and Curriculum',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Optimize-Existing-Programs-and-Curriculum.webp',
+    description: 'Our experienced team identifies challenges in your current programs and suggests actionable steps to enhance their effectiveness.',
   },
 ];
 
 export function OurSolutionsSection() {
   return (
-    <section className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold mb-4 text-center">Our Solutions</h2>
-      <p className="max-w-4xl mx-auto mb-12 text-center text-gray-700">
-        We offer a range of solutions that empower organizations to achieve sustainable growth and success. From optimizing every aspect of your L&D function through managed learning services, to crafting custom content that meets diverse learner needs, our approach aligns initiatives with industry trends and drives impactful results.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <section className="bg-[#f8f8f8] w-full py-10">
+      <h2 className="text-5xl font-extrabold text-center mb-8">
+        Key Benefits of Working with Us for Learning Strategy
+      </h2>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {solutions.map(({ title, image, description }) => (
-          <div key={title} className="border border-gray-300 rounded-md p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <img src={image} alt={title} className="w-full h-40 object-cover mb-4 rounded" loading="lazy" />
-            <h3 className="font-semibold mb-2">{title}</h3>
-            <p className="text-sm text-gray-700">{description}</p>
-            <a href="#" className="mt-2 inline-block text-blue-600 hover:underline font-semibold">LEARN MORE &rarr;</a>
+          <div key={title} className="flex flex-col">
+            <div
+              className="mb-6 rounded overflow-hidden"
+              style={{
+                borderTop: '4px solid #6b19ff',
+                width: '100%',
+                height: '180px',
+                background: `url('${image}') center/cover no-repeat`
+              }}
+            />
+            <h3 className="font-bold text-2xl mb-2">{title}</h3>
+            <p className="text-lg text-gray-700">{description}</p>
           </div>
         ))}
       </div>

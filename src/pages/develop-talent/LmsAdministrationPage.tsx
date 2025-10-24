@@ -8,7 +8,7 @@ import { LmsAdministrationPlatforms } from '../../components/Hero/LmsAdministrat
 import { SuccessStoriesSection } from '../../components/Hero/SuccessStoriesSection';
 import { LatestInsights } from '../../components/Hero/LatestInsights';
 import { LearningExperienceArchitectsSection } from '../../components/Hero/LearningExperienceArchitectsSection';
-import { CustomContentAIAreasOfImpact } from '../../components/Hero/CustomContentAIAreasOfImpact';
+import ContactForm from '../../components/Hero/ContactForm';
 
 export function LmsAdministrationPage() {
   return (
@@ -23,7 +23,7 @@ export function LmsAdministrationPage() {
       <SuccessStoriesSection />
       <LatestInsights />
       <LearningExperienceArchitectsSection />
-      <CustomContentAIAreasOfImpact />
+      <ContactForm />
     </main>
   );
 }

@@ -1,33 +1,47 @@
 import React from 'react';
 
+const stats = [
+  {
+    number: '85%',
+    description: 'of organizations see a significant improvement in workforce performance with a tailored learning strategy',
+  },
+  {
+    number: '78%',
+    description: 'of companies report higher employee engagement and retention through strategic learning initiatives',
+  },
+  {
+    number: '72%',
+    description: 'of businesses achieve better alignment of learning goals with business objectives using a strategic approach',
+  },
+  {
+    number: '80%',
+    description: 'of organizations experience increased ROI on training investments with a well-defined learning strategy',
+  },
+  {
+    number: '74%',
+    description: 'of L&D leaders believe that a customized learning strategy enhances overall training effectiveness and business outcomes',
+  },
+];
+
 export function LDTransformationNow() {
   return (
-    <section className="container mx-auto px-4 py-16 text-center">
-      <h2 className="text-3xl font-bold mb-2">The Time for L&amp;D Transformation is Now</h2>
-      <p className="mb-12 text-gray-700">
-        Organizations that delay risk falling behind in the race for talent and innovation
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-left">
-        <div>
-          <p className="text-4xl font-bold text-purple-600 mb-2">76%</p>
-          <p className="text-sm">of L&amp;D leaders say their role has become more strategic</p>
-        </div>
-        <div>
-          <p className="text-4xl font-bold text-purple-600 mb-2">84%</p>
-          <p className="text-sm">of executives believe they need to rethink their workforce experience</p>
-        </div>
-        <div>
-          <p className="text-4xl font-bold text-purple-600 mb-2">94%</p>
-          <p className="text-sm">of business leaders say current L&amp;D strategies fall short in preparing employees for future skills needs.</p>
-        </div>
-        <div>
-          <p className="text-4xl font-bold text-purple-600 mb-2">78%</p>
-          <p className="text-sm">of executives expect AI-powered L&amp;D to be standard within three years</p>
-        </div>
-        <div>
-          <p className="text-4xl font-bold text-purple-600 mb-2">71%</p>
-          <p className="text-sm">of employees feel more satisfied with personalized, AI-enabled learning paths</p>
-        </div>
+    <section className="bg-white py-8">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch border-gray-200">
+        {stats.map(({ number, description }, idx) => (
+          <div
+            key={idx}
+            className={`
+              flex flex-col justify-start
+              px-8 py-4
+              flex-1
+              ${idx !== stats.length - 1 ? 'border-r border-gray-200' : ''}
+            `}
+            style={{ minWidth: 0 }}
+          >
+            <span className="text-5xl font-semibold text-[#7c38ee] mb-2">{number}</span>
+            <span className="text-base text-gray-800 mt-1">{description}</span>
+          </div>
+        ))}
       </div>
     </section>
   );

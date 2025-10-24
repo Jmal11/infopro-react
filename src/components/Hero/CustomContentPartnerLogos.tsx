@@ -3,32 +3,32 @@ import React from 'react';
 const logos = [
   {
     name: 'McKinsey & Company',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/McKinsey_%26_Company_logo.svg',
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/McKinsey.webp',
     alt: 'McKinsey & Company Logo',
   },
   {
     name: 'Heineken',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Heineken_logo.svg',
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Heineken.webp',
     alt: 'Heineken Logo',
   },
   {
     name: 'Nike',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg',
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Nike1.webp',
     alt: 'Nike Logo',
   },
   {
     name: 'Lenovo',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Lenovo_logo.svg',
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Lenovo.webp',
     alt: 'Lenovo Logo',
   },
   {
     name: 'Adobe',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Adobe_Corporate_Logo.png',
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Adobe.webp',
     alt: 'Adobe Logo',
   },
   {
     name: 'Ford',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg',
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Ford.webp',
     alt: 'Ford Logo',
   },
 ];

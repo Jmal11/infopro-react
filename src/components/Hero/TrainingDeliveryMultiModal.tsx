@@ -38,7 +38,17 @@ export function TrainingDeliveryMultiModal() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {cards.map(({ title, description, image }) => (
           <div key={title} className="flex flex-col items-center text-center">
-            <img src={image} alt={title} className="mb-4 rounded-lg w-full h-48 object-cover" loading="lazy" />
+            <div
+              className="mb-4 w-[394px] h-[213px] rounded-lg overflow-hidden"
+              style={{ borderTop: "4px solid #6b19ff" }}
+            >
+              <img
+                src={image}
+                alt={title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
             <h3 className="font-semibold mb-2">{title}</h3>
             <p className="text-gray-700 text-sm">{description}</p>
           </div>

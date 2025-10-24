@@ -1,6 +1,6 @@
 export function TrainingDeliveryCapabilities() {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-16 bg-[#f6f6f6]">
       <h2 className="text-3xl font-bold mb-12 text-center">Global Training Delivery Capabilities</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Trainer Network */}
@@ -11,7 +11,6 @@ export function TrainingDeliveryCapabilities() {
             alt="Trainer Network"
             className="mb-6 w-full h-auto"
           />
-          
         </div>
 
         {/* Training Expertise In */}
@@ -22,7 +21,6 @@ export function TrainingDeliveryCapabilities() {
             alt="Training Expertise In"
             className="mb-6 w-full h-auto"
           />
-          
         </div>
 
         {/* Training Administration */}
@@ -33,7 +31,6 @@ export function TrainingDeliveryCapabilities() {
             alt="Training Administration"
             className="mb-6 w-full h-auto"
           />
-          
         </div>
       </div>
     </section>

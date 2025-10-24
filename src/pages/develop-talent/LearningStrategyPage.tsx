@@ -2,14 +2,15 @@ import React from 'react';
 import { LearningStrategyHero } from '../../components/Hero/LearningStrategyHero';
 import { CustomContentPartnerLogos } from '../../components/Hero/CustomContentPartnerLogos';
 import { IntelligentLearningAdvantage } from '../../components/Hero/IntelligentLearningAdvantage';
-import { AIAndTechnologyIntegration } from '../../components/Hero/AIAndTechnologyIntegration';
+// import { AIAndTechnologyIntegration } from '../../components/Hero/AIAndTechnologyIntegration';
 import { LDTransformationNow } from '../../components/Hero/LDTransformationNow';
 import { TransformLDVision } from '../../components/Hero/TransformLDVision';
-import { IntelligentDesignFramework } from '../../components/Hero/IntelligentDesignFramework';
+// import { IntelligentDesignFramework } from '../../components/Hero/IntelligentDesignFramework';
 import { OurSolutionsSection } from '../../components/Hero/OurSolutionsSection';
 import { SuccessStoriesSection } from '../../components/Hero/SuccessStoriesSection';
 import { LatestInsights } from '../../components/Hero/LatestInsights';
 import { LearningExperienceArchitectsSection } from '../../components/Hero/LearningExperienceArchitectsSection';
+import ContactForm from '../../components/Hero/ContactForm';
 
 export function LearningStrategyPage() {
   return (
@@ -17,14 +18,15 @@ export function LearningStrategyPage() {
       <LearningStrategyHero />
       <CustomContentPartnerLogos />
       <IntelligentLearningAdvantage />
-      <AIAndTechnologyIntegration />
+      {/* <AIAndTechnologyIntegration /> */}
       <LDTransformationNow />
       <TransformLDVision />
-      <IntelligentDesignFramework />
+      {/* <IntelligentDesignFramework /> */}
       <OurSolutionsSection />
       <SuccessStoriesSection />
       <LatestInsights />
       <LearningExperienceArchitectsSection />
+      <ContactForm />
     </main>
   );
 }

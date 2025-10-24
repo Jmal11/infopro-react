@@ -3,16 +3,16 @@ import React from 'react';
 export function CustomContentHero() {
   return (
     <section
-      className="absolute top-0 left-0 w-full bg-black bg-cover bg-center z-10"
+      className="relative w-full bg-black bg-cover bg-center"
       style={{
         backgroundImage:
           "url('https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/CustomContentHeroBackground.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '51vw',
+        height: '100vh',
       }}
     >
-      <div className="container mx-auto px-4 h-full relative z-20 flex items-center" style={{ height: '100%' }}>
+      <div className="container mx-auto px-4 h-full relative flex items-center" style={{ height: '100%' }}>
         <div className="flex flex-col md:flex-row items-center w-full h-full">
           {/* Left Text Content */}
           <div className="md:w-1/2 text-white space-y-6 flex flex-col justify-center h-full">

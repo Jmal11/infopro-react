@@ -3,7 +3,7 @@ import React from 'react';
 const stats = [
   {
     number: '82%',
-    title: 'of organizations report improved learning efficiency after implementing a LMS',
+    title: 'of organizations report improved learning efficiency after implementing an LMS',
   },
   {
     number: '70%',
@@ -25,18 +25,23 @@ const stats = [
 
 export function LmsAdministrationStatsBar() {
   return (
-    <section className="bg-white text-purple-700 py-8 border-t border-b border-gray-300">
-      <div className="container mx-auto px-4 flex flex-wrap justify-between">
-        {stats.map(({ number, title }, index) => (
+    <section className="bg-white py-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch border-gray-200">
+        {stats.map(({ number, title }, idx) => (
           <div
-            key={index}
-            className={`flex flex-col px-4 ${
-              index !== stats.length - 1 ? 'border-r border-gray-300' : ''
-            } mb-4 md:mb-0 w-full md:w-auto`}
-            style={{ minWidth: '150px' }}
+            key={idx}
+            className={`
+              flex flex-col justify-center
+              px-10 py-4
+              md:py-0
+              items-start
+              flex-1
+              ${idx !== stats.length - 1 ? 'border-r border-gray-200' : ''}
+            `}
+            style={{ minWidth: 0 }}
           >
-            <span className="text-3xl font-bold">{number}</span>
-            <span className="text-sm mt-1">{title}</span>
+            <span className="text-5xl font-semibold" style={{ color: '#7c38ee' }}>{number}</span>
+            <span className="text-base text-gray-700 mt-2">{title}</span>
           </div>
         ))}
       </div>

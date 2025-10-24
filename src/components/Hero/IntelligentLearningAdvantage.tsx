@@ -1,94 +1,67 @@
 import React from 'react';
 
+const benefits = [
+  {
+    title: "Performance-Ready Workforce:",
+    description: "Develop a team equipped to meet current and future business challenges."
+  },
+  {
+    title: "Tailored Learning Solutions:",
+    description: "Receive a personalized strategy aligned with your unique organizational needs and goals."
+  },
+  {
+    title: "Rapid Strategy Development:",
+    description: "Obtain a comprehensive learning strategy within weeks, allowing for quick implementation."
+  },
+  {
+    title: "Role-Specific Learning Journeys:",
+    description: "Create targeted development paths that enhance individual and team performance."
+  },
+  {
+    title: "Measurable Success Metrics:",
+    description: "Define clear indicators for success, focusing on behavior change and business results."
+  },
+  {
+    title: "Future-Proofed Learning:",
+    description: "Gain strategic insights and curriculum paths that support long-term organizational growth."
+  }
+];
+
 export function IntelligentLearningAdvantage() {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="max-w-7xl mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left column */}
         <div className="md:col-span-1">
-          <h2 className="text-3xl font-bold mb-2 leading-tight">
-            The Intelligent <br /> Learning Advantage
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-2 leading-tight">
+            Transforming Your <br />
+            Workforce with <br />
+            Strategic Learning <br />
+            Solutions
           </h2>
-          <p className="text-lg text-gray-700">
-            Transforming Business Through <br /> AI-Driven Innovation
-          </p>
         </div>
-
         {/* Right columns */}
-        <div className="md:col-span-2 space-y-6 text-gray-800">
-          <p>
-            In today's rapidly evolving business landscape, traditional approaches to learning and development no longer suffice. Our Performance Learning Framework empowers L&D leaders to architect a future-ready learning ecosystem that directly impacts business performance while harnessing the power of AI. This framework provides a structured approach to transform your learning organization across six essential building blocks, enabling you to create adaptive, personalized, and scalable learning experiences that drive measurable performance outcomes.
+        <div className="md:col-span-2 flex flex-col">
+          <p className="mb-2 text-gray-800 text-base">
+            At Infopro Learning, our mission is to help you build a performance-ready workforce, ensuring you maximize your investment in them. Our learning strategy practice assesses your current state, envisions your ideal state, and benchmarks best-in-class solutions tailored to your unique needs.
           </p>
-          <p>
-            By integrating AI capabilities, modern learning architectures, and strategic business alignment, this framework helps you evolve from traditional training delivery to becoming a catalyst for performance improvement and business transformation. Whether you're just beginning your AI integration journey or looking to scale your existing learning initiatives, our approach provides clear pathways to enhanced performance while ensuring responsible innovation and measurable outcomes.
+          <p className="mb-6 text-gray-800 text-base">
+            Through discussions with your team and a comprehensive review of your existing training, we deliver a personalized learning strategy within a few weeks. This strategy includes role-specific learning journeys, high-level curriculum paths, and strategic insights for future growth. We start with the end in mind, creating a success plan that defines metrics for success, particularly in behavior change and business results.
           </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="mr-3 mt-1 text-purple-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span>
-                  <strong>Optimized Learning Operations &amp; Cost Efficiency</strong>
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 mt-1 text-purple-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span>
-                  <strong>AI-Driven Resource Optimization &amp; Scale</strong>
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 mt-1 text-purple-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span>
-                  <strong>Measurable Business Value &amp; ROI</strong>
-                </span>
-              </li>
-            </ul>
-
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="mr-3 mt-1 text-purple-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span>
-                  <strong>Enhanced Learner Performance &amp; Engagement</strong>
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 mt-1 text-purple-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span>
-                  <strong>Accelerated Speed-to-Capability Development</strong>
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 mt-1 text-purple-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span>
-                  <strong>Proven Risk-Managed Transformation Pathway</strong>
-                </span>
-              </li>
-            </ul>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6">
+            {benefits.map(({ title, description }, idx) => (
+              <div key={idx} className="flex items-start space-x-3">
+                {/* Icon */}
+                <svg className="h-6 w-6 mt-1 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                {/* Text */}
+                <div>
+                  <p className="font-semibold text-gray-900">{title}</p>
+                  <p className="text-gray-700 text-base">{description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

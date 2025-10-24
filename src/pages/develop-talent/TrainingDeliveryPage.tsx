@@ -10,6 +10,8 @@ import { TrainingDeliveryMultiModal } from '../../components/Hero/TrainingDelive
 import { TrainingDeliveryWhyBestFit } from '../../components/Hero/TrainingDeliveryWhyBestFit';
 import { SuccessStoriesSection } from '../../components/Hero/SuccessStoriesSection';
 import { LatestInsights } from '../../components/Hero/LatestInsights';
+import { LearningExperienceArchitectsSection } from '../../components/Hero/LearningExperienceArchitectsSection';
+import ContactForm from '../../components/Hero/ContactForm';
 
 export function TrainingDeliveryPage() {
   return (
@@ -23,6 +25,8 @@ export function TrainingDeliveryPage() {
       <TrainingDeliveryWhyBestFit />
       <SuccessStoriesSection />
       <LatestInsights />
+      <LearningExperienceArchitectsSection />
+      <ContactForm />
     </main>
   );
 }

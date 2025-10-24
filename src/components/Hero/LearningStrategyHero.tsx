@@ -2,7 +2,13 @@ import React from 'react';
 
 export function LearningStrategyHero() {
   return (
-    <section className="relative bg-gray-900 h-[600px] flex items-center">
+    <section
+      className="relative bg-cover bg-center bg-no-repeat h-[51vw] flex items-center"
+      style={{
+        backgroundImage:
+          "url('https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Learning-Strategy-Banner-Img.webp')",
+      }}
+    >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Left content */}
         <div className="max-w-lg text-white">
@@ -18,24 +24,7 @@ export function LearningStrategyHero() {
         </div>
 
         {/* Right content - video thumbnail with play button */}
-        <div className="relative w-[480px] h-[270px] rounded overflow-hidden shadow-lg">
-          <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
-            alt="Video thumbnail"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-              <svg
-                className="w-8 h-8 text-purple-700"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   );

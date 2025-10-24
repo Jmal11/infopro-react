@@ -10,15 +10,23 @@ const stats = [
 
 export function TalentAcquisitionStats() {
   return (
-    <section className="container mx-auto px-4 py-12">
-      <div className="flex flex-wrap justify-between items-center border-t border-b border-gray-300">
-        {stats.map(({ value, label }, index) => (
+    <section className="w-full bg-white pt-8 pb-2">
+      <div className="max-w-[1400px] mx-auto flex border-gray-300">
+        {stats.map(({ value, label }, idx) => (
           <div
-            key={index}
-            className={`flex-1 text-center py-6 ${index !== stats.length - 1 ? 'border-r border-gray-300' : ''}`}
+            key={idx}
+            className={`
+              flex-1 text-left pl-12 py-6
+              ${idx === 0 ? 'border-l border-gray-300' : ''}
+              ${idx !== stats.length - 1 ? 'border-r border-gray-300' : ''}
+            `}
+            style={{
+              minWidth: 0,
+              paddingRight: idx !== stats.length - 1 ? '1.5rem' : 0,
+            }}
           >
-            <div className="text-3xl font-bold text-purple-700 mb-2">{value}</div>
-            <div className="text-sm text-gray-700">{label}</div>
+            <div className="text-4xl font-semibold text-purple-600 mb-2">{value}</div>
+            <div className="text-base text-gray-800">{label}</div>
           </div>
         ))}
       </div>

@@ -10,12 +10,19 @@ const stats = [
 
 export function TrainingNeedsAnalysisStatsBar() {
   return (
-    <section className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-5 gap-6 text-center border-t border-gray-300 pt-6">
-        {stats.map((stat) => (
-          <div key={stat.value} className="border-r last:border-r-0 pr-4">
-            <p className="text-4xl font-bold text-purple-600">{stat.value}</p>
-            <p className="mt-2 text-sm text-gray-700">{stat.label}</p>
+    <section className="mx-auto w-full max-w-7xl px-4 py-8">
+      <div className="flex flex-col sm:flex-row sm:justify-center border-gray-300">
+        {stats.map((stat, idx) => (
+          <div
+            key={stat.value}
+            className={`
+              flex-1 py-8 px-2
+              text-center
+              ${idx !== stats.length - 1 ? 'sm:border-r sm:border-gray-300' : ''}
+            `}
+          >
+            <p className="text-5xl font-semibold text-purple-600 mb-2">{stat.value}</p>
+            <p className="text-base text-gray-700 max-w-xs mx-auto leading-snug">{stat.label}</p>
           </div>
         ))}
       </div>

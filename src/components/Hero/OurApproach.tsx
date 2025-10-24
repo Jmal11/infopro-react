@@ -1,99 +1,85 @@
 import React from 'react';
 
-export function OurApproach() {
-  const steps = [
-    {
-      title: 'Initial Assessment and Consultation',
-      description:
-        "Our team engages with key stakeholders to understand your organization's current learning environment, performance objectives, and business priorities. This ensures we align our analysis with your specific needs and goals.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-purple-600"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m-6-8h6M5 6h14M5 18h14" />
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Data Collection and Analysis',
-      description:
-        'We meticulously analyze performance metrics and conduct surveys to identify skills gaps and training needs. This data-driven approach ensures precise identification of areas requiring development.',
-      icon: (
-        <svg
-          className="w-8 h-8 text-purple-600"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 17l3-5 4 4 3-8" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Training Needs Identification',
-      description:
-        'We pinpoint specific areas where training is necessary, providing clarity on the exact skills and competencies needed to enhance performance and achieve organizational objectives.',
-      icon: (
-        <svg
-          className="w-8 h-8 text-purple-600"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m-6-8h6" />
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Training Roadmap Creation',
-      description:
-        'Based on our analysis, we develop a tailored training plan that addresses the identified needs. This plan will be strategically designed to align with your organizational goals and deliver effective solutions.',
-      icon: (
-        <svg
-          className="w-8 h-8 text-purple-600"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 20h9" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M16 8l4 4-4 4" />
-        </svg>
-      ),
-    },
-  ];
+const steps = [
+  {
+    title: 'Initial Assessment and Consultation',
+    description:
+      "Our team engages with key stakeholders to understand your organization's current learning environment, performance objectives, and business priorities. This ensures we align our analysis with your specific needs and goals.",
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/inisial-icon.svg',
+  },
+  {
+    title: 'Data Collection and Analysis',
+    description:
+      "We meticulously analyze performance metrics and conduct surveys to identify skill gaps and training needs. This data-driven approach ensures precise identification of areas requiring development.",
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/data-icon.svg',
+  },
+  {
+    title: 'Training Needs Identification',
+    description:
+      "We pinpoint specific areas where training is necessary, providing clarity on the exact skills and competencies needed to enhance performance and achieve organizational objectives.",
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/training-icon.svg',
+  },
+  {
+    title: 'Training Roadmap Creation',
+    description:
+      "Based on our analysis, we develop a tailored training plan that addresses the identified needs. This plan will be strategically designed to align with your organizational goals and deliver effective solutions.",
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/training-roadmap-icon.svg',
+  },
+];
 
+export function OurApproach() {
   return (
-    <section className="container mx-auto px-4 py-12">
-      <h2 className="text-2xl font-bold mb-4 text-center">Our Approach</h2>
-      <p className="text-center max-w-3xl mx-auto mb-10">
-        Our expert team will collaborate with you to analyze your organization's current training needs, analyze skills gaps, and provide a strategic roadmap. We ensure your training investments are effectively aligned with your organizational goals and future objectives. After we develop the roadmap, we can also help you implement it.
-      </p>
-      <div className="flex flex-col md:flex-row justify-between max-w-7xl mx-auto gap-6">
-        {steps.map((step, index) => (
-          <div key={index} className="flex-1 bg-white p-6 border border-gray-200 rounded-md shadow-sm">
-            <div className="flex items-center justify-center mb-4">
-              <div className="bg-white p-2 rounded-md border border-gray-300">{step.icon}</div>
-            </div>
-            <h3 className="font-semibold mb-2">{step.title}</h3>
-            <p className="text-gray-700 text-sm">{step.description}</p>
+    <section className="w-full bg-white py-10">
+      <div className="max-w-[1400px] mx-auto px-4">
+        <h2 className="text-4xl font-extrabold text-center text-gray-900 mb-4">Our Approach</h2>
+        <p className="text-center text-gray-700 mb-12 max-w-4xl mx-auto text-base font-medium">
+          Our expert team will collaborate with you to analyze your organization&apos;s current training needs, analyze skill gaps, and provide a strategic roadmap. We ensure your training investments are effectively aligned with your organizational goals and future objectives. After we develop the roadmap, we can also help you implement it.
+        </p>
+        <div className="relative mt-10">
+          {/* Purple line */}
+          <div className="absolute left-0 right-0 top-[32px] h-2 bg-transparent z-0 flex">
+            <div className="w-1/24" />
+            <div className="flex-1 h-full bg-purple-200" />
+            <div className="w-1/24" />
           </div>
-        ))}
+          {/* Main cards */}
+          <div className="grid grid-cols-1 md:grid-cols-4 border border-gray-200 rounded-none z-10 bg-white relative">
+            {steps.map((step, i) => (
+              <div
+                key={step.title}
+                className={`
+                  relative flex flex-col items-start px-8 pt-12 pb-8 bg-white
+                  border-gray-200
+                  ${i !== 0 ? 'border-l' : ''}
+                `}
+                style={{
+                  minHeight: 360,
+                  borderRight: i === steps.length - 1 ? 'none' : '1px solid #e5e7eb'
+                }}
+              >
+                {/* Hex icon overlapping card and line */}
+                <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10">
+                  <div className="clip-hexagon bg-white border-2 border-purple-200 flex items-center justify-center w-16 h-16">
+                    <img src={step.icon} className="w-8 h-8" alt="" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 mt-2">{step.title}</h3>
+                <p className="text-gray-700 text-base">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+      {/* Hexagon clip-path styling */}
+      <style>{`
+        .clip-hexagon {
+          clip-path: polygon(
+            25% 6%, 75% 6%,
+            100% 50%, 75% 94%,
+            25% 94%, 0% 50%
+          );
+        }
+      `}</style>
     </section>
   );
 }

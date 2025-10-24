@@ -273,7 +273,6 @@ function MainNav() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState(false);
-  const buttonRefs = useRef<(HTMLLabelElement | null)[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -293,33 +292,86 @@ function MainNav() {
       isScrolled ? "bg-white shadow-md" : "bg-gradient-to-b from-black/50 to-transparent"
     )}>
       <style>{`
-        /* Hide checkbox */
-        .dropdown-toggle {
+        /* Hide all radio buttons */
+        .dropdown-radio {
           position: absolute;
           opacity: 0;
           pointer-events: none;
         }
 
-        /* Hide dropdown by default */
+        /* Hide all dropdowns by default */
         .dropdown-content {
           display: none;
+          opacity: 0;
+          animation: fadeIn 0.2s ease-out forwards;
         }
 
-        /* Show dropdown when checkbox is checked */
-        .dropdown-toggle:checked ~ .dropdown-content {
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Show dropdown when its radio is checked */
+        #dropdown-radio-1:checked ~ .nav-items .dropdown-content-1,
+        #dropdown-radio-2:checked ~ .nav-items .dropdown-content-2,
+        #dropdown-radio-3:checked ~ .nav-items .dropdown-content-3 {
           display: block;
         }
 
         /* Rotate chevron when active */
-        .dropdown-toggle:checked + .dropdown-label .chevron-icon {
+        #dropdown-radio-1:checked ~ .nav-items .dropdown-label-1 .chevron-icon,
+        #dropdown-radio-2:checked ~ .nav-items .dropdown-label-2 .chevron-icon,
+        #dropdown-radio-3:checked ~ .nav-items .dropdown-label-3 .chevron-icon {
           transform: rotate(180deg);
         }
 
-        /* Active state for label */
-        .dropdown-toggle:checked + .dropdown-label {
+        /* Active state for label text color */
+        #dropdown-radio-1:checked ~ .nav-items .dropdown-label-1,
+        #dropdown-radio-2:checked ~ .nav-items .dropdown-label-2,
+        #dropdown-radio-3:checked ~ .nav-items .dropdown-label-3 {
           color: #2563eb;
         }
+
+        /* Show backdrop when any dropdown is open */
+        #dropdown-radio-1:checked ~ .dropdown-backdrop,
+        #dropdown-radio-2:checked ~ .dropdown-backdrop,
+        #dropdown-radio-3:checked ~ .dropdown-backdrop {
+          display: block;
+        }
+
+        /* Backdrop styles */
+        .dropdown-backdrop {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 45;
+          cursor: default;
+        }
+
+        /* Make dropdown content above backdrop */
+        .dropdown-content {
+          position: relative;
+          z-index: 50;
+        }
       `}</style>
+
+      {/* Radio buttons for dropdown state (outside nav structure) */}
+      <input type="radio" name="dropdown" id="dropdown-radio-none" className="dropdown-radio" defaultChecked />
+      <input type="radio" name="dropdown" id="dropdown-radio-1" className="dropdown-radio" />
+      <input type="radio" name="dropdown" id="dropdown-radio-2" className="dropdown-radio" />
+      <input type="radio" name="dropdown" id="dropdown-radio-3" className="dropdown-radio" />
+
+      {/* Backdrop to close dropdowns - click it to select 'none' radio */}
+      <label htmlFor="dropdown-radio-none" className="dropdown-backdrop"></label>
 
       {/* Main Navigation Bar */}
       <div className="container mx-auto px-4">
@@ -334,138 +386,133 @@ function MainNav() {
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center flex-wrap gap-x-2 max-w-full overflow-x-auto scrollbar-hide">
-            {mainMenuItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative px-4 xl:px-6"
-              >
-                {item.hasDropdown ? (
-                  <>
-                    {/* Hidden checkbox for toggle */}
-                    <input 
-                      type="checkbox" 
-                      id={`dropdown-${index}`} 
-                      className="dropdown-toggle"
-                    />
-                    
-                    {/* Clickable label acting as button */}
-                    <label
-                      htmlFor={`dropdown-${index}`}
-                      ref={(el) => (buttonRefs.current[index] = el)}
+          <div className="nav-items hidden lg:flex items-center flex-wrap gap-x-2 max-w-full overflow-x-auto scrollbar-hide">
+            {mainMenuItems.map((item, index) => {
+              const dropdownIndex = mainMenuItems.slice(0, index).filter(i => i.hasDropdown).length + 1;
+              
+              return (
+                <div
+                  key={index}
+                  className="relative px-4 xl:px-6"
+                >
+                  {item.hasDropdown ? (
+                    <>
+                      {/* Clickable label acting as button */}
+                      <label
+                        htmlFor={`dropdown-radio-${dropdownIndex}`}
+                        className={clsx(
+                          `dropdown-label-${dropdownIndex} flex items-center font-medium py-5 transition-all duration-500 ease-in-out cursor-pointer`,
+                          isScrolled 
+                            ? "text-gray-800 hover:text-blue-600" 
+                            : "text-white hover:text-gray-200"
+                        )}
+                      >
+                        {item.title} <ChevronDown className={clsx("ml-1 w-4 h-4 transition-all duration-300 chevron-icon", isScrolled ? "text-gray-600" : "text-white")} />
+                      </label>
+
+                      {/* Mega Dropdown - Full Width Below Navbar */}
+                      <div
+                        className={`dropdown-content-${dropdownIndex} dropdown-content fixed inset-x-0 bg-white shadow-lg rounded-b border-t border-gray-200`}
+                        style={{
+                          top: isScrolled ? '72px' : '80px',
+                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                        }}
+                      >
+                        <div className="container mx-auto px-4 py-8 bg-white">
+                          <div className="grid grid-cols-12 gap-6 border border-gray-200 rounded">
+                            {/* Left Panel - Service Icons */}
+                            <div className="col-span-3 bg-[#f0f0ff] p-6 rounded-l">
+                              <h3 className="text-gray-800 font-semibold mb-4 flex items-center">
+                                {item.content?.leftPanel.title}
+                                {item.content?.leftPanel.superscript && (
+                                  <sup className="text-blue-600 ml-1">{item.content.leftPanel.superscript}</sup>
+                                )}
+                                <ArrowRight className="ml-2 w-4 h-4" />
+                              </h3>
+                              <div className="grid grid-cols-2 gap-4">
+                                {item.content?.leftPanel.services.map((service, i) => (
+                                  <a key={i} href="#" className="flex flex-col items-center p-2 hover:bg-white rounded transition-colors">
+                                    <div className="mb-2">{service.icon}</div>
+                                    <span className="text-sm text-center" style={{ color: 'black' }}>
+                                      {service.title}
+                                      {'superscript' in service && service.superscript && (
+                                        <sup className="text-blue-600 text-xs ml-0.5">{service.superscript}</sup>
+                                      )}
+                                    </span>
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+
+                            {/* Middle Categories */}
+                            <div className={`col-span-6 grid ${item.content && item.content.categories && item.content.categories.length === 3 ? 'grid-cols-3' : 'grid-cols-2'} gap-6 p-6 border-r border-l border-gray-200`}>
+                              {item.content && item.content.categories && item.content.categories.map((category, catIndex) => (
+                                <div key={catIndex}>
+                                  {'url' in category && category.url ? (
+                                    <h3 className="text-black font-semibold mb-3">
+                                      <Link to={category.url} className="hover:text-blue-600 transition-colors">
+                                        {category.title}
+                                      </Link>
+                                    </h3>
+                                  ) : (
+                                    <h3 className="text-black font-semibold mb-3">{category.title}</h3>
+                                  )}
+                                  <ul className="space-y-2">
+                                    {category.links.filter(link => typeof link.url === 'string' && link.url).map((link, liIndex) => (
+                                      <li key={liIndex}>
+                                        <Link to={link.url || "#"} className="text-black hover:text-blue-600 transition-colors text-sm">
+                                          {link.text}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+
+                            {/* Right Panel */}
+                            <div className="col-span-3 p-6">
+                              <h3 className="text-gray-800 font-semibold mb-2">{item.content && item.content.rightPanel && item.content.rightPanel.title}</h3>
+                              {item.content && item.content.rightPanel && item.content.rightPanel.headline && (
+                                <p className="text-gray-800 font-medium mb-2">{item.content.rightPanel.headline}</p>
+                              )}
+                              {item.content && item.content.rightPanel && item.content.rightPanel.description && (
+                                <p className="text-sm text-gray-600 mb-3">{item.content.rightPanel.description}</p>
+                              )}
+                              {item.content && item.content.rightPanel && item.content.rightPanel.bulletPoints && (
+                                <ul className="mb-3 space-y-1">
+                                  {item.content.rightPanel.bulletPoints.map((point, i) => (
+                                    <li key={i} className="text-sm text-gray-700 flex items-start">
+                                      <span className="text-blue-600 mr-2">•</span>{point}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                              <Link to={item.content?.rightPanel?.ctaLink || "#"} className="text-sm text-gray-800 font-medium hover:text-blue-600 transition-colors flex items-center">
+                                {item.content?.rightPanel?.cta}
+                                <ArrowRight className="ml-1 w-4 h-4" />
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      to={item.link || "/"}
                       className={clsx(
-                        "dropdown-label flex items-center font-medium py-5 transition-all duration-500 ease-in-out cursor-pointer",
+                        "block py-5 transition-all duration-500 ease-in-out",
                         isScrolled 
                           ? "text-gray-800 hover:text-blue-600" 
                           : "text-white hover:text-gray-200"
                       )}
                     >
-                      {item.title} <ChevronDown className={clsx("ml-1 w-4 h-4 transition-all duration-500 chevron-icon", isScrolled ? "text-gray-600" : "text-white")} />
-                    </label>
-
-                    {/* Mega Dropdown - Full Width Below Navbar */}
-                    <div
-                      className="dropdown-content fixed inset-x-0 z-40 bg-white shadow-lg rounded-b border-t border-gray-200"
-                      style={{
-                        top: (buttonRefs.current[index]?.getBoundingClientRect().bottom ?? 0) + (isScrolled ? 8 : 16),
-                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                        zIndex: 50
-                      }}
-                    >
-                      <div className="container mx-auto px-4 py-8 bg-white">
-                        <div className="grid grid-cols-12 gap-6 border border-gray-200 rounded">
-                          {/* Left Panel - Service Icons */}
-                          <div className="col-span-3 bg-[#f0f0ff] p-6 rounded-l">
-                            <h3 className="text-gray-800 font-semibold mb-4 flex items-center">
-                              {item.content?.leftPanel.title}
-                              {item.content?.leftPanel.superscript && (
-                                <sup className="text-blue-600 ml-1">{item.content.leftPanel.superscript}</sup>
-                              )}
-                              <ArrowRight className="ml-2 w-4 h-4" />
-                            </h3>
-                            <div className="grid grid-cols-2 gap-4">
-                              {item.content?.leftPanel.services.map((service, i) => (
-                                <a key={i} href="#" className="flex flex-col items-center p-2 hover:bg-white rounded transition-colors">
-                                  <div className="mb-2">{service.icon}</div>
-                                  <span className="text-sm text-center" style={{ color: 'black' }}>
-                                    {service.title}
-                                    {'superscript' in service && service.superscript && (
-                                      <sup className="text-blue-600 text-xs ml-0.5">{service.superscript}</sup>
-                                    )}
-                                  </span>
-                                </a>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Middle Categories */}
-                          <div className={`col-span-6 grid ${item.content && item.content.categories && item.content.categories.length === 3 ? 'grid-cols-3' : 'grid-cols-2'} gap-6 p-6 border-r border-l border-gray-200`}>
-                            {item.content && item.content.categories && item.content.categories.map((category, catIndex) => (
-                              <div key={catIndex}>
-                                {'url' in category && category.url ? (
-                                  <h3 className="text-black font-semibold mb-3">
-                                    <Link to={category.url} className="hover:text-blue-600 transition-colors">
-                                      {category.title}
-                                    </Link>
-                                  </h3>
-                                ) : (
-                                  <h3 className="text-black font-semibold mb-3">{category.title}</h3>
-                                )}
-                                <ul className="space-y-2">
-                                  {category.links.filter(link => typeof link.url === 'string' && link.url).map((link, liIndex) => (
-                                    <li key={liIndex}>
-                                      <Link to={link.url || "#"} className="text-black hover:text-blue-600 transition-colors text-sm">
-                                        {link.text}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ))}
-                          </div>
-
-                          {/* Right Panel */}
-                          <div className="col-span-3 p-6">
-                            <h3 className="text-gray-800 font-semibold mb-2">{item.content && item.content.rightPanel && item.content.rightPanel.title}</h3>
-                            {item.content && item.content.rightPanel && item.content.rightPanel.headline && (
-                              <p className="text-gray-800 font-medium mb-2">{item.content.rightPanel.headline}</p>
-                            )}
-                            {item.content && item.content.rightPanel && item.content.rightPanel.description && (
-                              <p className="text-sm text-gray-600 mb-3">{item.content.rightPanel.description}</p>
-                            )}
-                            {item.content && item.content.rightPanel && item.content.rightPanel.bulletPoints && (
-                              <ul className="mb-3 space-y-1">
-                                {item.content.rightPanel.bulletPoints.map((point, i) => (
-                                  <li key={i} className="text-sm text-gray-700 flex items-start">
-                                    <span className="text-blue-600 mr-2">•</span>{point}
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                            <Link to={item.content?.rightPanel?.ctaLink || "#"} className="text-sm text-gray-800 font-medium hover:text-blue-600 transition-colors flex items-center">
-                              {item.content?.rightPanel?.cta}
-                              <ArrowRight className="ml-1 w-4 h-4" />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    to={item.link || "/"}
-                    className={clsx(
-                      "block py-5 transition-all duration-500 ease-in-out",
-                      isScrolled 
-                        ? "text-gray-800 hover:text-blue-600" 
-                        : "text-white hover:text-gray-200"
-                    )}
-                  >
-                    {item.title}
-                  </Link>
-                )}
-              </div>
-            ))}
+                      {item.title}
+                    </Link>
+                  )}
+                </div>
+              );
+            })}
 
             {/* Right Buttons */}
             <div className="flex items-center gap-3 flex-shrink-0">
@@ -562,8 +609,8 @@ function MainNav() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
-            style={{ top: isScrolled ? '72px' : '88px' }}
+            className="fixed left-0 right-0 bg-white z-[60] shadow-lg border-b"
+            style={{ top: isScrolled ? '64px' : '80px' }}
           >
             <div className="container mx-auto py-8 px-4">
               <div className="flex items-center justify-between mb-8">
@@ -590,8 +637,8 @@ function MainNav() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
-            style={{ top: isScrolled ? '72px' : '88px' }}
+            className="fixed left-0 right-0 bg-white z-[60] shadow-lg border-b"
+            style={{ top: isScrolled ? '64px' : '80px' }}
           >
             <div className="container mx-auto py-6 px-4 max-w-6xl">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

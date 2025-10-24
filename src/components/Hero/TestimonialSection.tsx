@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const testimonials = [
   {
@@ -64,25 +64,12 @@ const testimonials = [
 ];
 
 export function TestimonialSection() {
-  // Responsive cards-per-page
-  const getCardsPerPage = () => {
-    if (typeof window !== 'undefined') {
-      if (window.innerWidth < 640) return 1;
-      if (window.innerWidth < 1024) return 2;
-    }
-    return 3;
-  };
-
-  const [cardsPerPage, setCardsPerPage] = useState(getCardsPerPage());
+  const cardsPerPage = 3;
+  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
   const [currentPage, setCurrentPage] = useState(0);
 
-  useEffect(() => {
-    const handleResize = () => setCardsPerPage(getCardsPerPage());
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
+  const startIndex = currentPage * cardsPerPage;
+  const currentTestimonials = testimonials.slice(startIndex, startIndex + cardsPerPage);
 
   const goToNext = () => {
     if (currentPage < totalPages - 1) setCurrentPage((p) => p + 1);
@@ -91,20 +78,15 @@ export function TestimonialSection() {
     if (currentPage > 0) setCurrentPage((p) => p - 1);
   };
 
-  const startIndex = currentPage * cardsPerPage;
-  const currentTestimonials = testimonials.slice(startIndex, startIndex + cardsPerPage);
-
   return (
-    <section className="bg-[#f6f6f6] py-12">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Success Stories</h2>
-
-        {/* Cards container */}
-        <div className="flex flex-wrap justify-center gap-6 transition-opacity duration-500">
+        <div className="flex flex-col md:flex-row md:justify-center gap-6">
           {currentTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-md shadow-md w-full sm:w-[48%] lg:w-[32%] flex flex-col"
+              className="bg-white rounded-md shadow-md w-full md:w-1/3 flex flex-col"
             >
               <img
                 src={testimonial.image}
@@ -142,7 +124,6 @@ export function TestimonialSection() {
             </div>
           ))}
         </div>
-
         {/* Pagination Controls */}
         <div className="flex justify-center items-center space-x-4 mt-8">
           <button

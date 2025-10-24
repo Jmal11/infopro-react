@@ -9,39 +9,43 @@ import { FutureSkillsSection } from '../components/Hero/FutureSkillsSection';
 import { TestimonialSection } from '../components/Hero/TestimonialSection';
 import { CarouselSection } from '../components/Hero/CarouselSection';
 import { LatestInsights } from '../components/Hero/LatestInsights';
+import ContactForm from '../components/Hero/ContactForm';
 
 
 export function HomePage() {
   return (
     <main className="section-responsive">
       <HeroSection />
-      <section className="container mx-auto px-4 stack-lg-row">
+      <section className="">
         <WorkforcePage />
       </section>
-      <section className="container mx-auto px-4">
+      <section className="">
         <PartnerLogos />
       </section>
-      <section className="container mx-auto px-4">
+      <section className="">
         <AccordionContentSection />
       </section>
-      <section className="container mx-auto px-4">
+      <section className="">
         <StatsBar />
       </section>
-      <section className="container mx-auto px-4">
+      <section className="">
         <ManagedLearningServices />
       </section>
-      <section className="container mx-auto px-4 grid gap-8">
+      <section className="">
         <AwardSection />
         <FutureSkillsSection />
       </section>
-      <section className="container mx-auto px-4">
+      <section className="">
         <TestimonialSection />
       </section>
-      <section className="container mx-auto px-4">
+      <section className="">
         <CarouselSection />
       </section>
-      <section className="container mx-auto px-4">
+      <section className="">
         <LatestInsights />
+      </section>
+      <section className="">
+        <ContactForm />
       </section>
     </main>
   );

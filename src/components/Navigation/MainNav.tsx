@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Menu, Search, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';  // Added import for Link
+import { Link } from 'react-router-dom';
 
 // Define custom icons
 const StrategyIcon = () => (
@@ -54,7 +54,7 @@ const EventsIcon = () => (
 // Add missing icons
 const ConferenceIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24" className="text-primary">
-    <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm10.75 1c-.96.73-2.72 1.5-4.75 1.5h-1v-2.5c0-1.62-1.37-3.11-3.45-3.45C11.71 11.08 12 11.02 12 11s1.66-.34 2.75-.95c.85.84 2.26 1.45 3.75 1.45 2.21 0 4-1.79 4-4s-1.79-4-4-4c-1.94 0-3.54 1.38-3.9 3.21-.57-.22-1.17-.36-1.77-.46L14.05 2h-.05C13.45 1.38 12.78 1 12 1s-1.45.38-2 1h-.05l1.72 4.27c-.6.09-1.2.24-1.77.46C9.54 5.38 7.94 4 6 4 3.79 4 2 5.79 2 8s1.79 4 4 4c1.93 0 3.54-1.38 3.9-3.21.68.26 1.44.45 2.35.45h.75c.71 0 1.45-.2 2.1-.50.65.3 1.39.5 2.1.5h.04c1.64 0 2.97-.49 3.97-1.16.31.71.39 1.5.29 2.27-.14.86-.49 1.66-1 2.31V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+    <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm10.75 1c-.96.73-2.72 1.5-4.75 1.5h-1v-2.5c0-1.62-1.37-3.11-3.45-3.45C11.71 11.08 12 11.02 12 11s1.66-.34 2.75-.95c.85.84 2.26 1.45 3.75 1.45 2.21 0 4-1.79 4-4s-1.79-4-4-4c-1.94 0-3.54 1.38-3.9 3.21-.57-.22-1.17-.36-1.77-.46L14.05 2h-.05C13.45 1.38 12.78 1 12 1s-1.45.38-2 1h-.05l1.72 4.27c-.6.09-1.2.24-1.77.46C9.54 5.38 7.94 4 6 4 3.79 4 2 5.79 2 8s1.79 4 4 4c1.93 0 3.54-1.38 3.9-3.21.68.26 1.44.45 2.35.45h.75c.71 0 1.45-.2 2.1-.50.65.30 1.39.50 2.1.50h.04c1.64 0 2.97-.49 3.97-1.16.31.71.39 1.5.29 2.27-.14.86-.49 1.66-1 2.31V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
   </svg>
 );
 const CoachingIcon = () => (
@@ -64,7 +64,7 @@ const CoachingIcon = () => (
 );
 const LabsIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24" className="text-primary">
-    <path fill="currentColor" d="M14.81 9l-.94-2H10.13l-.94 2H5.21A1.09 1.09 0 0 0 4 10.08c0 3.45 1.72 6.61 4.5 8.45.67.44 1.35.81 2.05 1.1l1.04-3.22L10 14H8.88L9.2 12h5.6l.32 2H13.41l-1.59 2.4.78 3.22c.69-.29 1.38-.66 2.05-1.1C17.28 16.69 19 13.53 19 10.08A1.09 1.09 0 0 0 17.79 9zm-1.42 4h-2.78l.69-1h1.4zM19 3H5c-1.1 0-2 .9-2 2v14c0 .55.22 1.05.59 1.41.36.37.86.59 1.41.59h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+    <path fill="currentColor" d="M14.81 9l-.94-2H10.13l-.94 2H5.21A1.09 1.09 0 0 0 4 10.08c0 3.45 1.72 6.61 4.5 8.45.67.44 1.35.81 2.05 1.1l1.04-3.22L10 14H8.88L9.2 12h5.6l.32 2H13.41l-1.59 2.4.78 3.22c.69-.29 1.38-.66 2.05-1.10C17.28 16.69 19 13.53 19 10.08A1.09 1.09 0 0 0 17.79 9zm-1.42 4h-2.78l.69-1h1.4zM19 3H5c-1.1 0-2 .9-2 2v14c0 .55.22 1.05.59 1.41.36.37.86.59 1.41.59h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
   </svg>
 );
 const OnboardingIcon = () => (
@@ -147,135 +147,76 @@ const mainMenuItems = [
       rightPanel: {
         title: "Studio-On-Demand",
         headline: "Predictable. Scalable. Ready to Deliver.",
-        description: "Extend your team with scalable, flexible design, content & media production.",
-        cta: "Explore Studio on Demand",
-        ctaLink: "/studio-on-demand"
+        description: "A comprehensive suite of experts and resources ready to transform your learning content—when and how you need it.",
+        cta: "Explore Solutions",
+        ctaLink: "/studio-on-demand",
+        image: "https://infoprolearning.com/wp-content/uploads/2024/11/image-35-1.png"
       }
     }
   },
   {
-    title: "Empower Teams",
-    hasDropdown: true,
+    title: "Work With Us",
+    hasDropdown: false,
     content: {
-      leftPanel: {
-        title: "Training Delivery As a Service",
-        services: [
-          { icon: <InPersonTrainingIcon />, title: "In-Person Training" },
-          { icon: <VirtualTrainingIcon />, title: "Virtual Training" },
-          { icon: <EventsIcon />, title: "Events" },
-          { icon: <ConferenceIcon />, title: "Conference" },
-          { icon: <CoachingIcon />, title: "Coaching" },
-          { icon: <LabsIcon />, title: "Labs" }
+      ourWork: {
+        title: "Our Work",
+        links: [
+          { text: "Blended Learning", url: "/our-work/blended-learning" },
+          { text: "Bootcamps", url: "/our-work/bootcamps" },
+          { text: "Customer Education", url: "/our-work/customer-education" },
+          { text: "Learning Portals", url: "/our-work/learning-portals" }
         ]
       },
-      categories: [
-        {
-          title: "Leadership Skills",
-          links: [
-                  { text: "Vanguard Leadership", url: "/empower-teams/vanguard-leadership" },
-                  { text: "Early Career Development", url: "/develop-talent/early-career-development" },
-                  { text: "Mid-Career Development", url: "/empower-teams/mid-career-development" },
-                  { text: "Senior Leader Development", url: "/empower-teams/senior-leader-development" },
-                  { text: "Self Leadership Development", url: "/empower-teams/self-leadership-development" },
-                  { text: "Diversity, Equity and Inclusion", url: "/empower-teams/diversity-equity-inclusion" }
-          ]
-        },
-        {
-          title: "Business and Commercial Skills",
-          links: [
-            { text: "Sales Training and Enablement", url: "/empower-teams/sales-training-enablement" },
-            { text: "Customer Excellence", url: "/empower-teams/customer-excellence" },
-            { text: "Commercial Leader Development", url: "/empower-teams/commercial-leadership" },
-            { text: "Product Training", url: "/empower-teams/product-training" },
-            { text: "People Leadership", url: "/empower-teams/people-leadership" },
-            { text: "Business Leadership", url: "/empower-teams/business-leadership" }
-          ]
-        },
-            {
-              title: "Digital Skills",
-              links: [
-                { text: "Data Analytics and Visualization", url: "/empower-teams/data-analytics" },
-                { text: "AI & Machine Learning", url: "/empower-teams/aiml" },
-                { text: "Mastering the Digital Workplace", url: "/empower-teams/digital-workplace" },
-                { text: "AI Integration & Cloud Computing", url: "/empower-teams/cloud-computing" },
-                { text: "AI & Cybersecurity", url: "/empower-teams/cybersecurity" },
-                { text: "Prompt Engineering for Leaders", url: "/empower-teams/prompt-engineering" },
-                { text: "Agile Project Management", url: "/empower-teams/agile-project-management" }
-              ]
-            }
-      ],
-      rightPanel: {
-        title: "Master Skills with Award Winning Programs & Facilitators",
-        bulletPoints: ["Blended learning journeys", "Customizable to your needs"],
-        cta: "DOWNLOAD OUR SKILLS CATALOGUE",
-        ctaLink: "/skills-catalogue"
+      industries: {
+        title: "Industries We Serve",
+        links: [
+          { text: "Technology", url: "/industries/technology" },
+          { text: "Healthcare", url: "/industries/healthcare" },
+          { text: "Financial Services", url: "/industries/financial-services" },
+          { text: "Manufacturing", url: "/industries/manufacturing" },
+          { text: "Retail", url: "/industries/retail" },
+          { text: "Energy", url: "/industries/energy" }
+        ]
+      },
+      aboutUs: {
+        title: "About Us",
+        links: [
+          { text: "About Us", url: "/about-us" },
+          { text: "Press Releases", url: "/press-releases" },
+          { text: "Awards", url: "/awards" },
+          { text: "Events", url: "/events" },
+          { text: "Careers", url: "/careers" },
+          { text: "Contact Us", url: "/contact-us" }
+        ]
       }
     }
   },
   {
-    title: "Transform Organizations",
-    hasDropdown: true,
-    content: {
-      leftPanel: {
-        title: "Unlock:U Platform",
-        services: [
-          { icon: <OnboardingIcon />, title: "Onboarding" },
-          { icon: <LmsIcon />, title: "Learning Management (LMS)" },
-          { icon: <GoalSettingIcon />, title: "Goal Setting" },
-          { icon: <PerformanceIcon />, title: "Performance Management" },
-          { icon: <EmployeeEngagementIcon />, title: "Employee Engagement" },
-          { icon: <RewardsIcon />, title: "Rewards and Recognition" }
-        ]
-      },
-      categories: [
-        {
-          title: "Performance Consulting",
-          url: "/transform/performance-consulting",
-          links: [
-            { text: "Agile Enterprise Transformation", url: "/transform/agile-transformation" },
-            { text: "Organization Change Management", url: "/transform/change-management" }
-          ]
-        },
-        {
-          title: "Technology Consulting",
-          url: "/technology-consulting",
-          links: [
-            { text: "Operating Model Transformation", url: "/operating-model" },
-            { text: "Skills Based Design", url: "/skills-based-design" }
-          ]
-        }
-      ],
-      rightPanel: {
-        title: "Human+AI: Transforming Workflows and Value streams",
-        description: "Upskill, adapt and thrive in an AI driven future.",
-        cta: "LEARN MORE",
-        ctaLink: "/human-ai-transformation"
-      }
-    }
+    title: "Resources",
+    hasDropdown: false,
+    link: "/resources"
   }
 ];
 
-// Expanded menu data
 const expandedMenuData = {
   ourWork: {
     title: "Our Work",
     links: [
-      { text: "Case Studies", url: "/case-studies" },
-      { text: "Podcast", url: "/podcast" },
-      { text: "Insights", url: "/insights" }
+      { text: "Blended Learning", url: "/our-work/blended-learning" },
+      { text: "Bootcamps", url: "/our-work/bootcamps" },
+      { text: "Customer Education", url: "/our-work/customer-education" },
+      { text: "Learning Portals", url: "/our-work/learning-portals" }
     ]
   },
   industries: {
-    title: "Industries",
+    title: "Industries We Serve",
     links: [
-      { text: "Banking and Finance", url: "/industries/banking" },
-      { text: "Insurance", url: "/industries/insurance" },
-      { text: "Technology/IT", url: "/industries/technology" },
+      { text: "Technology", url: "/industries/technology" },
       { text: "Healthcare", url: "/industries/healthcare" },
-      { text: "Energy", url: "/industries/energy" },
-      { text: "Pharma", url: "/industries/pharma" },
-      { text: "Professional Services", url: "/industries/professional-services" },
-      { text: "Non Profit", url: "/industries/non-profit" }
+      { text: "Financial Services", url: "/industries/financial-services" },
+      { text: "Manufacturing", url: "/industries/manufacturing" },
+      { text: "Retail", url: "/industries/retail" },
+      { text: "Energy", url: "/industries/energy" }
     ]
   },
   aboutUs: {
@@ -359,12 +300,7 @@ const handleMouseLeave = () => {
 
   return (
     <header
-      className={clsx(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out overflow-x-clip",
-        isScrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-lg py-2" 
-          : "bg-transparent py-4"
-      )}
+      className="fixed top-0 left-0 right-0 z-[100] bg-white shadow-lg py-2"
       ref={navRef}
     >
       {/* Main Navigation Bar */}
@@ -372,11 +308,7 @@ const handleMouseLeave = () => {
         <div className="flex items-center justify-between h-16 gap-2">
           {/* Logo */}
           <a href="/" className="flex items-center z-10">
-            {isScrolled ? (
-              <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/logo.svg " alt="InfoPro Learning" className="h-10" />
-            ) : (
-              <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/logo-new.svg " alt="InfoPro Learning" className="h-12" />
-            )}
+            <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/logo.svg " alt="InfoPro Learning" className="h-10" />
           </a>
 
           {/* Desktop Nav Links */}
@@ -392,25 +324,17 @@ const handleMouseLeave = () => {
         <button
           ref={(el) => (buttonRefs.current[index] = el)}
           className={clsx(
-            "flex items-center font-medium py-5 transition-all duration-500 ease-in-out",
-            isScrolled 
-              ? "text-gray-800 hover:text-blue-600" 
-              : "text-white hover:text-gray-200",
-            activeDropdown === index && isScrolled ? "text-blue-600" : ""
+            "flex items-center font-medium py-5 transition-all duration-500 ease-in-out text-gray-800 hover:text-blue-600",
+            activeDropdown === index ? "text-blue-600" : ""
           )}
           aria-expanded={activeDropdown === index}
         >
-          {item.title} <ChevronDown className={clsx("ml-1 w-4 h-4 transition-all duration-500", isScrolled ? "text-gray-600" : "text-white")} />
+          {item.title} <ChevronDown className="ml-1 w-4 h-4 text-gray-600" />
         </button>
           ) : (
             <Link
               to={item.link || "/"}
-              className={clsx(
-                "block py-5 transition-all duration-500 ease-in-out",
-                isScrolled 
-                  ? "text-gray-800 hover:text-blue-600" 
-                  : "text-white hover:text-gray-200"
-              )}
+              className="block py-5 transition-all duration-500 ease-in-out text-gray-800 hover:text-blue-600"
             >
               {item.title}
             </Link>
@@ -418,121 +342,124 @@ const handleMouseLeave = () => {
 
     {/* Mega Dropdown - Full Width Below Navbar */}
     {item.hasDropdown && activeDropdown === index && (
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 10 }}
-        className="fixed inset-x-0 z-40 bg-white shadow-lg rounded-b border-t border-gray-200"
+      <div
+        className="fixed left-0 right-0 bg-white shadow-2xl border-t border-gray-200 z-[90]"
         style={{
-          top: (buttonRefs.current[index]?.getBoundingClientRect().bottom ?? 0) + (isScrolled ? 8 : 16),
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-          zIndex: 50
+          top: navRef.current ? `${navRef.current.offsetHeight}px` : '72px'
         }}
-        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseEnter={() => {
+          if (scheduleClose.current) clearTimeout(scheduleClose.current);
+        }}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="container mx-auto px-4 py-8 bg-white">
-          <div className="grid grid-cols-12 gap-6 border border-gray-200 rounded">
-            {/* Left Panel - Service Icons */}
-            <div className="col-span-3 bg-[#f0f0ff] p-6 rounded-l">
-              <h3 className="text-gray-800 font-semibold mb-4 flex items-center">
-                {item.content?.leftPanel.title}
-                {item.content?.leftPanel.superscript && (
-                  <sup className="text-blue-600 ml-1">{item.content.leftPanel.superscript}</sup>
-                )}
-                <ArrowRight className="ml-2 w-4 h-4" />
+        <div className="container mx-auto py-8 px-4 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            {/* Left Panel - Managed Learning Services */}
+            <div className="lg:col-span-4 border-r border-gray-200 pr-8">
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                {item.content.leftPanel.title}
+                <sup className="text-blue-600 text-xs ml-1">{item.content.leftPanel.superscript}</sup>
               </h3>
-              <div className="grid grid-cols-2 gap-4">
-                {item.content?.leftPanel.services.map((service, i) => (
-                  <a key={i} href="#" className="flex flex-col items-center p-2 hover:bg-white rounded transition-colors">
-                    <div className="mb-2">{service.icon}</div>
-                    <span className="text-sm text-center" style={{ color: 'black' }}>
-                      {service.title}
-                      {'superscript' in service && service.superscript && (
-                        <sup className="text-blue-600 text-xs ml-0.5">{service.superscript}</sup>
-                      )}
-                    </span>
-                  </a>
+              <div className="grid grid-cols-1 gap-4">
+                {item.content.leftPanel.services.map((service, sIndex) => (
+                  <div key={sIndex} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer group">
+                    <div className="flex-shrink-0 w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform">
+                      {service.icon}
+                    </div>
+                    <div className="flex-1">
+                      <span className="text-gray-800 font-medium group-hover:text-blue-600 transition-colors text-sm">
+                        {service.title}
+                        <sup className="text-blue-600 text-xs ml-1">{service.superscript}</sup>
+                      </span>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
 
-            {/* Middle Categories */}
-              <div className={`col-span-6 grid ${item.content && item.content.categories && item.content.categories.length === 3 ? 'grid-cols-3' : 'grid-cols-2'} gap-6 p-6 border-r border-l border-gray-200`}>
-{item.content && item.content.categories && item.content.categories.map((category, catIndex) => (
-  <div key={catIndex}>
-              {'url' in category && category.url ? (
-                <h3 className="text-black font-semibold mb-3">
-                  <Link to={category.url} className="hover:text-blue-600 transition-colors">
-                    {category.title}
-                  </Link>
-                </h3>
-              ) : (
-                <h3 className="text-black font-semibold mb-3">{category.title}</h3>
-              )}
-              <ul className="space-y-2">
-                {category.links.filter(link => typeof link.url === 'string' && link.url).map((link, liIndex) => (
-                  <li key={liIndex}>
-                    <Link to={link.url || "#"} className="text-black hover:text-blue-600 transition-colors text-sm">
-                      {link.text}
-                    </Link>
-                  </li>
+            {/* Middle Columns */}
+            <div className="lg:col-span-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                {item.content.categories.map((category, catIndex) => (
+                  <div key={catIndex}>
+                    {category.title && <h4 className="font-semibold text-gray-800 mb-3 text-base">{category.title}</h4>}
+                    <ul className="space-y-3">
+                      {category.links.filter(link => typeof link.url === 'string' && link.url).map((link, liIndex) => (
+                        <li key={liIndex}>
+                          <Link to={link.url as string} className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                            {link.text}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
-   </div>
- ))}
               </div>
+            </div>
 
-             {/* Right Panel */}
-             <div className="col-span-3 p-6">
-               <h3 className="text-gray-800 font-semibold mb-2">{item.content && item.content.rightPanel && item.content.rightPanel.title}</h3>
-               {item.content && item.content.rightPanel && item.content.rightPanel.headline && (
-                 <p className="text-gray-800 font-medium mb-2">{item.content.rightPanel.headline}</p>
-               )}
-               {item.content && item.content.rightPanel && item.content.rightPanel.description && (
-                 <p className="text-sm text-gray-600 mb-3">{item.content.rightPanel.description}</p>
-               )}
-               {item.content && item.content.rightPanel && item.content.rightPanel.bulletPoints && (
-                 <ul className="mb-3 space-y-1">
-                   {item.content.rightPanel.bulletPoints.map((point, i) => (
-                     <li key={i} className="text-sm text-gray-700 flex items-start">
-                       <span className="text-blue-600 mr-2">•</span>{point}
-                     </li>
-                   ))}
-                 </ul>
-               )}
-               <Link to={item.content?.rightPanel?.ctaLink || "#"} className="text-sm text-gray-800 font-medium hover:text-blue-600 transition-colors flex items-center">
-                 {item.content?.rightPanel?.cta}
-                 <ArrowRight className="ml-1 w-4 h-4" />
-               </Link>
-             </div>
+            {/* Right Panel - Studio-On-Demand */}
+            <div className="lg:col-span-3 border-l border-gray-200 pl-8">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl">
+                <h3 className="text-lg font-bold mb-2 text-gray-800">{item.content.rightPanel.title}</h3>
+                <p className="text-sm font-semibold text-blue-600 mb-2">{item.content.rightPanel.headline}</p>
+                <p className="text-sm text-gray-600 mb-4 line-clamp-3">{item.content.rightPanel.description}</p>
+                <Link
+                  to={item.content.rightPanel.ctaLink || "#"}
+                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm group"
+                >
+                  {item.content.rightPanel.cta}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                {item.content.rightPanel.image && (
+                  <img
+                    src={item.content.rightPanel.image}
+                    alt={item.content.rightPanel.title}
+                    className="w-full h-32 object-cover rounded-lg mt-4"
+                  />
+                )}
+              </div>
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     )}
   </div>
 ))}
-{/* Right Buttons */}
-<div className="flex items-center gap-3 flex-shrink-0">
-  <button onClick={() => setIsSearchOpen(true)} className={clsx("p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
-    <Search className={clsx("w-5 h-5 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
-  </button>
-  <button onClick={() => setExpandedMenu(!expandedMenu)} className={clsx("hidden lg:flex p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
-    <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
-  </button>
-  <a 
-  href="/contact" 
-  className="hidden lg:block text-white px-6 py-2 rounded"
-  style={{ backgroundColor: '#6B19FF' }}
+</div>
+
+          {/* Right Side: Search, Button, Hamburger */}
+          <div className="flex items-center gap-2 lg:gap-4">
+            {/* Search Icon */}
+<button
+  onClick={() => setIsSearchOpen(!isSearchOpen)}
+  className="p-2 rounded-full transition-all duration-500 text-gray-800 hover:bg-gray-100"
+  aria-label="Search"
+>
+  <Search className="w-5 h-5" />
+</button>
+
+            {/* "Connect With Us" Button - Desktop */}
+<Link
+  to="/contact"
+  className="hidden lg:block px-6 py-2 rounded-full font-medium transition-all duration-500 text-sm whitespace-nowrap bg-blue-600 text-white hover:bg-blue-700"
 >
   CONNECT WITH US
-</a>
+</Link>
 
-  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={clsx("lg:hidden p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+            {/* Hamburger - Mobile & Desktop */}
+            <div className="lg:hidden">
+  <button
+    onClick={() => {
+      setIsMenuOpen(!isMenuOpen);
+      setIsSearchOpen(false);
+    }}
+    className="p-2 rounded-full transition-all duration-500 text-gray-800 hover:bg-gray-100"
+    aria-label="Menu"
+  >
     {isMenuOpen ? (
-      <X className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+      <X className="w-6 h-6 transition-all duration-500" />
     ) : (
-      <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+      <Menu className="w-6 h-6 transition-all duration-500" />
     )}
   </button>
 </div>
@@ -611,7 +538,7 @@ const handleMouseLeave = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
-            style={{ top: isScrolled ? '72px' : '88px' }}
+            style={{ top: '72px' }}
           >
             <div className="container mx-auto py-8 px-4">
               <div className="flex items-center justify-between mb-8">
@@ -639,7 +566,7 @@ const handleMouseLeave = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
-            style={{ top: isScrolled ? '72px' : '88px' }}
+            style={{ top: '72px' }}
           >
             <div className="container mx-auto py-6 px-4 max-w-6xl">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

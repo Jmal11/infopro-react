@@ -49,9 +49,9 @@ export function PartnerLogos() {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12 mb-10 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer mx-auto"
+                  className="h-16 mb-10 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer mx-auto"
                   loading="lazy"
-                  style={{ maxHeight: '48px', objectFit: 'contain' }}
+                  style={{ maxHeight: '64px', objectFit: 'contain' }}
                 />
               </div>
             ))}
@@ -65,9 +65,9 @@ export function PartnerLogos() {
               key={logo.name}
               src={logo.src}
               alt={logo.alt}
-              className="h-12 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer"
+              className="h-16 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer"
               loading="lazy"
-              style={{ maxHeight: '48px', objectFit: 'contain' }}
+              style={{ maxHeight: '64px', objectFit: 'contain' }}
             />
           ))}
         </div>

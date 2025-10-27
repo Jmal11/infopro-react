@@ -4,18 +4,7 @@ const accordionItems = [
   {
     id: 'skills',
     title: 'Skills Inference',
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-purple-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m-6 6h12a2 2 0 002-2v-5a2 2 0 00-2-2h-3l-3-3-3 3H5a2 2 0 00-2 2v5a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/skill-inference-icon.svg',
     description: 'AI-based inference to capture skills gaps for accurate training needs assessment.',
     content: (
       <div className="space-y-4">
@@ -33,19 +22,7 @@ const accordionItems = [
   {
     id: 'personalized',
     title: 'Personalized Learning',
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-purple-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.84 4.422c0 3.866-3.582 7-8 7s-8-3.134-8-7a12.083 12.083 0 01.84-4.422L12 14z" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/personalized-learning-icon.svg',
     description: 'Harnessing AI to craft tailored learning journeys.',
     content: (
       <div className="space-y-4">
@@ -63,18 +40,7 @@ const accordionItems = [
   {
     id: 'ai-agent',
     title: 'AI-Powered Learning Agent',
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-purple-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m-6 6h12a2 2 0 002-2v-5a2 2 0 00-2-2h-3l-3-3-3 3H5a2 2 0 00-2 2v5a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/AI-powered-icon.svg',
     description: 'An intelligent agent that assists learners with real-time guidance and support.',
     content: (
       <div className="space-y-4">
@@ -92,18 +58,7 @@ const accordionItems = [
   {
     id: 'content-synthetic',
     title: 'Content and Synthetic Media Generation',
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-purple-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m-6 6h12a2 2 0 002-2v-5a2 2 0 00-2-2h-3l-3-3-3 3H5a2 2 0 00-2 2v5a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/content-and-syntetic-icon.svg',
     description: 'AI accelerates content creation and synthetic media production for immersive training.',
     content: (
       <div className="space-y-4">
@@ -121,58 +76,78 @@ const accordionItems = [
 ];
 
 export function AccordionContentSection() {
-  const [activeId, setActiveId] = useState(accordionItems[0].id); // First item is active by default
+  const [activeId, setActiveId] = useState(accordionItems[0].id); // First item active by default
+
+  const handleClick = (id) => {
+    // Only change if clicking a different item (no toggle functionality)
+    if (activeId !== id) {
+      setActiveId(id);
+    }
+  };
 
   return (
-    <section className="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
-      {/* Sidebar Navigation */}
-      <nav className="md:w-1/4 bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm">
-        {accordionItems.map(({ id, title, icon, description }) => (
-          <button
-            key={id}
-            onClick={() => setActiveId(id)}
-            className={`flex items-start gap-4 w-full px-4 py-4 text-left transition-colors border-b border-gray-200 last:border-b-0 ${
-              activeId === id
-                ? 'bg-purple-50 border-l-4 border-l-purple-500 font-semibold'
-                : 'hover:bg-gray-50'
-            }`}
-          >
-            <span className="flex-shrink-0 mt-1">{icon}</span>
-            <div className="min-w-0 flex-1">
-              <h3 className={`font-medium text-gray-900 ${activeId === id ? 'text-purple-700' : ''}`}>
-                {title}
-              </h3>
-              {activeId === id && (
-                <p className="mt-1 text-sm text-gray-600">{description}</p>
-              )}
-            </div>
-            {/* Chevron indicator */}
-            <svg
-              className={`w-5 h-5 text-gray-400 transition-transform ${
-                activeId === id ? 'rotate-90' : ''
-              }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        ))}
-      </nav>
-
-      {/* Content Area */}
-      <div className="md:w-3/4 bg-white rounded-lg p-6">
-        {accordionItems.find((item) => item.id === activeId)?.content}
-        {/* Learn More Button */}
-        {activeId && (
-          <div className="flex justify-end mt-4">
-            <button className="text-purple-600 hover:text-purple-800 transition-colors">
-              LEARN MORE →
-            </button>
-          </div>
-        )}
+    <div className="bg-[#f6f6f6] py-16">
+      {/* Header Section */}
+      <div className="text-center mb-12 px-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          AI-Powered Future of Learning & Development
+        </h2>
+        <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+          We're integrating AI across your entire learning lifecycle.
+        </p>
       </div>
-    </section>
+
+      {/* Accordion Section */}
+      <section className="container mx-auto px-4 flex flex-col md:flex-row gap-8">
+        {/* Sidebar Navigation */}
+        <nav className="md:w-1/4 bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm">
+          {accordionItems.map(({ id, title, icon, description }, index) => (
+            <button
+              key={id}
+              onClick={() => handleClick(id)}
+              className={`flex items-start gap-4 w-full px-4 py-4 text-left transition-colors ${
+                index !== accordionItems.length - 1 ? 'border-b-4' : ''
+              } ${
+                activeId === id
+                  ? 'bg-purple-50 border-b-[#6b19ff] font-semibold'
+                  : 'hover:bg-gray-50 border-b-gray-200'
+              }`}
+            >
+              <img 
+                src={icon} 
+                alt={`${title} icon`}
+                className="flex-shrink-0 w-6 h-6 mt-1"
+              />
+              <div className="min-w-0 flex-1">
+                <h3 className={`font-medium text-gray-900 ${activeId === id ? 'text-purple-700' : ''}`}>
+                  {title}
+                </h3>
+                {/* Show description only when active */}
+                {activeId === id && (
+                  <p className="mt-1 text-sm text-gray-600">
+                    {description}
+                  </p>
+                )}
+              </div>
+            </button>
+          ))}
+        </nav>
+
+        {/* Content Area */}
+        <div className="md:w-3/4 rounded-lg p-6">
+          {activeId && (
+            <>
+              {accordionItems.find((item) => item.id === activeId)?.content}
+              {/* Learn More Button */}
+              <div className="flex justify-end mt-4">
+                <button className="text-gray-900 hover:text-gray-700 font-semibold transition-colors">
+                  LEARN MORE →
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+    </div>
   );
 }

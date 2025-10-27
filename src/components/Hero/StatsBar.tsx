@@ -21,7 +21,12 @@ const stats = [
   },
   {
     number: '1500+',
-    title: 'Programs Accelerating Skills Development',
+    title: (
+      <>
+        Programs Accelerating<br />
+        Skills Development
+      </>
+    ),
   },
   {
     number: '100+',
@@ -31,20 +36,19 @@ const stats = [
 
 export function StatsBar() {
   return (
-    <section className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto px-4 flex flex-wrap justify-between">
-        {stats.map(({ number, title }, index) => (
-          <div
-            key={index}
-            className={`flex flex-col px-4 ${
-              index !== stats.length - 1 ? 'border-r border-gray-700' : ''
-            } mb-4 md:mb-0 w-full md:w-auto`}
-            style={{ minWidth: '150px' }}
-          >
-            <span className="text-3xl font-bold">{number}</span>
-            <span className="text-sm mt-1">{title}</span>
-          </div>
-        ))}
+    <section className="bg-[#292929] text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap md:flex-nowrap justify-center items-stretch">
+          {stats.map(({ number, title }, index) => (
+            <div
+              key={index}
+              className="flex flex-col px-6 md:px-8 py-4 border-l border-gray-600 w-full md:w-auto md:flex-1"
+            >
+              <span className="text-4xl font-bold mb-2 whitespace-nowrap">{number}</span>
+              <span className="text-sm leading-relaxed">{title}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

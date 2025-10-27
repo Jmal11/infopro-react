@@ -2,14 +2,14 @@ import React from 'react';
 
 export function WorkforcePage() {
   return (
-    <div className="bg-white min-h-screen section-responsive">
+    <div className="bg-[#f6f6f6] min-h-screen section-responsive py-16">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 px-2 sm:px-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-[75px] font-bold text-gray-900 mb-6 leading-tight">
             Workforce Transformation
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             For over 30 years, we've been transforming the way organizations develop their most valuable
             asset - their people. As a comprehensive learning and talent consulting agency, we drive
             integrated development across individuals, teams, and organizations to
@@ -20,7 +20,7 @@ export function WorkforcePage() {
         {/* Three Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Develop Talent Card */}
-          <div className="border border-gray-300 rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-200/50 hover:border-purple-300 group cursor-pointer">
+          <div className="bg-white rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
             <h2 className="text-xl sm:text-2xl font-semibold text-center mb-8 text-gray-800 group-hover:text-purple-600 transition-colors">
               Develop Talent
             </h2>
@@ -34,15 +34,15 @@ export function WorkforcePage() {
               />
             </div>
 
-            <div className="text-center border-t border-gray-200 pt-4">
-              <p className="text-purple-600 font-semibold text-base sm:text-lg">
+            <div className="text-center border-t-4 border-[#e1d1ff] pt-4 -mx-6 px-6">
+              <p className="text-gray-800 font-semibold text-base sm:text-lg">
                 Speed to Proficiency
               </p>
             </div>
           </div>
 
           {/* Empower Teams Card */}
-          <div className="border border-gray-300 rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-200/50 hover:border-yellow-300 group cursor-pointer">
+          <div className="bg-white rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
             <h2 className="text-xl sm:text-2xl font-semibold text-center mb-8 text-gray-800 group-hover:text-yellow-600 transition-colors">
               Empower Teams
             </h2>
@@ -56,15 +56,15 @@ export function WorkforcePage() {
               />
             </div>
 
-            <div className="text-center border-t border-gray-200 pt-4">
-              <p className="text-yellow-600 font-semibold text-base sm:text-lg">
+            <div className="text-center border-t-4 border-[#e1d1ff] pt-4 -mx-6 px-6">
+              <p className="text-gray-800 font-semibold text-base sm:text-lg">
                 Accelerate Growth
               </p>
             </div>
           </div>
 
           {/* Transform Organization Card */}
-          <div className="border border-gray-300 rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-200/50 hover:border-teal-300 group cursor-pointer">
+          <div className="bg-white rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
             <h2 className="text-xl sm:text-2xl font-semibold text-center mb-8 text-gray-800 group-hover:text-teal-600 transition-colors">
               Transform Organization
             </h2>
@@ -78,8 +78,8 @@ export function WorkforcePage() {
               />
             </div>
 
-            <div className="text-center border-t border-gray-200 pt-4">
-              <p className="text-teal-600 font-semibold text-base sm:text-lg">
+            <div className="text-center border-t-4 border-[#e1d1ff] pt-4 -mx-6 px-6">
+              <p className="text-gray-800 font-semibold text-base sm:text-lg">
                 Amplify Business Agility
               </p>
             </div>

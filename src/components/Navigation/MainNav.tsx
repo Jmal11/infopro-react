@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Menu, Search, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';  // Added import for Link
 
 // Define custom icons
 const StrategyIcon = () => (
@@ -50,9 +50,11 @@ const EventsIcon = () => (
     <path fill="currentColor" d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
   </svg>
 );
+
+// Add missing icons
 const ConferenceIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24" className="text-primary">
-    <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+    <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm10.75 1c-.96.73-2.72 1.5-4.75 1.5h-1v-2.5c0-1.62-1.37-3.11-3.45-3.45C11.71 11.08 12 11.02 12 11s1.66-.34 2.75-.95c.85.84 2.26 1.45 3.75 1.45 2.21 0 4-1.79 4-4s-1.79-4-4-4c-1.94 0-3.54 1.38-3.9 3.21-.57-.22-1.17-.36-1.77-.46L14.05 2h-.05C13.45 1.38 12.78 1 12 1s-1.45.38-2 1h-.05l1.72 4.27c-.6.09-1.2.24-1.77.46C9.54 5.38 7.94 4 6 4 3.79 4 2 5.79 2 8s1.79 4 4 4c1.93 0 3.54-1.38 3.9-3.21.68.26 1.44.45 2.35.45h.75c.71 0 1.45-.2 2.1-.50.65.3 1.39.5 2.1.5h.04c1.64 0 2.97-.49 3.97-1.16.31.71.39 1.5.29 2.27-.14.86-.49 1.66-1 2.31V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
   </svg>
 );
 const CoachingIcon = () => (
@@ -62,7 +64,7 @@ const CoachingIcon = () => (
 );
 const LabsIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24" className="text-primary">
-    <path fill="currentColor" d="M14.81 9l-.94-2H10.13l-.94 2H5.21A1.09 1.09 0 0 0 4 10.08c0 3.45 1.72 6.61 4.5 8.45.67.44 1.35.81 2.05 1.1l1.04-3.22L10 14H8.88L9.2 12h5.6l.32 2H13.41l-1.59 2.4.78 3.22c.69-.29 1.38-.66 2.05-1.10C17.28 16.69 19 13.53 19 10.08A1.09 1.09 0 0 0 17.79 9zm-1.42 4h-2.78l.69-1h1.4zM19 3H5c-1.1 0-2 .9-2 2v14c0 .55.22 1.05.59 1.41.36.37.86.59 1.41.59h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+    <path fill="currentColor" d="M14.81 9l-.94-2H10.13l-.94 2H5.21A1.09 1.09 0 0 0 4 10.08c0 3.45 1.72 6.61 4.5 8.45.67.44 1.35.81 2.05 1.1l1.04-3.22L10 14H8.88L9.2 12h5.6l.32 2H13.41l-1.59 2.4.78 3.22c.69-.29 1.38-.66 2.05-1.1C17.28 16.69 19 13.53 19 10.08A1.09 1.09 0 0 0 17.79 9zm-1.42 4h-2.78l.69-1h1.4zM19 3H5c-1.1 0-2 .9-2 2v14c0 .55.22 1.05.59 1.41.36.37.86.59 1.41.59h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
   </svg>
 );
 const OnboardingIcon = () => (
@@ -96,6 +98,8 @@ const RewardsIcon = () => (
   </svg>
 );
 
+
+
 // Navigation Data
 const mainMenuItems = [
   {
@@ -119,260 +123,250 @@ const mainMenuItems = [
           { icon: <ReportingIcon />, title: "Reporting", superscript: "AI+" }
         ]
       },
-      categories: [
-        {
-          title: "",
-          links: [
-            { text: "Custom Content", url: "/develop-talent/custom-content" },
-            { text: "Training Delivery", url: "/develop-talent/training-delivery" },
-            { text: "LMS Administration", url: "/develop-talent/lms-administration" },
-            { text: "Learning Strategy", url: "/develop-talent/learning-strategy" },
-            { text: "Training Needs Analysis", url: "/develop-talent/training-needs-analysis" }
-          ]
-        },
-        {
-          title: "",
-          links: [
-            { text: "Talent Acquisition", url: "/develop-talent/talent-acquisition" },
-            { text: "Onboarding", url: "/develop-talent/onboarding" },
-            { text: "Leadership Development", url: "/develop-talent/leadership-development" },
-            { text: "Performance Management", url: "/develop-talent/performance-management" }
-          ]
-        }
-      ],
+            categories: [
+              {
+                title: "",
+                links: [
+                  { text: "Custom Content", url: "/develop-talent/custom-content" },
+                  { text: "Training Delivery", url: "/develop-talent/training-delivery" },
+                  { text: "LMS Administration", url: "/develop-talent/lms-administration" },
+                  { text: "Learning Strategy", url: "/develop-talent/learning-strategy" },
+                  { text: "Training Needs Analysis", url: "/develop-talent/training-needs-analysis" }
+                ]
+              },
+              {
+                title: "",
+                links: [
+                  { text: "Talent Acquisition", url: "/develop-talent/talent-acquisition" },
+                  { text: "Onboarding", url: "/develop-talent/onboarding" },
+                  { text: "Leadership Development", url: "/develop-talent/leadership-development" },
+                  { text: "Performance Management", url: "/develop-talent/performance-management" }
+                ]
+              }
+            ],
       rightPanel: {
-        title: "More About Our Services",
-        cta: "Discover Our Approach",
-        ctaLink: "/managed-learning-services"
+        title: "Studio-On-Demand",
+        headline: "Predictable. Scalable. Ready to Deliver.",
+        description: "Extend your team with scalable, flexible design, content & media production.",
+        cta: "Explore Studio on Demand",
+        ctaLink: "/studio-on-demand"
       }
     }
   },
   {
-    title: "Deliver Training",
+    title: "Empower Teams",
     hasDropdown: true,
     content: {
       leftPanel: {
-        title: "Training Modalities",
+        title: "Training Delivery As a Service",
         services: [
           { icon: <InPersonTrainingIcon />, title: "In-Person Training" },
           { icon: <VirtualTrainingIcon />, title: "Virtual Training" },
-          { icon: <EventsIcon />, title: "Events & Conferences" },
-          { icon: <CoachingIcon />, title: "Coaching & Mentoring" },
-          { icon: <LabsIcon />, title: "Labs & Workshops" }
+          { icon: <EventsIcon />, title: "Events" },
+          { icon: <ConferenceIcon />, title: "Conference" },
+          { icon: <CoachingIcon />, title: "Coaching" },
+          { icon: <LabsIcon />, title: "Labs" }
         ]
       },
       categories: [
         {
-          title: "Training Types",
+          title: "Leadership Skills",
           links: [
-            { text: "Instructor-Led Training", url: "/deliver-training/instructor-led" },
-            { text: "Virtual Instructor-Led", url: "/deliver-training/virtual-instructor-led" },
-            { text: "Blended Learning", url: "/deliver-training/blended-learning" },
-            { text: "Microlearning", url: "/deliver-training/microlearning" }
+                  { text: "Vanguard Leadership", url: "/empower-teams/vanguard-leadership" },
+                  { text: "Early Career Development", url: "/develop-talent/early-career-development" },
+                  { text: "Mid-Career Development", url: "/empower-teams/mid-career-development" },
+                  { text: "Senior Leader Development", url: "/empower-teams/senior-leader-development" },
+                  { text: "Self Leadership Development", url: "/empower-teams/self-leadership-development" },
+                  { text: "Diversity, Equity and Inclusion", url: "/empower-teams/diversity-equity-inclusion" }
           ]
         },
         {
-          title: "Specialized Training",
+          title: "Business and Commercial Skills",
           links: [
-            { text: "Technical Training", url: "/deliver-training/technical" },
-            { text: "Soft Skills Training", url: "/deliver-training/soft-skills" },
-            { text: "Compliance Training", url: "/deliver-training/compliance" },
-            { text: "Sales Training", url: "/deliver-training/sales" }
+            { text: "Sales Training and Enablement", url: "/empower-teams/sales-training-enablement" },
+            { text: "Customer Excellence", url: "/empower-teams/customer-excellence" },
+            { text: "Commercial Leader Development", url: "/empower-teams/commercial-leadership" },
+            { text: "Product Training", url: "/empower-teams/product-training" },
+            { text: "People Leadership", url: "/empower-teams/people-leadership" },
+            { text: "Business Leadership", url: "/empower-teams/business-leadership" }
           ]
-        }
+        },
+            {
+              title: "Digital Skills",
+              links: [
+                { text: "Data Analytics and Visualization", url: "/empower-teams/data-analytics" },
+                { text: "AI & Machine Learning", url: "/empower-teams/aiml" },
+                { text: "Mastering the Digital Workplace", url: "/empower-teams/digital-workplace" },
+                { text: "AI Integration & Cloud Computing", url: "/empower-teams/cloud-computing" },
+                { text: "AI & Cybersecurity", url: "/empower-teams/cybersecurity" },
+                { text: "Prompt Engineering for Leaders", url: "/empower-teams/prompt-engineering" },
+                { text: "Agile Project Management", url: "/empower-teams/agile-project-management" }
+              ]
+            }
       ],
       rightPanel: {
-        title: "Featured Training Programs",
-        cta: "Explore Training Options",
-        ctaLink: "/training-programs"
+        title: "Master Skills with Award Winning Programs & Facilitators",
+        bulletPoints: ["Blended learning journeys", "Customizable to your needs"],
+        cta: "DOWNLOAD OUR SKILLS CATALOGUE",
+        ctaLink: "/skills-catalogue"
       }
     }
   },
   {
-    title: "Engage Employees",
+    title: "Transform Organizations",
     hasDropdown: true,
     content: {
       leftPanel: {
-        title: "Engagement Solutions",
+        title: "Unlock:U Platform",
         services: [
           { icon: <OnboardingIcon />, title: "Onboarding" },
-          { icon: <LmsIcon />, title: "LMS & Platforms" },
+          { icon: <LmsIcon />, title: "Learning Management (LMS)" },
           { icon: <GoalSettingIcon />, title: "Goal Setting" },
-          { icon: <PerformanceIcon />, title: "Performance Tracking" },
-          { icon: <EmployeeEngagementIcon />, title: "Engagement Programs" },
-          { icon: <RewardsIcon />, title: "Rewards & Recognition" }
+          { icon: <PerformanceIcon />, title: "Performance Management" },
+          { icon: <EmployeeEngagementIcon />, title: "Employee Engagement" },
+          { icon: <RewardsIcon />, title: "Rewards and Recognition" }
         ]
       },
       categories: [
         {
-          title: "Employee Experience",
+          title: "Performance Consulting",
+          url: "/transform/performance-consulting",
           links: [
-            { text: "Onboarding Programs", url: "/engage-employees/onboarding" },
-            { text: "Career Development", url: "/engage-employees/career-development" },
-            { text: "Retention Strategies", url: "/engage-employees/retention" },
-            { text: "Culture Building", url: "/engage-employees/culture" }
+            { text: "Agile Enterprise Transformation", url: "/transform/agile-transformation" },
+            { text: "Organization Change Management", url: "/transform/change-management" }
           ]
         },
         {
-          title: "Performance",
+          title: "Technology Consulting",
+          url: "/technology-consulting",
           links: [
-            { text: "Performance Management", url: "/engage-employees/performance-management" },
-            { text: "360 Feedback", url: "/engage-employees/360-feedback" },
-            { text: "Recognition Programs", url: "/engage-employees/recognition" },
-            { text: "Engagement Surveys", url: "/engage-employees/surveys" }
+            { text: "Operating Model Transformation", url: "/operating-model" },
+            { text: "Skills Based Design", url: "/skills-based-design" }
           ]
         }
       ],
       rightPanel: {
-        title: "Boost Employee Engagement",
-        cta: "Learn About Our Solutions",
-        ctaLink: "/employee-engagement"
+        title: "Human+AI: Transforming Workflows and Value streams",
+        description: "Upskill, adapt and thrive in an AI driven future.",
+        cta: "LEARN MORE",
+        ctaLink: "/human-ai-transformation"
       }
     }
   }
 ];
 
+// Expanded menu data
 const expandedMenuData = {
   ourWork: {
     title: "Our Work",
     links: [
       { text: "Case Studies", url: "/case-studies" },
-      { text: "Client Success Stories", url: "/success-stories" },
-      { text: "Testimonials", url: "/testimonials" },
-      { text: "Portfolio", url: "/portfolio" }
+      { text: "Podcast", url: "/podcast" },
+      { text: "Insights", url: "/insights" }
     ]
   },
   industries: {
     title: "Industries",
     links: [
+      { text: "Banking and Finance", url: "/industries/banking" },
+      { text: "Insurance", url: "/industries/insurance" },
+      { text: "Technology/IT", url: "/industries/technology" },
       { text: "Healthcare", url: "/industries/healthcare" },
-      { text: "Financial Services", url: "/industries/financial" },
-      { text: "Technology", url: "/industries/technology" },
-      { text: "Manufacturing", url: "/industries/manufacturing" },
-      { text: "Retail", url: "/industries/retail" },
       { text: "Energy", url: "/industries/energy" },
-      { text: "Government", url: "/industries/government" },
-      { text: "Education", url: "/industries/education" }
+      { text: "Pharma", url: "/industries/pharma" },
+      { text: "Professional Services", url: "/industries/professional-services" },
+      { text: "Non Profit", url: "/industries/non-profit" }
     ]
   },
   aboutUs: {
     title: "About Us",
     links: [
-      { text: "Our Story", url: "/about" },
-      { text: "Leadership Team", url: "/leadership" },
+      { text: "About Us", url: "/about-us" },
+      { text: "Press Releases", url: "/press-releases" },
+      { text: "Awards", url: "/awards" },
+      { text: "Events", url: "/events" },
       { text: "Careers", url: "/careers" },
-      { text: "News & Events", url: "/news" },
-      { text: "Contact Us", url: "/contact" }
+      { text: "Contact Us", url: "/contact-us" }
     ]
   }
 };
 
-function MainNav() {
+export function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const [expandedMenu, setExpandedMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navRef = useRef<HTMLElement | null>(null);
+  const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
+  const scheduleClose = useRef<number | null>(null);
 
+  // Scroll handler
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50); // Increased threshold for better UX
     };
-    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Set initial scroll state on mount
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDropdown = (index: number) => {
-    setActiveDropdown(activeDropdown === index ? null : index);
-  };
+  // Click outside handler
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Escape key handler
+  useEffect(() => {
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveDropdown(null);
+        setIsSearchOpen(false);
+        setExpandedMenu(false);
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleEscKey);
+    return () => document.removeEventListener('keydown', handleEscKey);
+  }, []);
+
+const toggleDropdown = (index: number) => {
+  if (activeDropdown === index) {
+    setActiveDropdown(null);
+  } else {
+    setActiveDropdown(index);
+  }
+};
+
+// Hover handlers
+const handleMouseEnter = (index: number) => {
+  if (scheduleClose.current) clearTimeout(scheduleClose.current);
+  setActiveDropdown(index);
+};
+
+const handleMouseLeave = () => {
+  scheduleClose.current = window.setTimeout(() => {
+    setActiveDropdown(null);
+  }, 200);
+};
 
   return (
-    <header className={clsx(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-      isScrolled ? "bg-white shadow-md" : "bg-gradient-to-b from-black/50 to-transparent"
-    )}>
-      <style>{`
-        /* Hide all radio buttons */
-        .dropdown-radio {
-          position: absolute;
-          opacity: 0;
-          pointer-events: none;
-        }
-
-        /* Hide all dropdowns by default */
-        .dropdown-content {
-          display: none;
-          opacity: 0;
-          animation: fadeIn 0.2s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        /* Show dropdown when its radio is checked */
-        #dropdown-radio-1:checked ~ .nav-items .dropdown-content-1,
-        #dropdown-radio-2:checked ~ .nav-items .dropdown-content-2,
-        #dropdown-radio-3:checked ~ .nav-items .dropdown-content-3 {
-          display: block;
-        }
-
-        /* Rotate chevron when active */
-        #dropdown-radio-1:checked ~ .nav-items .dropdown-label-1 .chevron-icon,
-        #dropdown-radio-2:checked ~ .nav-items .dropdown-label-2 .chevron-icon,
-        #dropdown-radio-3:checked ~ .nav-items .dropdown-label-3 .chevron-icon {
-          transform: rotate(180deg);
-        }
-
-        /* Active state for label text color */
-        #dropdown-radio-1:checked ~ .nav-items .dropdown-label-1,
-        #dropdown-radio-2:checked ~ .nav-items .dropdown-label-2,
-        #dropdown-radio-3:checked ~ .nav-items .dropdown-label-3 {
-          color: #2563eb;
-        }
-
-        /* Show backdrop when any dropdown is open */
-        #dropdown-radio-1:checked ~ .dropdown-backdrop,
-        #dropdown-radio-2:checked ~ .dropdown-backdrop,
-        #dropdown-radio-3:checked ~ .dropdown-backdrop {
-          display: block;
-        }
-
-        /* Backdrop styles */
-        .dropdown-backdrop {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          z-index: 45;
-          cursor: default;
-        }
-
-        /* Make dropdown content above backdrop */
-        .dropdown-content {
-          position: relative;
-          z-index: 50;
-        }
-      `}</style>
-
-      {/* Radio buttons for dropdown state (outside nav structure) */}
-      <input type="radio" name="dropdown" id="dropdown-radio-none" className="dropdown-radio" defaultChecked />
-      <input type="radio" name="dropdown" id="dropdown-radio-1" className="dropdown-radio" />
-      <input type="radio" name="dropdown" id="dropdown-radio-2" className="dropdown-radio" />
-      <input type="radio" name="dropdown" id="dropdown-radio-3" className="dropdown-radio" />
-
-      {/* Backdrop to close dropdowns - click it to select 'none' radio */}
-      <label htmlFor="dropdown-radio-none" className="dropdown-backdrop"></label>
-
+    <header
+      className={clsx(
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out overflow-x-clip",
+        isScrolled 
+          ? "bg-white/95 backdrop-blur-md shadow-lg py-2" 
+          : "bg-transparent py-4"
+      )}
+      ref={navRef}
+    >
       {/* Main Navigation Bar */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 gap-2">
@@ -386,158 +380,165 @@ function MainNav() {
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="nav-items hidden lg:flex items-center flex-wrap gap-x-2 max-w-full overflow-x-auto scrollbar-hide">
-            {mainMenuItems.map((item, index) => {
-              const dropdownIndex = mainMenuItems.slice(0, index).filter(i => i.hasDropdown).length + 1;
-              
-              return (
-                <div
-                  key={index}
-                  className="relative px-4 xl:px-6"
-                >
-                  {item.hasDropdown ? (
-                    <>
-                      {/* Clickable label acting as button */}
-                      <label
-                        htmlFor={`dropdown-radio-${dropdownIndex}`}
-                        className={clsx(
-                          `dropdown-label-${dropdownIndex} flex items-center font-medium py-5 transition-all duration-500 ease-in-out cursor-pointer`,
-                          isScrolled 
-                            ? "text-gray-800 hover:text-blue-600" 
-                            : "text-white hover:text-gray-200"
-                        )}
-                      >
-                        {item.title} <ChevronDown className={clsx("ml-1 w-4 h-4 transition-all duration-300 chevron-icon", isScrolled ? "text-gray-600" : "text-white")} />
-                      </label>
+          <div className="hidden lg:flex items-center flex-wrap gap-x-2 max-w-full overflow-x-auto scrollbar-hide">
+{mainMenuItems.map((item, index) => (
+  <div
+    key={index}
+    className="relative px-4 xl:px-6"
+    onMouseEnter={() => item.hasDropdown && handleMouseEnter(index)}
+    onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
+  >
+      {item.hasDropdown ? (
+        <button
+          ref={(el) => (buttonRefs.current[index] = el)}
+          className={clsx(
+            "flex items-center font-medium py-5 transition-all duration-500 ease-in-out",
+            isScrolled 
+              ? "text-gray-800 hover:text-blue-600" 
+              : "text-white hover:text-gray-200",
+            activeDropdown === index && isScrolled ? "text-blue-600" : ""
+          )}
+          aria-expanded={activeDropdown === index}
+        >
+          {item.title} <ChevronDown className={clsx("ml-1 w-4 h-4 transition-all duration-500", isScrolled ? "text-gray-600" : "text-white")} />
+        </button>
+          ) : (
+            <Link
+              to={item.link || "/"}
+              className={clsx(
+                "block py-5 transition-all duration-500 ease-in-out",
+                isScrolled 
+                  ? "text-gray-800 hover:text-blue-600" 
+                  : "text-white hover:text-gray-200"
+              )}
+            >
+              {item.title}
+            </Link>
+          )}
 
-                      {/* Mega Dropdown - Full Width Below Navbar */}
-                      <div
-                        className={`dropdown-content-${dropdownIndex} dropdown-content fixed inset-x-0 bg-white shadow-lg rounded-b border-t border-gray-200`}
-                        style={{
-                          top: isScrolled ? '72px' : '80px',
-                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                        }}
-                      >
-                        <div className="container mx-auto px-4 py-8 bg-white">
-                          <div className="grid grid-cols-12 gap-6 border border-gray-200 rounded">
-                            {/* Left Panel - Service Icons */}
-                            <div className="col-span-3 bg-[#f0f0ff] p-6 rounded-l">
-                              <h3 className="text-gray-800 font-semibold mb-4 flex items-center">
-                                {item.content?.leftPanel.title}
-                                {item.content?.leftPanel.superscript && (
-                                  <sup className="text-blue-600 ml-1">{item.content.leftPanel.superscript}</sup>
-                                )}
-                                <ArrowRight className="ml-2 w-4 h-4" />
-                              </h3>
-                              <div className="grid grid-cols-2 gap-4">
-                                {item.content?.leftPanel.services.map((service, i) => (
-                                  <a key={i} href="#" className="flex flex-col items-center p-2 hover:bg-white rounded transition-colors">
-                                    <div className="mb-2">{service.icon}</div>
-                                    <span className="text-sm text-center" style={{ color: 'black' }}>
-                                      {service.title}
-                                      {'superscript' in service && service.superscript && (
-                                        <sup className="text-blue-600 text-xs ml-0.5">{service.superscript}</sup>
-                                      )}
-                                    </span>
-                                  </a>
-                                ))}
-                              </div>
-                            </div>
-
-                            {/* Middle Categories */}
-                            <div className={`col-span-6 grid ${item.content && item.content.categories && item.content.categories.length === 3 ? 'grid-cols-3' : 'grid-cols-2'} gap-6 p-6 border-r border-l border-gray-200`}>
-                              {item.content && item.content.categories && item.content.categories.map((category, catIndex) => (
-                                <div key={catIndex}>
-                                  {'url' in category && category.url ? (
-                                    <h3 className="text-black font-semibold mb-3">
-                                      <Link to={category.url} className="hover:text-blue-600 transition-colors">
-                                        {category.title}
-                                      </Link>
-                                    </h3>
-                                  ) : (
-                                    <h3 className="text-black font-semibold mb-3">{category.title}</h3>
-                                  )}
-                                  <ul className="space-y-2">
-                                    {category.links.filter(link => typeof link.url === 'string' && link.url).map((link, liIndex) => (
-                                      <li key={liIndex}>
-                                        <Link to={link.url || "#"} className="text-black hover:text-blue-600 transition-colors text-sm">
-                                          {link.text}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              ))}
-                            </div>
-
-                            {/* Right Panel */}
-                            <div className="col-span-3 p-6">
-                              <h3 className="text-gray-800 font-semibold mb-2">{item.content && item.content.rightPanel && item.content.rightPanel.title}</h3>
-                              {item.content && item.content.rightPanel && item.content.rightPanel.headline && (
-                                <p className="text-gray-800 font-medium mb-2">{item.content.rightPanel.headline}</p>
-                              )}
-                              {item.content && item.content.rightPanel && item.content.rightPanel.description && (
-                                <p className="text-sm text-gray-600 mb-3">{item.content.rightPanel.description}</p>
-                              )}
-                              {item.content && item.content.rightPanel && item.content.rightPanel.bulletPoints && (
-                                <ul className="mb-3 space-y-1">
-                                  {item.content.rightPanel.bulletPoints.map((point, i) => (
-                                    <li key={i} className="text-sm text-gray-700 flex items-start">
-                                      <span className="text-blue-600 mr-2">•</span>{point}
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
-                              <Link to={item.content?.rightPanel?.ctaLink || "#"} className="text-sm text-gray-800 font-medium hover:text-blue-600 transition-colors flex items-center">
-                                {item.content?.rightPanel?.cta}
-                                <ArrowRight className="ml-1 w-4 h-4" />
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <Link
-                      to={item.link || "/"}
-                      className={clsx(
-                        "block py-5 transition-all duration-500 ease-in-out",
-                        isScrolled 
-                          ? "text-gray-800 hover:text-blue-600" 
-                          : "text-white hover:text-gray-200"
+    {/* Mega Dropdown - Full Width Below Navbar */}
+    {item.hasDropdown && activeDropdown === index && (
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 10 }}
+        className="fixed inset-x-0 z-40 bg-white shadow-lg rounded-b border-t border-gray-200"
+        style={{
+          top: (buttonRefs.current[index]?.getBoundingClientRect().bottom ?? 0) + (isScrolled ? 8 : 16),
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+          zIndex: 50
+        }}
+        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="container mx-auto px-4 py-8 bg-white">
+          <div className="grid grid-cols-12 gap-6 border border-gray-200 rounded">
+            {/* Left Panel - Service Icons */}
+            <div className="col-span-3 bg-[#f0f0ff] p-6 rounded-l">
+              <h3 className="text-gray-800 font-semibold mb-4 flex items-center">
+                {item.content?.leftPanel.title}
+                {item.content?.leftPanel.superscript && (
+                  <sup className="text-blue-600 ml-1">{item.content.leftPanel.superscript}</sup>
+                )}
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                {item.content?.leftPanel.services.map((service, i) => (
+                  <a key={i} href="#" className="flex flex-col items-center p-2 hover:bg-white rounded transition-colors">
+                    <div className="mb-2">{service.icon}</div>
+                    <span className="text-sm text-center" style={{ color: 'black' }}>
+                      {service.title}
+                      {'superscript' in service && service.superscript && (
+                        <sup className="text-blue-600 text-xs ml-0.5">{service.superscript}</sup>
                       )}
-                    >
-                      {item.title}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Middle Categories */}
+              <div className={`col-span-6 grid ${item.content && item.content.categories && item.content.categories.length === 3 ? 'grid-cols-3' : 'grid-cols-2'} gap-6 p-6 border-r border-l border-gray-200`}>
+{item.content && item.content.categories && item.content.categories.map((category, catIndex) => (
+  <div key={catIndex}>
+              {'url' in category && category.url ? (
+                <h3 className="text-black font-semibold mb-3">
+                  <Link to={category.url} className="hover:text-blue-600 transition-colors">
+                    {category.title}
+                  </Link>
+                </h3>
+              ) : (
+                <h3 className="text-black font-semibold mb-3">{category.title}</h3>
+              )}
+              <ul className="space-y-2">
+                {category.links.filter(link => typeof link.url === 'string' && link.url).map((link, liIndex) => (
+                  <li key={liIndex}>
+                    <Link to={link.url || "#"} className="text-black hover:text-blue-600 transition-colors text-sm">
+                      {link.text}
                     </Link>
-                  )}
-                </div>
-              );
-            })}
+                  </li>
+                ))}
+              </ul>
+   </div>
+ ))}
+              </div>
+
+             {/* Right Panel */}
+             <div className="col-span-3 p-6">
+               <h3 className="text-gray-800 font-semibold mb-2">{item.content && item.content.rightPanel && item.content.rightPanel.title}</h3>
+               {item.content && item.content.rightPanel && item.content.rightPanel.headline && (
+                 <p className="text-gray-800 font-medium mb-2">{item.content.rightPanel.headline}</p>
+               )}
+               {item.content && item.content.rightPanel && item.content.rightPanel.description && (
+                 <p className="text-sm text-gray-600 mb-3">{item.content.rightPanel.description}</p>
+               )}
+               {item.content && item.content.rightPanel && item.content.rightPanel.bulletPoints && (
+                 <ul className="mb-3 space-y-1">
+                   {item.content.rightPanel.bulletPoints.map((point, i) => (
+                     <li key={i} className="text-sm text-gray-700 flex items-start">
+                       <span className="text-blue-600 mr-2">•</span>{point}
+                     </li>
+                   ))}
+                 </ul>
+               )}
+               <Link to={item.content?.rightPanel?.ctaLink || "#"} className="text-sm text-gray-800 font-medium hover:text-blue-600 transition-colors flex items-center">
+                 {item.content?.rightPanel?.cta}
+                 <ArrowRight className="ml-1 w-4 h-4" />
+               </Link>
+             </div>
+          </div>
+        </div>
+      </motion.div>
+    )}
+  </div>
+))}
+{/* Right Buttons */}
+<div className="flex items-center gap-3 flex-shrink-0">
+  <button onClick={() => setIsSearchOpen(true)} className={clsx("p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+    <Search className={clsx("w-5 h-5 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+  </button>
+  <button onClick={() => setExpandedMenu(!expandedMenu)} className={clsx("hidden lg:flex p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+    <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+  </button>
+  <a 
+  href="/contact" 
+  className="hidden lg:block text-white px-6 py-2 rounded"
+  style={{ backgroundColor: '#6B19FF' }}
+>
+  CONNECT WITH US
+</a>
+
+  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={clsx("lg:hidden p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+    {isMenuOpen ? (
+      <X className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+    ) : (
+      <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+    )}
+  </button>
+</div>
 
             {/* Right Buttons */}
-            <div className="flex items-center gap-3 flex-shrink-0">
-              <button onClick={() => setIsSearchOpen(true)} className={clsx("p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
-                <Search className={clsx("w-5 h-5 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
-              </button>
-              <button onClick={() => setExpandedMenu(!expandedMenu)} className={clsx("hidden lg:flex p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
-                <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
-              </button>
-              <a 
-                href="/contact" 
-                className="hidden lg:block text-white px-6 py-2 rounded"
-                style={{ backgroundColor: '#6B19FF' }}
-              >
-                CONNECT WITH US
-              </a>
-
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={clsx("lg:hidden p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
-                {isMenuOpen ? (
-                  <X className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
-                ) : (
-                  <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
-                )}
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -578,7 +579,7 @@ function MainNav() {
                             <ul className="space-y-2 ml-2">
                               {category.links.filter(link => typeof link.url === 'string' && link.url).map((link, liIndex) => (
                                 <li key={liIndex}>
-                                  <Link to={link.url as string} className="text-gray-600 text-sm">{link.text}</Link>
+                          <Link to={link.url as string} className="text-gray-600 text-sm">{link.text}</Link>
                                 </li>
                               ))}
                             </ul>
@@ -609,8 +610,8 @@ function MainNav() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed left-0 right-0 bg-white z-[60] shadow-lg border-b"
-            style={{ top: isScrolled ? '64px' : '80px' }}
+            className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
+            style={{ top: isScrolled ? '72px' : '88px' }}
           >
             <div className="container mx-auto py-8 px-4">
               <div className="flex items-center justify-between mb-8">
@@ -637,8 +638,8 @@ function MainNav() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed left-0 right-0 bg-white z-[60] shadow-lg border-b"
-            style={{ top: isScrolled ? '64px' : '80px' }}
+            className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
+            style={{ top: isScrolled ? '72px' : '88px' }}
           >
             <div className="container mx-auto py-6 px-4 max-w-6xl">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -22,11 +22,15 @@ const awards = [
 
 export function AwardSection() {
   return (
-    <section className="bg-[#f6f6f6]">
-      <div className="container mx-auto px-4 py-12">
+    <section className="bg-[#f6f6f6] py-16">
+      <div className="container mx-auto px-4">
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+          Awards
+        </h2>
 
         {/* Mobile: Logo Carousel with Dots */}
-        <div className="md:hidden">
+        <div className="md:hidden mb-8">
           <Carousel
             showArrows={false}
             showStatus={false}
@@ -57,7 +61,7 @@ export function AwardSection() {
                 <img
                   src={award.image}
                   alt={`Award Logo ${idx + 1}`}
-                  className="w-40 h-24 object-contain mb-10"
+                  className="w-48 h-auto object-contain mb-10"
                   loading="lazy"
                 />
               </div>
@@ -66,20 +70,29 @@ export function AwardSection() {
         </div>
 
         {/* Desktop/Tablet: Flex Wrap Logos */}
-        <div className="hidden md:flex flex-wrap justify-center gap-10">
+        <div className="hidden md:flex justify-center items-center mb-12">
           {awards.map((award, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center p-2"
+              className={`flex items-center justify-center px-8 ${
+                idx !== awards.length - 1 ? 'border-r-2 border-gray-300' : ''
+              }`}
             >
               <img
                 src={award.image}
                 alt={`Award Logo ${idx + 1}`}
-                className="w-40 h-24 object-contain"
+                className="w-48 h-auto object-contain"
                 loading="lazy"
               />
             </div>
           ))}
+        </div>
+
+        {/* View All Awards Button */}
+        <div className="flex justify-center mt-8">
+          <button className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300">
+            VIEW ALL AWARDS
+          </button>
         </div>
       </div>
     </section>

@@ -41,49 +41,27 @@ const rightItems = [
   {
     title: 'Strategic Cost Management',
     description: 'Optimize spend, and gain transparent ROI metrics for strategic financial control.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 1.343-3 3v3h6v-3c0-1.657-1.343-3-3-3z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14v4m0 0h3m-3 0H9" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/strategic-cost-management.svg',
   },
   {
     title: 'Agile & Integrated Operating Model',
     description: 'Drive measurable business value through collaborative partnership.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/agile-and-integrated-operating-model.svg',
   },
   {
     title: 'Performance-Driven Outcomes',
     description: 'Boost workforce productivity with measurable impact on performance.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m-6 6h12a2 2 0 002-2v-5a2 2 0 00-2-2h-3l-3-3-3 3H5a2 2 0 00-2 2v5a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/performance-driven-outcomes.svg',
   },
   {
     title: 'Scalable Global Operations',
     description: 'Ensure consistent service quality across all regions for global excellence.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m-6 6h12a2 2 0 002-2v-5a2 2 0 00-2-2h-3l-3-3-3 3H5a2 2 0 00-2 2v5a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Scalable-global-operations.svg',
   },
   {
     title: 'Seamless Transition & Governance',
     description: 'Mitigate risks and maintain robust operational oversight through seamless integration.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-3-3v6m-6 6h12a2 2 0 002-2v-5a2 2 0 00-2-2h-3l-3-3-3 3H5a2 2 0 00-2 2v5a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/seamless-transition-and-governance.svg',
   },
 ];
 
@@ -102,7 +80,7 @@ export function ManagedLearningServices() {
           </p>
         </div>
         {/* Two Column Layout */}
-        <div className="flex flex-col md:flex-row gap-10 items-stretch">
+        <div className="flex flex-col md:flex-row gap-10">
           {/* Left: Managed Learning Card */}
           <div className="md:w-1/2 bg-purple-50 rounded-lg p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-1">
@@ -119,7 +97,7 @@ export function ManagedLearningServices() {
                   className="bg-white rounded-md p-5 flex flex-col items-center justify-center space-y-2 shadow transition hover:shadow-lg cursor-pointer"
                 >
                   {icon}
-                  <span className="text-sm font-medium text-gray-900">
+                  <span className="text-sm font-medium text-gray-900 text-center">
                     {label}<sup className="text-xs font-normal">AI+</sup>
                   </span>
                 </div>
@@ -127,19 +105,22 @@ export function ManagedLearningServices() {
             </div>
           </div>
           {/* Right: Features List */}
-          <div className="md:w-1/2 flex flex-col justify-between">
-            <div className="space-y-7">
+          <div className="md:w-1/2 flex flex-col">
+            <div className="flex-grow flex flex-col justify-between">
               {rightItems.map(({ title, description, icon }) => (
                 <div key={title} className="flex items-start gap-4">
-                  <div className="flex-shrink-0">{icon}</div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">{title}</h4>
-                    <p className="text-gray-700">{description}</p>
+                  <div className="flex-shrink-0 w-16 flex justify-center items-start pt-1 pr-4 border-r-2 border-gray-300">
+                    <img src={icon} alt={title} className="w-auto h-auto max-w-full" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">{title}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="mt-10 flex justify-end">
+            {/* Learn More Button - Below the content */}
+            <div className="mt-8 flex justify-end">
               <button className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-purple-700">
                 LEARN MORE
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -517,7 +517,7 @@ export function MainNav() {
                         </div>
 
                         {/* Middle Categories */}
-                        <div className={col-span-6 grid ${item.content && item.content.categories && item.content.categories.length === 3 ? 'grid-cols-3' : 'grid-cols-2'} gap-6 p-6 border-r border-l border-gray-200}>
+                        <div className={`col-span-6 grid ${item.content && item.content.categories && item.content.categories.length === 3 ? 'grid-cols-3' : 'grid-cols-2'} gap-6 p-6 border-r border-l border-gray-200`}>
                           {item.content && item.content.categories && item.content.categories.map((category, catIndex) => (
                             <div key={catIndex}>
                               {'url' in category && category.url ? (
@@ -624,7 +624,7 @@ export function MainNav() {
                         className="flex justify-between items-center w-full py-2"
                       >
                         <span className="font-medium">{item.title}</span>
-                        <ChevronDown className={w-5 h-5 transition-transform ${activeDropdown === index ? 'rotate-180' : ''}} />
+                        <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === index ? 'rotate-180' : ''}`} />
                       </button>
                     ) : (
                       <a href={item.link} className="block py-2 font-medium">

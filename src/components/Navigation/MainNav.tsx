@@ -438,11 +438,11 @@ export function MainNav() {
           </a>
 
           {/* Desktop Nav Links */}   
-          <div className="hidden lg:flex items-center flex-wrap gap-x-2 max-w-full overflow-x-auto scrollbar-hide">
+          <div className="hidden lg:flex items-center flex-wrap gap-x-2 max-w-full px-5 overflow-x-auto scrollbar-hide">
             {mainMenuItems.map((item, index) => (
               <div
                 key={index}
-                className="relative px-4 xl:px-6"
+                className="relative px-4 xl:px-4"
                 onMouseEnter={() => item.hasDropdown && handleMouseEnter(index)}
                 onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
               >
@@ -580,7 +580,7 @@ export function MainNav() {
               </button>
               <a
                 href="/contact"
-                className="hidden lg:block text-white px-6 py-2 rounded bg-blue-600 hover:bg-blue-700 transition-colors w-[220px] text-center text-sm font-medium"
+                className="hidden bg-[#6B19FF] lg:block text-white px-2 py-4 rounded bg-blue-600 hover:bg-blue-700 transition-colors w-[200px] text-center text-sm font-medium"
               >
                 CONNECT WITH US
               </a>

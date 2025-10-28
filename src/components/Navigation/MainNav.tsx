@@ -300,7 +300,6 @@ export function MainNav() {
   const navRef = useRef<HTMLElement | null>(null);
   const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
   const scheduleClose = useRef<number | null>(null);
-  const [headerHeight, setHeaderHeight] = useState<number>(0);
   const [navHeight, setNavHeight] = useState<number>(0);
 
   // Treat navbar as white when scrolled or any menu/overlay is active
@@ -310,7 +309,7 @@ export function MainNav() {
     expandedMenu ||
     isSearchOpen ||
     isMenuOpen;
-  const hideAnnouncement = activeDropdown !== null || expandedMenu || isSearchOpen || isMenuOpen;
+  const hideAnnouncement = activeDropdown !== null || isElevated || expandedMenu || isSearchOpen || isMenuOpen;
 
   // Scroll handler
   useEffect(() => {
@@ -432,13 +431,13 @@ export function MainNav() {
           {/* Logo */}
           <a href="/" className="flex items-center z-10">
             {isElevated ? (
-              <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/logo.svg " alt="InfoPro Learning" className="h-10" />
+              <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/logo.svg " alt="InfoPro Learning" className="h-12" />
             ) : (
               <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/logo-new.svg " alt="InfoPro Learning" className="h-12" />
             )}
           </a>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Nav Links */}   
           <div className="hidden lg:flex items-center flex-wrap gap-x-2 max-w-full overflow-x-auto scrollbar-hide">
             {mainMenuItems.map((item, index) => (
               <div
@@ -658,7 +657,7 @@ export function MainNav() {
                     )}
                   </div>
                 ))}
-                <Link to="/contact" className="block text-center bg-blue-600 text-white py-2 px-4 rounded">CONNECT WITH US</Link>
+                <Link to="/contact" className="block text-center bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-6 rounded-md transition-all duration-300 font-semibold tracking-wide shadow-md hover:shadow-lg transform hover:-translate-y-0.5">CONNECT WITH US</Link>
               </nav>
             </div>
           </motion.div>

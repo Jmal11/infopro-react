@@ -105,7 +105,7 @@ export function HeroSection() {
 
   return (
     <div 
-      className="relative min-h-screen flex items-center bg-[#2a2a2a]"
+      className="relative min-h-screen flex items-center lg:pt-12 bg-[#2a2a2a]"
       style={slide.backgroundImage ? {
         backgroundImage: `url(${slide.backgroundImage})`,
         backgroundSize: 'cover',

@@ -55,6 +55,15 @@
   }
 }
 
+/* IPL brand color utility (fallback for places not using Tailwind classes) */
+:root {
+  --color-ipl: #6B19FF;
+}
+
+.text-color-ipl { color: var(--color-ipl) !important; }
+.bg-color-ipl { background-color: var(--color-ipl) !important; }
+.border-color-ipl { border-color: var(--color-ipl) !important; }
+
 /* ============= ENHANCED DROPDOWN STYLING ============= */
 
 /* Dropdown container with glass effect */

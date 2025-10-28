@@ -2,8 +2,8 @@ import React from 'react';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 text-sm border-t border-gray-700 mt-8">
-      <div className="max-w-[1280px] mx-auto px-4">
+    <footer className="bg-[#292929] text-gray-300 text-sm border-t border-gray-700 mt-8">
+      <div className="container mx-auto px-4">
         {/* Top Grid Columns: Hidden on mobile, visible on md and up */}
         <div className="hidden md:grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 py-12">
           {/* Develop Talent */}
@@ -165,7 +165,7 @@ export function Footer() {
           {/* Logo and Corporate Office */}
           <div className="flex items-center gap-4 min-w-[200px]">
             {/* Logo box */}
-            <div className="border-4 border-purple-600 rounded-sm px-4 py-1 flex items-center justify-center min-w-[65px] min-h-[44px] mr-2">
+            <div className="border-4 border-color-ipl rounded-sm px-4 py-1 flex items-center justify-center min-w-[65px] min-h-[44px] mr-2">
               <span className="text-white font-semibold text-xs text-left leading-snug">
                 Info<br />pro<br />Learning
               </span>
@@ -173,7 +173,7 @@ export function Footer() {
             <div className="flex items-center gap-2 text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5 text-purple-600"
+                className="w-5 h-5 text-color-ipl"
                 fill="none"
                 viewBox="0 0 24 24"
               >
@@ -196,7 +196,7 @@ export function Footer() {
           {/* Email */}
           <div className="flex items-center gap-2 text-gray-300">
             <svg
-              className="w-5 h-5 text-purple-600"
+              className="w-5 h-5 text-color-ipl"
               fill="none"
               viewBox="0 0 24 24"
             >

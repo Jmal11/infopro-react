@@ -95,8 +95,14 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <section className="container mx-auto px-4 py-12 bg-gray-50">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+    <section
+      className="w-full py-12"
+      style={{
+        background: 'linear-gradient(to bottom, #f6f6f6 0%, #f6f6f6 50%, #ffffff 50%, #ffffff 100%)'
+      }}
+    >
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-extrabold text-center mb-2">Let's Start a Conversation</h2>
         <p className="text-center text-gray-600 mb-6">Unlock New Possibilities.</p>
 
@@ -177,6 +183,7 @@ export default function ContactForm() {
             margin-top: 10px;
           }
         `}</style>
+        </div>
       </div>
     </section>
   );

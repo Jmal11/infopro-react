@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary: '#6B19FF',
+        'color-ipl': '#6B19FF',
         'primary-dark': '#5a0fd9',
         purple: {
           50: '#f3f0ff',

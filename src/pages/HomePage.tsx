@@ -14,7 +14,7 @@ import ContactForm from '../components/Hero/ContactForm';
 
 export function HomePage() {
   return (
-    <main className="section-responsive">
+    <main className="pt-0">
       <HeroSection />
       <section className="">
         <WorkforcePage />
@@ -44,6 +44,7 @@ export function HomePage() {
       <section className="">
         <LatestInsights />
       </section>
+      {/* Full-bleed contact form */}
       <section className="">
         <ContactForm />
       </section>

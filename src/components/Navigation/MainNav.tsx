@@ -300,17 +300,42 @@ export function MainNav() {
   const navRef = useRef<HTMLElement | null>(null);
   const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
   const scheduleClose = useRef<number | null>(null);
+  const [headerHeight, setHeaderHeight] = useState<number>(0);
+
+  // Treat navbar as white when scrolled or any menu/overlay is active
+  const isElevated =
+    isScrolled ||
+    activeDropdown !== null ||
+    expandedMenu ||
+    isSearchOpen ||
+    isMenuOpen;
 
   // Scroll handler
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 50); // Increased threshold for better UX
+      setIsScrolled(scrollY > 100); // Increased threshold to ensure navbar stays transparent longer
     };
     handleScroll(); // Set initial scroll state on mount
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Measure full header height (announcement + nav)
+  useEffect(() => {
+    const measure = () => {
+      if (navRef.current) {
+        setHeaderHeight(navRef.current.getBoundingClientRect().height);
+      }
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    const id = window.setInterval(measure, 150);
+    return () => {
+      window.removeEventListener('resize', measure);
+      window.clearInterval(id);
+    };
+  }, [isScrolled, activeDropdown, expandedMenu, isSearchOpen, isMenuOpen]);
 
   // Click outside handler
   useEffect(() => {
@@ -361,18 +386,29 @@ const handleMouseLeave = () => {
     <header
       className={clsx(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out overflow-x-clip",
-        isScrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-lg py-2" 
+        isElevated 
+          ? "bg-white shadow-md py-2" 
           : "bg-transparent py-4"
       )}
+      style={{
+        backgroundColor: isElevated ? '#ffffff' : 'transparent'
+      }}
       ref={navRef}
     >
+      {/* Announcement bar */}
+      <div className="w-full bg-transparent text-xs sm:text-sm">
+        <div className={clsx("container mx-auto px-4 py-2 text-center", isElevated ? "text-gray-800" : "text-white")}>
+          Upcoming Webinar | Sales Training for Non-Sales People | November 13, 1 pm EST
+          <a href="#" className="ml-2 text-color-ipl font-semibold">Register Now →</a>
+        </div>
+        <div className="h-px w-full" style={{ backgroundColor: '#565757' }} />
+      </div>
       {/* Main Navigation Bar */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 gap-2">
           {/* Logo */}
           <a href="/" className="flex items-center z-10">
-            {isScrolled ? (
+            {isElevated ? (
               <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/logo.svg " alt="InfoPro Learning" className="h-10" />
             ) : (
               <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/logo-new.svg " alt="InfoPro Learning" className="h-12" />
@@ -393,22 +429,22 @@ const handleMouseLeave = () => {
           ref={(el) => (buttonRefs.current[index] = el)}
           className={clsx(
             "flex items-center font-medium py-5 transition-all duration-500 ease-in-out",
-            isScrolled 
-              ? "text-gray-800 hover:text-blue-600" 
+            isElevated 
+              ? "text-gray-800 hover:text-color-ipl" 
               : "text-white hover:text-gray-200",
-            activeDropdown === index && isScrolled ? "text-blue-600" : ""
+            activeDropdown === index && isElevated ? "text-color-ipl" : ""
           )}
           aria-expanded={activeDropdown === index}
         >
-          {item.title} <ChevronDown className={clsx("ml-1 w-4 h-4 transition-all duration-500", isScrolled ? "text-gray-600" : "text-white")} />
+          {item.title} <ChevronDown className={clsx("ml-1 w-4 h-4 transition-all duration-500", isElevated ? "text-gray-600" : "text-white")} />
         </button>
           ) : (
             <Link
               to={item.link || "/"}
               className={clsx(
                 "block py-5 transition-all duration-500 ease-in-out",
-                isScrolled 
-                  ? "text-gray-800 hover:text-blue-600" 
+                isElevated 
+                  ? "text-gray-800 hover:text-color-ipl" 
                   : "text-white hover:text-gray-200"
               )}
             >
@@ -422,9 +458,9 @@ const handleMouseLeave = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
-        className="fixed inset-x-0 z-40 bg-white shadow-lg rounded-b border-t border-gray-200"
+        className="fixed inset-x-0 z-40 bg-white shadow-lg rounded-b"
         style={{
-          top: (buttonRefs.current[index]?.getBoundingClientRect().bottom ?? 0) + (isScrolled ? 8 : 16),
+          top: headerHeight,
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
           zIndex: 50
         }}
@@ -463,7 +499,7 @@ const handleMouseLeave = () => {
   <div key={catIndex}>
               {'url' in category && category.url ? (
                 <h3 className="text-black font-semibold mb-3">
-                  <Link to={category.url} className="hover:text-blue-600 transition-colors">
+                  <Link to={category.url} className="hover:text-color-ipl transition-colors">
                     {category.title}
                   </Link>
                 </h3>
@@ -473,7 +509,7 @@ const handleMouseLeave = () => {
               <ul className="space-y-2">
                 {category.links.filter(link => typeof link.url === 'string' && link.url).map((link, liIndex) => (
                   <li key={liIndex}>
-                    <Link to={link.url || "#"} className="text-black hover:text-blue-600 transition-colors text-sm">
+                    <Link to={link.url || "#"} className="text-black hover:text-color-ipl transition-colors text-sm">
                       {link.text}
                     </Link>
                   </li>
@@ -501,7 +537,7 @@ const handleMouseLeave = () => {
                    ))}
                  </ul>
                )}
-               <Link to={item.content?.rightPanel?.ctaLink || "#"} className="text-sm text-gray-800 font-medium hover:text-blue-600 transition-colors flex items-center">
+               <Link to={item.content?.rightPanel?.ctaLink || "#"} className="text-sm text-gray-800 font-medium hover:text-color-ipl transition-colors flex items-center">
                  {item.content?.rightPanel?.cta}
                  <ArrowRight className="ml-1 w-4 h-4" />
                </Link>
@@ -514,25 +550,24 @@ const handleMouseLeave = () => {
 ))}
 {/* Right Buttons */}
 <div className="flex items-center gap-3 flex-shrink-0">
-  <button onClick={() => setIsSearchOpen(true)} className={clsx("p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
-    <Search className={clsx("w-5 h-5 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+  <button onClick={() => setIsSearchOpen(true)} className={clsx("p-2 rounded-full transition-all duration-300", isElevated ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+    <Search className={clsx("w-5 h-5 transition-all duration-500", isElevated ? "text-gray-700" : "text-white")} />
   </button>
-  <button onClick={() => setExpandedMenu(!expandedMenu)} className={clsx("hidden lg:flex p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
-    <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+  <button onClick={() => setExpandedMenu(!expandedMenu)} className={clsx("hidden lg:flex p-2 rounded-full transition-all duration-300", isElevated ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+    <Menu className={clsx("w-6 h-6 transition-all duration-500", isElevated ? "text-gray-700" : "text-white")} />
   </button>
   <a 
   href="/contact" 
-  className="hidden lg:block text-white px-6 py-2 rounded"
-  style={{ backgroundColor: '#6B19FF' }}
+  className="hidden lg:block text-white px-6 py-2 rounded bg-color-ipl w-[220px] text-center"
 >
   CONNECT WITH US
 </a>
 
-  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={clsx("lg:hidden p-2 rounded-full transition-all duration-300", isScrolled ? "hover:bg-gray-100" : "hover:bg-white/10")}>
+  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={clsx("lg:hidden p-2 rounded-full transition-all duration-300", isElevated ? "hover:bg-gray-100" : "hover:bg-white/10")}>
     {isMenuOpen ? (
-      <X className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+      <X className={clsx("w-6 h-6 transition-all duration-500", isElevated ? "text-gray-700" : "text-white")} />
     ) : (
-      <Menu className={clsx("w-6 h-6 transition-all duration-500", isScrolled ? "text-gray-700" : "text-white")} />
+      <Menu className={clsx("w-6 h-6 transition-all duration-500", isElevated ? "text-gray-700" : "text-white")} />
     )}
   </button>
 </div>
@@ -543,6 +578,9 @@ const handleMouseLeave = () => {
         </div>
       </div>
 
+      {/* Bottom separator under navbar */}
+      <div className="h-px w-full" style={{ backgroundColor: '#565757' }} />
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -550,7 +588,8 @@ const handleMouseLeave = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t"
+            className="lg:hidden bg-white border-t fixed left-0 right-0"
+            style={{ top: headerHeight }}
           >
             <div className="container mx-auto px-4 py-4">
               <nav className="space-y-4">
@@ -611,7 +650,7 @@ const handleMouseLeave = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
-            style={{ top: isScrolled ? '72px' : '88px' }}
+            style={{ top: headerHeight }}
           >
             <div className="container mx-auto py-8 px-4">
               <div className="flex items-center justify-between mb-8">
@@ -639,7 +678,7 @@ const handleMouseLeave = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
-            style={{ top: isScrolled ? '72px' : '88px' }}
+            style={{ top: headerHeight }}
           >
             <div className="container mx-auto py-6 px-4 max-w-6xl">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

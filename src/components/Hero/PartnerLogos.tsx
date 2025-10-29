@@ -13,7 +13,7 @@ const logos = [
 
 export function PartnerLogos() {
   return (
-    <div className="bg-white py-8 border-t border-gray-200">
+    <div className="bg-white py-16 border-t border-gray-200">
       <div className="container mx-auto px-4">
         {/* Mobile Carousel */}
         <div className="md:hidden">
@@ -74,4 +74,6 @@ export function PartnerLogos() {
       </div>
     </div>
   );
+
+
 }

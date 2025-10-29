@@ -580,7 +580,7 @@ export function MainNav() {
               </button>
               <a
                 href="/contact"
-                className="hidden bg-[#6B19FF] lg:block text-white px-2 py-4 rounded bg-color-ipl-600 hover:bg-blue-700 transition-colors w-[200px] text-center text-sm font-medium"
+                className="hidden bg-[#6B19FF] lg:block text-white px-2 py-4 bg-color-ipl-600 transition-colors w-[200px] text-center text-sm font-medium"
               >
                 CONNECT WITH US
               </a>

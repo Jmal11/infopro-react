@@ -20,7 +20,7 @@ export function WorkforcePage() {
         {/* Three Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Develop Talent Card */}
-          <div className="bg-white rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
+          <div className="bg-white -lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
             <h2 className="text-xl sm:text-2xl font-semibold text-center mb-8 text-gray-800 group-hover:text-purple-600 transition-colors">
               Develop Talent
             </h2>
@@ -42,7 +42,7 @@ export function WorkforcePage() {
           </div>
 
           {/* Empower Teams Card */}
-          <div className="bg-white rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
+          <div className="bg-white -lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
             <h2 className="text-xl sm:text-2xl font-semibold text-center mb-8 text-gray-800 group-hover:text-yellow-600 transition-colors">
               Empower Teams
             </h2>
@@ -64,7 +64,7 @@ export function WorkforcePage() {
           </div>
 
           {/* Transform Organization Card */}
-          <div className="bg-white rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
+          <div className="bg-white-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-200/50 group cursor-pointer border-t-4 border-l-4 border-r-4 border-t-[#e1d1ff] border-l-[#e1d1ff] border-r-[#e1d1ff] border-b-4 border-b-[#6b19ff]">
             <h2 className="text-xl sm:text-2xl font-semibold text-center mb-8 text-gray-800 group-hover:text-teal-600 transition-colors">
               Transform Organization
             </h2>

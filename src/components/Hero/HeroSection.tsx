@@ -183,7 +183,7 @@ export function HeroSection() {
         )}
       </div>
       {/* Navigation - Dots with Prev/Next */}
-      <div className="absolute bottom-12 md:bottom-20 left-0 right-0 flex justify-center items-center gap-4" style={{ zIndex: 3 }}>
+      <div className="absolute bottom-12 md:bottom-0 left-0 right-0 flex justify-center items-center gap-4" style={{ zIndex: 3 }}>
         {/* Previous Button */}
         <button
           onClick={goToPrev}

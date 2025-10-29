@@ -420,7 +420,7 @@ export function MainNav() {
       >
         <div className={clsx("container mx-auto px-4 py-2 text-center text-xs sm:text-sm", isElevated ? "text-gray-800" : "text-white")}>
           Upcoming Webinar | Sales Training for Non-Sales People | November 13, 1 pm EST
-          <a href="#" className="ml-2 text-blue-600 font-semibold">Register Now →</a>
+          <a href="#" className="ml-2 text-primary-600 font-semibold">Register Now →</a>
         </div>
         <div className="h-px w-full bg-gray-300" />
       </motion.div>
@@ -431,9 +431,9 @@ export function MainNav() {
           {/* Logo */}
           <a href="/" className="flex items-center z-10">
             {isElevated ? (
-              <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/logo.svg " alt="InfoPro Learning" className="h-12" />
+              <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/logo.svg " alt="InfoPro Learning" />
             ) : (
-              <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/logo-new.svg " alt="InfoPro Learning" className="h-12" />
+              <img src="https://infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/logo-new.svg " alt="InfoPro Learning" />
             )}
           </a>
 
@@ -580,7 +580,7 @@ export function MainNav() {
               </button>
               <a
                 href="/contact"
-                className="hidden bg-[#6B19FF] lg:block text-white px-2 py-4 rounded bg-blue-600 hover:bg-blue-700 transition-colors w-[200px] text-center text-sm font-medium"
+                className="hidden bg-[#6B19FF] lg:block text-white px-2 py-4 rounded bg-color-ipl-600 hover:bg-blue-700 transition-colors w-[200px] text-center text-sm font-medium"
               >
                 CONNECT WITH US
               </a>

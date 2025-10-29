@@ -54,7 +54,7 @@ const EventsIcon = () => (
 // Add missing icons
 const ConferenceIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24" className="text-primary">
-    <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm10.75 1c-.96.73-2.72 1.5-4.75 1.5h-1v-2.5c0-1.62-1.37-3.11-3.45-3.45C11.71 11.08 12 11.02 12 11s1.66-.34 2.75-.95c.85.84 2.26 1.45 3.75 1.45 2.21 0 4-1.79 4-4s-1.79-4-4-4c-1.94 0-3.54 1.38-3.9 3.21-.57-.22-1.17-.36-1.77-.46L14.05 2h-.05C13.45 1.38 12.78 1 12 1s-1.45.38-2 1h-.05l1.72 4.27c-.6.09-1.2.24-1.77.46C9.54 5.38 7.94 4 6 4 3.79 4 2 5.79 2 8s1.79 4 4 4c1.93 0 3.54-1.38 3.9-3.21.68.26 1.44.45 2.35.45h.75c.71 0 1.45-.2 2.1-.50.65.3 1.39.5 2.1.5h.04c1.64 0 2.97-.49 3.97-1.16.31.71.39 1.5.29 2.27-.14.86-.49 1.66-1 2.31V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+    <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm10.75 1c-.96.73-2.72 1.5-4.75 1.5h-1v-2.5c0-1.62-1.37-3.11-3.45-3.45C11.71 11.08 12 11.02 12 11s1.66-.34 2.75-.95c.85.84 2.26 1.45 3.75 1.45 2.21 0 4-1.79 4-4s-1.79-4-4-4c-1.94 0-3.54 1.38-3.9 3.21-.57-.22-1.17-.36-1.77-.46L14.05 2h-.05C13.45 1.38 12.78 1 12 1s-1.45.38-2 1h-.05l1.72 4.27c-.6.09-1.2.24-1.77.46C9.54 5.38 7.94 4 6 4 3.79 4 2 5.79 2 8s1.79 4 4 4c1.93 0 3.54-1.38 3.9-3.21.68.26 1.44.45 2.35.45h.75c.71 0 1.45-.2 2.1-.50.65.30 1.39.50 2.10.50h.04c1.64 0 2.97-.49 3.97-1.16.31.71.39 1.5.29 2.27-.14.86-.49 1.66-1 2.31V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
   </svg>
 );
 const CoachingIcon = () => (
@@ -64,7 +64,7 @@ const CoachingIcon = () => (
 );
 const LabsIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24" className="text-primary">
-    <path fill="currentColor" d="M14.81 9l-.94-2H10.13l-.94 2H5.21A1.09 1.09 0 0 0 4 10.08c0 3.45 1.72 6.61 4.5 8.45.67.44 1.35.81 2.05 1.1l1.04-3.22L10 14H8.88L9.2 12h5.6l.32 2H13.41l-1.59 2.4.78 3.22c.69-.29 1.38-.66 2.05-1.1C17.28 16.69 19 13.53 19 10.08A1.09 1.09 0 0 0 17.79 9zm-1.42 4h-2.78l.69-1h1.4zM19 3H5c-1.1 0-2 .9-2 2v14c0 .55.22 1.05.59 1.41.36.37.86.59 1.41.59h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+    <path fill="currentColor" d="M14.81 9l-.94-2H10.13l-.94 2H5.21A1.09 1.09 0 0 0 4 10.08c0 3.45 1.72 6.61 4.5 8.45.67.44 1.35.81 2.05 1.1l1.04-3.22L10 14H8.88L9.2 12h5.6l.32 2H13.41l-1.59 2.4.78 3.22c.69-.29 1.38-.66 2.05-1.10C17.28 16.69 19 13.53 19 10.08A1.09 1.09 0 0 0 17.79 9zm-1.42 4h-2.78l.69-1h1.4zM19 3H5c-1.1 0-2 .9-2 2v14c0 .55.22 1.05.59 1.41.36.37.86.59 1.41.59h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
   </svg>
 );
 const OnboardingIcon = () => (
@@ -420,9 +420,12 @@ export function MainNav() {
       >
         <div className={clsx("container mx-auto px-4 py-2 text-center text-xs sm:text-sm", isElevated ? "text-gray-800" : "text-white")}>
           Upcoming Webinar | Sales Training for Non-Sales People | November 13, 1 pm EST
-          <a href="#" className="ml-2 text-primary-600 font-semibold">Register Now →</a>
+          <a href="#" className="ml-2 font-semibold inline-flex items-center gap-1">
+            <span style={{ color: '' }}>Register Now</span>
+            <img src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/arrow-indigo.svg" alt="" className="w-4 h-4" />
+          </a>
         </div>
-        <div className="h-px w-full bg-gray-300" />
+        <div className="h-px w-full bg-[#575757]" />
       </motion.div>
       {/* Main Navigation Bar */}
       {/* Main Navigation Bar */}
@@ -442,7 +445,7 @@ export function MainNav() {
             {mainMenuItems.map((item, index) => (
               <div
                 key={index}
-                className="relative px-4 xl:px-4"
+                className="relative px-3 xl:px-3"
                 onMouseEnter={() => item.hasDropdown && handleMouseEnter(index)}
                 onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
               >
@@ -450,7 +453,7 @@ export function MainNav() {
                   <button
                     ref={(el) => (buttonRefs.current[index] = el)}
                     className={clsx(
-                      "flex items-center font-medium py-5 transition-colors duration-300 ease-in-out",
+                      "flex items-center font-medium py-5 transition-colors duration-300 ease-in-out whitespace-nowrap",
                       isElevated
                         ? "text-gray-800 hover:text-color-ipl"
                         : "text-white hover:text-gray-200",
@@ -464,7 +467,7 @@ export function MainNav() {
                   <Link
                     to={item.link || "/"}
                     className={clsx(
-                      "block py-5 transition-colors duration-300 ease-in-out",
+                      "block py-5 transition-colors duration-300 ease-in-out whitespace-nowrap",
                       isElevated
                         ? "text-gray-800 hover:text-color-ipl"
                         : "text-white hover:text-gray-200"
@@ -601,7 +604,7 @@ export function MainNav() {
       </div>
 
       {/* Bottom separator under navbar */}
-      <div className="h-px w-full bg-gray-300" />
+      <div className="h-px w-full bg-[#575757]" />
 
       {/* Mobile Menu */}
       <AnimatePresence>

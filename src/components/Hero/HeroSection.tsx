@@ -20,7 +20,7 @@ const slides = [
             <span className="block text-xs text-gray-700">COST PER LEARNER</span>
           </>
         ),
-        style: "left-4 top-8 sm:left-[-45px] sm:top-[45px] shadow-md"
+        style: "left-2 top-4 xs:left-4 xs:top-6 sm:left-[-45px] sm:top-[45px] shadow-md"
       },
       {
         text: (
@@ -29,7 +29,7 @@ const slides = [
             <span className="block text-xs text-gray-700">GLOBAL REACH & IMPACT</span>
           </>
         ),
-        style: "right-4 bottom-6 sm:right-[-30px] sm:bottom-[30px] shadow-md"
+        style: "right-2 bottom-4 xs:right-4 xs:bottom-6 sm:right-[-30px] sm:bottom-[30px] shadow-md"
       }
     ]
   },
@@ -54,12 +54,12 @@ const slides = [
     subtitle: "Navigate disruption, harness AI, and transform your L&D strategy",
     buttonText: "BOOK A STRATEGIC VISION WORKSHOP",
     buttonSubtext: (
-      <div className="flex items-center gap-2 text-xs mt-1">
+      <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[10px] xs:text-xs mt-1.5 opacity-90">
         <span>Alignment call</span>
-        <span>›</span>
+        <span className="text-base">›</span>
         <span>Workshop</span>
-        <span>›</span>
-        <span>Future-ready Strategy</span>
+        <span className="text-base">›</span>
+        <span className="whitespace-nowrap">Future-ready Strategy</span>
       </div>
     ),
     tags: []
@@ -84,6 +84,8 @@ const slides = [
 
 export function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [rotatingWord, setRotatingWord] = useState('Onboarding');
+  const rotatingWords = ['Onboarding', 'Leadership', 'Sales'];
 
   useEffect(() => {
     const interval = setInterval(
@@ -91,6 +93,17 @@ export function HeroSection() {
       5000
     );
     return () => clearInterval(interval);
+  }, []);
+
+  // Rotate words for slide 4
+  useEffect(() => {
+    const wordInterval = setInterval(() => {
+      setRotatingWord(prev => {
+        const currentIdx = rotatingWords.indexOf(prev);
+        return rotatingWords[(currentIdx + 1) % rotatingWords.length];
+      });
+    }, 2000); // Change word every 2 seconds
+    return () => clearInterval(wordInterval);
   }, []);
 
   const slide = slides[currentIndex];
@@ -105,7 +118,7 @@ export function HeroSection() {
 
   return (
     <div 
-      className="relative min-h-screen flex items-center lg:pt-12 bg-[#2a2a2a]"
+      className="relative h-screen flex items-center justify-center bg-[#2a2a2a] overflow-hidden"
       style={slide.backgroundImage ? {
         backgroundImage: `url(${slide.backgroundImage})`,
         backgroundSize: 'cover',
@@ -133,76 +146,99 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/40" style={{ zIndex: 1 }}></div>
       )}
 
-      <div className="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-4 md:px-8 lg:px-12 py-24 md:py-0 relative" style={{ zIndex: 2 }}>
-       {/* Left - Text */}
-        <div className={`w-full ${slide.image ? 'md:w-7/12' : 'md:w-full'} text-white text-center md:text-left`}>
-          <h1 className="text-2xl sm:text-3xl md:text-[2.5rem] font-extrabold mb-4 leading-tight">
-            {slide.title}
-          </h1>
-          <p className="mb-6 text-base sm:text-lg md:text-xl">{slide.subtitle}</p>
-          <div>
-            <button className="border border-white px-6 py-3 sm:px-8 sm:py-4 rounded-md text-base sm:text-sm font-semibold hover:bg-white hover:text-black transition-all bg-transparent inline-flex flex-col items-center">
-              <span>{slide.buttonText || (slide.id === 2 ? 'GET YOUR MLS BUSINESS CASE' : 'READ MORE')}</span>
-              {slide.buttonSubtext && slide.buttonSubtext}
-            </button>
-          </div>
-        </div>
-        {/* Right - Image with tags */}
-        {slide.image && (
-          <div className="relative w-full md:w-5/12 flex justify-center items-center md:items-end md:justify-end">
-            <div className="relative">
-              <img
-                src={slide.image}
-                alt="Hero"
-                className={`block mx-auto ${
-                  slide.imageFromBottom 
-                    ? 'md:w-[90%] md:max-w-none md:h-auto object-contain' 
-                    : 'md:w-full md:h-screen md:object-contain'
-                }`}
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                  borderStyle: 'none',
-                  ...(slide.imageFromBottom && {
-                    objectPosition: 'bottom'
-                  })
-                }}
-              />
-              {/* Slide tags/badges */}
-              {slide.tags.map((tag, idx) => (
-                <div
-                  key={idx}
-                  className={`absolute bg-white py-2 px-4 sm:px-6 rounded-md text-sm text-left ${tag.style}`}
-                  style={{ minWidth: 100 }}
-                >
-                  {tag.text}
-                </div>
-              ))}
+      {/* Main Content Container */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pt-40 sm:pt-44 md:pt-48 lg:pt-52 xl:pt-56 pb-24 sm:pb-28 md:pb-32 lg:pb-36 xl:pb-40 relative" style={{ zIndex: 2 }}>
+        <div className={`flex flex-col-reverse ${slide.image ? 'md:flex-row' : 'md:flex-col'} items-center ${slide.image ? 'md:justify-between' : 'justify-center'} gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20`}>
+          
+          {/* Left - Text Content */}
+          <div className={`w-full ${slide.image ? 'md:w-[58%] lg:w-[60%] xl:w-[58%]' : 'md:w-full'} text-white text-center md:text-left flex flex-col justify-center`}>
+            {/* Title - Responsive sizing, 42px on md and above */}
+            <h1 className="text-[28px] xs:text-[32px] sm:text-[36px] md:text-[42px] font-bold mb-4 sm:mb-5 md:mb-6 leading-tight tracking-tight break-words">
+              {slide.id === 4 ? (
+                <>
+                  Meet your <span style={{ textDecoration: 'underline', textDecorationColor: 'white', textUnderlineOffset: '4px', transition: 'opacity 0.3s ease-in-out' }}>{rotatingWord}</span> Guru!
+                </>
+              ) : (
+                slide.title
+              )}
+            </h1>
+            
+            {/* Subtitle - Responsive text sizing */}
+            <p className="mb-6 sm:mb-7 md:mb-8 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed max-w-xl md:max-w-full mx-auto md:mx-0">
+              {slide.subtitle}
+            </p>
+            
+            {/* Button - Responsive sizing */}
+            <div className="flex justify-center md:justify-start">
+              <button className="border-2 border-white px-6 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 lg:px-9 lg:py-4 text-xs sm:text-sm md:text-base font-semibold hover:bg-white hover:text-black transition-all duration-300 bg-transparent inline-flex flex-col items-center gap-0.5">
+                <span className="leading-tight">
+                  {slide.buttonText || (slide.id === 2 ? 'GET YOUR MLS BUSINESS CASE' : 'READ MORE')}
+                </span>
+                {slide.buttonSubtext && slide.buttonSubtext}
+              </button>
             </div>
           </div>
-        )}
+
+          {/* Right - Image with tags - Hidden on mobile */}
+          {slide.image && (
+            <div className="hidden md:flex relative w-full md:w-[42%] lg:w-[40%] xl:w-[42%] justify-center items-center md:justify-end">
+              <div className="relative w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[380px] md:max-w-none">
+                <img
+                  src={slide.image}
+                  alt="Hero"
+                  className={`block mx-auto md:mx-0 w-full ${
+                    slide.imageFromBottom 
+                      ? 'md:w-[110%] lg:w-[115%] xl:w-[120%] max-h-[240px] xs:max-h-[280px] sm:max-h-[320px] md:max-h-[600px] lg:max-h-[680px] xl:max-h-[750px] object-contain md:translate-y-12 lg:translate-y-16 xl:translate-y-20' 
+                      : 'max-h-[260px] xs:max-h-[300px] sm:max-h-[340px] md:max-h-[450px] lg:max-h-[550px] xl:max-h-[650px] object-contain'
+                  }`}
+                  style={{
+                    maxWidth: '100%',
+                    height: 'auto',
+                    ...(slide.imageFromBottom && {
+                      objectPosition: 'bottom'
+                    })
+                  }}
+                />
+                
+                {/* Slide tags/badges - Responsive positioning and sizing */}
+                {slide.tags.map((tag, idx) => (
+                  <div
+                    key={idx}
+                    className={`absolute bg-white py-1.5 px-3 xs:py-2 xs:px-4 sm:py-2.5 sm:px-5 md:py-3 md:px-6 rounded-md text-[10px] xs:text-xs sm:text-sm md:text-base text-left ${tag.style}`}
+                    style={{ minWidth: 80 }}
+                  >
+                    {tag.text}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-      {/* Navigation - Dots with Prev/Next */}
-      <div className="absolute bottom-12 md:bottom-0 left-0 right-0 flex justify-center items-center gap-4" style={{ zIndex: 3 }}>
+
+      {/* Navigation - Dots with Prev/Next - Fixed at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center items-center px-4 pb-2 sm:pb-3" style={{ zIndex: 3 }}>
         {/* Previous Button */}
         <button
           onClick={goToPrev}
-          className="text-white hover:text-gray-300 transition-colors p-2"
+          className="text-white hover:text-gray-300 transition-all duration-300 p-2 sm:p-2.5 md:p-3 hover:bg-white/10 rounded-full"
           aria-label="Previous slide"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
           </svg>
         </button>
 
-        {/* Dots */}
-        <div className="flex items-center">
+        {/* Dots - Responsive sizing */}
+        <div className="flex items-center gap-2 sm:gap-2.5">
           {slides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`w-3 h-3 mx-1 rounded-full border transition-all duration-150 ${
-                idx === currentIndex ? 'bg-white border-white' : 'bg-transparent border-gray-400'
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 rounded-full border-2 transition-all duration-300 ${
+                idx === currentIndex 
+                  ? 'bg-white border-white scale-110' 
+                  : 'bg-transparent border-gray-400 hover:border-white hover:scale-105'
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
@@ -212,10 +248,10 @@ export function HeroSection() {
         {/* Next Button */}
         <button
           onClick={goToNext}
-          className="text-white hover:text-gray-300 transition-colors p-2"
+          className="text-white hover:text-gray-300 transition-all duration-300 p-2 sm:p-2.5 md:p-3 hover:bg-white/10 rounded-full"
           aria-label="Next slide"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
         </button>

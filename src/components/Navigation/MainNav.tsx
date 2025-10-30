@@ -428,7 +428,6 @@ export function MainNav() {
         <div className="h-px w-full bg-[#575757]" />
       </motion.div>
       {/* Main Navigation Bar */}
-      {/* Main Navigation Bar */}
       <div className="nav-bar container mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-2">
           {/* Logo */}

@@ -110,7 +110,7 @@ export function LatestInsights() {
         <div className="flex justify-center mt-10">
           <a
             href="#"
-            className="bg-purple-600 text-white font-semibold px-8 py-3 rounded hover:bg-purple-700 transition uppercase text-sm"
+            className="bg-purple-600 text-white font-semibold px-8 py-3  hover:bg-purple-700 transition uppercase text-sm"
           >
             SEE ALL INSIGHTS
           </a>

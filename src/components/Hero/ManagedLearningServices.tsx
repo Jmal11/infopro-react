@@ -105,8 +105,8 @@ export function ManagedLearningServices() {
             </div>
           </div>
           {/* Right: Features List */}
-          <div className="md:w-1/2 flex flex-col">
-            <div className="flex-grow flex flex-col justify-between">
+          <div className="md:w-1/2 flex flex-col md:mt-8">
+            <div className="flex-grow flex flex-col justify-between space-y-6">
               {rightItems.map(({ title, description, icon }) => (
                 <div key={title} className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-16 flex justify-center items-start pt-1 pr-4 border-r-2 border-gray-300">

@@ -106,11 +106,11 @@ export function AccordionContentSection() {
               key={id}
               onClick={() => handleClick(id)}
               className={`flex items-start gap-4 w-full px-4 py-4 text-left transition-colors ${
-                index !== accordionItems.length - 1 ? 'border-b-4' : ''
-              } ${
+                index !== accordionItems.length - 1 ? 'border-b' : ''
+              } border-gray-200 ${
                 activeId === id
-                  ? 'bg-purple-50 border-b-[#6b19ff] font-semibold'
-                  : 'hover:bg-gray-50 border-b-gray-200'
+                  ? 'bg-purple-50 border-l-4 border-l-[#6b19ff] font-semibold'
+                  : 'hover:bg-gray-50'
               }`}
             >
               <img 

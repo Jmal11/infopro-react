@@ -88,12 +88,12 @@ export function TestimonialSection() {
           {currentTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-md shadow-md w-full md:w-1/3 flex flex-col overflow-hidden border-t-4 border-t-[#6b19ff]"
+              className="bg-white shadow-md w-full md:w-1/3 flex flex-col overflow-hidden border-t-4 border-t-[#6b19ff]"
             >
               <img
                 src={testimonial.image}
                 alt={testimonial.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover block"
               />
               <div className="p-6 flex-grow flex flex-col">
                 <p className="text-sm text-purple-700 mb-1">

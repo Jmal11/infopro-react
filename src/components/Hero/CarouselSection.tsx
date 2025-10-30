@@ -29,9 +29,9 @@ export function CarouselSection() {
   };
 
   return (
-    <section className="relative">
-      <div className={`${slides[currentIndex].backgroundColor} text-white py-16`}>
-        <div className="max-w-5xl lg:max-w-7xl xl:max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center gap-12 px-4">
+    <section className="relative w-full">
+      <div className={`${slides[currentIndex].backgroundColor} text-white py-16 w-full`}>
+        <div className="max-w-5xl lg:max-w-7xl xl:max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center gap-12 px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-8">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-2">
@@ -42,7 +42,7 @@ export function CarouselSection() {
             </p>
             <a
               href={slides[currentIndex].buttonLink}
-              className="inline-block border border-white px-7 py-4 font-semibold text-white hover:bg-white hover:text-black rounded-md transition duration-300"
+              className="inline-block border border-white px-7 py-4 font-semibold text-white hover:bg-white hover:text-black transition duration-300"
             >
               {slides[currentIndex].buttonText}
             </a>
@@ -52,14 +52,14 @@ export function CarouselSection() {
             <img
               src={slides[currentIndex].image}
               alt={slides[currentIndex].title}
-              className="rounded-lg object-cover w-full max-w-md h-72 shadow-xl"
+              className="object-cover w-full max-w-md h-72 shadow-xl"
             />
           </div>
         </div>
       </div>
 
       {/* Navigation Dots and Arrows */}
-      <div className="w-full bg-white py-8 flex justify-center items-center space-x-5">
+      <div className="w-full bg-white py-8 flex justify-center items-center space-x-5 px-4">
         <button
           onClick={() => goToSlide(currentIndex - 1)}
           className="p-2 rounded-full text-purple-700 hover:bg-purple-100 transition"

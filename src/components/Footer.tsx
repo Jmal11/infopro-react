@@ -96,7 +96,7 @@ export function Footer() {
     <footer className="bg-[#292929] text-gray-300 text-sm border-t border-gray-700 mt-8 overflow-visible">
       <div className="container mx-auto px-4 overflow-visible">
         {/* Top Grid Columns: Hidden on mobile, visible on md and up */}
-        <div className="hidden md:grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 py-12">
+        <div className="hidden md:grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 py-12 overflow-visible">
           {/* Column 1: Develop Talent */}
           <div>
             <h3 className="font-bold text-white mb-6">Develop Talent</h3>
@@ -276,9 +276,9 @@ export function Footer() {
         </div>
 
         {/* Footer Bottom Bar: always visible */}
-        <div className="border-t border-b border-gray-700 py-4 flex flex-col md:flex-row items-center justify-between gap-4 relative">
+        <div className="border-t border-b border-gray-700 py-4 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-visible">
           {/* Logo and Corporate Office */}
-          <div className="flex items-center gap-4 min-w-[200px] relative">
+          <div className="flex items-center gap-4 min-w-[200px] relative overflow-visible">
             {/* Logo */}
             <div className="flex items-center mr-4">
               <img 
@@ -287,7 +287,7 @@ export function Footer() {
                 className="h-auto w-auto"
               />
             </div>
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative overflow-visible" ref={dropdownRef}>
               <button
                 onClick={() => setShowDropdown(!showDropdown)}
                 className="flex items-center gap-2 text-white hover:text-purple-600 transition-colors"
@@ -308,18 +308,29 @@ export function Footer() {
                 </svg>
               </button>
 
-              {/* Dropdown Menu - Shows all 12 office locations */}
+              {/* Dropdown Menu - Popup showing all 12 office locations */}
               {showDropdown && (
-                <div className="absolute bottom-full left-0 mb-2 bg-white text-gray-900 shadow-2xl border-2 border-gray-300 min-w-[200px] z-[9999]">
+                <div 
+                  className="absolute bg-white text-gray-900 shadow-2xl border-2 border-gray-300"
+                  style={{ 
+                    minWidth: '200px',
+                    bottom: '100%',
+                    left: '0',
+                    marginBottom: '8px',
+                    zIndex: 99999,
+                    display: 'block'
+                  }}
+                >
                   {/* Header */}
-                  <div className="px-4 py-2 font-bold text-sm border-b-2 border-gray-300 bg-gray-50 text-gray-900">
+                  <div className="px-4 py-2 font-bold text-sm border-b-2 border-gray-300 bg-gray-50 text-gray-900" style={{ display: 'block' }}>
                     Corporate Office
                   </div>
-                  {/* All Office Locations */}
-                  <div className="py-1">
+                  {/* All Office Locations List */}
+                  <div style={{ display: 'block' }}>
                     <button
                       onClick={() => handleOfficeSelect('New Jersey')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'New Jersey' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -327,7 +338,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Washington')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Washington' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -335,7 +347,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('New-York')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'New-York' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -343,7 +356,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Soborg')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Soborg' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -351,7 +365,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('London')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'London' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -359,7 +374,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Singapore')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Singapore' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -367,7 +383,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Toronto')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Toronto' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -375,7 +392,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Noida')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Noida' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -383,7 +401,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Goa')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Goa' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -391,7 +410,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Kolkata')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Kolkata' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -399,7 +419,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Pune')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Pune' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >
@@ -407,7 +428,8 @@ export function Footer() {
                     </button>
                     <button
                       onClick={() => handleOfficeSelect('Dubai')}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-purple-600 hover:text-white transition-colors block ${
+                      style={{ display: 'block', width: '100%' }}
+                      className={`text-left px-4 py-2 text-sm whitespace-nowrap hover:bg-purple-600 hover:text-white transition-colors ${
                         selectedOffice === 'Dubai' ? 'bg-purple-600 text-white' : 'text-gray-900'
                       }`}
                     >

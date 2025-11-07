@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const slides = [
   [
@@ -57,13 +57,66 @@ const slides = [
 
 export function VanguardSkillsCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [translateX, setTranslateX] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+    setTranslateX(0);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.pageX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    const diff = e.pageX - startX;
+    setTranslateX(diff);
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+
+    // If dragged more than 100px, change slide
+    if (translateX < -100 && currentSlide < slides.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+    } else if (translateX > 100 && currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+    
+    setTranslateX(0);
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      handleMouseUp();
+    }
+  };
+
+  // Touch events for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    const diff = e.touches[0].pageX - startX;
+    setTranslateX(diff);
+  };
+
+  const handleTouchEnd = () => {
+    handleMouseUp();
   };
 
   return (
-    <section className="mt-12">
+    <section className="mt-12 overflow-hidden">
+      {/* White Section */}
       <div className="bg-white py-12">
         <div className="container mx-auto max-w-7xl px-4">
           <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-4">
@@ -75,25 +128,42 @@ export function VanguardSkillsCarousel() {
         </div>
       </div>
 
-      <div className="bg-gray-50 py-12">
-        <div className="container mx-auto max-w-7xl px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 transition-all duration-700 border border-gray-200 rounded-md overflow-hidden">
-            {slides[currentSlide].map((item) => (
-              <div
-                key={item.number}
-                className={"flex flex-col justify-between bg-white px-6 sm:px-8 py-6 sm:py-8 border-b lg:border-b-0 lg:border-r border-gray-200 last:border-none items-start"}
-              >
-                <div>
-                  <div
-                    className="w-10 aspect-square rounded-full border-2 border-purple-600 text-purple-700 flex items-center justify-center font-bold text-lg mb-5"
-                  >
-                    {item.number}
+      {/* Gray Section with Cards - Full Width */}
+      <div className="bg-gray-50 py-12 pt-32">
+        <div className="container mx-auto max-w-7xl px-4 -mt-32">
+          <div
+            ref={carouselRef}
+            className="overflow-hidden cursor-grab active:cursor-grabbing"
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-gray-200 rounded-md overflow-hidden select-none"
+              style={{
+                transform: `translateX(${Math.max(Math.min(translateX, 0), 0)}px)`,
+                transition: isDragging ? 'none' : 'transform 0.7s ease'
+              }}
+            >
+              {slides[currentSlide].map((item) => (
+                <div
+                  key={item.number}
+                  className="flex flex-col bg-white px-6 sm:px-8 py-6 sm:py-8 border-b lg:border-b-0 lg:border-r border-gray-200 last:border-none items-start h-[400px]"
+                >
+                  <div className="flex flex-col h-full">
+                    <div className="w-10 aspect-square rounded-full border-2 border-purple-600 text-purple-700 flex items-center justify-center font-bold text-lg mb-5 flex-shrink-0">
+                      {item.number}
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-lg sm:text-xl mb-3 sm:mb-4 flex-shrink-0">{item.title}</h3>
+                    <p className="text-gray-700 leading-relaxed text-sm sm:text-base break-words flex-grow">{item.description}</p>
                   </div>
-                  <h3 className="font-bold text-gray-900 text-lg sm:text-xl mb-3 sm:mb-4">{item.title}</h3>
-                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base break-words">{item.description}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           <div className="flex justify-center space-x-3 mt-10">
             {slides.map((_, idx) => (

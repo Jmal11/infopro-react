@@ -15,7 +15,7 @@ const stats = [
   },
   {
     value: '65%',
-    description: 'of consumers say they’ll still trust businesses who use AI',
+    description: 'of consumers say they will still trust businesses who use AI',
   },
   {
     value: '83%',
@@ -33,11 +33,12 @@ export function HumanAIStatsSection() {
               key={index}
               className={`
                 flex-1
+                ${index === 0 ? 'border-l border-gray-300' : ''}
                 ${index !== stats.length - 1 ? 'border-r border-gray-300' : ''}
                 px-4
               `}
             >
-              <div className="text-purple-600 text-2xl font-bold mb-2">{stat.value}</div>
+              <div className="text-purple-600 text-[40px] font-bold mb-2">{stat.value}</div>
               <div className="text-sm">{stat.description}</div>
             </div>
           ))}

@@ -20,23 +20,30 @@ const approachItems = [
 
 export function HumanAIApproachSection() {
   return (
-    <section className="bg-gray-50 py-12 border-t border-gray-200">
-      <div className="container mx-auto px-4 max-w-6xl text-center">
-        <div className="flex flex-col lg:flex-row gap-8 text-left">
+    <section className="bg-gray-50 py-16 border-t border-gray-200">
+      <div className="container mx-auto px-4 max-w-6xl">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Approach</h2>
+          <p className="text-gray-700 text-lg max-w-4xl mx-auto">
+            Our approach empowers organizations to seamlessly integrate AI and human capabilities.
+            By focusing on strategic transformation, skill development, and hands-on adoption, we help
+            you achieve your Human+AI vision.
+          </p>
+        </div>
+
+        {/* Three Column Section */}
+        <div className="flex flex-col lg:flex-row gap-0 text-left">
           {approachItems.map((item, index) => (
             <div
               key={index}
-              className={`flex-1 bg-transparent ${index !== approachItems.length - 1 ? 'border-r border-gray-300' : ''} pr-8`}
+              className={`flex-1 ${index === 0 ? 'border-l border-gray-300' : ''} ${index !== approachItems.length - 1 ? 'border-r border-gray-300' : ''} px-6`}
             >
-              {/* Using div for title to eliminate inherited h3::after */}
-              <div>
-                <span className="font-semibold text-gray-900 text-xl">{item.title}</span>
-                <div
-                  className="border-b-2 border-[#9147ff] w-16 mb-4"
-                  style={{ borderBottomWidth: '3px' }}
-                ></div>
-              </div>
-              <p className="text-gray-700 text-base">{item.description}</p>
+              <h3 className="font-semibold text-gray-900 text-xl mb-2">{item.title}</h3>
+              <div
+                className="border-b-4 border-purple-600 w-16 mb-4"
+              ></div>
+              <p className="text-gray-700 text-base leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>

@@ -3,18 +3,18 @@ import React from 'react';
 const cards = [
   {
     title: 'Mastering the Digital Workplace: Tools for the Modern Employee',
-    description: `Equipping individuals with the essential skills to navigate and leverage digital tools, platforms, and applications that drive productivity and collaboration in today’s work environments. Participants gain proficiency in utilizing productivity suites like Microsoft Office and G Suite, collaborating seamlessly through AI tools like Copilot, ChatGPT, and communication tools, and adapting to new digital workflows and processes.`,
-    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    description: `Equipping individuals with the essential skills to navigate and leverage digital tools, platforms, and applications that drive productivity and collaboration in today's work environments. Participants gain proficiency in utilizing productivity suites like Microsoft Office and G Suite, collaborating seamlessly through AI tools like Copilot, ChatGPT, and communication tools, and adapting to new digital workflows and processes.`,
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Mastering%20the%20Digital%20Workplace%20Tools%20for%20the%20Modern%20Worker.webp',
   },
   {
     title: 'Data Analytics and Visualization: Transform Data into Action',
     description: `This program covers foundational analytical techniques, tools for data manipulation and cleaning, and creates compelling data visualizations and reports. Participants learn to interpret data, identify patterns and trends, and communicate findings clearly, facilitating informed decision-making across the organization.`,
-    image: 'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Data%20Analytics%20and%20Visualization%20Transform%20Data%20into%20Action.webp',
   },
   {
     title: 'AI and Machine Learning: Driving Innovation and Transformation',
     description: `Unlock the transformative power of AI and machine learning with our cutting-edge program. Master fundamental concepts, applied techniques, and real-world applications across industries. Gain hands-on experience with popular AI tools like Copilot, OpenAI, algorithms, frameworks, and capstone projects under expert guidance. Emerse as a future-ready leader, driving business innovation and AI-enabled transformation within your organization.`,
-    image: 'https://images.unsplash.com/photo-1517849845536-4d8e5a27a46c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/AI%20and%20Machine%20Learning%20Driving%20Innovation%20and%20Transformation%E2%80%AF.webp',
   },
 ];
 
@@ -42,7 +42,7 @@ export function AIDigitalSkillsAcademySection() {
               {/* Normal overlay */}
               <div className="absolute inset-0 transition bg-black bg-opacity-40 duration-300 ease-in-out group-hover:bg-opacity-80"></div>
               {/* Hover overlay */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20">
+              <div className="absolute inset-0 p-8 flex flex-col justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out z-20">
                 <h3 className="text-white font-extrabold text-2xl mb-4 text-left">
                   {card.title}
                 </h3>
@@ -51,7 +51,7 @@ export function AIDigitalSkillsAcademySection() {
                 </p>
               </div>
               {/* Card Content (visible when not hovered) */}
-              <div className="p-6 flex flex-col flex-grow relative z-10 group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
+              <div className="p-6 flex flex-col flex-grow relative z-10 group-hover:opacity-0 group-hover:-translate-y-4 transition-all duration-500 ease-out">
                 <h3 className="text-white font-bold text-lg mb-2">
                   {card.title}
                 </h3>

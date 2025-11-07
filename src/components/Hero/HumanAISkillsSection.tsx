@@ -1,4 +1,3 @@
-
 export function HumanAISkillsSection() {
   return (
     <section className="bg-transparent py-14 px-2">
@@ -58,9 +57,9 @@ export function HumanAISkillsSection() {
         </div>
         
         {/* Right Card */}
-        <div className="bg-gray-900 text-white flex-1 p-8 rounded-tr-lg rounded-br-lg max-w-[440px] border-t-4 border-t-primary lg:ml-[-2px]">
+        <div className="text-white flex-1 pt-8 px-8 pb-0 rounded-tr-lg rounded-br-lg max-w-[440px] border-t-4 border-t-primary lg:ml-[-2px]" style={{ backgroundColor: '#292929' }}>
           <h3 className="font-bold text-lg mb-5">AI Transformations in Key Functions</h3>
-          <div className="space-y-5 max-h-[420px] overflow-y-auto scrollbar-hide">
+          <div className="space-y-5 max-h-[420px] overflow-y-auto scrollbar-hide pb-8">
             <div>
               <h4 className="font-semibold text-white text-base">Sales</h4>
               <p>

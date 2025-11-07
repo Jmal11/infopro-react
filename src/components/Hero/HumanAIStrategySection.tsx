@@ -5,11 +5,12 @@ const steps = [
     key: 'assess',
     title: 'ASSESS',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" fill="none"/>
-      </svg>
-    ),
+  <img 
+    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/tab-Assess.svg" 
+    alt="Assess"
+    className="h-8 w-8"
+  />
+),
     description:
       "The Assess stage involves conducting a comprehensive evaluation of the organization's current state and AI readiness by analyzing both business/functional capabilities and identifying skill requirements. This stage combines systematic assessment of existing processes, competencies, and resources with data-driven gap analysis to establish a clear baseline and identify transformation requirements.",
     keyActivities: [
@@ -28,13 +29,13 @@ const steps = [
   {
     key: 'align',
     title: 'ALIGN',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <rect x="6" y="6" width="12" height="2" fill="currentColor"/>
-        <rect x="6" y="11" width="12" height="2" fill="currentColor"/>
-        <rect x="6" y="16" width="12" height="2" fill="currentColor"/>
-      </svg>
-    ),
+   icon: (
+  <img 
+    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/tab-Align.svg" 
+    alt="Assess"
+    className="h-8 w-8"
+  />
+),
     description:
       "The Align stage focuses on aligning AI strategy with business objectives, establishing governance frameworks, and ensuring stakeholder buy-in across the organization for successful AI adoption.",
     keyActivities: [
@@ -54,14 +55,12 @@ const steps = [
     key: 'plan',
     title: 'PLAN',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-        <circle cx="10" cy="12" r="1" fill="currentColor"/>
-        <circle cx="14" cy="12" r="1" fill="currentColor"/>
-        <circle cx="10" cy="16" r="1" fill="currentColor"/>
-        <circle cx="14" cy="16" r="1" fill="currentColor"/>
-      </svg>
-    ),
+  <img 
+    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/tab-Plan.svg" 
+    alt="Assess"
+    className="h-8 w-8"
+  />
+),
     description:
       "The Plan stage involves detailed planning of AI implementation roadmap, resource allocation, and establishing clear milestones and success metrics to guide the transformation journey.",
     keyActivities: [
@@ -80,13 +79,13 @@ const steps = [
   {
     key: 'activate',
     title: 'ACTIVATE',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        <rect x="11" y="6" width="2" height="5" fill="currentColor"/>
-        <rect x="8" y="11" width="8" height="2" fill="currentColor"/>
-      </svg>
-    ),
+     icon: (
+  <img 
+    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/tab-Activate.svg" 
+    alt="Assess"
+    className="h-8 w-8"
+  />
+),
     description:
       "The Activate stage implements the human-AI integration through carefully sequenced phases, prioritizing initiatives based on complexity, dependencies, and organizational readiness. This staged deployment approach allows for controlled rollout, learning from early implementations, and gradual scaling of complexity. Each phase builds upon previous successes while managing risk and ensuring sustainable adoption.",
     keyActivities: [
@@ -117,7 +116,7 @@ export function HumanAIStrategySection() {
 
         <div className="flex flex-col lg:flex-row bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden min-h-[500px]">
           {/* Left Panel: Vertical Timeline */}
-          <div className="w-full lg:w-[28%] p-8 sm:p-10 bg-gray-50 border-r border-gray-200 flex items-center">
+          <div className="w-full lg:w-[28%] p-8 sm:p-10 bg-white border-r border-gray-200 flex items-center">
             <div className="relative w-full py-4">
               {steps.map((step, idx) => (
                 <div
@@ -144,8 +143,8 @@ export function HumanAIStrategySection() {
                     {/* Line above current step */}
                     {idx > 0 && (
                       <div 
-                        className={`absolute left-1/2 -translate-x-1/2 bottom-1/2 w-0.5 h-16 z-0 transition-colors duration-200 ${
-                          activeStep === idx ? 'bg-[#9147ff]' : 'bg-gray-300'
+                        className={`absolute left-1/2 -translate-x-1/2 bottom-1/2 w-1 h-[9.5rem] z-0 transition-colors duration-200 ${
+                          activeStep === idx || activeStep === idx - 1 ? 'bg-[#9147ff]' : 'bg-gray-300'
                         }`}
                       />
                     )}
@@ -153,8 +152,8 @@ export function HumanAIStrategySection() {
                     {/* Line below current step */}
                     {idx < steps.length - 1 && (
                       <div 
-                        className={`absolute left-1/2 -translate-x-1/2 top-1/2 w-0.5 h-16 z-0 transition-colors duration-200 ${
-                          activeStep === idx ? 'bg-[#9147ff]' : 'bg-gray-300'
+                        className={`absolute left-1/2 -translate-x-1/2 top-1/2 w-1 h-[9.5rem] z-0 transition-colors duration-200 ${
+                          activeStep === idx || activeStep === idx + 1 ? 'bg-[#9147ff]' : 'bg-gray-300'
                         }`}
                       />
                     )}

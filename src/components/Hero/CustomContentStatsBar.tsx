@@ -36,6 +36,7 @@ export function CustomContentStatsBar() {
             key={index}
             className={`
               flex flex-col flex-1 items-start px-6 py-2
+              ${index === 0 ? 'border-l border-gray-200' : ''}
               ${index !== stats.length - 1 ? 'border-r border-gray-200' : ''}
               `}
           >

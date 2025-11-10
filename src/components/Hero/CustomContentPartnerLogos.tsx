@@ -34,17 +34,17 @@ const logos = [
 ];
 
 export function CustomContentPartnerLogos() {
-  return (
-    <div className="bg-white border-t border-gray-200">
-      <div className="container mx-auto px-4 flex justify-between items-center space-x-8 py-6">
+ return (
+    <div className="bg-white  border-t border-gray-200">
+      <div className="container mx-auto px-4 flex justify-between items-center space-x-8">
         {logos.map((logo) => (
           <img
-            key={logo.name}
-            src={logo.src}
-            alt={logo.alt}
-            className="w-auto h-16 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer"
-            loading="lazy"
-          />
+  key={logo.name}
+  src={logo.src}
+  alt={logo.alt}
+  className="w-auto h-28 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer"
+  loading="lazy"
+/>
         ))}
       </div>
     </div>

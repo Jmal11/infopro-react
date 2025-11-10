@@ -3,13 +3,14 @@ import React from 'react';
 export function CustomContentHero() {
   return (
     <section
-      className="relative w-full bg-black bg-cover bg-center"
+      className="relative w-full bg-cover bg-center"
       style={{
         backgroundImage:
           "url('https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/CustomContentHeroBackground.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh',
+        backgroundColor: '#292929',
+        height: '85vh',
       }}
     >
       <div className="container mx-auto px-4 h-full relative flex items-center" style={{ height: '100%' }}>

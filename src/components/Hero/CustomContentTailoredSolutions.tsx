@@ -1,5 +1,4 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
 
 const pointsLeft = [
   {
@@ -48,7 +47,7 @@ export function CustomContentTailoredSolutions() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <p className="mb-4 text-gray-700 text-lg">
-                Today’s learners demand content that is not only engaging and relevant but also aligned with organizational objectives and culture. At Infopro Learning, we partner with you to understand your unique challenges and design tailored solutions that address them. From comprehensive blended programs to precise digital learning modules, we offer flexible content development options that meet your budget and elevate your learners’ experience.
+                Today's learners demand content that is not only engaging and relevant but also aligned with organizational objectives and culture. At Infopro Learning, we partner with you to understand your unique challenges and design tailored solutions that address them. From comprehensive blended programs to precise digital learning modules, we offer flexible content development options that meet your budget and elevate your learners' experience.
               </p>
               <p className="mb-4 text-gray-700 text-lg">
                 We specialize in developing and delivering bespoke content solutions that drive impactful learning outcomes. Recognizing that learning is an evolving journey, we craft custom content that integrates seamlessly with modern learning preferences and business goals.
@@ -58,7 +57,11 @@ export function CustomContentTailoredSolutions() {
               <div className="space-y-7">
                 {pointsLeft.map(({ title, description }) => (
                   <div key={title} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <img 
+                      src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg"
+                      alt="Check"
+                      className="w-6 h-6 mt-1 flex-shrink-0"
+                    />
                     <div>
                       <p className="font-semibold text-gray-900">{title}</p>
                       <p className="text-gray-700 text-base">{description}</p>
@@ -69,7 +72,11 @@ export function CustomContentTailoredSolutions() {
               <div className="space-y-7">
                 {pointsRight.map(({ title, description }) => (
                   <div key={title} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <img 
+                      src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg"
+                      alt="Check"
+                      className="w-6 h-6 mt-1 flex-shrink-0"
+                    />
                     <div>
                       <p className="font-semibold text-gray-900">{title}</p>
                       <p className="text-gray-700 text-base">{description}</p>

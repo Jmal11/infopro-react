@@ -34,6 +34,7 @@ export function LDTransformationNow() {
               flex flex-col justify-start
               px-8 py-4
               flex-1
+              ${idx === 0 ? 'border-l border-gray-200' : ''}
               ${idx !== stats.length - 1 ? 'border-r border-gray-200' : ''}
             `}
             style={{ minWidth: 0 }}

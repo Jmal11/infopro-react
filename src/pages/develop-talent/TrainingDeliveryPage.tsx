@@ -1,7 +1,4 @@
 import { TrainingDeliveryHero } from '../../components/Hero/TrainingDeliveryHero';
-import { TrainingDeliveryKeyFeatures } from '../../components/Hero/TrainingDeliveryKeyFeatures';
-import { TrainingDeliveryMethods } from '../../components/Hero/TrainingDeliveryMethods';
-import { TrainingDeliveryCTA } from '../../components/Hero/TrainingDeliveryCTA';
 import { CustomContentPartnerLogos } from '../../components/Hero/CustomContentPartnerLogos';
 import { TrainingDeliveryExpertSolutions } from '../../components/Hero/TrainingDeliveryExpertSolutions';
 import { CustomContentStatsBar } from '../../components/Hero/CustomContentStatsBar';
@@ -15,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function TrainingDeliveryPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <TrainingDeliveryHero />
       <CustomContentPartnerLogos />
       <TrainingDeliveryExpertSolutions />

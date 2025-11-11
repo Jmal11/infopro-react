@@ -12,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function LmsAdministrationPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <LmsAdministrationHero />
       <CustomContentPartnerLogos />
       <LmsAdministrationDetails />

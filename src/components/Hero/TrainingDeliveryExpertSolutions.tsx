@@ -1,5 +1,3 @@
-import { CheckCircle } from 'lucide-react';
-
 const featuresLeft = [
   {
     title: "Global Expertise:",
@@ -22,7 +20,7 @@ const featuresRight = [
   },
   {
     title: "Enhanced Engagement:",
-    description: "Dynamic, interactive sessions that capture learners’ attention and drive active participation."
+    description: "Dynamic, interactive sessions that capture learners' attention and drive active participation."
   },
   {
     title: "Trusted Partnership:",
@@ -47,14 +45,18 @@ export function TrainingDeliveryExpertSolutions() {
           <div className="lg:col-span-2">
             <div className="mb-8">
               <p className="text-lg text-gray-800">
-                Maintaining large teams of in-house facilitators can lead to high fixed costs and low utilization rates. As a trusted partner to the world’s most esteemed companies, we deliver both in-person and virtual training globally. With a vast pool of over 15,000 rigorously vetted trainers, subject matter experts, and more than 300 learning suppliers worldwide, we optimize your training delivery model to maximize facilitator utilization while ensuring impactful learning experiences.
+                Maintaining large teams of in-house facilitators can lead to high fixed costs and low utilization rates. As a trusted partner to the world's most esteemed companies, we deliver both in-person and virtual training globally. With a vast pool of over 15,000 rigorously vetted trainers, subject matter experts, and more than 300 learning suppliers worldwide, we optimize your training delivery model to maximize facilitator utilization while ensuring impactful learning experiences.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
               <div className="space-y-7">
                 {featuresLeft.map((feature) => (
                   <div key={feature.title} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <img 
+                      src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg"
+                      alt="Check"
+                      className="w-6 h-6 mt-1 flex-shrink-0"
+                    />
                     <div>
                       <p className="font-semibold text-gray-900">{feature.title}</p>
                       <p className="text-gray-700 text-base">{feature.description}</p>
@@ -65,7 +67,11 @@ export function TrainingDeliveryExpertSolutions() {
               <div className="space-y-7">
                 {featuresRight.map((feature) => (
                   <div key={feature.title} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <img 
+                      src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg"
+                      alt="Check"
+                      className="w-6 h-6 mt-1 flex-shrink-0"
+                    />
                     <div>
                       <p className="font-semibold text-gray-900">{feature.title}</p>
                       <p className="text-gray-700 text-base">{feature.description}</p>

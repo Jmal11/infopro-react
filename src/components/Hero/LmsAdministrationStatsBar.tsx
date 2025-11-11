@@ -36,6 +36,7 @@ export function LmsAdministrationStatsBar() {
               md:py-0
               items-start
               flex-1
+              ${idx === 0 ? 'border-l border-gray-200' : ''}
               ${idx !== stats.length - 1 ? 'border-r border-gray-200' : ''}
             `}
             style={{ minWidth: 0 }}

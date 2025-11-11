@@ -9,7 +9,7 @@ const slide = {
 
 export function TrainingDeliveryHero() {
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative overflow-hidden" style={{ height: '85vh' }}>
       {/* Background Slide */}
       <AnimatePresence initial={false}>
         <motion.div
@@ -24,7 +24,7 @@ export function TrainingDeliveryHero() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 " />
           </div>
         </motion.div>
       </AnimatePresence>

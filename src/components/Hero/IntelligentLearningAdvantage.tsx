@@ -52,9 +52,11 @@ export function IntelligentLearningAdvantage() {
             {benefits.map(({ title, description }, idx) => (
               <div key={idx} className="flex items-start space-x-3">
                 {/* Icon */}
-                <svg className="h-6 w-6 mt-1 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+                <img 
+                  src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg"
+                  alt="Check icon"
+                  className="h-6 w-6 mt-1 flex-shrink-0"
+                />
                 {/* Text */}
                 <div>
                   <p className="font-semibold text-gray-900">{title}</p>

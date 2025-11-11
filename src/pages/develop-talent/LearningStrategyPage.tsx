@@ -14,7 +14,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function LearningStrategyPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <LearningStrategyHero />
       <CustomContentPartnerLogos />
       <IntelligentLearningAdvantage />

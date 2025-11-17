@@ -3,13 +3,13 @@ import React from 'react';
 export function TrainingNeedsAnalysisHero() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat w-full h-[51vw] mt-0 pt-0"
+      className="relative bg-cover bg-center bg-no-repeat w-full h-[85vh] mt-0 pt-0"
       style={{
         backgroundImage:
           "url('https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/training-need-analysis-banner.webp')",
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center m-0">
+      <div className="absolute inset-0 bg-black-50 flex items-center m-0">
         <div className="container mx-auto px-4 text-white max-w-3xl">
           <h1 className="text-4xl font-bold mb-4">Training Needs Analysis</h1>
           <p className="mb-6 text-lg">

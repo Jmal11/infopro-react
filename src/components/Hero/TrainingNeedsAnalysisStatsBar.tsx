@@ -17,12 +17,12 @@ export function TrainingNeedsAnalysisStatsBar() {
             key={stat.value}
             className={`
               flex-1 py-8 px-2
-              text-center
+              ${idx === 0 ? 'sm:border-l sm:border-gray-300' : ''}
               ${idx !== stats.length - 1 ? 'sm:border-r sm:border-gray-300' : ''}
             `}
           >
             <p className="text-5xl font-semibold text-purple-600 mb-2">{stat.value}</p>
-            <p className="text-base text-gray-700 max-w-xs mx-auto leading-snug">{stat.label}</p>
+            <p className="text-base text-gray-700 max-w-xs leading-snug">{stat.label}</p>
           </div>
         ))}
       </div>

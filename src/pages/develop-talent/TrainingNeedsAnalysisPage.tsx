@@ -11,7 +11,7 @@ import { TrainingExperts } from '../../components/Hero/TrainingExperts';
 
 export function TrainingNeedsAnalysisPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <TrainingNeedsAnalysisHero />
       <CustomContentPartnerLogos />
       <TrainingNeedsAnalysisContent />

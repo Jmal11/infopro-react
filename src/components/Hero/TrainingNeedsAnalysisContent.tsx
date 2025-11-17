@@ -1,5 +1,4 @@
 import React from 'react';
-import { CheckCircleIcon } from '@heroicons/react/24/outline';
 
 const pointsLeft = [
   {
@@ -52,7 +51,11 @@ export function TrainingNeedsAnalysisContent() {
             <div>
               {pointsLeft.map((point) => (
                 <div key={point.title} className="flex items-start mb-6">
-                  <CheckCircleIcon className="h-5 w-5 text-purple-500 mt-1 mr-3 flex-shrink-0" />
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check icon"
+                    className="h-5 w-5 mt-1 mr-3 flex-shrink-0" 
+                  />
                   <div>
                     <p className="font-semibold text-black">{point.title}</p>
                     <p className="text-gray-700">{point.description}</p>
@@ -63,7 +66,11 @@ export function TrainingNeedsAnalysisContent() {
             <div>
               {pointsRight.map((point) => (
                 <div key={point.title} className="flex items-start mb-6">
-                  <CheckCircleIcon className="h-5 w-5 text-purple-500 mt-1 mr-3 flex-shrink-0" />
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check icon"
+                    className="h-5 w-5 mt-1 mr-3 flex-shrink-0" 
+                  />
                   <div>
                     <p className="font-semibold text-black">{point.title}</p>
                     <p className="text-gray-700">{point.description}</p>

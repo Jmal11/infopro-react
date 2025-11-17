@@ -35,7 +35,7 @@ export function OurApproach() {
         <p className="text-center text-gray-700 mb-12 max-w-4xl mx-auto text-base font-medium">
           Our expert team will collaborate with you to analyze your organization&apos;s current training needs, analyze skill gaps, and provide a strategic roadmap. We ensure your training investments are effectively aligned with your organizational goals and future objectives. After we develop the roadmap, we can also help you implement it.
         </p>
-        <div className="relative mt-10">
+        <div className="relative mt-10 max-w-6xl mx-auto">
           {/* Purple line */}
           <div className="absolute left-0 right-0 top-[32px] h-2 bg-transparent z-0 flex">
             <div className="w-1/24" />
@@ -49,18 +49,19 @@ export function OurApproach() {
                 key={step.title}
                 className={`
                   relative flex flex-col items-start px-8 pt-12 pb-8 bg-white
-                  border-gray-200
+                  border-gray-200 border-t-[3px]
                   ${i !== 0 ? 'border-l' : ''}
                 `}
                 style={{
                   minHeight: 360,
-                  borderRight: i === steps.length - 1 ? 'none' : '1px solid #e5e7eb'
+                  borderRight: i === steps.length - 1 ? 'none' : '1px solid #e5e7eb',
+                  borderTopColor: '#d7c1ff'
                 }}
               >
                 {/* Hex icon overlapping card and line */}
-                <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10">
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-10 flex items-center justify-center">
                   <div className="clip-hexagon bg-white border-2 border-purple-200 flex items-center justify-center w-16 h-16">
-                    <img src={step.icon} className="w-8 h-8" alt="" />
+                    <img src={step.icon} alt="" />
                   </div>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 mt-2">{step.title}</h3>

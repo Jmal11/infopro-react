@@ -3,7 +3,7 @@ import React from 'react';
 export function OnboardingHero() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat h-[500px] flex items-center"
+      className="relative bg-cover bg-center bg-no-repeat h-[85vh] flex items-center"
       style={{ backgroundImage: "url('https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/onboarding-banner.webp')" }}
     >
       <div className="container mx-auto px-4 flex items-center h-full">
@@ -17,7 +17,7 @@ export function OnboardingHero() {
           </button>
         </div>
       </div>
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0"></div>
     </section>
   );
 }

@@ -10,13 +10,21 @@ const stats = [
 
 export function OnboardingStatsBar() {
   return (
-    <section className="bg-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-between items-center text-center text-gray-700">
+    <section className="bg-white py-12">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="flex items-stretch justify-between">
           {stats.map(({ value, description }, index) => (
-            <div key={index} className="flex-1 min-w-[150px] px-4 border-r last:border-r-0">
-              <div className="text-purple-600 font-bold text-3xl mb-2">{value}</div>
-              <div className="text-sm">{description}</div>
+            <div key={index} className="flex flex-1">
+              {/* Vertical line */}
+              <div className="flex items-center pr-6">
+                <div className="w-px h-32 bg-gray-300"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="flex-1 text-left">
+                <div className="text-purple-600 font-semibold text-5xl mb-3 leading-tight">{value}</div>
+                <p className="text-gray-700 text-base leading-relaxed font-normal">{description}</p>
+              </div>
             </div>
           ))}
         </div>

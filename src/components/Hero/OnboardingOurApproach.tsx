@@ -1,126 +1,132 @@
-import React, { useState } from 'react';
-import {
-  BarChart2,
-  Users,
-  Mail,
-  Settings,
-  FileText,
-  Search,
-  Repeat,
-  ClipboardList,
-  UserCheck,
-  Activity,
-  LucideIcon,
-} from 'lucide-react';
+import React from 'react';
+import { Check } from 'lucide-react';
 
-const approachSteps: { id: string; label: string; icon: LucideIcon }[] = [
-  { id: 'preboard', label: 'Preboard', icon: Repeat },
-  { id: 'orientation', label: 'Orientation', icon: ClipboardList },
-  { id: 'onboarding', label: 'Onboarding', icon: UserCheck },
-  { id: 'integration', label: 'Integration', icon: Settings },
-  { id: 'performance', label: 'Performance', icon: Activity },
-  { id: 'excel', label: 'Excel', icon: Search },
+const approachSteps = [
+  {
+    id: 'preboard',
+    label: 'Preboard',
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/preboard-icon.svg',
+    position: 'top-[15%] left-[18%]',
+  },
+  {
+    id: 'excel',
+    label: 'Excel',
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/excel-icon.svg',
+    position: 'top-[15%] right-[18%]',
+    highlighted: true,
+  },
+  {
+    id: 'orientation',
+    label: 'Orientation',
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/orientation-icon.svg',
+    position: 'top-[40%] left-[25%]',
+  },
+  {
+    id: 'performance',
+    label: 'Performance',
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/performance-icon.svg',
+    position: 'top-[40%] right-[25%]',
+  },
+  {
+    id: 'onboarding',
+    label: 'Onboarding',
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/onboarding-icon.svg',
+    position: 'top-[65%] left-[35%]',
+  },
+  {
+    id: 'integration',
+    label: 'Integration',
+    icon: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/integration-icon.svg',
+    position: 'top-[65%] right-[35%]',
+  },
 ];
 
-const approachDetails: Record<
-  string,
-  { points: string[]; icons: LucideIcon[] }
-> = {
-  preboard: {
-    points: ['Formal Review'],
-    icons: [BarChart2],
-  },
-  orientation: {
-    points: ['Growth Path'],
-    icons: [Users],
-  },
-  onboarding: {
-    points: ['Additional Responsibilities'],
-    icons: [Mail],
-  },
-  integration: {
-    points: ['New Challenges'],
-    icons: [Settings],
-  },
-  performance: {
-    points: ['Continuous Improvement'],
-    icons: [Activity],
-  },
-  excel: {
-    points: ['Excellence Achieved'],
-    icons: [FileText],
-  },
-};
+const trainingItems = [
+  'Process Training',
+  'Tools Training',
+  'SOP Training',
+  'SOS information',
+  'Direct Informal Feedback',
+];
+
+const bottomIcons = [
+  'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/globe-icon.svg',
+  'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/presentation-icon.svg',
+  'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/chat-icon.svg',
+  'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/email-icon.svg',
+];
 
 export function OnboardingOurApproach() {
-  const [selected, setSelected] = useState<string>('excel');
-
   return (
-    <section className="container mx-auto px-4 py-16 text-center">
-      <h2 className="text-2xl font-bold mb-2">Our Approach</h2>
-      <p className="mb-8 text-gray-700">
-        Combining inside-out and outside-in approaches to Onboarding Experience.
-      </p>
+    <section className="w-full bg-gray-100 py-16">
+      <div className="max-w-[1400px] mx-auto px-6">
+        {/* SVG Image with Positioned Icons in Semi-Circle */}
+        <div className="relative mb-8 max-w-5xl mx-auto">
+          {/* Background SVG */}
+          <img
+            src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/onboarding-model-shape-updated.svg"
+            alt="Our Approach - Onboarding Experience Flow"
+            className="w-full"
+          />
 
-      {/* Arc of icons */}
-      <div className="relative flex justify-center space-x-12 mb-12">
-        {approachSteps.map(({ id, label, icon: Icon }) => {
-          const isSelected = selected === id;
-          return (
-            <button
-              key={id}
-              onClick={() => setSelected(id)}
-              className={`flex flex-col items-center focus:outline-none ${
-                isSelected ? 'text-purple-600' : 'text-gray-500'
-              }`}
-              aria-pressed={isSelected}
+          {/* Positioned Icons on top of SVG in Semi-Circle */}
+          {approachSteps.map((step) => (
+            <div
+              key={step.id}
+              className={`absolute ${step.position} transform -translate-x-1/2 flex flex-col items-center`}
             >
               <div
-                className={`p-4 rounded-lg border-2 ${
-                  isSelected ? 'border-purple-600 bg-purple-100' : 'border-gray-300 bg-white'
+                className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md ${
+                  step.highlighted
+                    ? 'bg-purple-600'
+                    : 'bg-white border border-gray-200'
                 }`}
               >
-                <Icon size={32} />
+                <img
+                  src={step.icon}
+                  alt={step.label}
+                  className={`w-8 h-8 ${step.highlighted ? 'brightness-0 invert' : ''}`}
+                />
               </div>
-              <span className="mt-2 text-sm">{label}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Details below */}
-      <div className="bg-white rounded-lg shadow p-6 max-w-4xl mx-auto">
-        <div className="flex justify-center space-x-8 mb-6">
-          {approachDetails[selected].points.map((point: string) => (
-            <div key={point} className="flex items-center space-x-2 text-purple-600 font-semibold">
-              <CheckCircle size={20} />
-              <span>{point}</span>
+              <span
+                className={`text-sm font-medium whitespace-nowrap ${
+                  step.highlighted ? 'text-purple-600' : 'text-gray-800'
+                }`}
+              >
+                {step.label}
+              </span>
             </div>
           ))}
         </div>
-        <div className="flex justify-center space-x-6">
-          {approachDetails[selected].icons.map((IconComp: LucideIcon, idx: number) => (
-            <IconComp key={idx} size={24} className="text-purple-600" />
-          ))}
+
+        {/* Bottom White Box with Training Items */}
+        <div className="bg-white rounded-lg shadow-md px-12 py-8 max-w-5xl mx-auto">
+          {/* Training Items with Checkmarks */}
+          <div className="flex items-center justify-center gap-12 mb-6 flex-wrap">
+            {trainingItems.map((item) => (
+              <div key={item} className="flex items-center gap-2">
+                <div className="text-purple-600">
+                  <Check size={20} />
+                </div>
+                <span className="text-gray-800 font-medium text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom Icons - Centered and evenly spaced */}
+          <div className="flex items-center justify-center gap-12 pt-4">
+            {bottomIcons.map((icon, index) => (
+              <div key={index} className="w-12 h-12 flex items-center justify-center">
+                <img
+                  src={icon}
+                  alt={`Icon ${index + 1}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function CheckCircle(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M9 12l2 2 4-4" />
-      <circle cx="12" cy="12" r="10" />
-    </svg>
   );
 }

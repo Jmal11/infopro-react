@@ -10,25 +10,19 @@ const stats = [
 
 export function TalentAcquisitionStats() {
   return (
-    <section className="w-full bg-white pt-8 pb-2">
-      <div className="max-w-[1400px] mx-auto flex border-gray-300">
-        {stats.map(({ value, label }, idx) => (
-          <div
-            key={idx}
-            className={`
-              flex-1 text-left pl-12 py-6
-              ${idx === 0 ? 'border-l border-gray-300' : ''}
-              ${idx !== stats.length - 1 ? 'border-r border-gray-300' : ''}
-            `}
-            style={{
-              minWidth: 0,
-              paddingRight: idx !== stats.length - 1 ? '1.5rem' : 0,
-            }}
-          >
-            <div className="text-4xl font-semibold text-purple-600 mb-2">{value}</div>
-            <div className="text-base text-gray-800">{label}</div>
-          </div>
-        ))}
+    <section className="w-full bg-white py-12">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-5">
+          {stats.map(({ value, label }, idx) => (
+            <div
+              key={idx}
+              className="py-6 px-6 border-l border-gray-300"
+            >
+              <div className="text-5xl font-normal text-[#6b19ff] mb-3">{value}</div>
+              <div className="text-sm text-gray-800 leading-relaxed">{label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

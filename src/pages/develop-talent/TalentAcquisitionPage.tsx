@@ -1,6 +1,7 @@
 import React from 'react';
 import { TalentAcquisitionHero } from '../../components/Hero/TalentAcquisitionHero';
 import { CustomContentPartnerLogos } from '../../components/Hero/CustomContentPartnerLogos';
+import { TalentAcquisitionPartnerLogos } from '../../components/Hero/TalentAcquisitionPartnerLogos';
 import { TalentAcquisitionDetails } from '../../components/Hero/TalentAcquisitionDetails';
 import { TalentAcquisitionStats } from '../../components/Hero/TalentAcquisitionStats';
 import { TalentAcquisitionFocusAreas } from '../../components/Hero/TalentAcquisitionFocusAreas';
@@ -13,9 +14,9 @@ import { LearningExperienceArchitectsSection } from '../../components/Hero/Learn
 
 export function TalentAcquisitionPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <TalentAcquisitionHero />
-      <CustomContentPartnerLogos />
+      <TalentAcquisitionPartnerLogos />
       <TalentAcquisitionDetails />
       <TalentAcquisitionStats />
       <TalentAcquisitionFocusAreas />

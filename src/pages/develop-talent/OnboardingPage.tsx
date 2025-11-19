@@ -11,7 +11,7 @@ import { LearningExperienceArchitectsSection } from '../../components/Hero/Learn
 
 export function OnboardingPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
      
       <OnboardingHero />
       <OnboardingOptimizedRetention />

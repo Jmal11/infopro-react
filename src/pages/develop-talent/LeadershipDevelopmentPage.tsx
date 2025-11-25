@@ -8,6 +8,7 @@ import { SuccessStoriesSection } from '../../components/Hero/SuccessStoriesSecti
 import { LatestInsights } from '../../components/Hero/LatestInsights';
 import { LearningExperienceArchitectsSection } from '../../components/Hero/LearningExperienceArchitectsSection';
 import { LeadershipDevelopmentPartners } from '../../components/Hero/LeadershipDevelopmentPartners';
+import ContactForm from '../../components/Hero/ContactForm';
 
 export function LeadershipDevelopmentPage() {
   return (
@@ -21,6 +22,7 @@ export function LeadershipDevelopmentPage() {
       <SuccessStoriesSection />
       <LatestInsights />
       <LearningExperienceArchitectsSection />
+      <ContactForm />
       <div className="container mx-auto px-4 py-12">
         {/* Additional content sections for Leadership Development can be added here */}
        

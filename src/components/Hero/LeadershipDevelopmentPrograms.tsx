@@ -55,22 +55,25 @@ export function LeadershipDevelopmentPrograms() {
                 className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm"
               />
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-500"></div>
               
-              {/* Content overlay - positioned at bottom, moves up on hover */}
-              <div className="absolute bottom-0 left-0 right-0 p-10 transform translate-y-0 group-hover:-translate-y-16 transition-transform duration-500">
-                <div>
+              {/* Content overlay */}
+              <div className="absolute inset-0 flex flex-col justify-between p-10">
+                {/* Heading and Description - slides up to top of container */}
+                <div className="transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">
                     {title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-white mb-6">
+                  <p className="text-sm leading-relaxed text-white">
                     {description}
                   </p>
-                  
-                  {/* Learn More Link - stays left, slides right only when button is hovered */}
+                </div>
+                
+                {/* Learn More Link - slides to right edge of container */}
+                <div className="flex justify-start">
                   <a 
                     href={link}
-                    className="inline-flex items-center text-white font-semibold text-sm transform transition-transform duration-300 hover:translate-x-4"
+                    className="inline-flex items-center text-white font-semibold text-sm transform translate-x-0 group-hover:translate-x-[calc(100%-100%)] group-hover:ml-auto transition-all duration-500"
                   >
                     <span className="mr-2">LEARN MORE</span>
                     <svg 

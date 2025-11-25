@@ -2,7 +2,7 @@ import React from 'react';
 
 export function OnboardingInnovativeSolutions() {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Text Content */}
         <div>
@@ -22,7 +22,7 @@ export function OnboardingInnovativeSolutions() {
         {/* Right Image */}
         <div>
           <img
-            src="https://www.infoprolearning.com/wp-content/uploads/2023/03/chelsea-piers-tennis-center-1024x576.jpg"
+            src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/ezgif.com-optimize.gif"
             alt="The Tennis Center"
             className="w-full rounded shadow-lg"
           />

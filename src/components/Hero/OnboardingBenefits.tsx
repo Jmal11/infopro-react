@@ -21,16 +21,20 @@ const benefits = [
 
 export function OnboardingBenefits() {
   return (
-    <section className="container mx-auto px-4 py-16">
-      <h2 className="text-2xl font-bold mb-10 text-center">Benefits of Our Employee Onboarding Solutions</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <section className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
+      <h2 className="text-3xl md:text-4xl font-bold mb-12 md:mb-16 text-center">
+        Benefits of Our Employee Onboarding Solutions
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
         {benefits.map(({ title, description }) => (
-          <div key={title} className="border-l-4 border-transparent pl-4">
-            <h3 className="text-lg font-semibold mb-2 relative inline-block">
+          <div key={title} className="border-l border-gray-300 pl-6">
+            <h3 className="text-lg md:text-xl font-semibold mb-2 text-gray-900">
               {title}
-              <span className="block w-12 h-1 bg-purple-600 mt-1"></span>
             </h3>
-            <p className="text-gray-700 text-sm">{description}</p>
+            <div className="w-16 h-1 bg-purple-600 mb-4"></div>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              {description}
+            </p>
           </div>
         ))}
       </div>

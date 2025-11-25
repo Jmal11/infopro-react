@@ -8,6 +8,7 @@ import { OnboardingBenefits } from '../../components/Hero/OnboardingBenefits';
 import { SuccessStoriesSection } from '../../components/Hero/SuccessStoriesSection';
 import { LatestInsights } from '../../components/Hero/LatestInsights';
 import { LearningExperienceArchitectsSection } from '../../components/Hero/LearningExperienceArchitectsSection';
+import ContactForm from '../../components/Hero/ContactForm';
 
 export function OnboardingPage() {
   return (
@@ -22,6 +23,7 @@ export function OnboardingPage() {
       <SuccessStoriesSection />
       <LatestInsights />
       <LearningExperienceArchitectsSection />
+      <ContactForm />
       {/* Additional content for Onboarding page can be added here */}
     </main>
   );

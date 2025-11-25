@@ -10,13 +10,17 @@ const stats = [
 
 export function LeadershipStatsBar() {
   return (
-    <section className="bg-white py-8">
+    <section className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-between items-center text-center text-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {stats.map(({ value, description }, index) => (
-            <div key={index} className="flex-1 min-w-[150px] px-4 border-r last:border-r-0">
-              <div className="text-purple-600 font-bold text-3xl mb-2">{value}</div>
-              <div className="text-sm">{description}</div>
+            <div key={index} className="border-l border-gray-300 pl-6">
+              <div className="text-purple-600 font-normal text-4xl md:text-5xl mb-3">
+                {value}
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                {description}
+              </p>
             </div>
           ))}
         </div>

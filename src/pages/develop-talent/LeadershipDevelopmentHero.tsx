@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function VanguardLeadershipHero() {
+export function LeadershipDevelopmentHero() {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat h-[85vh] flex items-center"

@@ -18,8 +18,8 @@ export function PerformanceManagementPage() {
       <PerformanceManagementDetails />
       <PerformanceManagementStats />
       <PerformanceManagementFramework />
-      <PerformanceManagementApproach />
       <PerformanceManagementTools />
+      <PerformanceManagementApproach />
       <SuccessStoriesSection />
       <LatestInsights />
       <LearningExperienceArchitectsSection />

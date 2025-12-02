@@ -12,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function MidCareerDevelopmentPage() {
   return (
-    <main className="pt-16">
+    <main className="">
       <MidCareerDevelopmentHero />
       <MidCareerDevelopmentContent />
       <MidCareerDevelopmentJourney />

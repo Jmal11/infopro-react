@@ -32,7 +32,7 @@ const competencies = [
 export function VanguardLeadershipCompetencyModel() {
   return (
     <section className="container mx-auto px-4 py-12">
-      <h2 className="text-2xl font-bold text-center mb-10">Vanguard Leader Competency Model</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Vanguard Leader Competency Model</h2>
       <div className="relative w-full max-w-lg mx-auto aspect-square">
         {/* Central triangle */}
         <div className="absolute top-1/2 left-1/2 w-32 h-32 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-tr from-purple-600 to-purple-400 clip-triangle"></div>

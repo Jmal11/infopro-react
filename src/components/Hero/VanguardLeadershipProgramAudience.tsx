@@ -1,11 +1,13 @@
 import React from 'react';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
-const audiencePoints = [
+const leftColumnPoints = [
   "Team leaders, leaders of leaders, strategic organizational leaders",
   "Individuals willing to transition to leadership roles",
   "Teams needing emotional and social intelligence to manage diverse, cross-functional groups",
   "Enterprises prioritizing strategic thinking to gain a competitive edge in a digital-first landscape",
+];
+
+const rightColumnPoints = [
   "Professionals eager to lead beyond traditional boundaries",
   "Organizations facing AI disruptions, seeking leaders who can integrate AI into strategy",
   "Organizations facing AI disruptions, seeking leaders who can integrate AI into business strategy",
@@ -13,35 +15,74 @@ const audiencePoints = [
 
 export function VanguardLeadershipProgramAudience() {
   return (
-    <section className="bg-gray-900 text-white py-12">
+    <section className="bg-[#292929] text-white py-16">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-12">
         {/* Left side - Audience list */}
-        <div className="lg:w-1/2 space-y-4">
-          <h2 className="text-2xl font-bold mb-6">Who Is This Program For</h2>
-          <ul className="space-y-3 text-gray-300">
-            {audiencePoints.map((point, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <CheckCircleIcon className="w-6 h-6 text-purple-500 flex-shrink-0 mt-1" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="lg:w-2/3 lg:border-r lg:border-gray-600 lg:pr-12">
+          <h2 className="text-3xl font-bold mb-8">Who Is This Program For</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+            {/* Left Column */}
+            <ul className="space-y-6">
+              {leftColumnPoints.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-6 h-6 flex-shrink-0 mt-1"
+                  />
+                  <span className="text-gray-300">{point}</span>
+                </li>
+              ))}
+            </ul>
+            {/* Right Column */}
+            <ul className="space-y-6">
+              {rightColumnPoints.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-6 h-6 flex-shrink-0 mt-1"
+                  />
+                  <span className="text-gray-300">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Right side - Testimonial */}
-        <div className="lg:w-1/2 flex flex-col justify-center bg-gray-800 p-8 rounded shadow-lg">
-          <blockquote className="text-gray-300 italic mb-6 relative before:content-['“'] before:absolute before:-left-4 before:-top-2 before:text-6xl before:text-purple-600 after:content-['”'] after:absolute after:-right-4 after:-bottom-2 after:text-6xl after:text-purple-600">
-            Through the Vanguard Leadership Development Program, my approach to leadership evolved, embracing collaboration, inclusion and innovation like never before. Across cultural, technical, strategic and social boundaries, this program equipped me to lead my teams forward into the next phase of our growth success.
-          </blockquote>
+        <div className="lg:w-1/3 flex flex-col justify-center">
+          <div>
+            <p className="text-gray-300 leading-relaxed">
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Quote.svg" 
+                alt="Quote" 
+                className="w-8 h-8 inline-block mr-1 -mt-1"
+              />
+              Through the Vanguard Leadership Development Program, my approach to leadership evolved, embracing collaboration, inclusion and innovation like never before. Across cultural, technical, strategic and social boundaries, this program equipped me to lead my teams forward into the next phase of our growth success.
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Quote.svg" 
+                alt="Quote" 
+                className="w-8 h-8 inline-block ml-1 rotate-180"
+              />
+            </p>
+          </div>
+
+          {/* White Line - Small and Thick */}
+          <div className="w-16 h-1 bg-white my-6"></div>
+          
+          {/* Author */}
           <div className="flex items-center gap-4">
-            <img
-              src="https://randomuser.me/api/portraits/men/75.jpg"
-              alt="Alex M."
-              className="w-16 h-16 rounded-full object-cover"
-            />
+            <div className="w-14 h-14 rounded-full border-2 border-[#4a7c59] overflow-hidden">
+              <img
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Alex.webp"
+                alt="Alex M."
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div>
               <p className="font-semibold text-white">Alex M.,</p>
-              <p className="text-purple-500 text-sm">Chief Innovation Officer</p>
+              <p className="text-gray-400 text-sm">Chief Innovation Officer</p>
             </div>
           </div>
         </div>

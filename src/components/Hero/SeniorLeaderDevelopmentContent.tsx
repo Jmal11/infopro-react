@@ -1,65 +1,91 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
-
-const outcomes = [
-  {
-    title: 'Strategic Alignment',
-    desc: 'Unite values, culture, and engagement.',
-  },
-  {
-    title: 'Executive Presence',
-    desc: 'Develop a leadership persona that instills trust, confidence, and moves others to action.',
-  },
-  {
-    title: 'Data-Driven Decisions',
-    desc: 'Utilize objective, insightful information.',
-  },
-  {
-    title: 'Effective Communication',
-    desc: 'Minimize misunderstandings and conflicts.',
-  },
-  {
-    title: 'Stress Mastery',
-    desc: 'Transform stress into innovation.',
-  },
-  {
-    title: 'Confident Leadership',
-    desc: 'Navigate uncertainty with assurance.',
-  },
-];
 
 export function SeniorLeaderDevelopmentContent() {
+  const leftOutcomes = [
+    {
+      title: "Strategic Alignment:",
+      description: "Unite values, culture, and engagement."
+    },
+    {
+      title: "Data-Driven Decisions:",
+      description: "Utilize objective, insightful information."
+    },
+    {
+      title: "Stress Mastery:",
+      description: "Transform stress into innovation."
+    }
+  ];
+
+  const rightOutcomes = [
+    {
+      title: "Executive Presence:",
+      description: "Develop a leadership persona that instills trust, confidence, and moves others to action."
+    },
+    {
+      title: "Effective Communication:",
+      description: "Minimize misunderstandings and conflicts."
+    },
+    {
+      title: "Confident Leadership:",
+      description: "Navigate uncertainty with assurance."
+    }
+  ];
+
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Left: Heading */}
-        <div>
-          <h2 className="text-4xl font-extrabold mb-6 leading-tight">
-            Evolving Senior Leaders<br />
-            for a Complex and<br />
-            Hyper-Competitive<br />
-            Business Environment
+    <section className="container mx-auto px-4 py-16">
+      <div className="flex flex-col lg:flex-row gap-12">
+        {/* Left side heading */}
+        <div className="lg:w-1/3">
+          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+            Evolving Senior Leaders for a Complex and Hyper-Competitive Business Environment
           </h2>
         </div>
-        {/* Right: Description and Outcomes */}
-        <div>
-          <p className="mb-8 text-lg text-gray-800">
-            As senior leaders navigate complex, high-stakes business environments, it’s crucial to refine their strategic leadership abilities, boost their high-impact communication skills, and enable them to demonstrate a strong executive presence. Our Senior Leader Development Programs are each tailored to meet these needs, providing courses that enhance strategic thinking, stress management, and effective leadership in volatile, uncertain, complex, and ambiguous settings. Our expertly designed courses empower senior leaders to drive organizational success with confidence and clarity.
+
+        {/* Right side content */}
+        <div className="lg:w-2/3 space-y-6 text-gray-700">
+          <p className="leading-relaxed">
+            As senior leaders navigate complex, high-stakes business environments, it's crucial to refine their strategic leadership abilities, boost their high-impact communication skills, and enable them to demonstrate a strong executive presence. Our Senior Leader Development Programs are each tailored to meet these needs, providing courses that enhance strategic thinking, stress management, and effective leadership in volatile, uncertain, complex, and ambiguous settings. Our expertly designed courses empower senior leaders to drive organizational success with confidence and clarity.
           </p>
-          <h3 className="text-2xl font-bold mb-4">Development Outcomes:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
-            {outcomes.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                <div>
-                  <span className="font-semibold text-gray-900">{item.title}:</span>
-                  <span className="block text-gray-700">{item.desc}</span>
+
+          <h3 className="text-xl font-bold mt-8 mb-6">Development Outcomes:</h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            {/* Left Column */}
+            <div className="space-y-8">
+              {leftOutcomes.map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-5 h-5 mt-1 flex-shrink-0"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900">{item.title}</p>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-8">
+              {rightOutcomes.map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-5 h-5 mt-1 flex-shrink-0"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900">{item.title}</p>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
-} 
+}

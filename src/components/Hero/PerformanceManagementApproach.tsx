@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function PerformanceManagementTools() {
+export function PerformanceManagementApproach() {
   const tools = [
     {
       title: "OKR Platforms",

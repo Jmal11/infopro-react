@@ -1,64 +1,87 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
 
 export function MidCareerDevelopmentContent() {
+  const leftOutcomes = [
+    {
+      title: "Managing Difficult Conversations:",
+      description: "Engage productively when emotions are high and opinions differ."
+    },
+    {
+      title: "Effective Team Management:",
+      description: "Optimize team engagement and performance."
+    },
+    {
+      title: "Executive Communication:",
+      description: "Master communication with stakeholders."
+    }
+  ];
+
+  const rightOutcomes = [
+    {
+      title: "Integrated Thinking:",
+      description: "Learning to apply strategic thinking, systems thinking and critical thinking simultaneously."
+    },
+    {
+      title: "Conflict Resolution:",
+      description: "Manage workplace conflicts."
+    },
+    {
+      title: "Change Management:",
+      description: "Navigate organizational change."
+    }
+  ];
+
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Left: Heading */}
-        <div>
-          <h2 className="text-4xl font-extrabold mb-4 leading-tight">
+    <section className="container mx-auto px-4 py-16">
+      <div className="flex flex-col lg:flex-row gap-12">
+        {/* Left side heading */}
+        <div className="lg:w-1/3">
+          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
             Boosting Mid-Career Development Through Advanced Leadership Programs
           </h2>
         </div>
-        {/* Right: Description and Outcomes */}
-        <div>
-          <p className="mb-8 text-gray-700 text-base">
+
+        {/* Right side content */}
+        <div className="lg:w-2/3 space-y-6 text-gray-700">
+          <p className="leading-relaxed">
             Mid-career professionals often face unique challenges as they navigate complex responsibilities and prepare for senior leadership roles. Recognizing this, organizations invest in structured programs that blend advanced coaching, mentoring, and specialized courses. Our evidence-based mid-career development solutions enhance leadership capabilities, ensuring these leaders are equipped to drive strategic initiatives and foster organizational growth.
           </p>
-          <h3 className="text-2xl font-bold mb-4">Development Outcomes:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-purple-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Managing Difficult Conversations:</strong> <br />
-                <span className="text-gray-700">Engage productively when emotions are high and opinions differ.</span>
-              </div>
+
+          <h3 className="text-xl font-bold mt-8 mb-6">Development Outcomes:</h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            {/* Left Column */}
+            <div className="space-y-8">
+              {leftOutcomes.map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-5 h-5 mt-1 flex-shrink-0"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900">{item.title}</p>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-purple-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Integrated Thinking:</strong> <br />
-                <span className="text-gray-700">Learning to apply strategic thinking, systems thinking and critical thinking simultaneously.</span>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-purple-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Effective Team Management:</strong> <br />
-                <span className="text-gray-700">Optimize team engagement and performance.</span>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-purple-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Conflict Resolution:</strong> <br />
-                <span className="text-gray-700">Manage workplace conflicts.</span>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-purple-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Executive Communication:</strong> <br />
-                <span className="text-gray-700">Master communication with stakeholders.</span>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-purple-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Change Management:</strong> <br />
-                <span className="text-gray-700">Navigate organizational change.</span>
-              </div>
+
+            {/* Right Column */}
+            <div className="space-y-8">
+              {rightOutcomes.map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-5 h-5 mt-1 flex-shrink-0"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900">{item.title}</p>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -67,4 +90,4 @@ export function MidCareerDevelopmentContent() {
   );
 }
 
-export default MidCareerDevelopmentContent; 
+export default MidCareerDevelopmentContent;

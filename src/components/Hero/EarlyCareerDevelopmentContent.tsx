@@ -1,54 +1,87 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
 
 export function EarlyCareerDevelopmentContent() {
+  const leftOutcomes = [
+    {
+      title: "Transition to Leadership:",
+      description: "Manage and motivate teams."
+    },
+    {
+      title: "Giving and Receiving Feedback:",
+      description: "Foster growth through feedback."
+    },
+    {
+      title: "Your Personal Leadership Brand:",
+      description: "Align your leadership style and focus with your deepest values."
+    }
+  ];
+
+  const rightOutcomes = [
+    {
+      title: "Conduct effective, objective and productive:",
+      description: "reviews that boost employee engagement."
+    },
+    {
+      title: "Effective Performance Reviews:",
+      description: "Conduct effective, objective and productive reviews that boost employee engagement."
+    },
+    {
+      title: "Building Self-Esteem and Self-Confidence:",
+      description: "Boost confidence and credibility to enhance your ability to drive change."
+    }
+  ];
+
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <h2 className="text-3xl font-bold md:col-span-1 mb-6 md:mb-0">
-          Empower Your Early Career Leaders for Success
-        </h2>
-        <div className="md:col-span-2 space-y-6 text-gray-700">
-          <p>
-            Stepping into leadership roles can be daunting for early career professionals. Many face this transition without sufficient guidance or training. To address this, organizations are investing in comprehensive programs that combine coaching, mentoring, and targeted learning experiences. Our evidence-based early career development solutions help new managers build vital leadership skills, enabling them to lead confidently and foster growth.
+    <section className="container mx-auto px-4 py-16">
+      <div className="flex flex-col lg:flex-row gap-12">
+        {/* Left side heading */}
+        <div className="lg:w-1/3">
+          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+            Empower Your Early Career Leaders for Success
+          </h2>
+        </div>
+
+        {/* Right side content */}
+        <div className="lg:w-2/3 space-y-6 text-gray-700">
+          <p className="leading-relaxed">
+            Transitioning into leadership can be challenging for early career professionals. Many new leaders navigate this shift without adequate support or training. Recognizing this, organizations invest in structured programs that blend coaching, mentoring, and specialized courses. Our research-backed early career development solutions cultivate essential leadership capabilities, ensuring new managers are well-prepared to lead effectively and drive growth.
           </p>
-          <h3 className="text-xl font-semibold mb-4">Development Outcomes:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-blue-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Seamless Leadership Transition:</strong> Equip yourself to effectively manage and inspire your team.
-              </div>
+
+          <h3 className="text-xl font-bold mt-8 mb-6">Development Outcomes:</h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            {/* Left Column */}
+            <div className="space-y-8">
+              {leftOutcomes.map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-5 h-5 mt-1 flex-shrink-0"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900">{item.title}</p>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-blue-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Constructive Feedback Skills:</strong> Cultivate a culture of growth through meaningful feedback.
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-blue-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Personal Leadership Brand:</strong> Develop a leadership style that aligns with your core values.
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-blue-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Engagement and Productivity:</strong> Learn to conduct effective reviews that enhance team motivation.
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-blue-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Performance Management:</strong> Master objective and impactful performance evaluations.
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <CheckCircle className="text-blue-600 w-6 h-6 mt-1" />
-              <div>
-                <strong>Confidence Building:</strong> Strengthen your self-esteem and credibility to drive positive change.
-              </div>
+
+            {/* Right Column */}
+            <div className="space-y-8">
+              {rightOutcomes.map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-5 h-5 mt-1 flex-shrink-0"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-900">{item.title}</p>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

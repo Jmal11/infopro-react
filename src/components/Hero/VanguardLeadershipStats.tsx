@@ -11,16 +11,14 @@ const stats = [
 export function VanguardLeadershipStats() {
   return (
     <section className="container mx-auto px-4 py-12">
-      <div className="flex flex-wrap justify-between items-center text-center text-gray-800">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-y-8">
         {stats.map((stat, index) => (
           <div
             key={index}
-            className={`flex-1 min-w-[150px] px-4 ${
-              index !== stats.length - 1 ? 'border-r border-gray-300' : ''
-            }`}
+            className="border-l-2 border-gray-300 pl-6 pr-4"
           >
-            <p className="text-3xl font-extrabold text-purple-600">{stat.value}</p>
-            <p className="mt-2 text-sm">{stat.description}</p>
+            <p className="text-4xl font-bold text-[#6b19ff] mb-2">{stat.value}</p>
+            <p className="text-sm text-gray-700 leading-relaxed">{stat.description}</p>
           </div>
         ))}
       </div>

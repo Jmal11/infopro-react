@@ -12,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function SeniorLeaderDevelopmentPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <SeniorLeaderDevelopmentHero />
       <SeniorLeaderDevelopmentPartnerLogos />
       <SeniorLeaderDevelopmentContent />

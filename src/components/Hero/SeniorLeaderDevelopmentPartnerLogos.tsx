@@ -33,7 +33,7 @@ export function SeniorLeaderDevelopmentPartnerLogos() {
               key={idx}
               src={logo.src}
               alt={logo.alt}
-              className="max-h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-opacity"
+              className="max w-auto grayscale opacity-80 hover:opacity-100 transition-opacity"
               loading="lazy"
             />
           ))}

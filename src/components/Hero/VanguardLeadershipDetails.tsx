@@ -1,5 +1,4 @@
 import React from 'react';
-import { CheckCircleIcon } from '@heroicons/react/24/outline';
 
 export function VanguardLeadershipDetails() {
   return (
@@ -25,7 +24,11 @@ export function VanguardLeadershipDetails() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
             <div className="flex items-start gap-3">
-              <CheckCircleIcon className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                alt="Check" 
+                className="w-6 h-6 mt-1 flex-shrink-0"
+              />
               <div>
                 <p className="font-semibold">High-Impact Communicators:</p>
                 <p className="text-sm">
@@ -35,7 +38,11 @@ export function VanguardLeadershipDetails() {
             </div>
 
             <div className="flex items-start gap-3">
-              <CheckCircleIcon className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                alt="Check" 
+                className="w-6 h-6 mt-1 flex-shrink-0"
+              />
               <div>
                 <p className="font-semibold">Empathetic Leadership:</p>
                 <p className="text-sm">
@@ -45,7 +52,11 @@ export function VanguardLeadershipDetails() {
             </div>
 
             <div className="flex items-start gap-3">
-              <CheckCircleIcon className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                alt="Check" 
+                className="w-6 h-6 mt-1 flex-shrink-0"
+              />
               <div>
                 <p className="font-semibold">Strategic Agility:</p>
                 <p className="text-sm">
@@ -55,7 +66,11 @@ export function VanguardLeadershipDetails() {
             </div>
 
             <div className="flex items-start gap-3">
-              <CheckCircleIcon className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                alt="Check" 
+                className="w-6 h-6 mt-1 flex-shrink-0"
+              />
               <div>
                 <p className="font-semibold">Action-Oriented and Execution-Driven:</p>
                 <p className="text-sm">
@@ -65,7 +80,11 @@ export function VanguardLeadershipDetails() {
             </div>
 
             <div className="flex items-start gap-3">
-              <CheckCircleIcon className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                alt="Check" 
+                className="w-6 h-6 mt-1 flex-shrink-0"
+              />
               <div>
                 <p className="font-semibold">Seamless Collaboration:</p>
                 <p className="text-sm">

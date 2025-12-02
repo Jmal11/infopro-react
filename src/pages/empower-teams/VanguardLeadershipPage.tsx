@@ -13,7 +13,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function VanguardLeadershipPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <VanguardLeadershipHero />
       <VanguardLeadershipDetails />
       <VanguardLeadershipStats />

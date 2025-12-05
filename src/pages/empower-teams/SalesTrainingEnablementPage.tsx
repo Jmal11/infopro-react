@@ -17,7 +17,7 @@ import { SalesTrainingEnablementCertificate } from '../../components/Hero/SalesT
 
 export function SalesTrainingEnablementPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <SalesTrainingEnablementHero />
       <SalesTrainingEnablementPartnerLogos />
       <SalesTrainingEnablementContent />

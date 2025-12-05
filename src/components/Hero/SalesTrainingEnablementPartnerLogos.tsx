@@ -1,12 +1,30 @@
 import React from 'react';
 
 const logos = [
-  { src: '/logos/aristocrat.svg', alt: 'Aristocrat' },
-  { src: '/logos/jti.svg', alt: 'JTI' },
-  { src: '/logos/komatsu.svg', alt: 'Komatsu' },
-  { src: '/logos/lenovo.svg', alt: 'Lenovo' },
-  { src: '/logos/liberty.svg', alt: 'Liberty Dental Plan' },
-  { src: '/logos/paysafe.svg', alt: 'Paysafe' },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Aristocrat.webp',
+    alt: 'Aristocrat',
+  },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/JTi.webp',
+    alt: 'JTI',
+  },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Komu.webp',
+    alt: 'Komatsu',
+  },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Lenovo1.webp',
+    alt: 'Lenovo',
+  },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Liberty.webp',
+    alt: 'Liberty',
+  },
+   {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/Paysafe.webp',
+    alt: 'Paysafe',
+  },
 ];
 
 export function SalesTrainingEnablementPartnerLogos() {
@@ -19,7 +37,7 @@ export function SalesTrainingEnablementPartnerLogos() {
               key={idx}
               src={logo.src}
               alt={logo.alt}
-              className="max-h-10 w-auto grayscale opacity-80"
+              className="grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
               loading="lazy"
             />
           ))}
@@ -28,5 +46,3 @@ export function SalesTrainingEnablementPartnerLogos() {
     </section>
   );
 }
-
-export default SalesTrainingEnablementPartnerLogos; 

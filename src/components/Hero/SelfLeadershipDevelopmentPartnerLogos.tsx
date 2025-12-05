@@ -6,7 +6,7 @@ const logos = [
     alt: 'Delta',
   },
   {
-    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/jnj.webp',
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/j&j.webp',
     alt: 'Johnson & Johnson',
   },
   {
@@ -37,7 +37,7 @@ export function SelfLeadershipDevelopmentPartnerLogos() {
               key={idx}
               src={logo.src}
               alt={logo.alt}
-              className="grayscale opacity-80 hover:opacity-100 transition-opacity"
+              className="grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
               loading="lazy"
             />
           ))}
@@ -45,4 +45,4 @@ export function SelfLeadershipDevelopmentPartnerLogos() {
       </div>
     </section>
   );
-} 
+}

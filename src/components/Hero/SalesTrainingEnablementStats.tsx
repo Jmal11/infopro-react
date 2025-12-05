@@ -11,11 +11,18 @@ const stats = [
 export function SalesTrainingEnablementStats() {
   return (
     <section className="bg-white py-10 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch justify-between divide-y md:divide-y-0 md:divide-x divide-gray-200">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
         {stats.map((stat, idx) => (
-          <div key={idx} className="flex-1 flex flex-col items-center justify-center py-6 md:py-0 md:px-6 text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">{stat.value}</div>
-            <div className="text-gray-700 text-base">{stat.desc}</div>
+          <div 
+            key={idx} 
+            className="border-l-4 border-gray-200 pl-6 py-2"
+          >
+            <div className="text-4xl font-bold mb-2" style={{ color: '#6b19ff' }}>
+              {stat.value}
+            </div>
+            <div className="text-gray-700 text-sm leading-relaxed">
+              {stat.desc}
+            </div>
           </div>
         ))}
       </div>
@@ -23,4 +30,4 @@ export function SalesTrainingEnablementStats() {
   );
 }
 
-export default SalesTrainingEnablementStats; 
+export default SalesTrainingEnablementStats;

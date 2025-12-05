@@ -3,15 +3,15 @@ import React from 'react';
 export function SalesTrainingEnablementHero() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat h-[500px] flex items-center"
+      className="relative bg-cover bg-center bg-no-repeat h-[85VH] flex items-center"
       style={{ backgroundImage: "url('https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/header-img.webp')" }}
     >
-      <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+      <div className="absolute inset-0"></div>
       <div className="container mx-auto px-4 flex items-center h-full relative z-10">
         <div className="max-w-xl text-white">
           <h1 className="text-5xl font-bold mb-4">Sales Training & Enablement</h1>
           <p className="mb-6 text-xl font-normal">
-            All-inclusive sales enablement strategy for building a high-performing sales<br />
+            All-inclusive sales enablement strategy for building a high-performing sales
             team, boosting revenue, and fostering client loyalty
           </p>
           <a href="/contact" className="inline-block border border-white px-8 py-3 font-semibold rounded transition hover:bg-white hover:text-black text-lg">

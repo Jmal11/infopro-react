@@ -1,54 +1,93 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
 
-const points = [
-  'Strengthen personal productivity and focus',
-  'Enhance communication and writing skills',
-  'Optimize remote and hybrid work practices',
-  'Foster collaboration and teamwork',
-  'Master stress management techniques',
-  'Develop critical thinking and problem-solving abilities',
-  'Improve presentation and storytelling capabilities',
+const leftColumnPoints = [
+  "Strengthen personal productivity and focus",
+  "Enhance communication and writing skills",
+  "Optimize remote and hybrid work practices",
+  "Foster collaboration and teamwork",
+];
+
+const rightColumnPoints = [
+  "Master stress management techniques",
+  "Develop critical thinking and problem-solving abilities",
+  "Improve presentation and storytelling capabilities",
 ];
 
 export function SelfLeadershipDevelopmentProgramAudience() {
   return (
-    <section className="bg-gray-900 text-white py-20">
-      <div className="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row gap-12 items-start">
-        {/* Left Column */}
-        <div className="md:w-1/2 w-full">
+    <section className="bg-[#292929] text-white py-16">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-12">
+        {/* Left side - Audience list */}
+        <div className="lg:w-2/3 lg:border-r lg:border-gray-600 lg:pr-12">
           <h2 className="text-3xl font-bold mb-2">Who Is This Program For</h2>
-          <p className="mb-6 text-gray-300">Leaders who want to:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mb-4">
-            {points.map((point, idx) => (
-              <div key={idx} className="flex items-start gap-2 mb-2">
-                <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-                <span className="font-medium text-white text-base leading-tight">{point}</span>
-              </div>
-            ))}
+          <p className="text-gray-400 mb-8">Leaders who want to:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+            {/* Left Column */}
+            <ul className="space-y-6">
+              {leftColumnPoints.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  />
+                  <span className="text-gray-300">{point}</span>
+                </li>
+              ))}
+            </ul>
+            {/* Right Column */}
+            <ul className="space-y-6">
+              {rightColumnPoints.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  />
+                  <span className="text-gray-300">{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        {/* Right Column: Testimonial */}
-        <div className="md:w-1/2 w-full flex flex-col items-start md:pl-12 border-l border-gray-700">
-          <blockquote className="text-gray-100 italic mb-6 relative text-base">
-            <span className="text-4xl text-purple-400 font-bold absolute -left-6 top-0">“</span>
-            The Self-Leadership Development Training Program has been transformative in refining my focus and boosting my productivity. The strategies for stress management and critical thinking have enhanced my professional capabilities and empowered me to lead with greater confidence and clarity.
-            <span className="text-4xl text-purple-400 font-bold align-bottom">”</span>
-          </blockquote>
-          <hr className="border-gray-700 w-12 mb-4" />
+
+        {/* Right side - Testimonial */}
+        <div className="lg:w-1/3 flex flex-col justify-center">
+          <div>
+            <p className="text-gray-300 leading-relaxed">
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Quote.svg" 
+                alt="Quote" 
+                className="w-8 h-8 inline-block mr-1 -mt-1"
+              />
+              The Self-Leadership Development Training Program has been transformative in refining my focus and boosting my productivity. The strategies for stress management and critical thinking have enhanced my professional capabilities and empowered me to lead with greater confidence and clarity.
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Quote.svg" 
+                alt="Quote" 
+                className="w-8 h-8 inline-block ml-1 rotate-180"
+              />
+            </p>
+          </div>
+
+          {/* White Line - Small and Thick */}
+          <div className="w-12 h-0.5 bg-white my-6"></div>
+          
+          {/* Author */}
           <div className="flex items-center gap-4">
-            <img
-              src="https://randomuser.me/api/portraits/women/65.jpg"
-              alt="Sarah Williams"
-              className="w-14 h-14 rounded-full object-cover border-2 border-purple-400"
-            />
+            <div className="w-14 h-14 rounded-full border-2 border-gray-500 overflow-hidden">
+              <img
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Sarah-Williams.png"
+                alt="Sarah Williams"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div>
-              <div className="font-bold text-white text-lg">Sarah Williams,</div>
-              <div className="text-purple-400 text-sm">Senior Marketing Manager</div>
+              <p className="font-semibold text-white">Sarah Williams,</p>
+              <p className="text-gray-400 text-sm">Senior Marketing Manager</p>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-} 
+}

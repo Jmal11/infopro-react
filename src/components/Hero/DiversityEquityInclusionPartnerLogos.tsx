@@ -1,18 +1,44 @@
 import React from 'react';
 
+const logos = [
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/delta.webp',
+    alt: 'Delta',
+  },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/unilever.webp',
+    alt: 'Unilever',
+  },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/novartis.webp',
+    alt: 'Novartis',
+  },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/exelon.webp',
+    alt: 'Exelon',
+  },
+  {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/pwc.webp',
+    alt: 'PwC',
+  },
+];
+
 export function DiversityEquityInclusionPartnerLogos() {
   return (
-    <section className="bg-white py-8 px-4">
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-8">
-        {/* Example partner logos, replace with real ones as needed */}
-        <img src="/logos/delta.svg" alt="Delta" className="h-8 grayscale opacity-80" />
-        <img src="/logos/unilever.svg" alt="Unilever" className="h-8 grayscale opacity-80" />
-        <img src="/logos/novartis.svg" alt="Novartis" className="h-8 grayscale opacity-80" />
-        <img src="/logos/exelon.svg" alt="Exelon" className="h-8 grayscale opacity-80" />
-        <img src="/logos/pwc.svg" alt="PwC" className="h-8 grayscale opacity-80" />
+    <section className="py-10 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-center items-center gap-16">
+          {logos.map((logo, idx) => (
+            <img
+              key={idx}
+              src={logo.src}
+              alt={logo.alt}
+              className="grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
+              loading="lazy"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
-export default DiversityEquityInclusionPartnerLogos; 

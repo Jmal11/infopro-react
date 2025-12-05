@@ -2,82 +2,133 @@ import React, { useState } from 'react';
 
 const journeyItems = [
   {
-    id: 'getting-stuff-done',
+    id: 'Getting Stuff Done',
     title: 'Getting Stuff Done',
-    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Getting_Stuff_Done.webp',
-    content: (
-      <img
-        src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Getting_Stuff_Done.webp"
-        alt="Getting Stuff Done"
-        className="w-full rounded shadow-lg border mb-4"
-      />
-    ),
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Getting-Stuff-Done.webp',
   },
-  { id: 'business-writing', title: 'Business Writing Skills', image: '', content: (<p>Course details coming soon.</p>) },
-  { id: 'brand-story', title: 'Telling Your Brand Story', image: '', content: (<p>Course details coming soon.</p>) },
-  { id: 'remote-hybrid', title: 'Optimal Remote & Hybrid work practices', image: '', content: (<p>Course details coming soon.</p>) },
-  { id: 'extraordinary-service', title: 'Commitment to extraordinary service', image: '', content: (<p>Course details coming soon.</p>) },
-  { id: 'critical-thinking', title: 'Critical Thinking and problem Solving', image: '', content: (<p>Course details coming soon.</p>) },
-  { id: 'clarity', title: 'Communicating with Clarity', image: '', content: (<p>Course details coming soon.</p>) },
-  { id: 'high-impact-learning', title: 'Facilitating High-Impact Learning', image: '', content: (<p>Course details coming soon.</p>) },
+  {
+    id: 'Business Writing Skills',
+    title: 'Business Writing Skills',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Business-Writing-Skills.webp',
+  },
+  {
+    id: 'Telling Your Brand Story',
+    title: 'Telling Your Brand Story',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Telling-your-brand-story.webp',
+  },
+  {
+    id: 'Optimal Remote & Hybrid work practices',
+    title: 'Optimal Remote & Hybrid work practices',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Optimal-Remote-and-Hybrid-work-practices.webp',
+  },
+   
+   {
+    id: 'Commitment to extraordinary service',
+    title: 'Commitment to extraordinary service',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Commitment-to-extraordinary-service.webp',
+  },
+   {
+    id: 'Critical Thinking and problem Solving',
+    title: 'Critical Thinking and problem Solving',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Critical-Thinking-and-problem-Solving.webp',
+  },
+   {
+    id: 'Communicating with Clarity',
+    title: 'Communicating with Clarity',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Communicating-with-Clarity.webp',
+  },
+   {
+    id: 'Facilitating High-Impact Learning',
+    title: 'Facilitating High-Impact Learning',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Facilitating-High-Impact-Learning.webp',
+  },
 ];
 
 export function SelfLeadershipDevelopmentJourney() {
-  const [selected, setSelected] = useState(journeyItems[0].id);
-  const selectedItem = journeyItems.find((item) => item.id === selected);
+  const [activeId, setActiveId] = useState('strategic-leadership');
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Submitted email:', email);
+    alert(`Form submitted with email: ${email}`);
+  };
+
+  const activeItem = journeyItems.find((item) => item.id === activeId);
 
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl">
-      <h2 className="text-3xl font-bold mb-6">Development Journey</h2>
-      <p className="mb-8 text-gray-800 max-w-3xl">
-        Our dynamic self-leadership development training programs are designed to unlock individual potential, enabling leaders to lead themselves and others confidently, foster exceptional team performance, and drive impactful change.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-        {/* Left: Accordion/List */}
-        <div className="bg-gray-50 rounded-lg p-6 border md:col-span-1">
-          <ul className="space-y-4">
-            {journeyItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  className={`block text-left w-full font-medium text-base transition-colors rounded px-2 py-2 ${selected === item.id ? 'text-purple-700 bg-purple-100' : 'text-gray-800 hover:bg-gray-100'}`}
-                  onClick={() => setSelected(item.id)}
-                >
-                  {item.title}
-                </button>
-              </li>
-            ))}
-          </ul>
+    <section className="bg-gray-100 py-12">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Development Journey</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Leadership today isn't about sticking to the old playbook—it's about being agile, forward-thinking, and sparking transformative change. This program is tailored for organizations leading the charge in digital innovation or those navigating the waves of disruption brought by AI and tech, 7/24 information (and misinformation) overwhelm, globalization and increasing social/cultural/behavioral/generational diversity.
+          </p>
         </div>
-        {/* Right: Content */}
-        <div className="md:col-span-2 bg-white rounded-lg p-6 border flex flex-col items-center">
-          {selectedItem && selectedItem.image && (
-            <img
-              src={selectedItem.image}
-              alt={selectedItem.title}
-              className="w-full max-w-2xl rounded shadow-lg border mb-6"
-            />
-          )}
-          {selectedItem && selectedItem.content}
-          {/* Course Details Form */}
-          <form className="mt-8 w-full max-w-md mx-auto">
-            <h3 className="text-xl font-bold mb-2 text-center">Access Course Details</h3>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="your.email@company.com"
-                className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                required
+
+        {/* Content Area with Separate Containers */}
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Left Side - Menu Container */}
+          <div className="w-full lg:w-1/4 bg-white border border-gray-300 rounded-lg p-6">
+            <ul className="space-y-4">
+              {journeyItems.map(({ id, title }) => (
+                <li key={id} className="flex items-start gap-3">
+                  <span className={`mt-2 w-2 h-2 rounded-full flex-shrink-0 ${
+                    activeId === id ? 'bg-[#6b19ff]' : 'bg-gray-400'
+                  }`}></span>
+                  <button
+                    className={`text-left text-base ${
+                      activeId === id 
+                        ? 'text-[#6b19ff] font-semibold' 
+                        : 'text-gray-700 hover:text-[#6b19ff]'
+                    }`}
+                    onClick={() => setActiveId(id)}
+                  >
+                    {title}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Side - Image & Form Container */}
+          <div className="w-full lg:w-3/4 bg-white border border-gray-300 rounded-lg p-6 flex flex-col">
+            {/* Image */}
+            <div className="flex-grow mb-6">
+              <img
+                src={activeItem?.image}
+                alt={activeItem?.title}
+                className="w-full h-auto object-contain"
               />
-              <button
-                type="submit"
-                className="bg-purple-600 text-white px-6 py-2 rounded font-semibold hover:bg-purple-700 transition-colors"
-              >
-                SUBMIT
-              </button>
             </div>
-          </form>
+
+            {/* Form */}
+            <div className="text-center pt-4">
+              <h3 className="text-xl font-bold mb-4">Access Course Details</h3>
+              <form 
+                className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto"
+                onSubmit={handleSubmit}
+              >
+                <input
+                  type="email"
+                  placeholder="Email Address*"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full sm:flex-grow border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#6b19ff] focus:border-transparent"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto bg-[#6b19ff] text-white px-8 py-3 rounded font-semibold hover:bg-purple-700 transition uppercase tracking-wide"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-} 
+}

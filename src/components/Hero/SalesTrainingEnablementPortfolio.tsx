@@ -2,49 +2,61 @@ import React from 'react';
 
 const portfolio = [
   {
-    img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80',
+    img: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Embedding-Customer-Centric-Vision.webp',
     title: 'The Customer-centric Approach',
     desc: 'Develop a customer-centric approach to value selling by knowing the customer, their pains and gains, their market, and business goals. Tailor your message to focus on the business value and desired outcomes.'
   },
   {
-    img: 'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80',
+    img: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Powerful-Customer-Conversations.webp',
     title: 'Powerful Customer Conversations',
     desc: 'Build rapport and trust with customers. Establish a PAO – purpose, agenda, and outcome – for every meeting. Share your powerful insights. Listen more than you speak.'
   },
   {
-    img: 'https://images.unsplash.com/photo-1515168833906-d2a3b82b3029?auto=format&fit=crop&w=400&q=80',
+    img: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Insights-Selling-for-Value.webp',
     title: 'Insights Selling for Value',
     desc: 'Empower customers to buy by aligning value to their situation. Speak confidently about the product and its importance to the customer. Navigate any potential roadblocks and make it easy for the customer to understand the value of the solution.'
   },
   {
-    img: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80',
+    img: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Competitive-Negotiation.webp',
     title: 'Competitive Negotiation',
     desc: 'Recognize your differentiation as a knowledgeable partner to your customer. Sell against the status quo and build on value.'
   },
   {
-    img: 'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80',
+    img: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Account-Planning.webp',
     title: 'Account Planning',
     desc: 'Align the buying process with your selling process. Take control of the sales cycle with confidence using your digital tools.'
   },
   {
-    img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+    img: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/The-Expansion-Sale.webp',
     title: 'The Expansion Sale',
-    desc: 'Evaluate and maintain customer health. Foster expansion for your footprint in the account. Build a plan for the long-term relationship.'
+    desc: 'Evaluate and maintain customer health. Foster expansion of your footprint in the account. Build a plan for the long-term relationship.'
   }
 ];
 
 export function SalesTrainingEnablementPortfolio() {
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Customizable Sales Training Portfolio</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#1a1a1a] mb-12">
+          Customizable Sales Training Portfolio
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {portfolio.map((item, idx) => (
-            <div key={idx} className="bg-gray-50 rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col h-full">
-              <img src={item.img} alt={item.title} className="w-full h-40 object-cover" />
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-700 text-sm flex-1">{item.desc}</p>
+            <div key={idx} className="flex flex-col">
+              {/* Purple top border + Image */}
+              <div className="relative">
+                <div className="absolute top-0 left-0 right-0 h-[4px] bg-[#7C3AED]"></div>
+                <img 
+                  src={item.img} 
+                  alt={item.title} 
+                  className="w-full h-[200px] object-cover" 
+                />
+              </div>
+              
+              {/* Content */}
+              <div className="pt-5">
+                <h3 className="font-bold text-xl text-[#1a1a1a] mb-3">{item.title}</h3>
+                <p className="text-[#555555] text-[15px] leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -54,4 +66,4 @@ export function SalesTrainingEnablementPortfolio() {
   );
 }
 
-export default SalesTrainingEnablementPortfolio; 
+export default SalesTrainingEnablementPortfolio;

@@ -1,107 +1,103 @@
 import React, { useState } from 'react';
 
-const journeySteps = [
+const journeyItems = [
   {
-    title: 'Commitment to Extraordinary Service',
-    content: {
-      image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/customer-excellence-journey-1.webp',
-      description: (
-        <>
-          <blockquote className="italic text-gray-700 mb-2">“Before you are a leader, success is all about growing yourself. When you become a leader, success is all about growing others.”<br /><span className="block text-right mt-1">Jack Welch</span></blockquote>
-          <div className="mb-2">
-            <span className="font-bold">AUDIENCE:</span> Individual Contributors, Front-Line Leaders<br />
-            <span className="font-bold">FORMATS:</span> In Person: 3-5 hrs. | Virtual: 2 hrs. x 1-3 sessions
-          </div>
-          <p className="text-gray-700 mb-2">
-            This workshop focuses on both the mindset and the capabilities necessary for an organization to develop a culture and commitment to extraordinary customer service. Using the LEAP model as its basis, this workshop equips participants with tips and techniques that allow them to deliver exceptional service to customers.
-          </p>
-          <p className="text-gray-700 mb-2">
-            Experiential exercises in this workshop bring the content to life and help participants put developed practical skills that can be applied immediately on the job. This workshop helps to put its key elements in the “seat of the customer” in order to develop greater empathy and awareness of customer experiences and expectations.
-          </p>
-        </>
-      ),
-      email: 'jai.malhotra@infoprolearning.com',
-    },
+    id: 'Commitment to Extraordinary Service ',
+    title: 'Commitment to Extraordinary Service ',
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Commitment_to_Extraordinary_Service.webp',
   },
   {
+    id: 'Critical Thinking and problem Solving',
     title: 'Critical Thinking and problem Solving',
-    content: {
-      image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/customer-excellence-journey-2.webp',
-      description: (
-        <>
-          <blockquote className="italic text-gray-700 mb-2">“The important thing is not to stop questioning. Curiosity has its own reason for existing.”<br /><span className="block text-right mt-1">Albert Einstein</span></blockquote>
-          <div className="mb-2">
-            <span className="font-bold">AUDIENCE:</span> Individual Contributors, Front-Line Leaders<br />
-            <span className="font-bold">FORMATS:</span> In Person: 3-5 hrs. | Virtual: 2 hrs. x 1-3 sessions
-          </div>
-          <p className="text-gray-700 mb-2">
-            This workshop is designed to develop critical thinking and problem-solving skills essential for customer excellence. Participants will learn structured approaches to analyze situations, identify root causes, and implement effective solutions that enhance customer satisfaction.
-          </p>
-        </>
-      ),
-      email: 'jai.malhotra@infoprolearning.com',
-    },
+    image: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/pdf-images/Critical_Thinking_and_problem_Solving.webp',
   },
 ];
 
 export function CustomerExcellenceJourney() {
-  const [activeIdx, setActiveIdx] = useState(0);
-  const active = journeySteps[activeIdx];
+  const [activeId, setActiveId] = useState('strategic-leadership');
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Submitted email:', email);
+    alert(`Form submitted with email: ${email}`);
+  };
+
+  const activeItem = journeyItems.find((item) => item.id === activeId);
 
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Development Journey</h2>
-        <p className="text-gray-700 mb-8 max-w-3xl">
-          Customer excellence training prepares leaders to drive impactful customer interactions, setting the stage for enduring team achievements and growth. Leaders can enhance customer loyalty and achieve measurable growth by implementing strategies that focus on understanding and meeting customer expectations.
-        </p>
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Left: Accordion */}
-          <div className="md:w-1/4 w-full bg-white rounded-lg border p-4">
-            <ul className="space-y-2">
-              {journeySteps.map((step, idx) => (
-                <li key={step.title}>
+        {/* Header */}
+        <div className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Development Journey</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Leadership today isn't about sticking to the old playbook—it's about being agile, forward-thinking, and sparking transformative change. This program is tailored for organizations leading the charge in digital innovation or those navigating the waves of disruption brought by AI and tech, 7/24 information (and misinformation) overwhelm, globalization and increasing social/cultural/behavioral/generational diversity.
+          </p>
+        </div>
+
+        {/* Content Area with Separate Containers */}
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Left Side - Menu Container */}
+          <div className="w-full lg:w-1/4 bg-white border border-gray-300 rounded-lg p-6">
+            <ul className="space-y-4">
+              {journeyItems.map(({ id, title }) => (
+                <li key={id} className="flex items-start gap-3">
+                  <span className={`mt-2 w-2 h-2 rounded-full flex-shrink-0 ${
+                    activeId === id ? 'bg-[#6b19ff]' : 'bg-gray-400'
+                  }`}></span>
                   <button
-                    className={`text-left w-full px-2 py-2 rounded font-medium transition-colors ${activeIdx === idx ? 'text-purple-700 bg-purple-50' : 'text-gray-800 hover:bg-gray-100'}`}
-                    onClick={() => setActiveIdx(idx)}
+                    className={`text-left text-base ${
+                      activeId === id 
+                        ? 'text-[#6b19ff] font-semibold' 
+                        : 'text-gray-700 hover:text-[#6b19ff]'
+                    }`}
+                    onClick={() => setActiveId(id)}
                   >
-                    {step.title}
+                    {title}
                   </button>
                 </li>
               ))}
             </ul>
           </div>
-          {/* Right: Content Panel */}
-          <div className="md:w-3/4 w-full bg-white rounded-lg border p-6 flex flex-col items-center">
-            <img
-              src={active.content.image}
-              alt={active.title}
-              className="w-full max-w-2xl rounded mb-4 object-contain"
-              style={{ minHeight: 220 }}
-            />
-            <div className="w-full max-w-2xl">
-              {active.content.description}
-            </div>
-            <form className="mt-8 w-full max-w-md mx-auto flex flex-col md:flex-row items-center gap-2">
-              <label className="font-semibold text-gray-900 mr-2 whitespace-nowrap">Access Course Details</label>
-              <input
-                type="email"
-                defaultValue={active.content.email}
-                className="flex-1 border border-gray-300 rounded px-3 py-2 text-gray-800 focus:outline-none focus:border-purple-600"
-                readOnly
+
+          {/* Right Side - Image & Form Container */}
+          <div className="w-full lg:w-3/4 bg-white border border-gray-300 rounded-lg p-6 flex flex-col">
+            {/* Image */}
+            <div className="flex-grow mb-6">
+              <img
+                src={activeItem?.image}
+                alt={activeItem?.title}
+                className="w-full h-auto object-contain"
               />
-              <button
-                type="submit"
-                className="bg-purple-700 text-white px-6 py-2 rounded font-semibold hover:bg-purple-800 transition-colors"
+            </div>
+
+            {/* Form */}
+            <div className="text-center pt-4">
+              <h3 className="text-xl font-bold mb-4">Access Course Details</h3>
+              <form 
+                className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto"
+                onSubmit={handleSubmit}
               >
-                SUBMIT
-              </button>
-            </form>
+                <input
+                  type="email"
+                  placeholder="Email Address*"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full sm:flex-grow border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#6b19ff] focus:border-transparent"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto bg-[#6b19ff] text-white px-8 py-3 rounded font-semibold hover:bg-purple-700 transition uppercase tracking-wide"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-export default CustomerExcellenceJourney; 

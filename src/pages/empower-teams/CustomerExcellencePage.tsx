@@ -13,7 +13,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function CustomerExcellencePage() {
   return (
-    <main className="pt-16 overflow-x-hidden">
+    <main className="">
       <CustomerExcellenceHero />
       <CustomerExcellencePartnerLogos />
       <CustomerExcellenceContent />

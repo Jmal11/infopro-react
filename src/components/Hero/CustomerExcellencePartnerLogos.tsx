@@ -6,6 +6,10 @@ const logos = [
     alt: 'Delta',
   },
   {
+    src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/j&j.webp',
+    alt: 'Johnson & Johnson',
+  },
+  {
     src: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/unilever.webp',
     alt: 'Unilever',
   },
@@ -25,19 +29,20 @@ const logos = [
 
 export function CustomerExcellencePartnerLogos() {
   return (
-    <section className="bg-white py-8">
-      <div className="container mx-auto px-4 min-w-0 overflow-x-auto flex flex-nowrap justify-center items-center gap-x-12 gap-y-6">
-        {logos.map((logo) => (
-          <img
-            key={logo.alt}
-            src={logo.src}
-            alt={logo.alt}
-            className="grayscale max-h-12 w-auto object-contain"
-          />
-        ))}
+    <section className="py-10 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-center items-center gap-16">
+          {logos.map((logo, idx) => (
+            <img
+              key={idx}
+              src={logo.src}
+              alt={logo.alt}
+              className="grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
+              loading="lazy"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
-export default CustomerExcellencePartnerLogos; 

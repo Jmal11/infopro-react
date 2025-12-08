@@ -50,11 +50,12 @@ export function CustomerExcellenceContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
               {outcomes.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <span className="mt-1">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="11" cy="11" r="11" fill="#8B5CF6" />
-                      <path d="M7 11.5l3 3 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                  <span className="mt-1 flex-shrink-0">
+                    <img 
+                      src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                      alt="check" 
+                      className="w-[22px] h-[22px]"
+                    />
                   </span>
                   <div>
                     <span className="font-semibold text-gray-900">{item.title}</span>
@@ -70,4 +71,4 @@ export function CustomerExcellenceContent() {
   );
 }
 
-export default CustomerExcellenceContent; 
+export default CustomerExcellenceContent;

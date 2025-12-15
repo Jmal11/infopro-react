@@ -116,7 +116,7 @@ export function IntelligentDesignFramework() {
       <p className="text-center md:text-left mb-8 text-gray-700 max-w-4xl mx-auto">
         Experience seamless learning content development with our comprehensive AI toolkit that guides you through every phase—from initial concept to final deployment—revolutionizing how we create, deliver, and measure learning experiences.
       </p>
-      <div className="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
+      <div className="flex flex-col md:flex-row gap-8 max-w-[1280px] mx-auto">
         {/* Left circular segmented navigation */}
         <div className="md:w-1/3 flex justify-center">
           <svg

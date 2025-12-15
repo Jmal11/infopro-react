@@ -3,7 +3,7 @@ import React from 'react';
 export function CompetencyGapAnalysis() {
   return (
     <section className="w-full bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1280px] mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10">
           Perform a Competency Gap Analysis to:
         </h2>

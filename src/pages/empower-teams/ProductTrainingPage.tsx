@@ -15,7 +15,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 export function ProductTrainingPage() {
   return (
-    <main className="section-responsive">
+    <main className="">
       <ProductTrainingHero />
       <ProductTrainingPartnerLogos />
       <ProductTrainingOutcomes />

@@ -36,7 +36,7 @@ const stories = [
 export function SuccessStoriesSection() {
   return (
     <section className="bg-white py-12">
-      <div className="container mx-auto max-w-7xl px-4">
+      <div className="container mx-auto max-w-[1280px] px-4">
         <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8 border-b-2 border-purple-600 inline-block pb-2">
           Success Stories
         </h2>

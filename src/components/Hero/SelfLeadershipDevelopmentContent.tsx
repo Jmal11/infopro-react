@@ -30,7 +30,7 @@ const outcomes = [
 export function SelfLeadershipDevelopmentContent() {
   return (
     <section className="bg-white py-16">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4 max-w-[1280px]">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           {/* Left: Heading */}
           <div className="md:col-span-4">

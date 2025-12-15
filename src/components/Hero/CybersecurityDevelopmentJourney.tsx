@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 
 export function CybersecurityDevelopmentJourney() {
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl">
+    <section className="container mx-auto px-4 py-16 max-w-[1280px]">
       <h2 className="text-3xl font-bold mb-4">Development Journey</h2>
       <p className="mb-6 text-sm font-semibold">Cybersecurity and AI Integration Course Outline</p>
       <p className="mb-6">

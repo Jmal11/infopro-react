@@ -108,7 +108,7 @@ export function HumanAIStrategySection() {
 
   return (
     <section className="bg-gray-50 py-12 sm:py-16 border-gray-200">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-[1280px] mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Human + AI Strategy</h2>
         <p className="text-gray-700 text-center max-w-4xl mx-auto mb-10 sm:mb-12 text-base sm:text-lg leading-relaxed">
           Unlock the potential of Human+AI collaboration with a tailored strategy that drives innovation and efficiency. We identify competencies, address skills gaps, and outline process changes for seamless AI integration.

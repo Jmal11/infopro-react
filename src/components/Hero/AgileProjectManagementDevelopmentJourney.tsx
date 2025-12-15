@@ -65,7 +65,7 @@ export function AgileProjectManagementDevelopmentJourney() {
       <p className="mb-8 text-gray-600 max-w-4xl">
         Welcome to our comprehensive Agile Project Management for the digital age learning program. This program combines agile principles with digital transformation concepts, offering a comprehensive learning journey to help participants navigate agile project management in modern, tech-driven, and virtual work environments.
       </p>
-      <div className="flex flex-col md:flex-row gap-8 max-w-6xl">
+      <div className="flex flex-col md:flex-row gap-8 max-w-[1280px]">
         <nav className="md:w-1/3 bg-white border rounded p-4 space-y-3 text-gray-700">
           {courses.map((course, index) => (
             <button

@@ -11,7 +11,7 @@ const stats = [
 export function DiversityEquityInclusionStats() {
   return (
     <section className="bg-white py-10 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch justify-between divide-y md:divide-y-0 md:divide-x divide-gray-200">
+      <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-stretch justify-between divide-y md:divide-y-0 md:divide-x divide-gray-200">
         {stats.map((stat, idx) => (
           <div key={idx} className="flex-1 flex flex-col items-center justify-center py-6 md:py-0 md:px-6 text-center">
             <div className="text-4xl font-bold text-purple-600 mb-2">{stat.value}</div>

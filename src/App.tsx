@@ -52,6 +52,29 @@ import { TechnologyConsultingPage } from './pages/technology-consulting/Technolo
 import OperatingModelPage from './pages/operating-model/OperatingModelPage';
 import SkillsBasedDesignPage from './pages/skills-based-design/SkillsBasedDesignPage';
 
+// Our Work Pages
+import { CaseStudiesPage } from './pages/our-work/CaseStudiesPage';
+import { PodcastPage } from './pages/our-work/PodcastPage';
+import { InsightsPage } from './pages/our-work/InsightsPage';
+
+// Industries Pages
+import { BankingPage } from './pages/industries/BankingPage';
+import { InsurancePage } from './pages/industries/InsurancePage';
+import { TechnologyPage } from './pages/industries/TechnologyPage';
+import { HealthcarePage } from './pages/industries/HealthcarePage';
+import { EnergyPage } from './pages/industries/EnergyPage';
+import { PharmaPage } from './pages/industries/PharmaPage';
+import { ProfessionalServicesPage } from './pages/industries/ProfessionalServicesPage';
+import { NonProfitPage } from './pages/industries/NonProfitPage';
+
+// About Us Pages
+import { AboutUsPage } from './pages/about-us/AboutUsPage';
+import { PressReleasesPage } from './pages/about-us/PressReleasesPage';
+import { AwardsPage } from './pages/about-us/AwardsPage';
+import { EventsPage } from './pages/about-us/EventsPage';
+import { CareersPage } from './pages/about-us/CareersPage';
+import { ContactUsPage } from './pages/about-us/ContactUsPage';
+
 const App = () => {
   return (
     <Router>
@@ -106,6 +129,29 @@ const App = () => {
         <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
         <Route path="/operating-model" element={<OperatingModelPage />} />
         <Route path="/skills-based-design" element={<SkillsBasedDesignPage />} />
+
+        {/* Our Work Pages */}
+        <Route path="/case-studies" element={<CaseStudiesPage />} />
+        <Route path="/podcast" element={<PodcastPage />} />
+        <Route path="/insights" element={<InsightsPage />} />
+
+        {/* Industries Pages */}
+        <Route path="/industries/banking" element={<BankingPage />} />
+        <Route path="/industries/insurance" element={<InsurancePage />} />
+        <Route path="/industries/technology" element={<TechnologyPage />} />
+        <Route path="/industries/healthcare" element={<HealthcarePage />} />
+        <Route path="/industries/energy" element={<EnergyPage />} />
+        <Route path="/industries/pharma" element={<PharmaPage />} />
+        <Route path="/industries/professional-services" element={<ProfessionalServicesPage />} />
+        <Route path="/industries/non-profit" element={<NonProfitPage />} />
+
+        {/* About Us Pages */}
+        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/press-releases" element={<PressReleasesPage />} />
+        <Route path="/awards" element={<AwardsPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/contact-us" element={<ContactUsPage />} />
       </Routes>
       <Footer />
     </Router>

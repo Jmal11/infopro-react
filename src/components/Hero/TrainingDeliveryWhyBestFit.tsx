@@ -25,7 +25,7 @@ export function TrainingDeliveryWhyBestFit() {
   return (
     <section className="container mx-auto px-4 py-16">
       <h2 className="text-3xl font-bold mb-12 text-center">Why Our Training Delivery Solutions Are the Best Fit for You</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1280px] mx-auto">
         {items.map(({ title, description }) => (
           <div key={title} className="mb-8 border-l pl-4">
             <h3 className="font-semibold mb-2">{title}</h3>

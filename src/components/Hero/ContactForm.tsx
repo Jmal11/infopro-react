@@ -101,7 +101,7 @@ export default function ContactForm() {
         background: 'linear-gradient(to bottom, #f6f6f6 0%, #f6f6f6 50%, #ffffff 50%, #ffffff 100%)'
       }}
     >
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4 max-w-[1280px]">
         <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-extrabold text-center mb-2">Let's Start a Conversation</h2>
         <p className="text-center text-gray-600 mb-6">Unlock New Possibilities.</p>

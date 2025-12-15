@@ -68,7 +68,7 @@ const rightItems = [
 export function ManagedLearningServices() {
   return (
     <section className="bg-white w-full py-14 px-2">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1280px] mx-auto">
         {/* Main Heading & Subheading */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">

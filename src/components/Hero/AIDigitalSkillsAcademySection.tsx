@@ -21,7 +21,7 @@ const cards = [
 export function AIDigitalSkillsAcademySection() {
   return (
     <section className="bg-white py-16 border-t border-gray-200">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4 max-w-[1280px]">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
           <h2 className="text-3xl font-extrabold text-gray-900 max-w-lg">
             AI and Digital Skills Academy

@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { BusinessLeadershipHero } from "../../components/Hero/BusinessLeadershipHero";
 import { BusinessLeadershipContent } from "../../components/Hero/BusinessLeadershipContent";
 import { BusinessLeadershipJourney } from "../../components/Hero/BusinessLeadershipJourney";

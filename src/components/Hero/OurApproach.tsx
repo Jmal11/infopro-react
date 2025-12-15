@@ -35,7 +35,7 @@ export function OurApproach() {
         <p className="text-center text-gray-700 mb-12 max-w-4xl mx-auto text-base font-medium">
           Our expert team will collaborate with you to analyze your organization&apos;s current training needs, analyze skill gaps, and provide a strategic roadmap. We ensure your training investments are effectively aligned with your organizational goals and future objectives. After we develop the roadmap, we can also help you implement it.
         </p>
-        <div className="relative mt-10 max-w-6xl mx-auto">
+        <div className="relative mt-10 max-w-[1280px] mx-auto">
           {/* Purple line */}
           <div className="absolute left-0 right-0 top-[32px] h-2 bg-transparent z-0 flex">
             <div className="w-1/24" />

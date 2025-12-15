@@ -31,7 +31,7 @@ export function CarouselSection() {
   return (
     <section className="relative w-full">
       <div className={`${slides[currentIndex].backgroundColor} text-white py-16 w-full`}>
-        <div className="max-w-5xl lg:max-w-7xl xl:max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center gap-12 px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="max-w-[1280px] lg:max-w-[1280px] xl:max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center gap-12 px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-8">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-2">

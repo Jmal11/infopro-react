@@ -84,7 +84,7 @@ export function TestimonialSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           Success Stories
         </h2>
-        <div className="flex flex-col md:flex-row md:justify-center gap-8 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:justify-center gap-8 max-w-[1280px] mx-auto">
           {currentTestimonials.map((testimonial, index) => (
             <div
               key={index}

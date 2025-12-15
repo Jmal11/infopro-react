@@ -10,7 +10,7 @@ const stats = [
 
 export function TrainingNeedsAnalysisStatsBar() {
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-8">
+    <section className="mx-auto w-full max-w-[1280px] px-4 py-8">
       <div className="flex flex-col sm:flex-row sm:justify-center border-gray-300">
         {stats.map((stat, idx) => (
           <div

@@ -78,7 +78,7 @@ export function LearningExperienceArchitectsSection() {
 
   return (
     <section className="bg-white py-12">
-      <div className="container mx-auto max-w-7xl px-4 flex flex-col md:flex-row gap-8">
+      <div className="container mx-auto max-w-[1280px] px-4 flex flex-col md:flex-row gap-8">
         {/* Left Tabs */}
         <div className="md:w-1/4">
           <h2 className="text-2xl font-bold mb-4">Meet Our Learning Experience Architects</h2>

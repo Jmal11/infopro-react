@@ -13,7 +13,7 @@ import { LearningExperienceArchitectsSection } from '../../components/Hero/Learn
 
 export function CommercialLeadershipPage() {
   return (
-    <main className="pt-16 overflow-x-hidden">
+    <main className="">
       <CommercialLeadershipHero />
       <CommercialLeadershipOutcomes />
       <CommercialLeadershipJourney />

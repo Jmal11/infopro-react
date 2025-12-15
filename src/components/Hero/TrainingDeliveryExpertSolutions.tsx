@@ -31,7 +31,7 @@ const featuresRight = [
 export function TrainingDeliveryExpertSolutions() {
   return (
     <section className="w-full py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1280px] mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12">
           {/* LEFT COLUMN: HEADING */}
           <div className="mb-8 lg:mb-0 flex items-start">

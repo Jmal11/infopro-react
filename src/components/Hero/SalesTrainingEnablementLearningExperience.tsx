@@ -31,7 +31,7 @@ export function SalesTrainingEnablementLearningExperience() {
 
   return (
     <section className="relative py-20">
-      <div className="container mx-auto text-center max-w-6xl relative">
+      <div className="container mx-auto text-center max-w-[1280px] relative">
         <h2 className="text-3xl font-bold mb-10">Learning Experience</h2>
 
         <div className="relative mx-auto" style={{ height: 350 }}>

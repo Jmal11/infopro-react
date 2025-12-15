@@ -30,7 +30,7 @@ const stats = [
 export function CustomContentStatsBar() {
   return (
     <section className="bg-white py-8">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-stretch border-gray-200">
+      <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-stretch border-gray-200">
         {stats.map(({ number, title }, index) => (
           <div
             key={index}

@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 
 export function AgileProjectManagementProgramAudience() {
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl text-white">
+    <section className="container mx-auto px-4 py-16 max-w-[1280px] text-white">
       <h2 className="text-3xl font-bold mb-8">Who Is This Program For</h2>
       <div className="flex flex-col md:flex-row gap-12">
         <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">

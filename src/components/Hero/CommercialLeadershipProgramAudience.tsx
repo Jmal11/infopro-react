@@ -1,52 +1,88 @@
 import React from 'react';
 
-const benefits = [
-  'Enhance strategic leadership skills',
-  'Transition to leadership roles',
-  'Refine their coaching abilities',
-  'Improve performance management',
-  'Develop a growth mindset within their teams',
-  'Drive sales success and team performance',
+const leftColumnPoints = [
+  "Enhance strategic leadership skills",
+  "Transition to leadership roles",
+  "Refine their coaching abilities",
 ];
 
-function CheckIcon() {
-  return (
-    <svg className="w-5 h-5 text-purple-300 mr-2 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-    </svg>
-  );
-}
+const rightColumnPoints = [
+  "Improve performance management",
+  "Develop a growth mindset within their teams",
+  "Drive sales success and team performance",
+];
 
 export function CommercialLeadershipProgramAudience() {
   return (
-    <section className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto max-w-6xl px-8 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-        {/* Left: Who Is This Program For */}
-        <div className="md:col-span-2">
-          <h2 className="text-3xl font-bold mb-4">Who Is This Program For</h2>
-          <p className="mb-6">Leaders who want to:</p>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
-            {benefits.map((item, idx) => (
-              <li key={idx} className="flex items-start">
-                <CheckIcon />
-                <span className="font-medium">{item}</span>
-              </li>
-            ))}
-          </ul>
+    <section className="bg-[#292929] text-white py-16">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-12">
+        {/* Left side - Audience list */}
+        <div className="lg:w-2/3 lg:border-r lg:border-gray-600 lg:pr-12">
+          <h2 className="text-3xl font-bold mb-2">Who Is This Program For</h2>
+          <p className="text-gray-400 mb-8">Leaders who want to:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+            {/* Left Column */}
+            <ul className="space-y-6">
+              {leftColumnPoints.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  />
+                  <span className="text-gray-300">{point}</span>
+                </li>
+              ))}
+            </ul>
+            {/* Right Column */}
+            <ul className="space-y-6">
+              {rightColumnPoints.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  />
+                  <span className="text-gray-300">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        {/* Right: Testimonial */}
-        <div className="md:col-span-1 border-l border-gray-700 pl-8 flex flex-col items-start">
-          <svg className="w-8 h-8 text-gray-400 mb-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h.01M15 7h.01M7 11h10M7 15h6" />
-          </svg>
-          <p className="italic text-gray-200 mb-4">
-            “The Commercial Leadership Development program was a game-changer for my career. It honed my strategic thinking, sharpened my performance management skills, and empowered me to lead my team with confidence and vision. Our sales success has never been stronger.”
-          </p>
-          <div className="flex items-center mt-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jordan Thompson" className="w-12 h-12 rounded-full mr-3 border-2 border-white" />
+
+        {/* Right side - Testimonial */}
+        <div className="lg:w-1/3 flex flex-col justify-center">
+          <div>
+            <p className="text-gray-300 leading-relaxed italic">
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Quote.svg" 
+                alt="Quote" 
+                className="w-8 h-8 inline-block mr-1 -mt-1"
+              />
+              The Commercial Leadership Development program was a game-changer for my career. It honed my strategic thinking, sharpened my performance management skills, and empowered me to lead my team with confidence and vision. Our sales success has never been stronger.
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Quote.svg" 
+                alt="Quote" 
+                className="w-8 h-8 inline-block ml-1 rotate-180"
+              />
+            </p>
+          </div>
+
+          {/* White Line - Small and Thick */}
+          <div className="w-12 h-0.5 bg-white my-6"></div>
+          
+          {/* Author */}
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-full border-2 border-gray-500 overflow-hidden">
+              <img
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Michael-D.webp"
+                alt="Jordan Thompson"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div>
-              <span className="font-bold text-white">Jordan Thompson,</span>
-              <div className="text-gray-300 text-sm">Director of Sales</div>
+              <p className="font-semibold text-white">Jordan Thompson,</p>
+              <p className="text-gray-400 text-sm">Director of Sales</p>
             </div>
           </div>
         </div>
@@ -55,4 +91,4 @@ export function CommercialLeadershipProgramAudience() {
   );
 }
 
-export default CommercialLeadershipProgramAudience; 
+export default CommercialLeadershipProgramAudience;

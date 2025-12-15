@@ -50,7 +50,7 @@ export const DigitalWorkplaceDevelopmentJourney: React.FC = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 max-w-[1280px]">
         <h2 className="text-3xl font-bold mb-2">Development Journey</h2>
         <p className="text-gray-700 mb-8">
           Mastering the Digital Workplace: Comprehensive Training Program

@@ -4,7 +4,7 @@ export function DataAnalyticsContent() {
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Title and Description */}
             <div className="lg:pr-8">

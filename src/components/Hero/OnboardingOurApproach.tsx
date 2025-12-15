@@ -61,7 +61,7 @@ export function OnboardingOurApproach() {
     <section className="w-full bg-gray-100 py-16">
       <div className="max-w-[1400px] mx-auto px-6">
         {/* SVG Image with Positioned Icons in Semi-Circle */}
-        <div className="relative mb-8 max-w-5xl mx-auto">
+        <div className="relative mb-8 max-w-[1280px] mx-auto">
           {/* Background SVG */}
           <img
             src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/onboarding-model-shape-updated.svg"
@@ -100,7 +100,7 @@ export function OnboardingOurApproach() {
         </div>
 
         {/* Bottom White Box with Training Items */}
-        <div className="bg-white rounded-lg shadow-md px-12 py-8 max-w-5xl mx-auto">
+        <div className="bg-white rounded-lg shadow-md px-12 py-8 max-w-[1280px] mx-auto">
           {/* Training Items with Checkmarks */}
           <div className="flex items-center justify-center gap-12 mb-6 flex-wrap">
             {trainingItems.map((item) => (

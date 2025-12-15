@@ -118,7 +118,7 @@ export function VanguardSkillsCarousel() {
     <section className="mt-12 overflow-hidden">
       {/* White Section */}
       <div className="bg-white py-12">
-        <div className="container mx-auto max-w-7xl px-4">
+        <div className="container mx-auto max-w-[1280px] px-4">
           <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-4">
             Vanguard Skills Program
           </h2>
@@ -130,7 +130,7 @@ export function VanguardSkillsCarousel() {
 
       {/* Gray Section with Cards - Full Width */}
       <div className="bg-gray-50 py-12 pt-32">
-        <div className="container mx-auto max-w-7xl px-4 -mt-32">
+        <div className="container mx-auto max-w-[1280px] px-4 -mt-32">
           <div
             ref={carouselRef}
             className="overflow-hidden cursor-grab active:cursor-grabbing"

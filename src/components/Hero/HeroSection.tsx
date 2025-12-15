@@ -147,7 +147,7 @@ export function HeroSection() {
       )}
 
       {/* Main Content Container */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pt-40 sm:pt-44 md:pt-48 lg:pt-52 xl:pt-56 pb-24 sm:pb-28 md:pb-32 lg:pb-36 xl:pb-40 relative" style={{ zIndex: 2 }}>
+      <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pt-40 sm:pt-44 md:pt-48 lg:pt-52 xl:pt-56 pb-24 sm:pb-28 md:pb-32 lg:pb-36 xl:pb-40 relative" style={{ zIndex: 2 }}>
         <div className={`flex flex-col-reverse ${slide.image ? 'md:flex-row' : 'md:flex-col'} items-center ${slide.image ? 'md:justify-between' : 'justify-center'} gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20`}>
           
           {/* Left - Text Content */}

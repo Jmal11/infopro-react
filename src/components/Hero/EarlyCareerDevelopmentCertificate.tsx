@@ -2,7 +2,7 @@ import React from 'react';
 
 export function EarlyCareerDevelopmentCertificate() {
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl flex flex-col md:flex-row items-center gap-8">
+    <section className="container mx-auto px-4 py-16 max-w-[1280px] flex flex-col md:flex-row items-center gap-8">
       <div className="md:w-1/2">
         <img
           src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Certificate.webp"

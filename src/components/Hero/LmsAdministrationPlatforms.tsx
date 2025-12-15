@@ -38,7 +38,7 @@ export function LmsAdministrationPlatforms() {
         Empower your ecosystem with our expertise. We seamlessly integrate with your existing platforms,
         ensuring optimal performance while you focus on driving impactful results.
       </p>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-12 gap-x-2">
+      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-12 gap-x-2">
         {platforms.map(({ description, logo }, i) => (
           <div
             key={i}

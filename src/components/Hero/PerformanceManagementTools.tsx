@@ -46,7 +46,7 @@ export function PerformanceManagementTools() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-[1280px] mx-auto">
           {approaches.map((item, index) => (
             <div key={index} className="flex flex-col">
               <div className="mb-4 overflow-hidden border-t-4 border-[#6b19ff]">

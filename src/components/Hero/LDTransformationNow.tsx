@@ -26,7 +26,7 @@ const stats = [
 export function LDTransformationNow() {
   return (
     <section className="bg-white py-8">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch border-gray-200">
+      <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-stretch border-gray-200">
         {stats.map(({ number, description }, idx) => (
           <div
             key={idx}

@@ -37,7 +37,7 @@ const features = [
 export function SeniorLeaderDevelopmentLearningExperience() {
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto px-4 max-w-[1280px]">
         <h2 className="text-3xl font-bold text-center mb-12">Learning Experience</h2>
         <div className="relative flex flex-col items-center justify-center">
           {/* Central Hexagon */}

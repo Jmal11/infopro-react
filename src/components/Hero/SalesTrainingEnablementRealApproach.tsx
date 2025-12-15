@@ -54,7 +54,7 @@ export function SalesTrainingEnablementRealApproach() {
 
       {/* Content */}
       <div className="relative py-16 px-4 md:px-8 lg:px-16">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1280px] mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">REAL Sales Approach</h2>

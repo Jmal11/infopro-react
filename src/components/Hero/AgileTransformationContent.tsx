@@ -31,7 +31,7 @@ export function AgileTransformationContent() {
 
   return (
     <section className="bg-white py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1280px] mx-auto">
         {/* Main Heading and Description */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Left Side - Main Heading */}

@@ -12,7 +12,7 @@ export function HumanAISkillsSection() {
       </div>
       
       {/* Columns */}
-      <div className="flex flex-col lg:flex-row max-w-6xl mx-auto gap-0">
+      <div className="flex flex-col lg:flex-row max-w-[1280px] mx-auto gap-0">
         {/* Left Card */}
         <div className="bg-white border border-gray-300 rounded-tl-lg rounded-bl-lg flex-1 py-10 px-8 space-y-7 min-h-[420px]">
           <div className="flex items-start gap-3">

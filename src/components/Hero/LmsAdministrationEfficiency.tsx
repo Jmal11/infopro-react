@@ -31,7 +31,7 @@ export function LmsAdministrationEfficiency() {
         Partner with us for comprehensive LMS management that drives operational excellence<br />
         and empowers your team to focus on what matters most.
       </p>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3">
+      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3">
         {efficiencyItems.map(({ title, description }, i) => (
           <div
             key={i}

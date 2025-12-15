@@ -26,7 +26,7 @@ export function AgileTransformationStats() {
 
   return (
     <section className="bg-white py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1280px] mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">

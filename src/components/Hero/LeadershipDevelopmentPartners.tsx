@@ -19,7 +19,7 @@ const partners = [
   },
   {
     name: 'Pepsico',
-    logoUrl: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/exelon.webp',
+    logoUrl: 'https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Clients/pwc.webp',
   },
 ];
 

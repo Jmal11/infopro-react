@@ -29,7 +29,7 @@ export function OurSolutionsSection() {
       <h2 className="text-5xl font-extrabold text-center mb-8">
         Key Benefits of Working with Us for Learning Strategy
       </h2>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {solutions.map(({ title, image, description }) => (
           <div key={title} className="flex flex-col">
             <div

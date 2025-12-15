@@ -704,13 +704,13 @@ export function MainNav() {
             className="fixed left-0 right-0 bg-white z-[50] shadow-lg border-b"
             style={{ top: navHeight}}
           >
-            <div className="container mx-auto py-6 px-4 max-w-6xl">
+            <div className="container mx-auto py-6 px-4 max-w-[1280px]">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold mb-4">{expandedMenuData.ourWork.title}</h3>
                   <ul className="space-y-3">
                     {expandedMenuData.ourWork.links.map((link, i) => (
-                      <li key={i}><a href={link.url} className="text-gray-700 hover:text-blue-600 transition-colors text-base">{link.text}</a></li>
+                      <li key={i}><Link to={link.url} className="text-gray-700 hover:text-blue-600 transition-colors text-base">{link.text}</Link></li>
                     ))}
                   </ul>
                 </div>
@@ -718,7 +718,7 @@ export function MainNav() {
                   <h3 className="text-lg font-semibold mb-4">{expandedMenuData.industries.title}</h3>
                   <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                     {expandedMenuData.industries.links.map((link, i) => (
-                      <a key={i} href={link.url} className="text-gray-700 hover:text-blue-600 transition-colors text-base">{link.text}</a>
+                      <Link key={i} to={link.url} className="text-gray-700 hover:text-blue-600 transition-colors text-base">{link.text}</Link>
                     ))}
                   </div>
                 </div>
@@ -726,7 +726,7 @@ export function MainNav() {
                   <h3 className="text-lg font-semibold mb-4 invisible">{expandedMenuData.aboutUs.title}</h3>
                   <ul className="space-y-3">
                     {expandedMenuData.aboutUs.links.map((link, i) => (
-                      <li key={i}><a href={link.url} className="text-gray-700 hover:text-blue-600 transition-colors text-base">{link.text}</a></li>
+                      <li key={i}><Link to={link.url} className="text-gray-700 hover:text-blue-600 transition-colors text-base">{link.text}</Link></li>
                     ))}
                   </ul>
                 </div>

@@ -36,7 +36,7 @@ const portfolio = [
 export function SalesTrainingEnablementPortfolio() {
   return (
     <section className="bg-white py-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1280px] mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-[#1a1a1a] mb-12">
           Customizable Sales Training Portfolio
         </h2>

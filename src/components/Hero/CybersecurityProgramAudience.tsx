@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 
 export default function CybersecurityProgramAudience() {
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl bg-gray-900 text-white rounded-lg flex flex-col md:flex-row gap-12">
+    <section className="container mx-auto px-4 py-16 max-w-[1280px] bg-gray-900 text-white rounded-lg flex flex-col md:flex-row gap-12">
       <div className="md:w-1/2 space-y-6">
         <h2 className="text-3xl font-bold">This program is designed for:</h2>
         <ul className="space-y-4 text-sm">

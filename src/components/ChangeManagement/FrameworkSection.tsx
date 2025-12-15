@@ -13,7 +13,7 @@ export function FrameworkSection() {
         </div>
 
         {/* Central Diagram */}
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-[1280px] mx-auto">
           <div className="grid grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Top Left - Individual (Internal) */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-purple-100 relative">

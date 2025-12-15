@@ -26,7 +26,7 @@ const stats = [
 export function HumanAIStatsSection() {
   return (
     <section className="bg-white py-8 border-gray-200">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 max-w-[1280px]">
         <div className="flex justify-between text-center text-gray-900">
           {stats.map((stat, index) => (
             <div

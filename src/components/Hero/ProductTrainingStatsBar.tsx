@@ -26,9 +26,12 @@ const stats = [
 export function ProductTrainingStatsBar() {
   return (
     <section className="bg-white py-8">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-stretch divide-y md:divide-y-0 md:divide-x divide-gray-300">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-stretch">
         {stats.map((stat, idx) => (
-          <div key={idx} className="flex-1 flex flex-col items-center justify-center py-4 px-2 text-center">
+          <div 
+            key={idx} 
+            className="flex-1 flex flex-col items-start justify-center py-4 px-6 text-left border-t md:border-t-0 md:border-l border-gray-300"
+          >
             <span className="text-4xl font-bold text-purple-600 mb-2">{stat.value}</span>
             <span className="text-gray-800 text-base leading-snug">{stat.desc}</span>
           </div>
@@ -38,4 +41,4 @@ export function ProductTrainingStatsBar() {
   );
 }
 
-export default ProductTrainingStatsBar; 
+export default ProductTrainingStatsBar;

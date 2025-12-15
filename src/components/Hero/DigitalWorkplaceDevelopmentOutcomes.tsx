@@ -3,7 +3,7 @@ import React from 'react';
 export const DigitalWorkplaceDevelopmentOutcomes: React.FC = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 max-w-[1280px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl font-bold mb-6">

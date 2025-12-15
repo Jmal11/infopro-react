@@ -26,7 +26,7 @@ const stats = [
 export function LmsAdministrationStatsBar() {
   return (
     <section className="bg-white py-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch border-gray-200">
+      <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-stretch border-gray-200">
         {stats.map(({ number, title }, idx) => (
           <div
             key={idx}

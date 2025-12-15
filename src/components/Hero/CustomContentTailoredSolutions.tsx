@@ -33,7 +33,7 @@ const pointsRight = [
 export function CustomContentTailoredSolutions() {
   return (
     <section className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1280px] mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Heading always at top left */}
           <div className="md:col-span-1">

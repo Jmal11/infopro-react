@@ -28,7 +28,7 @@ export function CloudComputingDevelopmentJourney() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl">
+    <section className="container mx-auto px-4 py-16 max-w-[1280px]">
       <h2 className="text-3xl font-bold mb-6">Development Journey</h2>
       <p className="mb-6">
         Cloud Computing and AI Integration Training Program Catalog

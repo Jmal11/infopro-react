@@ -4,7 +4,7 @@ import { CheckCircle } from 'lucide-react';
 export function CloudComputingProgramAudience() {
   return (
     <section className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto max-w-7xl px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="container mx-auto max-w-[1280px] px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left: Who Is This Program For */}
         <div>
           <h2 className="text-3xl font-bold mb-6">Who Is This Program For</h2>

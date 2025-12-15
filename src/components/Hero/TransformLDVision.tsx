@@ -83,7 +83,7 @@ export function TransformLDVision() {
 
   return (
     <section className="bg-white w-full py-10">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1280px] mx-auto px-4">
         {/* Headings Row */}
         <div className="flex w-full justify-between mb-8 relative z-20">
           {steps.map((step, idx) => (

@@ -21,7 +21,7 @@ const approachItems = [
 export function HumanAIApproachSection() {
   return (
     <section className="bg-gray-50 py-16 border-t border-gray-200">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 max-w-[1280px]">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Approach</h2>

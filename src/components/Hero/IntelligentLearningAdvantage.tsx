@@ -29,7 +29,7 @@ const benefits = [
 
 export function IntelligentLearningAdvantage() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <section className="max-w-[1280px] mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left column */}
         <div className="md:col-span-1">

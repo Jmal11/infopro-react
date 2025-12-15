@@ -22,7 +22,7 @@ export function AgileTransformationHero() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-60" />
       
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Text Content */}
           <div className="text-white space-y-8">

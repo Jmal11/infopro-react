@@ -1,33 +1,32 @@
 import React from 'react';
 
-const heroBg = 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80'; // Placeholder background
-const heroImg = 'https://randomuser.me/api/portraits/women/65.jpg'; // Placeholder right-side image
-
 export function ProductTrainingHero() {
   return (
-    <section className="relative w-full h-[80vh] flex items-center bg-gray-900 overflow-hidden">
-      {/* Background */}
-      <img src={heroBg} alt="Office background" className="absolute inset-0 w-full h-full object-cover object-center opacity-70 blur-sm" />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40" />
-      <div className="relative z-10 flex w-full h-full items-center justify-between px-12 pt-16">
-        {/* Left: Text */}
-        <div className="max-w-xl text-white flex flex-col gap-6">
-          <h1 className="text-5xl font-bold leading-tight">Product Training</h1>
-          <p className="text-lg">Prepare your teams, partners, and clients with deep product knowledge for success</p>
-          <button className="mt-4 px-8 py-3 bg-black border border-white text-white font-semibold rounded transition hover:bg-gray-800">CONNECT WITH US</button>
-        </div>
-        {/* Right: Image */}
-        <div className="hidden md:block">
-          <img src={heroImg} alt="Professional woman" className="w-80 h-80 object-cover rounded-xl shadow-lg border-4 border-white" />
+    <section
+      className="relative bg-cover bg-center bg-no-repeat h-[85VH] flex items-center"
+      style={{ backgroundImage: "url('https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Product_training_banner.webp')" }}
+    >
+      <div className="absolute inset-0"></div>
+      <div className="container mx-auto px-4 flex items-center h-full relative z-10">
+        <div className="max-w-xl text-white">
+          <h1 className="text-5xl font-bold mb-4">Product Training</h1>
+          <p className="mb-6 text-xl font-normal">
+          Prepare your teams, partners, and clients with
+deep product knowledge for success
+          </p>
+          <a href="/contact" className="inline-block border border-white px-8 py-3 font-semibold rounded transition hover:bg-white hover:text-black text-lg">
+            CONNECT WITH US
+          </a>
         </div>
       </div>
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
-        <div className="w-8 h-12 border-2 border-white rounded-full flex items-start justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce" />
-        </div>
-        <svg className="mt-1 w-4 h-4 text-white animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+      {/* Scroll indicator */}
+      <div className="absolute left-1/2 bottom-6 -translate-x-1/2 flex flex-col items-center z-10">
+        <svg width="24" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="22" height="34" rx="11" stroke="#fff" strokeWidth="2" />
+          <circle cx="12" cy="10" r="3" fill="#fff">
+            <animate attributeName="cy" values="10;26;10" dur="2s" repeatCount="indefinite" />
+          </circle>
+        </svg>
       </div>
     </section>
   );

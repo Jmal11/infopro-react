@@ -35,7 +35,7 @@ const points = [
 
 export function ProductTrainingImmersiveExperience() {
   return (
-    <section className="py-12 px-6 bg-white max-w-7xl mx-auto">
+    <section className="py-12 px-6 bg-white max-w-[1280px] mx-auto">
       <h2 className="text-center text-2xl font-bold mb-10">Tailored and Immersive Learning Experience</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {points.map(({ title, description }, index) => (

@@ -20,7 +20,7 @@ function CheckIcon() {
 export function SalesTrainingEnablementProgramAudience() {
   return (
     <section className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto max-w-6xl px-8 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+      <div className="container mx-auto max-w-[1280px] px-8 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
         {/* Left: Who Is This Program For */}
         <div className="md:col-span-2">
           <h2 className="text-3xl font-bold mb-4">Who Is This Program For</h2>

@@ -2,7 +2,7 @@ import React from "react";
 import { DataAnalyticsHero } from "../../components/Hero/DataAnalyticsHero";
 import { DataAnalyticsContent } from "../../components/Hero/DataAnalyticsContent";
 import { DataAnalyticsJourney } from "../../components/Hero/DataAnalyticsJourney";
-import { BusinessLeadershipLearningExperience } from "../../components/Hero/BusinessLeadershipLearningExperience";
+import { EarlyCareerDevelopmentLearningExperience } from "../../components/Hero/EarlyCareerDevelopmentLearningExperience";
 import { DataAnalyticsProgramAudience } from "../../components/Hero/DataAnalyticsProgramAudience";
 import { EarlyCareerDevelopmentCertificate } from "../../components/Hero/EarlyCareerDevelopmentCertificate";
 import { SuccessStoriesSection } from "../../components/Hero/SuccessStoriesSection";
@@ -12,11 +12,11 @@ import ContactForm from "../../components/Hero/ContactForm";
 
 const DataAnalyticsPage = () => {
   return (
-    <main className="section-responsive">
+    <main className="">
       <DataAnalyticsHero />
       <DataAnalyticsContent />
       <DataAnalyticsJourney />
-      <BusinessLeadershipLearningExperience />
+      <EarlyCareerDevelopmentLearningExperience />
       <DataAnalyticsProgramAudience />
       <EarlyCareerDevelopmentCertificate />
       <SuccessStoriesSection />

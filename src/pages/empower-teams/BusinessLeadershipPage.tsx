@@ -5,19 +5,19 @@ import { BusinessLeadershipJourney } from "../../components/Hero/BusinessLeaders
 import { EarlyCareerDevelopmentLearningExperience } from "../../components/Hero/EarlyCareerDevelopmentLearningExperience";
 import { BusinessLeadershipProgramAudience } from "../../components/Hero/BusinessLeadershipProgramAudience";
 import { EarlyCareerDevelopmentCertificate } from "../../components/Hero/EarlyCareerDevelopmentCertificate";
-import { BusinessLeadershipLogos } from "../../components/Hero/BusinessLeadershipLogos";
 import { SuccessStoriesSection } from "../../components/Hero/SuccessStoriesSection";
 import { LatestInsights } from "../../components/Hero/LatestInsights";
 import { LearningExperienceArchitectsSection } from "../../components/Hero/LearningExperienceArchitectsSection";
 import ContactForm from "../../components/Hero/ContactForm";
+import { LeadershipDevelopmentPartners } from "../../components/Hero/LeadershipDevelopmentPartners";
 
 const BusinessLeadershipPage = () => {
   return (
-    <main className="section-responsive">
+    <main className="">
       <BusinessLeadershipHero />
+      <LeadershipDevelopmentPartners />
       <BusinessLeadershipContent />
       <BusinessLeadershipJourney />
-      <BusinessLeadershipLogos />
       <EarlyCareerDevelopmentLearningExperience />
       <BusinessLeadershipProgramAudience />
       <EarlyCareerDevelopmentCertificate />

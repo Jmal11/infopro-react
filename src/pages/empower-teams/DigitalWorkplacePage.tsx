@@ -1,20 +1,20 @@
 import React from 'react';
 import DigitalWorkplaceHero from '../../components/Hero/DigitalWorkplaceHero';
 import { DigitalWorkplaceContent } from '../../components/Hero/DigitalWorkplaceContent';
-import { DigitalWorkplaceDevelopmentOutcomes } from '../../components/Hero/DigitalWorkplaceDevelopmentOutcomes';
 import { DigitalWorkplaceDevelopmentJourney } from '../../components/Hero/DigitalWorkplaceDevelopmentJourney';
 import { SuccessStoriesSection } from '../../components/Hero/SuccessStoriesSection';
 import { LatestInsights } from '../../components/Hero/LatestInsights';
 import { LearningExperienceArchitectsSection } from '../../components/Hero/LearningExperienceArchitectsSection';
 import ContactForm from '../../components/Hero/ContactForm';
+import { EarlyCareerDevelopmentLearningExperience } from '../../components/Hero/EarlyCareerDevelopmentLearningExperience';
 
 const DigitalWorkplacePage: React.FC = () => {
   return (
-    <main className="section-responsive">
+    <main className="">
       <DigitalWorkplaceHero />
       <DigitalWorkplaceContent />
-      <DigitalWorkplaceDevelopmentOutcomes />
       <DigitalWorkplaceDevelopmentJourney />
+      <EarlyCareerDevelopmentLearningExperience />
       <SuccessStoriesSection />
       <LatestInsights />
       <LearningExperienceArchitectsSection />

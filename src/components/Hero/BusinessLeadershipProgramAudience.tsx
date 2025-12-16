@@ -1,98 +1,88 @@
 import React from 'react';
 
+const leftColumnPoints = [
+  "Drive organizational transformation",
+  "Cultivate a global business perspective",
+  "Optimize operational efficiency",
+];
+
+const rightColumnPoints = [
+  "Strengthen decision-making capabilities",
+  "Lead cross-functional teams",
+  "Foster innovation and creativity",
+];
+
 export function BusinessLeadershipProgramAudience() {
   return (
-    <section className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Program Audience */}
-            <div>
-              <h2 className="text-4xl font-bold mb-4">
-                Who Is This Program For
-              </h2>
-              <p className="text-gray-300 mb-8 text-lg">
-                Leaders who want to:
-              </p>
+    <section className="bg-[#292929] text-white py-16">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-12">
+        {/* Left side - Audience list */}
+        <div className="lg:w-2/3 lg:border-r lg:border-gray-600 lg:pr-12">
+          <h2 className="text-3xl font-bold mb-2">Who Is This Program For</h2>
+          <p className="text-gray-400 mb-8">Leaders who want to:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+            {/* Left Column */}
+            <ul className="space-y-6">
+              {leftColumnPoints.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  />
+                  <span className="text-white font-medium">{point}</span>
+                </li>
+              ))}
+            </ul>
+            {/* Right Column */}
+            <ul className="space-y-6">
+              {rightColumnPoints.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img 
+                    src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Check-icon.svg" 
+                    alt="Check" 
+                    className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  />
+                  <span className="text-white font-medium">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 mr-4 flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-300">Drive organizational transformation</span>
-                  </div>
+        {/* Right side - Testimonial */}
+        <div className="lg:w-1/3 flex flex-col justify-center">
+          <div>
+            <p className="text-gray-300 leading-relaxed italic">
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Quote.svg" 
+                alt="Quote" 
+                className="w-8 h-8 inline-block mr-1 -mt-1"
+              />
+              The Business Leadership Development program elevated my strategic vision and decision-making skills, enabling me to drive significant organizational change and foster a culture of innovation. Our operational efficiency and global perspective have seen remarkable improvement.
+              <img 
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Quote.svg" 
+                alt="Quote" 
+                className="w-8 h-8 inline-block ml-1 rotate-180"
+              />
+            </p>
+          </div>
 
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 mr-4 flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-300">Cultivate a global business perspective</span>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 mr-4 flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-300">Optimize operational efficiency</span>
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 mr-4 flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-300">Strengthen decision-making capabilities</span>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 mr-4 flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-300">Lead cross-functional teams</span>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 mr-4 flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-300">Foster innovation and creativity</span>
-                  </div>
-                </div>
-              </div>
+          {/* White Line - Small and Thick */}
+          <div className="w-12 h-0.5 bg-white my-6"></div>
+          
+          {/* Author */}
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-full overflow-hidden">
+              <img
+                src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Morgan R.png"
+                alt="Morgan R."
+                className="w-full h-full object-cover"
+              />
             </div>
-
-            {/* Right Column - Testimonial */}
-            <div className="flex flex-col items-center lg:items-start">
-              <blockquote className="text-lg italic text-gray-300 mb-8 text-center lg:text-left">
-                "The Business Leadership Development program elevated my strategic vision and decision-making skills, enabling me to drive significant organizational change and foster a culture of innovation. Our operational efficiency and global business perspective have seen remarkable improvement."
-              </blockquote>
-
-              <div className="flex items-center">
-                <div className="w-16 h-16 bg-gray-600 rounded-full mr-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-semibold text-white">Morgan R.,</div>
-                  <div className="text-gray-400">Vice President of Operations</div>
-                </div>
-              </div>
+            <div>
+              <p className="font-semibold text-white">Morgan R.,</p>
+              <p className="text-gray-400 text-sm">Vice President of Operations</p>
             </div>
           </div>
         </div>

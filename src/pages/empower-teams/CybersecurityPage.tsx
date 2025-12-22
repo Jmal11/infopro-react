@@ -12,12 +12,12 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 const CybersecurityPage: React.FC = () => {
   return (
-    <main className="section-responsive">
+    <main className="">
       <CybersecurityHero />
       <CybersecurityContent />
       <CybersecurityDevelopmentJourney />
-      <CybersecurityProgramAudience />
       <EarlyCareerDevelopmentLearningExperience />
+      <CybersecurityProgramAudience />
       <EarlyCareerDevelopmentCertificate />
       <SuccessStoriesSection />
       <LatestInsights />

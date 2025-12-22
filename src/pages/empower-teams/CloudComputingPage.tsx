@@ -12,7 +12,7 @@ import ContactForm from '../../components/Hero/ContactForm';
 
 const CloudComputingPage: React.FC = () => {
   return (
-    <main className="section-responsive">
+    <main className="">
       <CloudComputingHero />
       <CloudComputingContent />
       <CloudComputingDevelopmentJourney />

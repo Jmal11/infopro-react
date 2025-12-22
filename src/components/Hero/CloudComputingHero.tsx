@@ -2,27 +2,32 @@ import React from 'react';
 
 export function CloudComputingHero() {
   return (
-    <section className="relative bg-gray-900 text-white min-h-screen flex items-center">
+    <section className="relative bg-gray-900 text-white h-[85vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-          alt="Cloud Computing AI Integration"
-          className="w-full h-full object-cover opacity-70"
+          src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Cloud-computing-banner.webp"
+          alt="Diverse business professionals"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-left">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Cloud Computing & AI Integration
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl">
-            Mastering the convergence of cloud computing and artificial intelligence
+      <div className="relative z-10 container mx-auto">
+        <div className="max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          Cloud Computing & AI 
+            <br />
+Integration          </h1>
+
+          <p className="text-lg md:text-xl mb-8 text-gray-200">
+Mastering the convergence of cloud computing and artificial intelligence
+
+
           </p>
-          <button className="border-2 border-white text-white px-8 py-4 font-semibold text-lg hover:bg-white hover:text-gray-900 transition duration-300 uppercase tracking-wide">
+
+          <button className="border-2 border-white text-white px-8 py-3 font-semibold text-sm hover:bg-white hover:text-gray-900 transition duration-300 uppercase tracking-wider">
             CONNECT WITH US
           </button>
         </div>

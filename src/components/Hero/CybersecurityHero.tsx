@@ -1,37 +1,47 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export function CybersecurityHero() {
   return (
-    <section
-      className="relative bg-black bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')" }}
-    >
-      <div className="bg-black bg-opacity-70">
-        <div className="container mx-auto px-4 py-32 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Developing Resilient Security Leaders for the Digital Age
-            </h1>
-            <p className="text-lg mb-8">
-              Leveraging AI to strengthen cybersecurity and safeguard systems
-            </p>
-            <Link
-              to="/contact"
-              className="inline-block border border-white text-white px-6 py-3 font-semibold hover:bg-white hover:text-black transition"
-            >
-              CONNECT WITH US
-            </Link>
-          </div>
-          <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-            <img
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
-              alt="Cybersecurity professional"
-              className="rounded-lg shadow-lg max-w-full h-auto"
-            />
-          </div>
+    <section className="relative bg-gray-900 text-white h-[85vh] flex items-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://www.infoprolearning.com/wp-content/themes/ipl/assets/images-new/2024/Cybersecurity-&-AI.webp"
+          alt="Diverse business professionals"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto">
+        <div className="max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+Developing Resilient Security  
+            <br />
+Leaders for the Digital Age          </h1>
+
+          <p className="text-lg md:text-xl mb-8 text-gray-200">
+Leveraging AI to strengthen cybersecurity and safeguard systems
+
+
+
+          </p>
+
+          <button className="border-2 border-white text-white px-8 py-3 font-semibold text-sm hover:bg-white hover:text-gray-900 transition duration-300 uppercase tracking-wider">
+            CONNECT WITH US
+          </button>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </section>
   );
 }
+
+export default CybersecurityHero;
